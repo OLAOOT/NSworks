@@ -41,11 +41,20 @@ const Footer = ({
           )}>
           <div className="footer-top space-between text-xxs">
             <Logo />
-            <FooterSocial />
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <FooterNav />
-            <div className="footer-copyright">Made by <a href="https://cruip.com">Cruip</a>. All right reserved</div>
+            <div className="footer-copyright">
+              엔에스웍스(주)
+              <br />
+              주소 : (30127) 세종특별자치시 한누리대로 249, 609호 (나성동, 에스제이타워)<br />
+              대표전화 : 070-4232-2240
+              <br />
+              개인정보책임자 | contact@nsworks.co.kr
+              <br />
+              [개인정보처리방침]
+              <br />
+              Copyright © NSworks. All rights reserved.
+            </div>
           </div>
         </div>
       </div>

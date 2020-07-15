@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import { SectionSplitProps } from '../../utils/SectionProps';
-import SectionHeader from './partials/SectionHeader';
-import Image from '../elements/Image';
-import Button from '../elements/Button';
-import ButtonGroup from '../elements/ButtonGroup';
+import { SectionSplitProps } from '../../../utils/SectionProps';
+import SectionHeader from '../partials/SectionHeader';
+import Image from '../../elements/Image';
+import Button from '../../elements/Button';
+import ButtonGroup from '../../elements/ButtonGroup';
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -51,8 +51,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: '여기다가도 딱히',
-    paragraph: '넣을만한게 안보이노 일단 여러줄 써야지 으러럴러러러럴러 집가고싶다 전역하고싶다 언제끝나노이거'
+    title: '회사소개',
+    paragraph: '존나 멋진 회사가 되겠습니다'
   };
 
   return (
@@ -63,15 +63,39 @@ const FeaturesSplit = ({
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
+              <div className="reveal-from-bottom" data-reveal-delay="600">
+                <ButtonGroup style={{
+                  display: 'flex',
+                  justifyContent: 'space-around',
+                  marginBottom: 48 + 'px'
+                }}>
+                  <Button tag="a" color="dark" wideMobile href="#1">
+                    회사 개요
+                    </Button>
+                  <Button tag="a" color="dark" wideMobile href="#2">
+                    인사말
+                    </Button>
+                  <Button tag="a" color="dark" wideMobile href="#3">
+                    연혁
+                    </Button>
+                  <Button tag="a" color="dark" wideMobile href="#4">
+                    찾아오시는 길
+                    </Button>
+                  <Button tag="a" color="dark" wideMobile href="#5">
+                    Contact
+                    </Button>
+                  
+                </ButtonGroup>
+              </div>
           <div className={splitClasses}>
 
-            <div className="split-item">
+            <div className="split-item" id="#1">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  이것도 걍 없앨까
+                  회사 개요
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Virtual Integration
+                  Virtualizing Your Information Infrastructure
                   </h3>
                 <p className="m-0" style={{fontSize: 0.8 + "rem"}}>
                   가상화 서비스를 통해 고객의 비즈니스 효율성을 높이며<br />
@@ -90,7 +114,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-01.png')}
+                  src={require('./../../../assets/images/features-split-image-01.png')}
                   alt="Features split 01"
                   width={528}
                   height={396} />
@@ -121,7 +145,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-02.png')}
+                  src={require('./../../../assets/images/features-split-image-02.png')}
                   alt="Features split 02"
                   width={528}
                   height={396} />
@@ -152,7 +176,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
+                  src={require('./../../../assets/images/features-split-image-03.png')}
                   alt="Features split 03"
                   width={528}
                   height={396} />
@@ -183,7 +207,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
+                  src={require('./../../../assets/images/features-split-image-03.png')}
                   alt="Features split 03"
                   width={528}
                   height={396} />
