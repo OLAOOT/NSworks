@@ -7,7 +7,7 @@ import Slider from "../components/sections/Slider";
 const Home = () => {
   return (
     <>
-      <Hero className="illustration-section-01" />
+      <Slider />
       <FeaturesSplit
         invertMobile
         topDivider
