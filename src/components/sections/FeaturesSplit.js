@@ -127,7 +127,10 @@ const FeaturesSplit = ({
                 >
                   Virtual Infrastructure
                 </h3>
-                <p className="m-0" style={{ fontSize: 0.8 + "rem" }}>
+                <p
+                  className="m-0"
+                  style={{ fontSize: 0.8 + "rem", color: "#000000" }}
+                >
                   압도적인 시장 점유율과 높은 신뢰성 및 안전성을 가진 VMware
                   기반 가상화를 구현합니다
                 </p>
@@ -165,8 +168,18 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   그린 그린 그린
                 </div>
-                <h3 className="mt-0 mb-12">Technical Support</h3>
-                <p className="m-0" style={{ fontSize: 0.8 + "rem" }}>
+                <h3
+                  className="mt-0 mb-12"
+                  style={{
+                    color: "#000000"
+                  }}
+                >
+                  Technical Support
+                </h3>
+                <p
+                  className="m-0"
+                  style={{ fontSize: 0.8 + "rem", color: "#000000" }}
+                >
                   전문 엔지니어의 풍부한 경험으로 차별화된 서비스를 지원합니다
                 </p>
                 <Button
@@ -203,8 +216,18 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   그린 그린 그린
                 </div>
-                <h3 className="mt-0 mb-12">IT Consulting</h3>
-                <p className="m-0" style={{ fontSize: 0.8 + "rem" }}>
+                <h3
+                  className="mt-0 mb-12"
+                  style={{
+                    color: "#000000"
+                  }}
+                >
+                  IT Consulting
+                </h3>
+                <p
+                  className="m-0"
+                  style={{ fontSize: 0.8 + "rem", color: "#000000" }}
+                >
                   고객의 요구 사항에 맞는 맞춤형 최적 솔루션을 제공하겠습니다
                 </p>
                 <Button
