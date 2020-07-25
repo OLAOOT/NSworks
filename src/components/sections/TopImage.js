@@ -5,34 +5,50 @@ import "react-awesome-slider/dist/captioned.css";
 import Hero from "../sections/Hero";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styled from "styled-components";
-import Image from "../elements/Image";
+import img3 from "./../../img/slider3.jpg";
 
 const SlideContainer = styled.div`
-  margin: 10px auto;
-  position: relative;
+  position: absolute;
+  left:0;
+  width:100%;
+  top:80px;
+  height:300px;
 `;
 const ImageContainer = styled.div`
   width: 100%;
+  height:100%;
   vertical-align: middle;
 `;
-const HeroContainer = styled.div`
-  padding: 5px 10px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+const Image = styled.img`
+  width: 100%;
+  height:100%;
 `;
 
-const TopImage = ({ key, data }) => {
+const Text_container = styled.div`
+  text-align: center;
+  position: absolute;
+  top: 50%;  
+  transform:translateY(-50%);
+  width:100%;
+`;
+
+const Title = styled.div`
+  font-size:50px;
+  font-weight:bold;
+  color:#ffffff;
+  text-align:center;
+`;
+
+const TopImage = ({ data }) => {
   return (
     <SlideContainer>
       <ImageContainer>
-        <Image src={require(data.image)} alt="image" />
+        <Image src={img3} alt="image" />
       </ImageContainer>
-      <HeroContainer>
-        <Hero data={data} />
-      </HeroContainer>
+      <Text_container>
+        <Title>{data.title}</Title>
+      </Text_container>
     </SlideContainer>
   );
 };

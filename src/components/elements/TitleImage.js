@@ -25,7 +25,7 @@ const TitleImage = ({ data }) => {
   return (
     <Slide>
       <ImageContainer>
-        <Image src={require(data.image)} alt="image" />
+        <Image src={require('./../../img/slider1.jpg')} alt="image" />
       </ImageContainer>
       <HeroContainer>
         <Hero data={data} />
