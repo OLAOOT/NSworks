@@ -1,27 +1,7 @@
 import React from "react";
-import Image from "../elements/Image";
-import Hero from "./Hero";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import styled from "styled-components";
-import { values } from "lodash";
-
-const Slide = styled.div`
-  margin: 10px auto;
-  position: relative;
-`;
-const ImageContainer = styled.div`
-  width: 100%;
-  vertical-align: middle;
-`;
-const HeroContainer = styled.div`
-  padding: 5px 10px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
+import TitleImage from "../elements/TitleImage";
 
 const heroData = [
   {
@@ -48,16 +28,7 @@ const Slider = () => {
   return (
     <Carousel autoplay>
       {heroData.map(v => (
-        <div key={v.title}>
-          <Slide>
-            <ImageContainer>
-              <Image src={require(v.image)} alt="00" />
-            </ImageContainer>
-            <HeroContainer>
-              <Hero data={v} />
-            </HeroContainer>
-          </Slide>
-        </div>
+        <TitleImage data={v} />
       ))}
     </Carousel>
   );
