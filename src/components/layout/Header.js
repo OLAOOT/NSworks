@@ -148,7 +148,7 @@ const Header = ({
                     </li>
                     <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu3">
                       <Link to="#0" onClick={closeMenu}>하드웨어인프라</Link>
-                      <div id="subclass2" className="subclasses" >
+                      <div id="subclass3" className="subclasses" >
                         <Link to="/info" onClick={closeMenu} className="menu3">서버</Link>
                         <Link to="/info" onClick={closeMenu} className="menu3">스토리지</Link>
                         <Link to="/info" onClick={closeMenu} className="menu3">네트워크</Link>
@@ -157,7 +157,7 @@ const Header = ({
                     </li>
                     <li>
                       <Link to="#0" onClick={closeMenu} id="menu4">기술지원</Link>
-                      <div id="subclass2" className="subclasses" >
+                      <div id="subclass4" className="subclasses" >
                         <Link to="/info" onClick={closeMenu} className="menu4">유지보수</Link>
                         <Link to="/info" onClick={closeMenu} className="menu4">기술지원문의</Link>
                         <Link to="/info" onClick={closeMenu} className="menu4">자료실</Link>

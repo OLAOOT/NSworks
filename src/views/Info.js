@@ -31,7 +31,7 @@ export default function Variants() {
   const classes = useStyles();
   return (
       <div className="info_container">
-        <AutoplaySlider play={true} cancelOnInteraction={false} interval={6000}>
+        <AutoplaySlider play={true} cancelOnInteraction={false} interval={2000}>
           <div data-src={img1}>
             <p>고객만족을 위한<br/>최고기술</p>
           </div>
@@ -93,11 +93,6 @@ export default function Variants() {
               <img src={img4}/>
               <div>병원</div>
               <div>고객사 환경에 최적화된 HW, SW, Network 인프라 구축을 위한 솔루션 컨설팅 재해 방지를 위한 백업및 보안 컨설팅</div>
-            </Paper>
-            <Paper elevation={3}>
-              <img src={img4}/>
-              <div>유지보수</div>
-              <div>HP Industrial Server Storage 충북, 세종 공인 지원센터 Dell 충북, 충남, 세종 공인 지원센터 기업, 대학, 병원 등 유지보수</div>
             </Paper>
           </div>
         </div>
