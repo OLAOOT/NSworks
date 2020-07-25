@@ -48,13 +48,13 @@ export default function Info1() {
       <div className="info_container">
         <AutoplaySlider play={true} cancelOnInteraction={false} interval={2000}>
           <div data-src={img1}>
-            <p>고객만족을 위한<br/>최고기술</p>
+            <p className="slider_text">고객만족을 위한<br/>최고기술</p>
           </div>
           <div data-src={img2}>
-            <p>이익실현을 위한<br/>효율경영</p>
+            <p className="slider_text">이익실현을 위한<br/>효율경영</p>
           </div>
           <div data-src={img3}>
-            <p>동반성장을 위한<br/>파트너쉽</p>
+            <p className="slider_text">동반성장을 위한<br/>파트너쉽</p>
           </div>
         </AutoplaySlider>
         <div className="article">
