@@ -6,11 +6,11 @@ import 'react-awesome-slider/dist/captioned.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
-import img1 from "./../img/slider1.jpg";
-import img2 from "./../img/slider2.jpg";
-import img3 from "./../img/slider3.jpg";
-import img4 from "./../img/img_ccai.png";
-import '../css/info.css';
+import img1 from "./../../img/slider1.jpg";
+import img2 from "./../../img/slider2.jpg";
+import img3 from "./../../img/slider3.jpg";
+import img4 from "./../../img/img_ccai.png";
+import '../../css/info.css';
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -22,12 +22,27 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:'center',
     '& > *': {
       margin: '1%',
-
+      width:'23%',
+      minWidth:'250px',
+      height: 480,
+    },
+    '& > * > img': {
+      position: 'relative',
+      left: 0
+    },
+    '& > * > div': {
+      textAlign: 'left',
+      padding: '25px 40px 0px',
+      fontSize: 19,
+      fontWeight: 'bold'
+    },
+    '& > * > div:last-child': {
+      fontWeight: 'normal'
     },
   },
 }));
 
-export default function Variants() {    
+export default function Info1() {    
   const classes = useStyles();
   return (
       <div className="info_container">
@@ -95,6 +110,32 @@ export default function Variants() {
               <div>고객사 환경에 최적화된 HW, SW, Network 인프라 구축을 위한 솔루션 컨설팅 재해 방지를 위한 백업및 보안 컨설팅</div>
             </Paper>
           </div>
+          <table class="type03">
+            <tr>
+                <th scope="row">회사명</th>
+                <td>엔에스웍스(주)</td>
+            </tr>
+            <tr>
+                <th scope="row">대표</th>
+                <td>김창영</td>
+            </tr>
+            <tr>
+                <th scope="row">설립일</th>
+                <td>2012년 2월 22일</td>
+            </tr>
+            <tr>
+                <th scope="row">소재지</th>
+                <td>세종특별시 한누리대로 249, 609호(나성동, 에스제이타워)</td>
+            </tr>
+            <tr>
+                <th scope="row">연락처</th>
+                <td>TEL 070-4232-2240 / FAX 044-868-2240</td>
+            </tr>
+            <tr>
+                <th scope="row">주요사업</th>
+                <td>가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅</td>
+            </tr>
+          </table>
         </div>
       </div>
       );

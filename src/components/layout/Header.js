@@ -128,10 +128,10 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li onMouseOver={mouseOver}  onMouseOut={mouseOut}>
-                      <Link to="/info" onClick={closeMenu} className="menu1">회사소개</Link>
+                      <Link to="/info/introduce" onClick={closeMenu} className="menu1">회사소개</Link>
                       <div id="subclass1" className="subclasses" >
-                        <Link to="/info" onClick={closeMenu} className="menu1">회사개요</Link>
-                        <Link to="/info" onClick={closeMenu} className="menu1">인사말</Link>
+                        <Link to="/info/introduce" onClick={closeMenu} className="menu1">회사개요</Link>
+                        <Link to="/info/greeting" onClick={closeMenu} className="menu1">인사말</Link>
                         <Link to="/info" onClick={closeMenu} className="menu1">연혁</Link>
                         <Link to="/info" onClick={closeMenu} className="menu1">찾아오시는 길</Link>
                         <Link to="/info" onClick={closeMenu} className="menu1">contact</Link>

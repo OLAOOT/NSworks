@@ -10,7 +10,8 @@ import LayoutDefault from './layouts/LayoutDefault';
 
 // Views 
 import Home from './views/Home';
-import Info from './views/Info';
+import Info1 from './views/infos/Info1';
+import Info2 from './views/infos/Info2';
 
 
 // Initialize Google Analytics
@@ -44,12 +45,17 @@ const App = () => {
                 <LayoutDefault>
                   <Home {...props} />
                 </LayoutDefault>
-              )} />
-            <Route exact path="/info" render={props => (
+            )} />
+            <Route exact path="/info/introduce" render={props => (
                 <LayoutDefault>
-                  <Info {...props} />
+                  <Info1 {...props} />
                 </LayoutDefault>
-              )} />
+            )} />
+            <Route exact path="/info/greeting" render={props => (
+                <LayoutDefault>
+                  <Info2 {...props} />
+                </LayoutDefault>
+            )} />
           </Switch>
         </Router>
       )} />
