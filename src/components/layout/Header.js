@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from './partials/Logo';
 
+import '../../css/header.css';
+
+import $ from 'jquery';
+window.$ = $;
+
 const propTypes = {
   navPosition: PropTypes.string,
   hideNav: PropTypes.bool,
@@ -56,6 +61,17 @@ const Header = ({
     document.body.classList.remove('off-nav-is-active');
     nav.current && (nav.current.style.maxHeight = null);
     setIsactive(false);
+  }
+
+  const mouseOver = (e) => {
+    var event_id = e.target.className.replace('menu', '')    
+    $('#subclass'+event_id).show();
+  }
+
+  const mouseOut = (e) => {
+    var event_id = e.target.className.replace('menu', '')        
+    $('#subclass'+event_id).hide();
+   
   }
 
   const keyPress = (e) => {
@@ -111,32 +127,49 @@ const Header = ({
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
-                    <li>
-                      <Link to="/info" onClick={closeMenu}>회사소개</Link>
+                    <li onMouseOver={mouseOver}  onMouseOut={mouseOut}>
+                      <Link to="/info" onClick={closeMenu} className="menu1">회사소개</Link>
+                      <div id="subclass1" className="subclasses" >
+                        <Link to="/info" onClick={closeMenu} className="menu1">회사개요</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu1">인사말</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu1">연혁</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu1">찾아오시는 길</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu1">contact</Link>
+                      </div>
                     </li>
-                    <li>
-                      <Link to="#0" onClick={closeMenu}>가상화인프라</Link>
+                    <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu2">
+                      <Link to="#0" onClick={closeMenu} className="menu2">가상화인프라</Link>
+                      <div id="subclass2" className="subclasses" >
+                        <Link to="/info" onClick={closeMenu} className="menu2">서버 가상화</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu2">데스크탑 가상화</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu2">스토리지 가상화</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu2">재해복구시스템(DR)</Link>
+                      </div>
                     </li>
-                    <li>
+                    <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu3">
                       <Link to="#0" onClick={closeMenu}>하드웨어인프라</Link>
+                      <div id="subclass2" className="subclasses" >
+                        <Link to="/info" onClick={closeMenu} className="menu3">서버</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu3">스토리지</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu3">네트워크</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu3">보안</Link>
+                      </div>
                     </li>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>기술지원</Link>
+                      <Link to="#0" onClick={closeMenu} id="menu4">기술지원</Link>
+                      <div id="subclass2" className="subclasses" >
+                        <Link to="/info" onClick={closeMenu} className="menu4">유지보수</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu4">기술지원문의</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu4">자료실</Link>
+                        <Link to="/info" onClick={closeMenu} className="menu4">원격지원</Link>
+                      </div>
                     </li>
                     <li>
                       <Link to="#0" onClick={closeMenu}>원격지원</Link>
                     </li>
-                    
                   </ul>
-                  {!hideSignin &&
-                    <ul
-                      className="list-reset header-nav-right"
-                    >
-                      <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>로그인</Link>
-                      </li>
-                    </ul>}
                 </div>
+                
               </nav>
             </>}
         </div>
