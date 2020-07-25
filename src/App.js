@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useRef, useEffect } from 'react';
 import { useLocation, Switch, Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -12,7 +13,21 @@ import LayoutDefault from './layouts/LayoutDefault';
 import Home from './views/Home';
 import Info1 from './views/infos/Info1';
 import Info2 from './views/infos/Info2';
+=======
+import React, { useRef, useEffect } from "react";
+import { useLocation, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoute from "./utils/AppRoute";
+import ScrollReveal from "./utils/ScrollReveal";
+// import ReactGA from 'react-ga';
 
+// Layouts
+import LayoutDefault from "./layouts/LayoutDefault";
+>>>>>>> csb-fjqce
+
+// Views
+import Home from "./views/Home";
+import Info from "./views/infos/Info";
 
 // Initialize Google Analytics
 // ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -23,13 +38,12 @@ import Info2 from './views/infos/Info2';
 // };
 
 const App = () => {
-
   const childRef = useRef();
   let location = useLocation();
 
   useEffect(() => {
     // const page = location.pathname;
-    document.body.classList.add('is-loaded')
+    document.body.classList.add("is-loaded");
     childRef.current.init();
     // trackPage(page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -60,6 +74,6 @@ const App = () => {
         </Router>
       )} />
   );
-}
+};
 
 export default App;
