@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
     "& .awssld__controls button": {
       opacity: "0"
-    }
+    },
   }
 }));
 
@@ -39,7 +39,7 @@ export default function Info1() {
         <AutoplaySlider
           play={true}
           cancelOnInteraction={false}
-          interval={2000}
+          interval={5000}
           className={classes.slider}
         >
           <div data-src={img1}>

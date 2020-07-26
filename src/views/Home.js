@@ -52,7 +52,7 @@ const heroData = [
 const Home = () => {
   return (
     <>
-      <Slider data={heroData} />
+      {/*<Slider data={heroData} /> 카톡으로 말한 거 이거때문이었음*/}
       <Info1 />
       <Info2 />
       <Info3 />
