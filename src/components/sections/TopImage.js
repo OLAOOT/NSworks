@@ -8,7 +8,7 @@ import styled from "styled-components";
 import banner from "./../../img/banner_w.png";
 
 const SlideContainer = styled.div`
-  position: absolute;
+  position: relative;
   left: 0;
   width: 100%;
   top: 80px;

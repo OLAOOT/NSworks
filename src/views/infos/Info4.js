@@ -14,7 +14,8 @@ import img2 from "./../../img/img_ccai2.png";
 
 import "../../css/info.css";
 
-
+import $ from 'jquery';
+window.$ = $;
 
 const img_data = [
   {
@@ -56,11 +57,11 @@ export default function Info4() {
   }
   return (
     <div>
-      {window.location.href.indexOf('info') ? (img_data.map(v => (
+      {window.location.href.indexOf('info') === 22  ? (img_data.map(v => (
            <TopImage data={v} />
         ))) : (<div></div>)}
       {/* <div className="info_container"> */}
-      <div className="info_container">
+      <div className="info_container" id="info_container4">
         <div className="article" id="article4">
           <table className="type03">
             <tr>

@@ -6,18 +6,17 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
-
 import history from "./../../img/history.jpg";
-
-
 import "../../css/info.css";
+import $ from 'jquery';
+window.$ = $;
 
 const useStyles = makeStyles(theme => ({
   img: {
     position:"relative",
     left:'50%',
     transform:'translateX(-50%)',
-    marginTop: 500,
+    paddingTop: 50,
     flexWrap: "wrap",
     
     width:'95%',
@@ -36,11 +35,11 @@ export default function Info3() {
   const classes = useStyles();
   return (
     <div>
-      {window.location.href.indexOf('info') ? (
+      {window.location.href.indexOf('info') === 22  ? (
         img_data.map(v => (
           <TopImage data={v} />
         ))):(<div></div>)}
-      <div className="info_container">
+      <div className="info_container" id="info_container3">
           <div className="article">
             <img src={history} className={classes.img}/>          
           </div>

@@ -13,48 +13,23 @@ import img2 from "./../../img/img_ccai2.png";
 
 import "../../css/info.css";
 
-const useStyles = makeStyles(theme => ({
-  article_mid: {
-    display: "flex",
-    marginTop: 500,
-    flexWrap: "wrap",
-    justifyContent: "center",
-
-    "& > *": {
-      margin: "1%",
-      width: "30%",
-      minWidth: "250px",
-      height: 550
-    },
-    "& > * > img": {
-      position: "relative",
-      left: 0,
-      width: "100%",
-      maxHeight: "200px"
-    },
-    "& > * > div": {
-      textAlign: "left",
-      padding: "25px 40px 0px",
-      fontSize: 19,
-      fontWeight: "bold"
-    },
-    "& > * > div:last-child": {
-      fontWeight: "normal"
-    }
-  }
-}));
+import $ from 'jquery';
+window.$ = $;
 
 const img_data = {
   image: "./../../img/slider1.jpg",
   title: "인사말"
 };
 
-export default function Info2() {
-  const classes = useStyles();
+export default function Info2() { 
+  
   return (
     <div>
-      <TopImage data={img_data} />
-      <div className="info_container">
+      {window.location.href.indexOf('info') === 22 ? (
+        <TopImage data={img_data} />) :
+        (<div></div>)
+      }      
+      <div className="info_container" id="info_container2">
         <div className="header">
           <div>
             <p>
@@ -82,7 +57,7 @@ export default function Info2() {
               <span>CEO 인사말</span>
             </div>
           </div>
-          <div className="article_mid">
+          <div className="article_mid2">
             <div>
               <img src={ceo} />
             </div>
@@ -101,8 +76,8 @@ export default function Info2() {
               출발합니다. 귀사의 발전에 NSworks가 함께 하겠습니다. 감사합니다.
             </div>
           </div>
-          <div className={classes.article_mid}>
-            <Paper elevation={3}>
+          <div className="article_mid">
+            <Paper elevation={3} id="paper">
               <img src={img1} />
               <div>서비스의 품격과 가치를 높이겠습니다</div>
               <div>
@@ -111,7 +86,7 @@ export default function Info2() {
                 여러분께 꼭 필요한 서비스를 의미 있는 가치로 제공하겠습니다.
               </div>
             </Paper>
-            <Paper elevation={3}>
+            <Paper elevation={3} id="paper">
               <img src={img2} />
               <div>상생과 나눔의 경영을 실천하겠습니다</div>
               <div>

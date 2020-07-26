@@ -10,42 +10,7 @@ import vmcloud from "./../../img/vmw-cloud.png";
 import img4 from "./../../img/img_ccai.png";
 import "../../css/virtual.css";
 
-const useStyles = makeStyles((theme) => ({
-    article_mid: {
-      display: 'flex',
-      marginTop:100,
-      flexWrap: 'wrap',
-      justifyContent:'center',
 
-      '& > *': {
-        margin: '1%',
-        width:'30%',
-        minWidth:'250px',
-        height: 550,
-      },
-      '& > *:first-child': {
-        margin: '1%',
-        width:'95%',
-        minWidth:'250px',
-        height: 550,
-      },
-      '& > * > img': {
-        position: 'relative',
-        left: 0,
-        width:'100%',
-        maxHeight:'200px'
-      },
-      '& > * > div': {
-        textAlign: 'left',
-        padding: '25px 40px 0px',
-        fontSize: 19,
-        fontWeight: 'bold'
-      },
-      '& > * > div:last-child': {
-        fontWeight: 'normal'
-      },
-    },
-  }));
 
   const img_data = [
     {
@@ -55,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   ];
 
 export default function Virtualization1() {    
-    const classes = useStyles();
+    
     return (
       <div>
         {img_data.map(v => (
@@ -93,7 +58,7 @@ export default function Virtualization1() {
                             간편하고 확장 가능한 보안 솔루션을 통해 보안 위협 감지 및 분석의 정확성을 향상시키고 대응시간을 단축합니다.
                         </div>
                     </Paper>
-                    <Paper elevation={3}> className="paper"
+                    <Paper elevation={3} className="paper"> 
                         <img src={img4} />
                         <div>지능적인 운영 관리 및 자동화</div>
                         <div>

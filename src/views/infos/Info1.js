@@ -66,7 +66,7 @@ export default function Info1() {
         </AutoplaySlider>
         ) : (<div></div>)
       }
-      <div className="info_container">
+      <div className="info_container" id="info_container1">
         <div className="article" id="article1">
           <div className="article_top">
             <div>

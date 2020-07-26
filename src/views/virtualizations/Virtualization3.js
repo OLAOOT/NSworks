@@ -10,43 +10,6 @@ import vsan from "./../../img/vsan.png";
 import img4 from "./../../img/img_ccai.png";
 import "../../css/virtual.css";
 
-const useStyles = makeStyles((theme) => ({
-    article_mid: {
-      display: 'flex',
-      marginTop:100,
-      flexWrap: 'wrap',
-      justifyContent:'center',
-
-      '& > *': {
-        margin: '1%',
-        width:'30%',
-        minWidth:'250px',
-        height: 550,
-      },
-      '& > *:first-child': {
-        margin: '1%',
-        width:'95%',
-        minWidth:'250px',
-        height: 550,
-      },
-      '& > * > img': {
-        position: 'relative',
-        left: 0,
-        width:'100%',
-        maxHeight:'200px'
-      },
-      '& > * > div': {
-        textAlign: 'left',
-        padding: '25px 40px 0px',
-        fontSize: 19,
-        fontWeight: 'bold'
-      },
-      '& > * > div:last-child': {
-        fontWeight: 'normal'
-      },
-    },
-  }));
-
   const img_data = [
     {
       image: './../../img/slider1.jpg',
@@ -55,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
   ];
 
 export default function Virtualization3() {    
-    const classes = useStyles();
     return (
       <div>
         {img_data.map((v,i) => (
