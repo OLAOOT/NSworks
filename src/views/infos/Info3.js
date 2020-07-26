@@ -7,9 +7,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
 
-import ceo from "./../../img/ceo-1.jpg";
-import img1 from "./../../img/img_ccai1.png";
-import img2 from "./../../img/img_ccai2.png";
+import history from "./../../img/history.jpg";
+
 
 import "../../css/info.css";
 
@@ -59,7 +58,11 @@ export default function Info3() {
           <TopImage data={v} />
         ))} */}
       {/* <div className="info_container" /> */}
-      <div> Info3 ~~~~~ </div>
+      <div className="info_container">
+          <div className="article">
+            <img src={history} className={classes.img}/>          
+          </div>
+        </div>
     </div>
   );
 }

@@ -7,6 +7,8 @@ import Hero from "./Hero";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 
+import banner from "./../../img/banner_w.png";
+
 const useStyles = makeStyles(theme => ({
   article_mid: {
     display: "flex",
@@ -61,7 +63,7 @@ const Slider = ({ data }) => {
         className={classes.slider}
       >
         {data.map(v => (
-          <div data-src={require(v.image)}>
+          <div data-src={banner}>
             <Hero data={v} />
           </div>
         ))}

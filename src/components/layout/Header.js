@@ -147,10 +147,10 @@ const Header = ({
                     <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu2">
                       <Link to="#0" onClick={closeMenu} className="menu2">가상화인프라</Link>
                       <div id="subclass2" className="subclasses" >
-                        <Link to="/info" onClick={closeMenu} className="menu2">서버 가상화</Link>
-                        <Link to="/info" onClick={closeMenu} className="menu2">데스크탑 가상화</Link>
-                        <Link to="/info" onClick={closeMenu} className="menu2">스토리지 가상화</Link>
-                        <Link to="/info" onClick={closeMenu} className="menu2">재해복구시스템(DR)</Link>
+                        <Link to="/vm/server" onMouseOver={mouseOver2} onClick={closeMenu} className="menu2">서버 가상화</Link>
+                        <Link to="/vm/desktop" onMouseOver={mouseOver2} onClick={closeMenu} className="menu2">데스크탑 가상화</Link>
+                        <Link to="/vm/storage" onMouseOver={mouseOver2} onClick={closeMenu} className="menu2">스토리지 가상화</Link>
+                        <Link to="/vm/DR" onMouseOver={mouseOver2} onClick={closeMenu} className="menu2">재해복구시스템(DR)</Link>
                       </div>
                     </li>
                     <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu3">
