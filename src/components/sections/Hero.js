@@ -4,6 +4,7 @@ import { SectionProps } from "../../utils/SectionProps";
 import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import { Link, NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 const propTypes = {
   ...SectionProps.types
@@ -48,15 +49,13 @@ const Hero = ({
           }}
         >
           <div className="hero-content">
-            <h1 className="mt-0 mb-16">
-              <span className="text-color-primary">{data.title}</span>
-            </h1>
-            <h3 className="mt-0 mb-16">{data.subtitle}</h3>
+            <h2 className="mt-0 mb-8">{data.title}</h2>
+            <h3 className="mt-0 mb-8">{data.subtitle}</h3>
             <div className="container-xs">
               <p
                 className="m-0 mb-32"
                 style={{
-                  fontSize: 0.8 + "rem",
+                  color: "#ffffff",
                   marginBottom: 20 + "px"
                 }}
               >

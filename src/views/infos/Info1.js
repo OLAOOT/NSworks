@@ -59,7 +59,7 @@ export default function Info1() {
   const classes = useStyles();
   return (
     <div>
-      <AutoplaySlider
+      {/* <AutoplaySlider
         play={true}
         cancelOnInteraction={false}
         interval={2000}
@@ -86,7 +86,7 @@ export default function Info1() {
             파트너쉽
           </p>
         </div>
-      </AutoplaySlider>
+      </AutoplaySlider> */}
       <div className="info_container">
         <div className="article" id="article1">
           <div className="article_top">
@@ -104,7 +104,7 @@ export default function Info1() {
           </div>
           <div className={classes.article_mid}>
             <Paper elevation={3}>
-              <img src={img1} alt="empty"/>
+              <img src={img1} alt="empty" />
               <div>제품 개발</div>
               <div>
                 HP,IBM,Dell서버,스토리지,백업장비, /Cisco, HP, Dell, Alcatel
@@ -197,7 +197,9 @@ export default function Info1() {
               </tr>
               <tr>
                 <th scope="row">주요사업</th>
-                <td>가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅</td>
+                <td>
+                  가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅
+                </td>
               </tr>
             </tbody>
           </table>
