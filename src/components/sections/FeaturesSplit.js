@@ -63,11 +63,11 @@ const FeaturesSplit = ({
           <div className={splitClasses}>
             <div className="split-item">
               <div
-                className="split-item-content center-content-mobile reveal-from-left"
+                className="split-item-content center-content-mobile"
                 data-reveal-container=".split-item"
               >
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  이것도 걍 없앨까
+                  {/* 이것도 걍 없앨까 */}
                 </div>
                 <h3
                   className="mt-0 mb-12"
@@ -97,7 +97,7 @@ const FeaturesSplit = ({
               </div>
               <div
                 className={classNames(
-                  "split-item-image center-content-mobile reveal-from-bottom",
+                  "split-item-image center-content-mobile",
                   imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
@@ -113,11 +113,11 @@ const FeaturesSplit = ({
 
             <div className="split-item">
               <div
-                className="split-item-content center-content-mobile reveal-from-right"
+                className="split-item-content center-content-mobile"
                 data-reveal-container=".split-item"
               >
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  초록초록초록초록
+                  {/* 초록초록초록초록 */}
                 </div>
                 <h3
                   className="mt-0 mb-12"
@@ -146,7 +146,7 @@ const FeaturesSplit = ({
               </div>
               <div
                 className={classNames(
-                  "split-item-image center-content-mobile reveal-from-bottom",
+                  "split-item-image center-content-mobile",
                   imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
@@ -162,11 +162,11 @@ const FeaturesSplit = ({
 
             <div className="split-item">
               <div
-                className="split-item-content center-content-mobile reveal-from-left"
+                className="split-item-content center-content-mobile"
                 data-reveal-container=".split-item"
               >
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  그린 그린 그린
+                  {/* 그린 그린 그린 */}
                 </div>
                 <h3
                   className="mt-0 mb-12"
@@ -194,7 +194,7 @@ const FeaturesSplit = ({
               </div>
               <div
                 className={classNames(
-                  "split-item-image center-content-mobile reveal-from-bottom",
+                  "split-item-image center-content-mobile",
                   imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
@@ -210,11 +210,11 @@ const FeaturesSplit = ({
 
             <div className="split-item">
               <div
-                className="split-item-content center-content-mobile reveal-from-left"
+                className="split-item-content center-content-mobile"
                 data-reveal-container=".split-item"
               >
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  그린 그린 그린
+                  {/* 그린 그린 그린 */}
                 </div>
                 <h3
                   className="mt-0 mb-12"
@@ -242,7 +242,7 @@ const FeaturesSplit = ({
               </div>
               <div
                 className={classNames(
-                  "split-item-image center-content-mobile reveal-from-bottom",
+                  "split-item-image center-content-mobile",
                   imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
