@@ -1,36 +1,72 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import TitleImage from "../elements/TitleImage";
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+import "react-awesome-slider/dist/styles.css";
+import "react-awesome-slider/dist/captioned.css";
+import Hero from "./Hero";
+import { makeStyles } from "@material-ui/core/styles";
+import styled from "styled-components";
 
-const heroData = [
-  {
-    image: "./../../assets/images/features-split-image-01.png",
-    title: "NSWorks",
-    subtitle: "Always Do the Best",
-    description: "아무말"
+const useStyles = makeStyles(theme => ({
+  article_mid: {
+    display: "flex",
+    marginTop: 50,
+    flexWrap: "wrap",
+    justifyContent: "center",
+    "& > *": {
+      margin: "1%",
+      width: "23%",
+      minWidth: "250px",
+      height: 480
+    },
+    "& > * > img": {
+      position: "relative",
+      left: 0
+    },
+    "& > * > div": {
+      textAlign: "left",
+      padding: "25px 40px 0px",
+      fontSize: 19,
+      fontWeight: "bold"
+    },
+    "& > * > div:last-child": {
+      fontWeight: "normal"
+    }
   },
-  {
-    image: "./../../assets/images/features-split-image-02.png",
-    title: "NSWorks2",
-    subtitle: "Always Do the Best",
-    description: "아무말"
-  },
-  {
-    image: "./../../assets/images/features-split-image-03.png",
-    title: "NSWorks3",
-    subtitle: "Always Do the Best",
-    description: "아무말"
+  slider: {
+    width: "100%",
+    position: "absolute",
+    left: 0,
+    top: "80px",
+    height: 400,
+    "&  .awssld__bullets": {
+      display: "none"
+    },
+    "& .awssld__controls button": {
+      opacity: "0"
+    }
   }
-];
+}));
 
-const Slider = () => {
+const AutoplaySlider = withAutoplay(AwesomeSlider);
+
+const Slider = ({ data }) => {
+  const classes = useStyles();
   return (
-    <Carousel autoplay>
-      {heroData.map(v => (
-        <TitleImage data={v} />
-      ))}
-    </Carousel>
+    <div>
+      <AutoplaySlider
+        play={true}
+        cancelOnInteraction={false}
+        interval={2000}
+        className={classes.slider}
+      >
+        {data.map(v => (
+          <div data-src={require(v.image)}>
+            <Hero data={v} />
+          </div>
+        ))}
+      </AutoplaySlider>
+    </div>
   );
 };
 

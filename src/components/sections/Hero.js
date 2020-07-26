@@ -41,38 +41,39 @@ const Hero = ({
   return (
     <section {...props} className={outerClasses}>
       <div className="container-sm">
-        <div className={innerClasses}>
+        <div
+          className={innerClasses}
+          style={{
+            paddingTop: 0 + "px"
+          }}
+        >
           <div className="hero-content">
-            <h1
-              className="mt-0 mb-16 reveal-from-bottom"
-              data-reveal-delay="200"
-            >
+            <h1 className="mt-0 mb-16">
               <span className="text-color-primary">{data.title}</span>
             </h1>
-            <h3
-              className="mt-0 mb-16 reveal-from-bottom"
-              data-reveal-delay="200"
-            >
-              {data.subtitle}
-            </h3>
+            <h3 className="mt-0 mb-16">{data.subtitle}</h3>
             <div className="container-xs">
               <p
-                className="m-0 mb-32 reveal-from-bottom"
-                data-reveal-delay="400"
-                style={{ fontSize: 0.8 + "rem" }}
+                className="m-0 mb-32"
+                style={{
+                  fontSize: 0.8 + "rem",
+                  marginBottom: 20 + "px"
+                }}
               >
                 {data.description}
               </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div>
                 <ButtonGroup>
-                  <Button
-                    tag="a"
-                    color="primary"
-                    wideMobile
-                    href="https://cruip.com/"
-                  >
-                    자세히 보기
-                  </Button>
+                  {data.button ? (
+                    <Button
+                      tag="Link"
+                      color="primary"
+                      wideMobile
+                      to={data.button}
+                    >
+                      자세히 보기
+                    </Button>
+                  ) : null}
                 </ButtonGroup>
               </div>
             </div>

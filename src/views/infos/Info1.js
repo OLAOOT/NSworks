@@ -40,17 +40,17 @@ const useStyles = makeStyles(theme => ({
       fontWeight: "normal"
     }
   },
-  slider:{
-    width:'100%',
-    position:'absolute',
-    left:0,
-    top:'80px',
-    height:400,
+  slider: {
+    width: "100%",
+    position: "absolute",
+    left: 0,
+    top: "80px",
+    height: 400,
     "&  .awssld__bullets": {
-      display:'none'
+      display: "none"
     },
-    "& .awssld__controls button":{
-      opacity:'0'
+    "& .awssld__controls button": {
+      opacity: "0"
     }
   }
 }));
@@ -59,7 +59,12 @@ export default function Info1() {
   const classes = useStyles();
   return (
     <div>
-      <AutoplaySlider play={true} cancelOnInteraction={false} interval={2000} className={classes.slider}>
+      <AutoplaySlider
+        play={true}
+        cancelOnInteraction={false}
+        interval={2000}
+        className={classes.slider}
+      >
         <div data-src={img1}>
           <p className="slider_text">
             고객만족을 위한
@@ -91,9 +96,10 @@ export default function Info1() {
             <div>
               NSworks는 서버, 스토리지, 네트워크의 전문성으로 고객의 IT 인프라를
               통합적으로 제공하며, 이를 바탕으로 안정적인 IT환경과 완성도 높은
-              가상화를 고객에게 제공하는 기술력 있는 기업입니다. IT인프라의 기초가
-              되는 서버, 서버운영체제, 스토리지, 네트워크, 보안, 가상화에 대한
-              전문 엔지니어를 통해 고개의 복잡하고 다양한 요구를 수행합니다.
+              가상화를 고객에게 제공하는 기술력 있는 기업입니다. IT인프라의
+              기초가 되는 서버, 서버운영체제, 스토리지, 네트워크, 보안, 가상화에
+              대한 전문 엔지니어를 통해 고개의 복잡하고 다양한 요구를
+              수행합니다.
             </div>
           </div>
           <div className={classes.article_mid}>
@@ -135,10 +141,10 @@ export default function Info1() {
               <span>Major Service Partners</span>
             </div>
             <div>
-              고객사의 환경에 최적화된 인프라 구축을 위한 컨설팅을 통해 제품 판매
-              및 솔루션을 제공함은 물론 현재 사용중인 Server Storage의 유지보수
-              서비스를 제공하고 있습니다. 고객사의 비즈니스 성공을 위해 최선을
-              다하는 NSworks가 되겠습니다.
+              고객사의 환경에 최적화된 인프라 구축을 위한 컨설팅을 통해 제품
+              판매 및 솔루션을 제공함은 물론 현재 사용중인 Server Storage의
+              유지보수 서비스를 제공하고 있습니다. 고객사의 비즈니스 성공을 위해
+              최선을 다하는 NSworks가 되겠습니다.
             </div>
           </div>
           <div className={classes.article_mid}>
@@ -190,7 +196,9 @@ export default function Info1() {
             </tr>
             <tr>
               <th scope="row">주요사업</th>
-              <td>가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅</td>
+              <td>
+                가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅
+              </td>
             </tr>
           </table>
         </div>
