@@ -63,6 +63,19 @@
 #article2{
     padding-top:400px;
 }
+#article4{
+    padding-top:1px;
+}
+
+#Mymap{
+    margin: 0 auto;
+    margin-top:50px;
+    max-width:800px;
+    width:95%;
+    height:600px;
+    border: 1px solid #ccc
+}
+
 .article_top > div{
     margin-top:20px;
     font-size: 15px;;

@@ -12,7 +12,8 @@ import LayoutDefault from './layouts/LayoutDefault';
 import Home from './views/Home';
 import Info1 from './views/infos/Info1';
 import Info2 from './views/infos/Info2';
-
+import Info3 from './views/infos/Info3';
+import Info4 from './views/infos/Info4';
 
 // Initialize Google Analytics
 // ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -53,6 +54,11 @@ const App = () => {
             <Route exact path="/info/greeting" render={props => (
                 <LayoutDefault>
                   <Info2 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/info/location" render={props => (
+                <LayoutDefault>
+                  <Info4 {...props} />
                 </LayoutDefault>
             )} />
           </Switch>

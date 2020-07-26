@@ -11,6 +11,7 @@ import ceo from "./../../img/ceo-1.jpg";
 import img1 from "./../../img/img_ccai1.png";
 import img2 from "./../../img/img_ccai2.png";
 
+
 import '../../css/info.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -57,8 +58,8 @@ export default function Info2() {
     const classes = useStyles();
     return (
       <div>
-        {img_data.map(v => (
-          <TopImage data={v} />
+        {img_data.map((v,i) => (
+          <TopImage data={v} key={i}/>
         ))}
         <div className="info_container">
           
@@ -67,11 +68,11 @@ export default function Info2() {
               <p>The world's most powerful<br/> NSworks Service Team</p>
               <div>
                   <p>01</p>
-                  <p><p>Paradigm</p> 최적의 가상화, 디지털 기술, 빅데이터 역량을 활용</p>
+                  <p><span>Paradigm</span><br/> 최적의 가상화, 디지털 기술, 빅데이터 역량을 활용</p>
               </div>
               <div>
                   <p>02</p>
-                  <p><p>Service</p> 고객 여러분께서 쉽게 체감하실 수 있는 실용적인 상품과 서비스</p>
+                  <p><span>Service</span><br/> 고객 여러분께서 쉽게 체감하실 수 있는 실용적인 상품과 서비스</p>
               </div>
             </div>
           </div>

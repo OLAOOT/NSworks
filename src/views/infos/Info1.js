@@ -98,7 +98,7 @@ export default function Info1() {
           </div>
           <div className={classes.article_mid}>
             <Paper elevation={3}>
-              <img src={img1} />
+              <img src={img1} alt="empty"/>
               <div>제품 개발</div>
               <div>
                 HP,IBM,Dell서버,스토리지,백업장비, /Cisco, HP, Dell, Alcatel
@@ -106,7 +106,7 @@ export default function Info1() {
               </div>
             </Paper>
             <Paper elevation={3}>
-              <img src={img2} />
+              <img src={img2} alt="empty" />
               <div>솔루션</div>
               <div>
                 Citrix, Microsoft, Cisco, VMware, HP, Dell의 인프라 구축 및
@@ -114,7 +114,7 @@ export default function Info1() {
               </div>
             </Paper>
             <Paper elevation={3}>
-              <img src={img2} />
+              <img src={img2} alt="empty" />
               <div>컨설팅</div>
               <div>
                 고객사 환경에 최적화된 HW, SW, Network 인프라 구축을 위한 솔루션
@@ -122,7 +122,7 @@ export default function Info1() {
               </div>
             </Paper>
             <Paper elevation={3}>
-              <img src={img1} />
+              <img src={img1} alt="empty" />
               <div>유지보수</div>
               <div>
                 HP Industrial Server Storage 충북, 세종 공인 지원센터 Dell 충북,
@@ -167,31 +167,33 @@ export default function Info1() {
               </div>
             </Paper>
           </div>
-          <table class="type03">
-            <tr>
-              <th scope="row">회사명</th>
-              <td>엔에스웍스(주)</td>
-            </tr>
-            <tr>
-              <th scope="row">대표</th>
-              <td>김창영</td>
-            </tr>
-            <tr>
-              <th scope="row">설립일</th>
-              <td>2012년 2월 22일</td>
-            </tr>
-            <tr>
-              <th scope="row">소재지</th>
-              <td>세종특별시 한누리대로 249, 609호(나성동, 에스제이타워)</td>
-            </tr>
-            <tr>
-              <th scope="row">연락처</th>
-              <td>TEL 070-4232-2240 / FAX 044-868-2240</td>
-            </tr>
-            <tr>
-              <th scope="row">주요사업</th>
-              <td>가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅</td>
-            </tr>
+          <table className="type03">
+            <tbody>
+              <tr>
+                <th scope="row">회사명</th>
+                <td>엔에스웍스(주)</td>
+              </tr>
+              <tr>
+                <th scope="row">대표</th>
+                <td>김창영</td>
+              </tr>
+              <tr>
+                <th scope="row">설립일</th>
+                <td>2012년 2월 22일</td>
+              </tr>
+              <tr>
+                <th scope="row">소재지</th>
+                <td>세종특별시 한누리대로 249, 609호(나성동, 에스제이타워)</td>
+              </tr>
+              <tr>
+                <th scope="row">연락처</th>
+                <td>TEL 070-4232-2240 / FAX 044-868-2240</td>
+              </tr>
+              <tr>
+                <th scope="row">주요사업</th>
+                <td>가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>

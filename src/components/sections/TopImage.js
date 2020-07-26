@@ -5,7 +5,8 @@ import "react-awesome-slider/dist/captioned.css";
 import Hero from "../sections/Hero";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styled from "styled-components";
-import img3 from "./../../img/slider3.jpg";
+
+import banner from "./../../img/banner1.png";
 
 const SlideContainer = styled.div`
   position: absolute;
@@ -17,12 +18,12 @@ const SlideContainer = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   height:100%;
-  vertical-align: middle;
+  overflow:hidden;
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height:100%;
+  max-width:3840px;
+  
 `;
 
 const Text_container = styled.div`
@@ -36,7 +37,7 @@ const Text_container = styled.div`
 const Title = styled.div`
   font-size:50px;
   font-weight:bold;
-  color:#ffffff;
+  color:#000000;
   text-align:center;
 `;
 
@@ -44,7 +45,7 @@ const TopImage = ({ data }) => {
   return (
     <SlideContainer>
       <ImageContainer>
-        <Image src={img3} alt="image" />
+        <Image src={banner} alt="image" />
       </ImageContainer>
       <Text_container>
         <Title>{data.title}</Title>
