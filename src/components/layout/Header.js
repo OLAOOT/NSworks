@@ -68,8 +68,16 @@ const Header = ({
     $('#subclass'+event_id).show();
   }
 
+  const mouseOver2 = (e) => {
+    var event_target_style = e.target.style
+    $('.subclasses > *').css('background','#ffffff')
+    event_target_style.background = "#D8D8D8"
+    
+  }
+
   const mouseOut = (e) => {
     var event_id = e.target.className.replace('menu', '')        
+    $('.subclasses > *').css('background','#ffffff')
     $('#subclass'+event_id).hide();
    
   }
@@ -130,11 +138,10 @@ const Header = ({
                     <li onMouseOver={mouseOver}  onMouseOut={mouseOut}>
                       <Link to="/info/introduce" onClick={closeMenu} className="menu1">회사소개</Link>
                       <div id="subclass1" className="subclasses" >
-                        <Link to="/info/introduce" onClick={closeMenu} className="menu1">회사개요</Link>
-                        <Link to="/info/greeting" onClick={closeMenu} className="menu1">인사말</Link>
-                        <Link to="/info" onClick={closeMenu} className="menu1">연혁</Link>
-                        <Link to="/info" onClick={closeMenu} className="menu1">찾아오시는 길</Link>
-                        <Link to="/info" onClick={closeMenu} className="menu1">contact</Link>
+                        <Link to="/info/introduce" onMouseOver={mouseOver2} onClick={closeMenu} className="menu1">회사개요</Link>
+                        <Link to="/info/greeting" onMouseOver={mouseOver2} onClick={closeMenu} className="menu1">인사말</Link>
+                        <Link to="/info/history" onMouseOver={mouseOver2} onClick={closeMenu} className="menu1">연혁</Link>
+                        <Link to="/info/location" onMouseOver={mouseOver2} onClick={closeMenu} className="menu1">찾아오시는 길</Link>                        
                       </div>
                     </li>
                     <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu2">
@@ -147,7 +154,7 @@ const Header = ({
                       </div>
                     </li>
                     <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu3">
-                      <Link to="#0" onClick={closeMenu}>하드웨어인프라</Link>
+                      <Link to="#0" onClick={closeMenu}  className="menu3">하드웨어인프라</Link>
                       <div id="subclass3" className="subclasses" >
                         <Link to="/info" onClick={closeMenu} className="menu3">서버</Link>
                         <Link to="/info" onClick={closeMenu} className="menu3">스토리지</Link>
@@ -155,8 +162,8 @@ const Header = ({
                         <Link to="/info" onClick={closeMenu} className="menu3">보안</Link>
                       </div>
                     </li>
-                    <li>
-                      <Link to="#0" onClick={closeMenu} id="menu4">기술지원</Link>
+                    <li onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu4">
+                      <Link to="#0" onClick={closeMenu} className="menu4">기술지원</Link>
                       <div id="subclass4" className="subclasses" >
                         <Link to="/info" onClick={closeMenu} className="menu4">유지보수</Link>
                         <Link to="/info" onClick={closeMenu} className="menu4">기술지원문의</Link>

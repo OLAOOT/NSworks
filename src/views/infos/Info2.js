@@ -44,6 +44,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+<<<<<<< HEAD
 const img_data = {
   image: "./../../img/slider1.jpg",
   title: "인사말"
@@ -73,6 +74,28 @@ export default function Info2() {
                 <p>Service</p> 고객 여러분께서 쉽게 체감하실 수 있는 실용적인
                 상품과 서비스
               </p>
+=======
+export default function Info2() {    
+    const classes = useStyles();
+    return (
+      <div>
+        {img_data.map((v,i) => (
+          <TopImage data={v} key={i}/>
+        ))}
+        <div className="info_container">
+          
+          <div className="header">
+            <div>
+              <p>The world's most powerful<br/> NSworks Service Team</p>
+              <div>
+                  <p>01</p>
+                  <p><span>Paradigm</span><br/> 최적의 가상화, 디지털 기술, 빅데이터 역량을 활용</p>
+              </div>
+              <div>
+                  <p>02</p>
+                  <p><span>Service</span><br/> 고객 여러분께서 쉽게 체감하실 수 있는 실용적인 상품과 서비스</p>
+              </div>
+>>>>>>> ksh2
             </div>
           </div>
         </div>
