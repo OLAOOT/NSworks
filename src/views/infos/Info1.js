@@ -35,34 +35,37 @@ export default function Info1() {
   const classes = useStyles();
   return (
     <div>
-      {/* <AutoplaySlider
-        play={true}
-        cancelOnInteraction={false}
-        interval={2000}
-        className={classes.slider}
-      >
-        <div data-src={img1}>
-          <p className="slider_text">
-            고객만족을 위한
-            <br />
-            최고기술
-          </p>
-        </div>
-        <div data-src={img2}>
-          <p className="slider_text">
-            이익실현을 위한
-            <br />
-            효율경영
-          </p>
-        </div>
-        <div data-src={img3}>
-          <p className="slider_text">
-            동반성장을 위한
-            <br />
-            파트너쉽
-          </p>
-        </div>
-      </AutoplaySlider> */}
+      {window.location.href.indexOf('info') ?  (
+        <AutoplaySlider
+          play={true}
+          cancelOnInteraction={false}
+          interval={2000}
+          className={classes.slider}
+        >
+          <div data-src={img1}>
+            <p className="slider_text">
+              고객만족을 위한
+              <br />
+              최고기술
+            </p>
+          </div>
+          <div data-src={img2}>
+            <p className="slider_text">
+              이익실현을 위한
+              <br />
+              효율경영
+            </p>
+          </div>
+          <div data-src={img3}>
+            <p className="slider_text">
+              동반성장을 위한
+              <br />
+              파트너쉽
+            </p>
+          </div>
+        </AutoplaySlider>
+        ) : (<div></div>)
+      }
       <div className="info_container">
         <div className="article" id="article1">
           <div className="article_top">

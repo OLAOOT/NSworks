@@ -14,36 +14,7 @@ import img2 from "./../../img/img_ccai2.png";
 
 import "../../css/info.css";
 
-const useStyles = makeStyles(theme => ({
-  article_mid: {
-    display: "flex",
-    marginTop: 500,
-    flexWrap: "wrap",
-    justifyContent: "center",
 
-    "& > *": {
-      margin: "1%",
-      width: "30%",
-      minWidth: "250px",
-      height: 550
-    },
-    "& > * > img": {
-      position: "relative",
-      left: 0,
-      width: "100%",
-      maxHeight: "200px"
-    },
-    "& > * > div": {
-      textAlign: "left",
-      padding: "25px 40px 0px",
-      fontSize: 19,
-      fontWeight: "bold"
-    },
-    "& > * > div:last-child": {
-      fontWeight: "normal"
-    }
-  }
-}));
 
 const img_data = [
   {
@@ -52,8 +23,7 @@ const img_data = [
   }
 ];
 
-export default function Info4() {
-  const classes = useStyles();
+export default function Info4() {  
 
   if (window.location.href.indexOf("location")) {
     const script = document.createElement("script");
@@ -79,45 +49,48 @@ export default function Info4() {
 
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
+        map.setZoomable(false);    
+        map.setDraggable(false);    
       });
     };
   }
   return (
     <div>
-      {/* {img_data.map(v => (
+      {window.location.href.indexOf('info') ? (img_data.map(v => (
            <TopImage data={v} />
-        ))} */}
+        ))) : (<div></div>)}
       {/* <div className="info_container"> */}
-      <div className="article" id="article4">
-        <table className="type03">
-          <tr>
-            <th scope="row">주소</th>
-            <td>세종특별자치시 한누리대로 249, 에스제이타워 609호</td>
-          </tr>
-          <tr>
-            <th scope="row">전화</th>
-            <td>070-4232-2240</td>
-          </tr>
-          <tr>
-            <th scope="row">팩스</th>
-            <td>02-1234-5679</td>
-          </tr>
-          <tr>
-            <th scope="row">이메일</th>
-            <td>email@youremail.com</td>
-          </tr>
-          <tr>
-            <th scope="row">지하철 이용</th>
-            <td>지하철 이용 방법 안내</td>
-          </tr>
-          <tr>
-            <th scope="row">버스 이용</th>
-            <td>버스노선 및 코스 안내</td>
-          </tr>
-        </table>
-        <div id="Mymap" />
+      <div className="info_container">
+        <div className="article" id="article4">
+          <table className="type03">
+            <tr>
+              <th scope="row">주소</th>
+              <td>세종특별자치시 한누리대로 249, 에스제이타워 609호</td>
+            </tr>
+            <tr>
+              <th scope="row">전화</th>
+              <td>070-4232-2240</td>
+            </tr>
+            <tr>
+              <th scope="row">팩스</th>
+              <td>02-1234-5679</td>
+            </tr>
+            <tr>
+              <th scope="row">이메일</th>
+              <td>email@youremail.com</td>
+            </tr>
+            <tr>
+              <th scope="row">지하철 이용</th>
+              <td>지하철 이용 방법 안내</td>
+            </tr>
+            <tr>
+              <th scope="row">버스 이용</th>
+              <td>버스노선 및 코스 안내</td>
+            </tr>
+          </table>
+          <div id="Mymap" />
+        </div>
       </div>
-      {/* </div> */}
     </div>
   );
 }

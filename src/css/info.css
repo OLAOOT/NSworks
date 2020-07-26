@@ -113,7 +113,7 @@
     position: relative;
     left: 0
 }
-.info_container.article_mid > * > div {
+.info_container .article_mid > * > div {
     text-align: left;
     padding: 25px 40px 0px;
     font-size: 19px;

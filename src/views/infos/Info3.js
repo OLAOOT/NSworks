@@ -13,33 +13,15 @@ import history from "./../../img/history.jpg";
 import "../../css/info.css";
 
 const useStyles = makeStyles(theme => ({
-  article_mid: {
-    display: "flex",
+  img: {
+    position:"relative",
+    left:'50%',
+    transform:'translateX(-50%)',
     marginTop: 500,
     flexWrap: "wrap",
-    justifyContent: "center",
-
-    "& > *": {
-      margin: "1%",
-      width: "30%",
-      minWidth: "250px",
-      height: 550
-    },
-    "& > * > img": {
-      position: "relative",
-      left: 0,
-      width: "100%",
-      maxHeight: "200px"
-    },
-    "& > * > div": {
-      textAlign: "left",
-      padding: "25px 40px 0px",
-      fontSize: 19,
-      fontWeight: "bold"
-    },
-    "& > * > div:last-child": {
-      fontWeight: "normal"
-    }
+    
+    width:'95%',
+    maxWidth:800
   }
 }));
 
@@ -54,10 +36,10 @@ export default function Info3() {
   const classes = useStyles();
   return (
     <div>
-      {/* {img_data.map(v => (
+      {window.location.href.indexOf('info') ? (
+        img_data.map(v => (
           <TopImage data={v} />
-        ))} */}
-      {/* <div className="info_container" /> */}
+        ))):(<div></div>)}
       <div className="info_container">
           <div className="article">
             <img src={history} className={classes.img}/>          
