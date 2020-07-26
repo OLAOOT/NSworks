@@ -11,17 +11,17 @@
     text-align: center;
 }
 
-.header{
+.info_container .header{
     position: absolute;
     width: 100%;
     height: 400px;
     left: 0;
-    background:#F1F1F1;
+    background:#f8fafc;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.header > div{
+.info_container .header > div{
     position: relative;
     height: 75%;
     top: 50%;
@@ -32,28 +32,28 @@
     
 }
 
-.header > div > p{
+.info_container .header > div > p{
     text-align: center;
     font-weight: 500;
     font-size: 30px;
     color:#2E2E2E;
 }
-.header > div > div > p{
+.info_container .header > div > div > p{
     float: left;
     color:#2E2E2E;
 }
-.header > div > div > p:first-child{
+.info_container .header > div > div > p:first-child{
     width: 30%;
     text-align: center;
     font-size: 50px;
     padding-top:15px
 }
-.header > div > div > p:last-child{
+.info_container .header > div > div > p:last-child{
     width: 70%;
     font-size: 22px;
 }
 
-.header > div > div > p > p{
+.info_container .header > div > div > p > p{
     margin-bottom: 8px;
 }
 
@@ -63,6 +63,7 @@
 #article2{
     padding-top:400px;
 }
+
 #article4{
     padding-top:1px;
 }
@@ -76,38 +77,50 @@
     border: 1px solid #ccc
 }
 
-.article_top > div{
+.info_container .article_top > div{
     margin-top:20px;
     font-size: 15px;;
     color: #bdbdbd;
+    text-align: center;
 }
 
-.article_top > div:first-child{
+.info_container .article_top > div:first-child{
     font-weight: 500;
     margin-top:100px;
     text-align:center;
     font-size:30px;
     
 }
-.article_top > div:first-child > span{
+.info_container .article_top > div:first-child > span{
     padding-bottom: 5px;
     border-bottom: 2px solid #bdbdbd;
     color:#000000;
     
 }
-
-.article_mid{
-    padding-top:50px;
-    color:#2E2E2E
+.info_container .article_mid {
+    display: flex;
+    margin-top:100px;
+    flex-wrap: wrap;
+    justify-content:center;
 }
-.article_mid > div{
-    float:left;
-    width:50%
+.info_container .article_mid > * {
+    margin: 1%;
+    width: 23%;
+    min-width: 250px;
+    height: 480px
 }
-
-.article_mid > div:first-child{
-    padding: 2%;
-    width: 46%;
+.info_container .article_mid > * > img {
+    position: relative;
+    left: 0
+}
+.info_container.article_mid > * > div {
+    text-align: left;
+    padding: 25px 40px 0px;
+    font-size: 19px;
+    font-weight: bold
+}
+.info_container .article_mid > * > div:last-child {
+    font-weight: normal
 }
 
 table.type03 {

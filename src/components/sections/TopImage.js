@@ -5,7 +5,7 @@ import "react-awesome-slider/dist/captioned.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styled from "styled-components";
 
-import banner from "./../../img/banner_g.png";
+import banner from "./../../img/banner_w.png";
 
 const SlideContainer = styled.div`
   position: absolute;

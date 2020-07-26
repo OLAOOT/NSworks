@@ -15,31 +15,7 @@ import "../../css/info.css";
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const useStyles = makeStyles(theme => ({
-  article_mid: {
-    display: "flex",
-    marginTop: 50,
-    flexWrap: "wrap",
-    justifyContent: "center",
-    "& > *": {
-      margin: "1%",
-      width: "23%",
-      minWidth: "250px",
-      height: 480
-    },
-    "& > * > img": {
-      position: "relative",
-      left: 0
-    },
-    "& > * > div": {
-      textAlign: "left",
-      padding: "25px 40px 0px",
-      fontSize: 19,
-      fontWeight: "bold"
-    },
-    "& > * > div:last-child": {
-      fontWeight: "normal"
-    }
-  },
+  
   slider: {
     width: "100%",
     position: "absolute",
@@ -102,7 +78,7 @@ export default function Info1() {
               수행합니다.
             </div>
           </div>
-          <div className={classes.article_mid}>
+          <div className="article_mid">
             <Paper elevation={3}>
               <img src={img1} alt="empty"/>
               <div>제품 개발</div>
@@ -147,7 +123,7 @@ export default function Info1() {
               최선을 다하는 NSworks가 되겠습니다.
             </div>
           </div>
-          <div className={classes.article_mid}>
+          <div className="article_mid">
             <Paper elevation={3}>
               <img src={img4} />
               <div>기업</div>
