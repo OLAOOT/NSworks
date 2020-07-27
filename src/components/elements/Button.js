@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import { Link, NavLink } from "react-router-dom";
 
 const propTypes = {
   tag: PropTypes.elementType,
@@ -10,17 +11,17 @@ const propTypes = {
   wide: PropTypes.bool,
   wideMobile: PropTypes.bool,
   disabled: PropTypes.bool
-}
+};
 
 const defaultProps = {
-  tag: 'button',
-  color: '',
-  size: '',
+  tag: "button",
+  color: "",
+  size: "",
   loading: false,
   wide: false,
   wideMobile: false,
   disabled: false
-}
+};
 
 const Button = ({
   className,
@@ -33,14 +34,12 @@ const Button = ({
   disabled,
   ...props
 }) => {
-
   const classes = classNames(
-    'button',
-    color && `button-${color}`,
+    "button",
     size && `button-${size}`,
-    loading && 'is-loading',
-    wide && 'button-block',
-    wideMobile && 'button-wide-mobile',
+    loading && "is-loading",
+    wide && "button-block",
+    wideMobile && "button-wide-mobile",
     className
   );
 
@@ -50,9 +49,14 @@ const Button = ({
       {...props}
       className={classes}
       disabled={disabled}
+      style={{
+        background: "none",
+        border: "2px solid #ffffff",
+        color: "#ffffff"
+      }}
     />
   );
-}
+};
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;

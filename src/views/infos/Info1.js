@@ -15,7 +15,6 @@ import "../../css/info.css";
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const useStyles = makeStyles(theme => ({
-  
   slider: {
     width: "100%",
     position: "absolute",
@@ -27,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     },
     "& .awssld__controls button": {
       opacity: "0"
-    },
+    }
   }
 }));
 
@@ -35,7 +34,7 @@ export default function Info1() {
   const classes = useStyles();
   return (
     <div>
-      {window.location.href.indexOf('info') ?  (
+      {/* {window.location.href.indexOf('info') ?  (
         <AutoplaySlider
           play={true}
           cancelOnInteraction={false}
@@ -65,12 +64,19 @@ export default function Info1() {
           </div>
         </AutoplaySlider>
         ) : (<div></div>)
-      }
+      } */}
       <div className="info_container" id="info_container1">
         <div className="article" id="article1">
           <div className="article_top">
             <div>
-              <span>Virtualizing Your Information Infrastructure</span>
+              <span
+                id="info1"
+                style={{
+                  lineHeight: 50 + "px"
+                }}
+              >
+                Virtualizing Your Information Infrastructure
+              </span>
             </div>
             <div>
               NSworks는 서버, 스토리지, 네트워크의 전문성으로 고객의 IT 인프라를
@@ -152,36 +158,6 @@ export default function Info1() {
               </div>
             </Paper>
           </div>
-          <table className="type03">
-            <tbody>
-              <tr>
-                <th scope="row">회사명</th>
-                <td>엔에스웍스(주)</td>
-              </tr>
-              <tr>
-                <th scope="row">대표</th>
-                <td>김창영</td>
-              </tr>
-              <tr>
-                <th scope="row">설립일</th>
-                <td>2012년 2월 22일</td>
-              </tr>
-              <tr>
-                <th scope="row">소재지</th>
-                <td>세종특별시 한누리대로 249, 609호(나성동, 에스제이타워)</td>
-              </tr>
-              <tr>
-                <th scope="row">연락처</th>
-                <td>TEL 070-4232-2240 / FAX 044-868-2240</td>
-              </tr>
-              <tr>
-                <th scope="row">주요사업</th>
-                <td>
-                  가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>

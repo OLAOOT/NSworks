@@ -14,7 +14,7 @@ import img2 from "./../../img/img_ccai2.png";
 
 import "../../css/info.css";
 
-import $ from 'jquery';
+import $ from "jquery";
 window.$ = $;
 
 const img_data = [
@@ -24,8 +24,7 @@ const img_data = [
   }
 ];
 
-export default function Info4() {  
-
+export default function Info4() {
   if (window.location.href.indexOf("location")) {
     const script = document.createElement("script");
     script.async = true;
@@ -50,44 +49,59 @@ export default function Info4() {
 
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
-        map.setZoomable(false);    
-        map.setDraggable(false);    
+        map.setZoomable(false);
+        map.setDraggable(false);
       });
     };
   }
   return (
     <div>
-      {window.location.href.indexOf('info') === 22  ? (img_data.map(v => (
+      {/* {window.location.href.indexOf('info') === 22  ? (img_data.map(v => (
            <TopImage data={v} />
-        ))) : (<div></div>)}
-      {/* <div className="info_container"> */}
+        ))) : (<div></div>)} */}
       <div className="info_container" id="info_container4">
         <div className="article" id="article4">
           <table className="type03">
-            <tr>
-              <th scope="row">주소</th>
-              <td>세종특별자치시 한누리대로 249, 에스제이타워 609호</td>
-            </tr>
-            <tr>
-              <th scope="row">전화</th>
-              <td>070-4232-2240</td>
-            </tr>
-            <tr>
-              <th scope="row">팩스</th>
-              <td>02-1234-5679</td>
-            </tr>
-            <tr>
-              <th scope="row">이메일</th>
-              <td>email@youremail.com</td>
-            </tr>
-            <tr>
-              <th scope="row">지하철 이용</th>
-              <td>지하철 이용 방법 안내</td>
-            </tr>
-            <tr>
-              <th scope="row">버스 이용</th>
-              <td>버스노선 및 코스 안내</td>
-            </tr>
+            <tbody>
+              <tr>
+                <th scope="row">회사명</th>
+                <td>엔에스웍스(주)</td>
+              </tr>
+              <tr>
+                <th scope="row">대표</th>
+                <td>김창영</td>
+              </tr>
+              <tr>
+                <th scope="row">설립일</th>
+                <td>2012년 2월 22일</td>
+              </tr>
+              <tr>
+                <th scope="row">주요사업</th>
+                <td>
+                  가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">소재지</th>
+                <td>세종특별시 한누리대로 249, 609호(나성동, 에스제이타워)</td>
+              </tr>
+              <tr>
+                <th scope="row">연락처</th>
+                <td>TEL 070-4232-2240 / FAX 044-868-2240</td>
+              </tr>
+              <tr>
+                <th scope="row">이메일</th>
+                <td>email@youremail.com</td>
+              </tr>
+              <tr>
+                <th scope="row">지하철 이용</th>
+                <td>지하철 이용 방법 안내</td>
+              </tr>
+              <tr>
+                <th scope="row">버스 이용</th>
+                <td>버스노선 및 코스 안내</td>
+              </tr>
+            </tbody>
           </table>
           <div id="Mymap" />
         </div>

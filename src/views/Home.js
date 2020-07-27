@@ -6,7 +6,7 @@ import Info2 from "./infos/Info2";
 import Info3 from "./infos/Info3";
 import Info4 from "./infos/Info4";
 
-import $ from 'jquery';
+import $ from "jquery";
 window.$ = $;
 
 const heroData = [
@@ -52,9 +52,9 @@ const heroData = [
 const Home = () => {
   return (
     <>
-      {/*<Slider data={heroData} /> 카톡으로 말한 거 이거때문이었음*/}
+      <Slider data={heroData} />
       <Info1 />
-      <Info2 />
+      <Info2 id="info2" />
       <Info3 />
       <Info4 />
 

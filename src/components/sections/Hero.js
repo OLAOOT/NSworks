@@ -56,7 +56,8 @@ const Hero = ({
                 className="m-0 mb-32"
                 style={{
                   color: "#ffffff",
-                  marginBottom: 20 + "px"
+                  marginBottom: 20 + "px",
+                  fontSize: 1 + "rem"
                 }}
               >
                 {data.description}
@@ -64,14 +65,11 @@ const Hero = ({
               <div>
                 <ButtonGroup>
                   {data.button ? (
-                    <Button
-                      tag="Link"
-                      color="primary"
-                      wideMobile
-                      to={data.button}
-                    >
-                      자세히 보기
-                    </Button>
+                    <a href="#info1">
+                      <Button color="primary" wideMobile to={data.button}>
+                        자세히 보기
+                      </Button>
+                    </a>
                   ) : null}
                 </ButtonGroup>
               </div>
