@@ -20,6 +20,11 @@ import Virtualization2 from './views/virtualizations/Virtualization2';
 import Virtualization3 from './views/virtualizations/Virtualization3';
 import Virtualization4 from './views/virtualizations/Virtualization4';
 
+import Hardware1 from './views/hardwares/Hardware1';
+import Hardware2 from './views/hardwares/Hardware2';
+import Hardware3 from './views/hardwares/Hardware3';
+import Hardware4 from './views/hardwares/Hardware4';
+
 // Initialize Google Analytics
 // ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -101,6 +106,26 @@ const App = () => {
             <Route exact path="/vm/DR" render={props => (
                 <LayoutDefault>
                   <Virtualization4 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/hw/server" render={props => (
+                <LayoutDefault>
+                  <Hardware1 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/hw/storage" render={props => (
+                <LayoutDefault>
+                  <Hardware2 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/hw/network" render={props => (
+                <LayoutDefault>
+                  <Hardware3 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/hw/security" render={props => (
+                <LayoutDefault>
+                  <Hardware4 {...props} />
                 </LayoutDefault>
             )} />
           </Switch>
