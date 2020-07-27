@@ -71,6 +71,16 @@ const Header = ({
     setIsactive(false);
   };
 
+  const closeMenu1 = (e) => {
+    document.body.classList.remove("off-nav-is-active");
+    nav.current && (nav.current.style.maxHeight = null);
+    setIsactive(false);
+    console.log(e.target.name)
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#"+e.target.name).offset().top -30
+    }, 500);
+  };
+
   const mouseOver = e => {
     var event_id = e.target.className.replace("menu", "");
     $("#subclass" + event_id).show();
@@ -148,34 +158,38 @@ const Header = ({
                       </Link>
                       <div id="subclass1" className="subclasses">
                         <a
-                          href="#info1"
+                          href="#info_container1"
+                          name="info_container1"
                           onMouseOver={mouseOver2}
-                          onClick={closeMenu}
+                          onClick={closeMenu1}
                           className="menu1"
                           id="button1"
                         >
                           회사개요
                         </a>
                         <a
-                          href="#info2"
+                          href="#info_container2"
+                          name="info_container2"
                           onMouseOver={mouseOver2}
-                          onClick={closeMenu}
+                          onClick={closeMenu1}
                           className="menu1"
                         >
                           인사말
                         </a>
                         <a
-                          href="#info3"
+                          href="#info_container3"
+                          name="info_container3"
                           onMouseOver={mouseOver2}
-                          onClick={closeMenu}
+                          onClick={closeMenu1}
                           className="menu1"
                         >
                           연혁
                         </a>
                         <a
-                          href="#info4"
+                          href="#info_container4"
+                          name="info_container4"
                           onMouseOver={mouseOver2}
-                          onClick={closeMenu}
+                          onClick={closeMenu1}
                           className="menu1"
                         >
                           찾아오시는 길
