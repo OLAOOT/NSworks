@@ -14,10 +14,23 @@ import Info2 from "./views/infos/Info2";
 import Info3 from "./views/infos/Info3";
 import Info4 from "./views/infos/Info4";
 
-import Virtualization1 from "./views/virtualizations/Virtualization1";
-import Virtualization2 from "./views/virtualizations/Virtualization2";
-import Virtualization3 from "./views/virtualizations/Virtualization3";
-import Virtualization4 from "./views/virtualizations/Virtualization4";
+import Virtualization1 from './views/virtualizations/Virtualization1';
+import Virtualization2 from './views/virtualizations/Virtualization2';
+import Virtualization3 from './views/virtualizations/Virtualization3';
+import Virtualization4 from './views/virtualizations/Virtualization4';
+
+import Hardware1 from './views/hardwares/Hardware1';
+import Hardware2 from './views/hardwares/Hardware2';
+import Hardware3 from './views/hardwares/Hardware3';
+import Hardware4 from './views/hardwares/Hardware4';
+
+// Initialize Google Analytics
+// ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+
+// const trackPage = page => {
+//   ReactGA.set({ page });
+//   ReactGA.pageview(page);
+// };
 
 const App = () => {
   const childRef = useRef();
@@ -114,8 +127,27 @@ const App = () => {
                 <LayoutDefault>
                   <Virtualization4 {...props} />
                 </LayoutDefault>
-              )}
-            />
+            )} />
+            <Route exact path="/hw/server" render={props => (
+                <LayoutDefault>
+                  <Hardware1 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/hw/storage" render={props => (
+                <LayoutDefault>
+                  <Hardware2 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/hw/network" render={props => (
+                <LayoutDefault>
+                  <Hardware3 {...props} />
+                </LayoutDefault>
+            )} />
+            <Route exact path="/hw/security" render={props => (
+                <LayoutDefault>
+                  <Hardware4 {...props} />
+                </LayoutDefault>
+            )} />
           </Switch>
         </Router>
       )}
