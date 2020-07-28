@@ -7,7 +7,8 @@ import TopImage from "../../components/sections/TopImage";
 import classNames from "classnames";
 
 import hp1 from "./../../img/hp01_01.jpg";
-import hp2 from "./../../img/hp02_01.jpg";
+import hp2 from "./../../img/hp01_02.jpg";
+import hp3 from "./../../img/hp02_01.jpg";
 import dell1 from "./../../img/dell01_01.jpg";
 import dell2 from "./../../img/dell02_01.jpg";
 import dell3 from "./../../img/dell02_02.jpg";

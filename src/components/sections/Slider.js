@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     position: "absolute",
     left: 0,
-    top: "80px",
+    top: "64px",
     height: 400,
     "&  .awssld__bullets": {
       display: "none"
@@ -63,7 +63,7 @@ const Slider = ({ data }) => {
         className={classes.slider}
       >
         {data.map(v => (
-          <div data-src={require(v.image)} key={v.image}>
+          <div data-src={v.image} key={v.image}>
             <Hero data={v} />
           </div>
         ))}

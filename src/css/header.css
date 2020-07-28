@@ -1,15 +1,67 @@
 .subclasses{
-    display: inline;
     position: absolute;
     background-color: #ffffff;
     box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
     padding-left: 0;
     display:none;
+    top:40px;
+    
 }
 .subclasses >*{
+    width:100%;
     font-size:17px;
     list-style:none;
     padding: 20px !important;
     margin-bottom: 0;
-    color:#2E2E2E !important
+    color:#2E2E2E !important;
+    display: block;
+}
+
+.header{
+    height:64px;
+    background:#fafafa;
+    position: absolute;
+    width:100%
+}
+
+.tool{
+    padding-left:180px;
+    padding-right:180px;
+    height:100%;
+}
+@media (max-width:600px){
+    .tool{
+        padding-left:10px;
+        padding-right:10px;
+    }
+    .menus{
+        display:none
+    }
+}
+.tool img{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:150px
+}
+
+.menus{
+    padding-top:20px;
+    float: right;
+    height: 100%;
+}
+.menus > div{
+    float: left;
+    height:100%;
+    padding-left:10px;
+    padding-right:10px;
+}
+.menus > div > a{
+    color:#9CA9B3 !important;
+    font-size:16px;
+}
+
+.MuiAccordionDetails-root {
+    display:block !important;
+    color:#000000 !important
 }
