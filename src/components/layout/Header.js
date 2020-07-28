@@ -71,14 +71,17 @@ const Header = ({
     setIsactive(false);
   };
 
-  const closeMenu1 = (e) => {
+  const closeMenu1 = e => {
     document.body.classList.remove("off-nav-is-active");
     nav.current && (nav.current.style.maxHeight = null);
     setIsactive(false);
-    console.log(e.target.name)
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#"+e.target.name).offset().top -30
-    }, 500);
+    console.log(e.target.name);
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#" + e.target.name).offset().top - 30
+      },
+      500
+    );
   };
 
   const mouseOver = e => {
@@ -201,7 +204,11 @@ const Header = ({
                       onMouseOut={mouseOut}
                       id="menu2"
                     >
-                      <Link to="#0" onClick={closeMenu} className="menu2">
+                      <Link
+                        to="/vm/server"
+                        onClick={closeMenu}
+                        className="menu2"
+                      >
                         가상화인프라
                       </Link>
                       <div id="subclass2" className="subclasses">
@@ -244,20 +251,40 @@ const Header = ({
                       onMouseOut={mouseOut}
                       id="menu3"
                     >
-                      <Link to="#0" onClick={closeMenu} className="menu3">
+                      <Link
+                        to="/hw/server"
+                        onClick={closeMenu}
+                        className="menu3"
+                      >
                         하드웨어인프라
                       </Link>
                       <div id="subclass3" className="subclasses">
-                        <Link to="/hw/server" onClick={closeMenu} className="menu3">
+                        <Link
+                          to="/hw/server"
+                          onClick={closeMenu}
+                          className="menu3"
+                        >
                           서버
                         </Link>
-                        <Link to="/hw/storage" onClick={closeMenu} className="menu3">
+                        <Link
+                          to="/hw/storage"
+                          onClick={closeMenu}
+                          className="menu3"
+                        >
                           스토리지
                         </Link>
-                        <Link to="/hw/network" onClick={closeMenu} className="menu3">
+                        <Link
+                          to="/hw/network"
+                          onClick={closeMenu}
+                          className="menu3"
+                        >
                           네트워크
                         </Link>
-                        <Link to="/hw/security" onClick={closeMenu} className="menu3">
+                        <Link
+                          to="/hw/security"
+                          onClick={closeMenu}
+                          className="menu3"
+                        >
                           보안
                         </Link>
                       </div>
@@ -267,26 +294,26 @@ const Header = ({
                       onMouseOut={mouseOut}
                       id="menu4"
                     >
-                      <Link to="#0" onClick={closeMenu} className="menu4">
+                      <Link to="/" onClick={closeMenu} className="menu4">
                         기술지원
                       </Link>
                       <div id="subclass4" className="subclasses">
-                        <Link to="/info" onClick={closeMenu} className="menu4">
+                        <Link to="/" onClick={closeMenu} className="menu4">
                           유지보수
                         </Link>
-                        <Link to="/info" onClick={closeMenu} className="menu4">
+                        <Link to="/" onClick={closeMenu} className="menu4">
                           기술지원문의
                         </Link>
-                        <Link to="/info" onClick={closeMenu} className="menu4">
+                        <Link to="/" onClick={closeMenu} className="menu4">
                           자료실
                         </Link>
-                        <Link to="/info" onClick={closeMenu} className="menu4">
+                        <Link to="/" onClick={closeMenu} className="menu4">
                           원격지원
                         </Link>
                       </div>
                     </li>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>
+                      <Link to="/" onClick={closeMenu}>
                         원격지원
                       </Link>
                     </li>

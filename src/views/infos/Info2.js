@@ -1,18 +1,6 @@
 import React from "react";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "react-awesome-slider/dist/styles.css";
-import "react-awesome-slider/dist/captioned.css";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import TopImage from "../../components/sections/TopImage";
 import classNames from "classnames";
-import { SectionSplitProps } from "../../utils/SectionProps";
 import styled from "styled-components";
-
-import ceo from "./../../img/ceo-1.jpg";
-import img1 from "./../../img/img_ccai1.png";
-import img2 from "./../../img/img_ccai2.png";
 
 import "../../css/info.css";
 
@@ -98,7 +86,7 @@ const GreetingSplit = ({
                     fontSize: 1.2 + "rem"
                   }}
                 >
-                  안녕하세요 NSworks CEO 최일준 입니다
+                  안녕하세요, NSworks CEO 최일준 입니다.
                 </h3>
                 <p
                   className="m-0"

@@ -16,16 +16,15 @@ const SlideContainer = styled.div`
 `;
 const ImageContainer = styled.div`
   width: 100%;
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 `;
 
 const Image = styled.img`
-  max-width:3840px;
-  
+  max-width: 3840px;
 `;
 
-const Text_container = styled.div`
+const TextContainer = styled.div`
   text-align: center;
   position: absolute;
   top: 50%;
@@ -34,10 +33,18 @@ const Text_container = styled.div`
 `;
 
 const Title = styled.div`
-  font-size:50px;
-  font-weight:bold;
-  color:#000000;
-  text-align:center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+`;
+
+const Subtitle = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-top: 16px;
 `;
 
 const TopImage = ({ data }) => {
@@ -46,9 +53,10 @@ const TopImage = ({ data }) => {
       <ImageContainer>
         <Image src={banner} alt="image" />
       </ImageContainer>
-      <Text_container>
+      <TextContainer>
         <Title>{data.title}</Title>
-      </Text_container>
+        <Subtitle>{data.subtitle}</Subtitle>
+      </TextContainer>
     </SlideContainer>
   );
 };
