@@ -1,307 +1,217 @@
-import React, { useState, useRef, useEffect } from "react";
-import PropTypes from "prop-types";
-import classNames from "classnames";
-import { Link, NavLink } from "react-router-dom";
-import Logo from "./partials/Logo";
+import React from 'react';
+import {Link } from 'react-router-dom';
+import AppBar from '@material-ui/core/AppBar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Divider from '@material-ui/core/Divider';
+import Drawer from '@material-ui/core/Drawer';
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import PeopleIcon from '@material-ui/icons/People';
+import MenuIcon from '@material-ui/icons/Menu';
+import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import BusinessIcon from '@material-ui/icons/Business';
 import "../../css/header.css";
-
-import $ from "jquery";
+import logo from "./../../img/logo.png";
+import $ from 'jquery';
 window.$ = $;
 
-$("#button1").click(function() {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#elementtoScrollToID").offset().top
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    zIndex:9999,
+    height : '64px'
+  },
+  drawer: {
+    [theme.breakpoints.up('sm')]: {
+      width: drawerWidth,
+      flexShrink: 0,
     },
-    2000
+  },
+  appBar: {
+    [theme.breakpoints.up('sm')]: {
+      width: `100%`,
+      marginLeft: drawerWidth,
+      zIndex:9999,
+    },
+    height:'64px',
+    background:'#fafafa',
+    boxShadow:'0px 0px 0px 0px !important'
+  },
+  menuButton: {
+    marginLeft: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+    position:'absolute',
+    right:0
+  },
+  toolbar: theme.mixins.toolbar,
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+  icon_wrap1: {
+    position:"absolute",
+    right:30,
+    width:50
+  },
+  icon_wrap2: {
+    flaot:'right',
+    color:'#ffffff',
+    textDecoration:'none'
+  },
+  txt_deco_none:{
+    color:'#000000',
+    textDecoration:'none'
+  },
+  txt_deco_none2:{
+    color:'#000000',
+    textDecoration:'none'
+  },
+  clicked_item:{    
+    textDecoration:'none',
+    backgroundColor:'#D8D8D8',
+    color:'#000000'
+  },
+  unclicked_item:{    
+    textDecoration:'none',
+    backgroundColor:'#ffffff',
+    color:'#000000'
+  }
+}));
+
+function Header(props) {
+  const { window } = props;
+  const classes = useStyles();
+  const theme = useTheme();
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  
+  //console.log(props.current_link)
+  
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const handleLogout = () => {
+    fetch('/logout'); 
+  };
+  const drawer = (
+    <div>
+      <div className={classes.toolbar} />
+      <Divider />
+        <List>
+          <Link to="/" className={classes.txt_deco_none}>
+            <ListItem button key='aaa' className={props.current_link === '/' ? classes.clicked_item : classes.unclicked_item }>
+              <ListItemText primary='aaa' />
+            </ListItem>
+          </Link>
+          <Link to="/customer" className={classes.txt_deco_none}>
+            <ListItem button key='bbb' className={props.current_link === '/customer' ? classes.clicked_item : classes.unclicked_item }>
+              <ListItemText primary='bbb' />
+            </ListItem>
+          </Link>
+          <Link to="/manager" className={classes.txt_deco_none}>
+            <ListItem button key='ccc' className={props.current_link === '/manager' ? classes.clicked_item : classes.unclicked_item }>
+              <ListItemText primary='ccc' />
+            </ListItem>
+          </Link>
+        </List>
+      <Divider />
+      <List>
+        <Link to="/journal" className={classes.txt_deco_none}>
+          <ListItem button key='ddd' className={props.current_link === '/journal' ? classes.clicked_item : classes.unclicked_item }>
+            <ListItemText primary='ddd' />
+          </ListItem>
+        </Link>
+
+        <Link to="/attendance" className={classes.txt_deco_none}>
+          <ListItem button key='eee' className={props.current_link === '/attendance' ? classes.clicked_item : classes.unclicked_item }>
+            <ListItemText primary='eee' />
+          </ListItem>
+        </Link>
+      </List>
+    </div>
   );
-});
 
-const propTypes = {
-  navPosition: PropTypes.string,
-  hideNav: PropTypes.bool,
-  hideSignin: PropTypes.bool,
-  bottomOuterDivider: PropTypes.bool,
-  bottomDivider: PropTypes.bool
-};
-
-const defaultProps = {
-  navPosition: "",
-  hideNav: false,
-  hideSignin: false,
-  bottomOuterDivider: false,
-  bottomDivider: false
-};
-
-const Header = ({
-  className,
-  navPosition,
-  hideNav,
-  hideSignin,
-  bottomOuterDivider,
-  bottomDivider,
-  ...props
-}) => {
-  const [isActive, setIsactive] = useState(false);
-
-  const nav = useRef(null);
-  const hamburger = useRef(null);
-
-  useEffect(() => {
-    isActive && openMenu();
-    document.addEventListener("keydown", keyPress);
-    document.addEventListener("click", clickOutside);
-    return () => {
-      document.removeEventListener("keydown", keyPress);
-      document.addEventListener("click", clickOutside);
-      closeMenu();
-    };
-  });
-
-  const openMenu = () => {
-    document.body.classList.add("off-nav-is-active");
-    nav.current.style.maxHeight = nav.current.scrollHeight + "px";
-    setIsactive(true);
-  };
-
-  const closeMenu = () => {
-    document.body.classList.remove("off-nav-is-active");
-    nav.current && (nav.current.style.maxHeight = null);
-    setIsactive(false);
-  };
-
-  const closeMenu1 = (e) => {
-    document.body.classList.remove("off-nav-is-active");
-    nav.current && (nav.current.style.maxHeight = null);
-    setIsactive(false);
-    console.log(e.target.name)
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#"+e.target.name).offset().top -30
-    }, 500);
-  };
-
-  const mouseOver = e => {
-    var event_id = e.target.className.replace("menu", "");
-    $("#subclass" + event_id).show();
-  };
-
-  const mouseOver2 = e => {
-    var event_target_style = e.target.style;
-    $(".subclasses > *").css("background", "#ffffff");
-    event_target_style.background = "#D8D8D8";
-  };
-
-  const mouseOut = e => {
-    var event_id = e.target.className.replace("menu", "");
-    $(".subclasses > *").css("background", "#ffffff");
-    $("#subclass" + event_id).hide();
-  };
-
-  const keyPress = e => {
-    isActive && e.keyCode === 27 && closeMenu();
-  };
-
-  const clickOutside = e => {
-    if (!nav.current) return;
-    if (
-      !isActive ||
-      nav.current.contains(e.target) ||
-      e.target === hamburger.current
-    )
-      return;
-    closeMenu();
-  };
-
-  const classes = classNames(
-    "site-header",
-    bottomOuterDivider && "has-bottom-divider",
-    className
-  );
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <header {...props} className={classes}>
-      <div className="container">
-        <div
-          className={classNames(
-            "site-header-inner",
-            bottomDivider && "has-bottom-divider"
-          )}
+    <div className={classes.root}>
+    <CssBaseline />
+    <div className="header">
+      <div className="tool">
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          edge="start"
+          onClick={handleDrawerToggle}
+          className={classes.menuButton}
         >
-          <Logo />
-          {!hideNav && (
-            <>
-              <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
-              >
-                <span className="screen-reader">Menu</span>
-                <span className="hamburger">
-                  <span className="hamburger-inner" />
-                </span>
-              </button>
-              <nav
-                ref={nav}
-                className={classNames("header-nav", isActive && "is-active")}
-              >
-                <div className="header-nav-inner">
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                  >
-                    <li onMouseOver={mouseOver} onMouseOut={mouseOut}>
-                      <Link to="/" onClick={closeMenu} className="menu1">
-                        회사소개
-                      </Link>
-                      <div id="subclass1" className="subclasses">
-                        <a
-                          href="#info_container1"
-                          name="info_container1"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu1}
-                          className="menu1"
-                          id="button1"
-                        >
-                          회사개요
-                        </a>
-                        <a
-                          href="#info_container2"
-                          name="info_container2"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu1}
-                          className="menu1"
-                        >
-                          인사말
-                        </a>
-                        <a
-                          href="#info_container3"
-                          name="info_container3"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu1}
-                          className="menu1"
-                        >
-                          연혁
-                        </a>
-                        <a
-                          href="#info_container4"
-                          name="info_container4"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu1}
-                          className="menu1"
-                        >
-                          찾아오시는 길
-                        </a>
-                      </div>
-                    </li>
-                    <li
-                      onMouseOver={mouseOver}
-                      onMouseOut={mouseOut}
-                      id="menu2"
-                    >
-                      <Link to="#0" onClick={closeMenu} className="menu2">
-                        가상화인프라
-                      </Link>
-                      <div id="subclass2" className="subclasses">
-                        <Link
-                          to="/vm/server"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu}
-                          className="menu2"
-                        >
-                          서버 가상화
-                        </Link>
-                        <Link
-                          to="/vm/desktop"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu}
-                          className="menu2"
-                        >
-                          데스크탑 가상화
-                        </Link>
-                        <Link
-                          to="/vm/storage"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu}
-                          className="menu2"
-                        >
-                          스토리지 가상화
-                        </Link>
-                        <Link
-                          to="/vm/DR"
-                          onMouseOver={mouseOver2}
-                          onClick={closeMenu}
-                          className="menu2"
-                        >
-                          재해복구시스템(DR)
-                        </Link>
-                      </div>
-                    </li>
-                    <li
-                      onMouseOver={mouseOver}
-                      onMouseOut={mouseOut}
-                      id="menu3"
-                    >
-                      <Link to="#0" onClick={closeMenu} className="menu3">
-                        하드웨어인프라
-                      </Link>
-                      <div id="subclass3" className="subclasses">
-                        <Link to="/hw/server" onClick={closeMenu} className="menu3">
-                          서버
-                        </Link>
-                        <Link to="/hw/storage" onClick={closeMenu} className="menu3">
-                          스토리지
-                        </Link>
-                        <Link to="/hw/network" onClick={closeMenu} className="menu3">
-                          네트워크
-                        </Link>
-                        <Link to="/hw/security" onClick={closeMenu} className="menu3">
-                          보안
-                        </Link>
-                      </div>
-                    </li>
-                    <li
-                      onMouseOver={mouseOver}
-                      onMouseOut={mouseOut}
-                      id="menu4"
-                    >
-                      <Link to="#0" onClick={closeMenu} className="menu4">
-                        기술지원
-                      </Link>
-                      <div id="subclass4" className="subclasses">
-                        <Link to="/info" onClick={closeMenu} className="menu4">
-                          유지보수
-                        </Link>
-                        <Link to="/info" onClick={closeMenu} className="menu4">
-                          기술지원문의
-                        </Link>
-                        <Link to="/info" onClick={closeMenu} className="menu4">
-                          자료실
-                        </Link>
-                        <Link to="/info" onClick={closeMenu} className="menu4">
-                          원격지원
-                        </Link>
-                      </div>
-                    </li>
-                    <li>
-                      <Link to="#0" onClick={closeMenu}>
-                        원격지원
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </>
-          )}
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" noWrap>
+          <Link to="/" className={classes.txt_deco_none2}>
+            <img src={logo}/>
+          </Link>
+        </Typography>
+        <div className="menus">
+          <Link to="/login">
+            <Button color="inherit"  onClick={handleLogout}>회사소개</Button>
+          </Link>
+          <Link to="/login">
+            <Button color="inherit"  onClick={handleLogout}>가상화인프라</Button>
+          </Link>
+          <Link to="/login">
+            <Button color="inherit"  onClick={handleLogout}>하드웨어인프라</Button>
+          </Link>
+          <Link to="/login">
+            <Button color="inherit"  onClick={handleLogout}>기술지원</Button>
+          </Link>
+          <Link to="/login">
+            <Button color="inherit"  onClick={handleLogout}>원격지원</Button>
+          </Link>
         </div>
       </div>
-    </header>
-  );
-};
-
-Header.propTypes = propTypes;
-Header.defaultProps = defaultProps;
-
+    </div>
+    <nav className={classes.drawer} aria-label="mailbox folders">
+      {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+      <Hidden smUp implementation="css">
+        <Drawer
+          container={container}
+          variant="temporary"
+          anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Hidden>
+      
+    </nav>
+    </div>
+    );
+}
 export default Header;

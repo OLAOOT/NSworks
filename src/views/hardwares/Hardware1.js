@@ -6,7 +6,8 @@ import Paper from '@material-ui/core/Paper';
 import TopImage from "../../components/sections/TopImage";
 
 import hp1 from "./../../img/hp01_01.jpg";
-import hp2 from "./../../img/hp02_01.jpg";
+import hp2 from "./../../img/hp01_02.jpg";
+import hp3 from "./../../img/hp02_01.jpg";
 import dell1 from "./../../img/dell01_01.jpg";
 import dell2 from "./../../img/dell02_01.jpg";
 import dell3 from "./../../img/dell02_02.jpg";
@@ -76,7 +77,7 @@ export default function Hardware1() {
                         이제 새로운 접근 방법을 통해 비즈니스 요구사항과 IT인프라의 간격을 줄일 때 입니다. 인프라스트럭쳐의 핵심인 Compute에 대해 새롭게 접근할 필요가 있습니다. 
                         비즈니스의 혁신은 Compute에 대한 새로운 접근을 통해 이루어 질 수 있습니다.
                     </div>
-                    <img src={hp2}/>
+                    <img src={hp3}/>
                     <div>
                         데이터센터의 60% 파워와 40%의 쿨링 비용이 Compute를 위해 사용됩니다. Compute를 위한 서버는 데이터센터 상면의 60%를 차지하며, 
                         나머지 40%가 스토리지와 네트워크를 차지합니다. Compute는 데이터센터의 핵심이며, 서버는 Compute를 위한 핵심 요소입니다. <br/>

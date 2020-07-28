@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     position: "absolute",
     left: 0,
-    top: "80px",
+    top: "64px",
     height: 400,
     "&  .awssld__bullets": {
       display: "none"
