@@ -8,19 +8,14 @@ import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import PeopleIcon from '@material-ui/icons/People';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
-import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
-import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-
-import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
-import BusinessIcon from '@material-ui/icons/Business';
 import "../../css/header.css";
 import logo from "./../../img/logo.png";
 import $ from 'jquery';
@@ -77,23 +72,13 @@ const useStyles = makeStyles((theme) => ({
     textDecoration:'none'
   },
   txt_deco_none:{
-    color:'#000000',
+    color:'#000000 !important',
     textDecoration:'none'
   },
   txt_deco_none2:{
-    color:'#000000',
+    color:'#000000 !important',
     textDecoration:'none'
   },
-  clicked_item:{    
-    textDecoration:'none',
-    backgroundColor:'#D8D8D8',
-    color:'#000000'
-  },
-  unclicked_item:{    
-    textDecoration:'none',
-    backgroundColor:'#ffffff',
-    color:'#000000'
-  }
 }));
 
 function Header(props) {
@@ -109,44 +94,180 @@ function Header(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleLogout = () => {
-    fetch('/logout'); 
-  };
+  const mouseOver = (e) => {
+    var event_id = e.target.className.replace('menu', '')    
+    $('#subclass'+event_id).show();
+  }
+
+  const mouseOver2 = (e) => {
+    var event_target_style = e.target.style
+    $('.subclasses > *').css('background','#ffffff')
+    event_target_style.background = "#D8D8D8"
+    
+  }
+
+  const mouseOut = (e) => {
+    var event_id = e.target.className.replace('menu', '')        
+    $('.subclasses > *').css('background','#ffffff')
+    $('#subclass'+event_id).hide();
+   
+  }
+
+  $('#details > *').click(function(){
+    $('#menuBtn').click()
+  })
+    
+   
+  
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
       <Divider />
         <List>
-          <Link to="/" className={classes.txt_deco_none}>
-            <ListItem button key='aaa' className={props.current_link === '/' ? classes.clicked_item : classes.unclicked_item }>
-              <ListItemText primary='aaa' />
-            </ListItem>
-          </Link>
-          <Link to="/customer" className={classes.txt_deco_none}>
-            <ListItem button key='bbb' className={props.current_link === '/customer' ? classes.clicked_item : classes.unclicked_item }>
-              <ListItemText primary='bbb' />
-            </ListItem>
-          </Link>
-          <Link to="/manager" className={classes.txt_deco_none}>
-            <ListItem button key='ccc' className={props.current_link === '/manager' ? classes.clicked_item : classes.unclicked_item }>
-              <ListItemText primary='ccc' />
-            </ListItem>
-          </Link>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>회사소개</Typography>
+            </AccordionSummary>
+            <AccordionDetails id="details">
+              <div>
+                <Link to="/info/introduce" className={classes.txt_deco_none}>
+                  <ListItem button key='회사개요'>
+                    <ListItemText primary='회사개요' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/info/greeting" className={classes.txt_deco_none}>
+                  <ListItem button key='인사말'>
+                    <ListItemText primary='인사말' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/info/history" className={classes.txt_deco_none}>
+                  <ListItem button key='연혁'>
+                    <ListItemText primary='연혁' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/info/location" className={classes.txt_deco_none}>
+                  <ListItem button key='찾아오시는길'>
+                    <ListItemText primary='찾아오시는길' />
+                  </ListItem>
+                </Link>
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>가상화인프라</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div>
+                <Link to="/vm/desktop" className={classes.txt_deco_none}>
+                  <ListItem button key='서버가상화'>
+                    <ListItemText primary='서버가상화' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/vm/storage" className={classes.txt_deco_none}>
+                  <ListItem button key='데스크탑가상화'>
+                    <ListItemText primary='데스크탑가상화' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/vm/storage" className={classes.txt_deco_none}>
+                  <ListItem button key='스토리지가상화'>
+                    <ListItemText primary='스토리지가상화' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/vm/DR" className={classes.txt_deco_none}>
+                  <ListItem button key='재해복구시스템'>
+                    <ListItemText primary='재해복구시스템' />
+                  </ListItem>
+                </Link>
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>하드웨어인프라</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div>
+                <Link to="/hw/server" className={classes.txt_deco_none} onClick="alert('hi')">
+                  <ListItem button key='서버'>
+                    <ListItemText primary='서버' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/hw/storage" className={classes.txt_deco_none}>
+                  <ListItem button key='스토리지'>
+                    <ListItemText primary='스토리지' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/info/network" className={classes.txt_deco_none}>
+                  <ListItem button key='네트워크'>
+                    <ListItemText primary='네트워크' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/info/security" className={classes.txt_deco_none}>
+                  <ListItem button key='보안'>
+                    <ListItemText primary='보안' />
+                  </ListItem>
+                </Link>
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>유지보수</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div>
+                <Link to="/info/introduce" className={classes.txt_deco_none}>
+                  <ListItem button key='엔지니어 현황'>
+                    <ListItemText primary='엔지니어 현황' />
+                  </ListItem>
+                </Link>
+              </div>
+              <div>
+                <Link to="/info/greeting" className={classes.txt_deco_none}>
+                  <ListItem button key='유지보수'>
+                    <ListItemText primary='유지보수' />
+                  </ListItem>
+                </Link>
+              </div>
+            </AccordionDetails>
+          </Accordion>
         </List>
-      <Divider />
-      <List>
-        <Link to="/journal" className={classes.txt_deco_none}>
-          <ListItem button key='ddd' className={props.current_link === '/journal' ? classes.clicked_item : classes.unclicked_item }>
-            <ListItemText primary='ddd' />
-          </ListItem>
-        </Link>
-
-        <Link to="/attendance" className={classes.txt_deco_none}>
-          <ListItem button key='eee' className={props.current_link === '/attendance' ? classes.clicked_item : classes.unclicked_item }>
-            <ListItemText primary='eee' />
-          </ListItem>
-        </Link>
-      </List>
     </div>
   );
 
@@ -163,6 +284,7 @@ function Header(props) {
           edge="start"
           onClick={handleDrawerToggle}
           className={classes.menuButton}
+          id="menuBtn"
         >
           <MenuIcon />
         </IconButton>
@@ -172,21 +294,40 @@ function Header(props) {
           </Link>
         </Typography>
         <div className="menus">
-          <Link to="/login">
-            <Button color="inherit"  onClick={handleLogout}>회사소개</Button>
-          </Link>
-          <Link to="/login">
-            <Button color="inherit"  onClick={handleLogout}>가상화인프라</Button>
-          </Link>
-          <Link to="/login">
-            <Button color="inherit"  onClick={handleLogout}>하드웨어인프라</Button>
-          </Link>
-          <Link to="/login">
-            <Button color="inherit"  onClick={handleLogout}>기술지원</Button>
-          </Link>
-          <Link to="/login">
-            <Button color="inherit"  onClick={handleLogout}>원격지원</Button>
-          </Link>
+          <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu1">
+            <Link to="/info/introduce" className="menu1">회사소개</Link>
+            <div id="subclass1" className="subclasses" >
+              <Link to="/info/introduce" onMouseOver={mouseOver2} className="menu1">회사개요</Link>
+              <Link to="/info/greeting" onMouseOver={mouseOver2} className="menu1">인사말</Link>
+              <Link to="/info/history" onMouseOver={mouseOver2} className="menu1">연혁</Link>
+              <Link to="/info/location" onMouseOver={mouseOver2} className="menu1">찾아오시는 길</Link>                        
+            </div>
+          </div>
+          <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu2">
+            <Link to="#0" className="menu2">가상화인프라</Link>
+            <div id="subclass2" className="subclasses" >
+              <Link to="/vm/server" onMouseOver={mouseOver2} className="menu2">서버 가상화</Link>
+              <Link to="/vm/desktop" onMouseOver={mouseOver2} className="menu2">데스크탑 가상화</Link>
+              <Link to="/vm/storage" onMouseOver={mouseOver2} className="menu2">스토리지 가상화</Link>
+              <Link to="/vm/DR" onMouseOver={mouseOver2} className="menu2">재해복구시스템(DR)</Link>
+            </div>
+          </div>
+          <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu3">
+            <Link to="#0" className="menu3">하드웨어인프라</Link>
+            <div id="subclass3" className="subclasses" >
+              <Link to="/hw/server" onMouseOver={mouseOver2} className="menu3">서버</Link>
+              <Link to="/hw/storage" onMouseOver={mouseOver2} className="menu3">스토리지</Link>
+              <Link to="/hw/network" onMouseOver={mouseOver2} className="menu3">네트워크</Link>
+              <Link to="/hw/security" onMouseOver={mouseOver2} className="menu3">보안</Link>
+            </div>
+          </div>
+          <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu4">
+            <Link to="#0" className="menu4">유지보수</Link>
+            <div id="subclass4" className="subclasses" >
+              <Link to="/info" className="menu4">엔지니어 현황</Link>
+              <Link to="/info" className="menu4">유지보수</Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
