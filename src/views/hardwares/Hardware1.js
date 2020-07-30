@@ -182,7 +182,7 @@ export default function Hardware1() {
           <div className="article_mid">
             <img src={hp2} />
           </div>
-          <div class="pdf_wrap">
+          <div className="pdf_wrap">
             <p>
               <a
                 href="http://nsworks.ns7.biz/data_sheet/HPE_Server_Gen9_Brochure.pdf"

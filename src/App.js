@@ -26,6 +26,9 @@ import Hardware2 from "./views/hardwares/Hardware2";
 import Hardware3 from "./views/hardwares/Hardware3";
 import Hardware4 from "./views/hardwares/Hardware4";
 
+import Engineer1 from "./views/engineers/Engineer1";
+import Engineer2 from "./views/engineers/Engineer2";
+
 const App = () => {
   const childRef = useRef();
   let location = useLocation();
@@ -164,6 +167,24 @@ const App = () => {
               render={props => (
                 <LayoutDefault>
                   <Hardware4 {...props} />
+                </LayoutDefault>
+              )}
+            />
+            <Route
+              exact
+              path="/mt/engineer"
+              render={props => (
+                <LayoutDefault>
+                  <Engineer1 {...props} />
+                </LayoutDefault>
+              )}
+            />
+            <Route
+              exact
+              path="/mt/maintenance"
+              render={props => (
+                <LayoutDefault>
+                  <Engineer2 {...props} />
                 </LayoutDefault>
               )}
             />

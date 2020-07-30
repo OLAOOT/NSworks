@@ -6,7 +6,7 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
-import history from "./../../img/history.jpg";
+import history from "./../../img/history.png";
 import "../../css/info.css";
 import $ from 'jquery';
 window.$ = $;

@@ -113,6 +113,16 @@ function Header(props) {
    
   }
 
+  const scroll_mv = (e) => {
+    //if(window.location.href)
+    if(document.location.pathname != '/' ){
+      document.location.href="/#"+e.target.name;
+    }
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#"+e.target.name).offset().top -30
+    }, 500);
+  };
+
   $('#details > *').click(function(){
     $('#menuBtn').click()
   })
@@ -299,12 +309,12 @@ function Header(props) {
         </Typography>
         <div className="menus">
           <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu1">
-            <Link to="/info/introduce" className="menu1">회사소개</Link>
+            <Link to="#info_container1" className="menu1">회사소개</Link>
             <div id="subclass1" className="subclasses" >
-              <Link to="/info/introduce" onMouseOver={mouseOver2} className="menu1">회사개요</Link>
-              <Link to="/info/greeting" onMouseOver={mouseOver2} className="menu1">인사말</Link>
-              <Link to="/info/history" onMouseOver={mouseOver2} className="menu1">연혁</Link>
-              <Link to="/info/location" onMouseOver={mouseOver2} className="menu1">찾아오시는 길</Link>                        
+              <Link to="#info_container1" name="info_container1" onClick={scroll_mv} onMouseOver={mouseOver2} className="menu1">회사개요</Link>
+              <Link to="#info_container2" name="info_container2" onClick={scroll_mv} onMouseOver={mouseOver2} className="menu1">인사말</Link>
+              <Link to="#info_container3" name="info_container3" onClick={scroll_mv} onMouseOver={mouseOver2} className="menu1">연혁</Link>
+              <Link to="#info_container4" name="info_container4" onClick={scroll_mv} onMouseOver={mouseOver2} className="menu1">찾아오시는 길</Link>                        
             </div>
           </div>
           <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu2">
@@ -331,8 +341,8 @@ function Header(props) {
           <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu5">
             <Link to="#0" className="menu5">유지보수</Link>
             <div id="subclass5" className="subclasses" >
-              <Link to="/info" className="menu5">엔지니어 현황</Link>
-              <Link to="/info" className="menu5">유지보수</Link>
+              <Link to="/mt/engineer" className="menu5">엔지니어 현황</Link>
+              <Link to="/mt/maintenance" className="menu5">유지보수</Link>
             </div>
           </div>
         </div>
