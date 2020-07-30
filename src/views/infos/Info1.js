@@ -69,12 +69,7 @@ export default function Info1() {
         <div className="article" id="article1">
           <div className="article_top">
             <div>
-              <span
-                id="info1"
-                style={{
-                  lineHeight: 50 + "px"
-                }}
-              >
+              <span id="info1">
                 Virtualizing Your Information Infrastructure
               </span>
             </div>
@@ -83,7 +78,7 @@ export default function Info1() {
               통합적으로 제공하며, 이를 바탕으로 안정적인 IT환경과 완성도 높은
               가상화를 고객에게 제공하는 기술력 있는 기업입니다. IT인프라의
               기초가 되는 서버, 서버운영체제, 스토리지, 네트워크, 보안, 가상화에
-              대한 전문 엔지니어를 통해 고개의 복잡하고 다양한 요구를
+              대한 전문 엔지니어를 통해 고객의 복잡하고 다양한 요구를
               수행합니다.
             </div>
           </div>
@@ -92,7 +87,7 @@ export default function Info1() {
               <img src={img1} alt="empty" />
               <div>제품 개발</div>
               <div>
-                HP,IBM,Dell서버,스토리지,백업장비, /Cisco, HP, Dell, Alcatel
+                HP, IBM, Dell서버, 스토리지, 백업장비, /Cisco, HP, Dell, Alcatel
                 Network 장비판매 MS, Linux 관련 OS및 SW판매
               </div>
             </Paper>
@@ -138,7 +133,7 @@ export default function Info1() {
               <div>기업</div>
               <div>
                 사업분야 텍스트를 입력하세요. 이 텍스트는 Dummy Text 입니다.
-                사업분야 텍스트를 입력하세요.{" "}
+                사업분야 텍스트를 입력하세요.
               </div>
             </Paper>
             <Paper elevation={3}>
