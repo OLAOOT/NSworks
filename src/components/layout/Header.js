@@ -117,9 +117,6 @@ function Header(props) {
     $('#menuBtn').click()
   })
     
-   
-  
-
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -163,6 +160,13 @@ function Header(props) {
                 </Link>
               </div>
             </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <Link to="/VI" className={classes.txt_deco_none}>
+              <ListItem button key='Virtual Integration'>
+                <ListItemText primary='Virtual Integration' />
+              </ListItem>
+            </Link>
           </Accordion>
           <Accordion>
             <AccordionSummary
@@ -304,28 +308,31 @@ function Header(props) {
             </div>
           </div>
           <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu2">
-            <Link to="#0" className="menu2">가상화인프라</Link>
-            <div id="subclass2" className="subclasses" >
-              <Link to="/vm/server" onMouseOver={mouseOver2} className="menu2">서버 가상화</Link>
-              <Link to="/vm/desktop" onMouseOver={mouseOver2} className="menu2">데스크탑 가상화</Link>
-              <Link to="/vm/storage" onMouseOver={mouseOver2} className="menu2">스토리지 가상화</Link>
-              <Link to="/vm/DR" onMouseOver={mouseOver2} className="menu2">재해복구시스템(DR)</Link>
-            </div>
+            <Link to="/0" className="menu2">Virtual Integration</Link>
           </div>
           <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu3">
-            <Link to="#0" className="menu3">하드웨어인프라</Link>
+            <Link to="#0" className="menu3">가상화인프라</Link>
             <div id="subclass3" className="subclasses" >
-              <Link to="/hw/server" onMouseOver={mouseOver2} className="menu3">서버</Link>
-              <Link to="/hw/storage" onMouseOver={mouseOver2} className="menu3">스토리지</Link>
-              <Link to="/hw/network" onMouseOver={mouseOver2} className="menu3">네트워크</Link>
-              <Link to="/hw/security" onMouseOver={mouseOver2} className="menu3">보안</Link>
+              <Link to="/vm/server" onMouseOver={mouseOver2} className="menu3">서버 가상화</Link>
+              <Link to="/vm/desktop" onMouseOver={mouseOver2} className="menu3">데스크탑 가상화</Link>
+              <Link to="/vm/storage" onMouseOver={mouseOver2} className="menu3">스토리지 가상화</Link>
+              <Link to="/vm/DR" onMouseOver={mouseOver2} className="menu3">재해복구시스템(DR)</Link>
             </div>
           </div>
           <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu4">
-            <Link to="#0" className="menu4">유지보수</Link>
+            <Link to="#0" className="menu4">하드웨어인프라</Link>
             <div id="subclass4" className="subclasses" >
-              <Link to="/info" className="menu4">엔지니어 현황</Link>
-              <Link to="/info" className="menu4">유지보수</Link>
+              <Link to="/hw/server" onMouseOver={mouseOver2} className="menu4">서버</Link>
+              <Link to="/hw/storage" onMouseOver={mouseOver2} className="menu4">스토리지</Link>
+              <Link to="/hw/network" onMouseOver={mouseOver2} className="menu4">네트워크</Link>
+              <Link to="/hw/security" onMouseOver={mouseOver2} className="menu4">보안</Link>
+            </div>
+          </div>
+          <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu5">
+            <Link to="#0" className="menu5">유지보수</Link>
+            <div id="subclass5" className="subclasses" >
+              <Link to="/info" className="menu5">엔지니어 현황</Link>
+              <Link to="/info" className="menu5">유지보수</Link>
             </div>
           </div>
         </div>
