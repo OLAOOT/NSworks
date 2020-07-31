@@ -54,18 +54,9 @@ const Home = () => {
     <>
       <Slider data={heroData} />
       <Info1 />
-      <Info2 id="info2" />
+      <Info2 />
       <Info3 />
       <Info4 />
-
-      {/* <FeaturesSplit
-        invertMobile
-        imageFill
-        className="illustration-section-02"
-        style={{
-          paddingTop: "500px"
-        }}
-      /> */}
     </>
   );
 };

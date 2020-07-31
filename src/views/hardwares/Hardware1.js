@@ -14,6 +14,7 @@ import dell2 from "./../../img/dell02_01.jpg";
 import dell3 from "./../../img/dell02_02.jpg";
 import dell4 from "./../../img/dell02_03.jpg";
 import img4 from "./../../img/img_ccai.png";
+import dummyicon from "./../../img/logo.png";
 
 import "../../css/hardware.css";
 
@@ -22,7 +23,7 @@ const img_data = {
   title: "서버"
 };
 
-const Split = ({
+const HpeSplit = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -92,7 +93,7 @@ const Split = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <img src={require("./../../img/slider1.jpg")} alt="1" />
+                <img src={require("./../../img/hp01_01.jpg")} alt="1" />
               </div>
             </div>
 
@@ -122,7 +123,177 @@ const Split = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <img src={require("./../../img/slider2.jpg")} alt="2" />
+                <img src={require("./../../img/hp01_02.jpg")} alt="2" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const DellSplit = ({
+  className,
+  topOuterDivider,
+  bottomOuterDivider,
+  topDivider,
+  bottomDivider,
+  hasBgColor,
+  invertColor,
+  invertMobile,
+  invertDesktop,
+  alignTop,
+  imageFill,
+  data,
+  ...props
+}) => {
+  const outerClasses = classNames(
+    "features-split section",
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color"
+  );
+
+  const innerClasses = classNames(
+    "features-split-inner section-inner",
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
+  );
+
+  const splitClasses = classNames(
+    "split-wrap",
+    invertMobile && "invert-mobile",
+    invertDesktop && "invert-desktop",
+    alignTop && "align-top"
+  );
+
+  return (
+    <section
+      {...props}
+      className={outerClasses}
+      style={{
+        marginTop: 0
+      }}
+    >
+      <div className="container">
+        <div className={innerClasses}>
+          <div className={splitClasses}>
+            <div className="split-item">
+              <div
+                className="split-item-content center-content-mobile"
+                data-reveal-container=".split-item"
+              >
+                <h3
+                  className="mt-0 mb-12"
+                  style={{
+                    color: "#000000",
+                    fontSize: 1.2 + "rem"
+                  }}
+                >
+                  가상 및 프라이빗 클라우드 데이터에 권장되는 솔루션
+                </h3>
+                <p
+                  className="m-0"
+                  style={{ fontSize: 0.8 + "rem", textAlign: "left" }}
+                >
+                  컴퓨팅 노드당 최고 수준의 VM 성능과 집적도가 요구되는 대규모
+                  가상화 환경에는 4소켓 R930와 FC830이 가장 적합합니다. 랜덤
+                  입출력 워크로드에 최적화된 R930은 탁월한 입출력 성능과
+                  처리량으로 미션 크리티컬 애플리케이션을 지원하며, 1U FC830은
+                  집적도를 두 배로 높입니다. <br />올 플래시 구성의 초고집적 1U
+                  2소켓 R630은 공간이 협소한 환경에서 비슷한 성능의 서버와
+                  비교하여 절반의 공간만으로도 대용량 메모리와 최고 수준의
+                  입출력 성능을 제공합니다. FC630은 높은 집적도와 향상된
+                  인프라스트럭처 유연성을 제공 합니다. <br />
+                  컨버지드 인프라스트럭처를 구축하여 효율성과 성능을 높이고 냉각
+                  비용을 절감하려는 기업에는 M1000e 블레이드 서버 솔루션이
+                  제격입니다.
+                </p>
+              </div>
+              <div
+                className={classNames(
+                  "split-item-image center-content-mobile",
+                  imageFill && "split-item-image-fill"
+                )}
+                data-reveal-container=".split-item"
+              >
+                <img src={require("./../../img/hp01_01.jpg")} alt="1" />
+              </div>
+            </div>
+
+            <div className="split-item">
+              <div
+                className="split-item-content center-content-mobile"
+                data-reveal-container=".split-item"
+              >
+                <h3
+                  className="mt-0 mb-12"
+                  style={{
+                    color: "#000000",
+                    fontSize: 1.2 + "rem"
+                  }}
+                >
+                  서버 및 데스크톱 가상화용으로 권장되는 솔루션
+                </h3>
+                <p
+                  className="m-0"
+                  style={{ fontSize: 0.8 + "rem", textAlign: "left" }}
+                >
+                  최대 3TB의 메모리와 가상 데스크톱 인프라스트럭처에 최적화된
+                  입출력 옵션을 갖춘 R730은 최고 수준의 VDI 확장성을 보장합니다.
+                  확장된 GPU 옵션은 더 나은 성능을 위해 CAD/CAM 같은 그래픽
+                  집약적인 VDI 구축 환경을 지원합니다. PowerEdge M630 또는 M830
+                  블레이드 노드를 장착할 경우 PowerEdge VRTX는 다양한 기능과
+                  강력한 성능을 갖춘 서버 또는 데스크톱 가상화용 플랫폼이
+                  됩니다. FC630은 가상 데스크톱 환경에서도 그 성능이
+                  입증되었습니다.
+                </p>
+              </div>
+              <div
+                className={classNames(
+                  "split-item-image center-content-mobile",
+                  imageFill && "split-item-image-fill"
+                )}
+                data-reveal-container=".split-item"
+              >
+                <img src={require("./../../img/hp01_02.jpg")} alt="2" />
+              </div>
+            </div>
+            <div className="split-item">
+              <div
+                className="split-item-content center-content-mobile"
+                data-reveal-container=".split-item"
+              >
+                <h3
+                  className="mt-0 mb-12"
+                  style={{
+                    color: "#000000",
+                    fontSize: 1.2 + "rem"
+                  }}
+                >
+                  소프트웨어 정의 가상 스토리지에 권장되는 솔루션
+                </h3>
+                <p
+                  className="m-0"
+                  style={{ fontSize: 0.8 + "rem", textAlign: "left" }}
+                >
+                  Microsoft Storage Spaces, VMware Virtual SAN OpenStack™ Ceph
+                  등의 소프 트웨어 정의 스토리지 솔루션과 호환되며, 가상화된
+                  스토리지 플랫폼으로 이상적 인 서버 솔루션입니다. DAS 스토리지
+                  어레이를 함께 사용하면 비용 효율적인 가 상화 스토리지 풀을 더
+                  큰 규모로 구축할 수 있습니다.{" "}
+                </p>
+              </div>
+              <div
+                className={classNames(
+                  "split-item-image center-content-mobile",
+                  imageFill && "split-item-image-fill"
+                )}
+                data-reveal-container=".split-item"
+              >
+                <img src={require("./../../img/hp01_02.jpg")} alt="2" />
               </div>
             </div>
           </div>
@@ -167,7 +338,7 @@ export default function Hardware1() {
               Compute에 대한 새로운 접근을 통해 이루어 질 수 있습니다.
             </div>
 
-            <Split />
+            <HpeSplit />
           </div>
           <div className="article_top">
             <div />
@@ -180,7 +351,7 @@ export default function Hardware1() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={hp2} />
+            <img src={hp3} />
           </div>
           <div className="pdf_wrap">
             <p>
@@ -200,16 +371,16 @@ export default function Hardware1() {
             <div>
               <div className="highlight">차세대 POWEREDGE 서버 기술</div>
               <br />
-              13세대 PowerEdge 서버는 Dell EMC가 제공하 는 가장 발전된 형태의
-              랙, 타워형 및 모듈식 인 프라스트럭처 플랫폼 제품군으로서 웹,
-              엔터프라 이즈 및 하이퍼스케일 애플리케이션을 다른 어떤 제품보다
+              13세대 PowerEdge 서버는 Dell EMC가 제공하는 가장 발전된 형태의 랙,
+              타워형 및 모듈식 인프라스트럭처 플랫폼 제품군으로서 웹,
+              엔터프라이즈 및 하이퍼스케일 애플리케이션을 다른 어떤 제품보다
               폭넓게 지원하도록 설계되었습니다. 이 시스템의 차원이 다른 유연성,
-              효율성, 성능은 다 음과 같은 이점을 IT 조직에 제공합니다.
+              효율성, 성능은 다음과 같은 이점을 IT 조직에 제공합니다.
             </div>
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={img4} />
+              <img src={dummyicon} />
               <div>확장성과 적응성이 뛰어난 인프라스트럭처 구축</div>
               <div>
                 확장성과 적응성이 뛰어난 PowerEdge 서버의 포트폴리오를 모듈식
@@ -219,50 +390,51 @@ export default function Hardware1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={img4} />
+              <img src={dummyicon} />
               <div>
                 확장된 자동화 기능과 새로운 액세스 옵션으로 장소에 구애받지 않는
                 관리 작업
               </div>
               <div>
                 시스템 관리 툴인 OpenManage 포트폴리오로 자동화 기능을 확대하고
-                툴을 간소화하며 모바 일 디바이스 액세스를 지원하면서
-                엔터프라이즈 관리 작업을 더욱 간소화하고 더 높은 효율성을
-                제공하게 되었습니다.
+                툴을 간소화하며 모바일 디바이스 액세스를 지원하면서 엔터프라이즈
+                관리 작업을 더욱 간소화하고 더 높은 효율성을 제공하게
+                되었습니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={img4} />
+              <img src={dummyicon} />
               <div>
                 확장성과 효율성이 뛰어난 서버 스토리지로 애플리케이션 성능 향상
               </div>
               <div>
-                다양한 기능과 강력한 성능을 제공하는 서버 스 토리지는 데이터
-                센터 효율성을 극대화하도록 설 계된 유연한 구성과 함께 대상
+                다양한 기능과 강력한 성능을 제공하는 서버 스토리지는 데이터 센터
+                효율성을 극대화하도록 설계된 유연한 구성과 함께 대상
                 애플리케이션의 성능을 높일 수 있습니다.
               </div>
             </Paper>
           </div>
-          <div className="article_mid">
-            <img src={dell1} />
-          </div>
+
+          <div className="article_mid" />
           <div className="article_top">
             <div>
-              <span>PowerEdge 서버</span>
+              <div className="highlight">
+                PowerEdge 서버: 업계 최신 기술과 Dell EMC 혁신 기술의 만남
+              </div>
             </div>
-            <div>업계 최신 기술과 Dell EMC 혁신 기술의 만남</div>
           </div>
           <div className="article_mid2">
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
+            <img src={dell1} />
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} />
               <div>더 큰 처리 능력</div>
               <div>
                 최신 세대 Intel® Xeon® 프로세서는 가상화 환경과 높은 성능을
                 요구하는 비즈니스 애플리케이션의 성능을 강화합니다.
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} />
               <div>대용량 저전력 메모리</div>
               <div>
                 시스템 관리 툴인 OpenManage 포트폴리오로 자동화 기능을 확대하고
@@ -271,8 +443,8 @@ export default function Hardware1() {
                 제공하게 되었습니다.
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} />
               <div>확장성 및 효율성이 뛰어난 로컬 스토리지</div>
               <div>
                 다양한 서버 내 스토리지 옵션은 올 플래시 구성, 인박스(In-box)
@@ -281,8 +453,8 @@ export default function Hardware1() {
                 애플리케이션 요구 사항을 충족합 니다.
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} />
               <div>간소화된 지능형 관리 환경</div>
               <div>
                 OpenManage 툴은 향상된 로컬 액세스와 핸드헬드 디바이스에서
@@ -291,8 +463,8 @@ export default function Hardware1() {
                 비용을 줄여 운영 개시까지의 소요 기 간을 단축해 줍니다.
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} />
               <div>에너지 효율</div>
               <div>
                 최대 40°C의 일정한 온도로 데이터 센터를 운영할 수 있는 Fresh Air
@@ -303,123 +475,98 @@ export default function Hardware1() {
           </div>
           <div className="article_top">
             <div>
-              <span>
-                가상화 및 클라우드 컴퓨팅(!!이부분은 디자인 교체 예정!!)
-              </span>
+              <div className="highlight">가상화 및 클라우드 컴퓨팅</div>
             </div>
-            <div>
-              인프라스트럭처 최적화용 DELL EMC 솔루션
-              <br />
-              <br />
-              <br />
-              <br />
-              (!!이부분은 디자인 교체 예정!!)
-            </div>
+            <div>인프라스트럭처 최적화용 DELL EMC 솔루션</div>
           </div>
-          <div className="article_mid2" id="paper_wide">
-            <Paper elevation={3} className="paper">
-              <div id="noImg">
-                <div>대규모 가상화 환경의 이점</div>
-                <div>
-                  가상화 기술은 물리적 컴퓨터 1대에서 실행되는 몇 대의 가상
-                  머신부터 여러 대의 루트 서버에 걸쳐 구 축된 전체 서버 팜에
-                  이르기까지 다양한 규모의 환경에서 무분별한 서버 증가를
-                  최소화하여 하드웨어 및 네트워크 인프라스트럭처에 대한 투자
-                  효율성을 최적화합니다. 또한 가상화 기술은 활용도를 극대
-                  화하고, 지원 리소스를 최적화하고, 설치 공간과 전력 비용을
-                  절감하는 등 대규모 구축 환경의 이점을 실현하는 한편, 더 높은
-                  가용성과 복구 성능을 보장할 수 있는 강력한 인프라스트럭처를
-                  제공하는 데 도움이 됩니다.
-                </div>
-              </div>
-            </Paper>
-            <Paper elevation={3} className="paper">
-              <div id="noImg">
-                <div>애플리케이션 요구 사항</div>
-                <div>
-                  데스크톱 가상화 또는 프라이빗 클라우드와 같은 워크로드를
-                  처리하려면 효율적인 고성능 IT 인프라스 트럭처가 필요합니다.
-                  VDI 구축 환경에서는 통합, 집적도 및 성능이 무엇보다
-                  중요합니다. 가상화 플랫 폼은 VM에 리소스를 충분히 할당할 수
-                  있을 만큼 많은 코어 수, 막대한 메모리 집적도, 유연한 입출력
-                  옵션을 제공해야 합니다.
-                </div>
-              </div>
-            </Paper>
-            <Paper elevation={3} className="paper" id="paper_wide2">
-              <img src={dell2} className="img_50" />
-              <img src={dell3} className="img_50" />
-              <div>서버 및 데스크톱 가상화용으로 권장되는 솔루션</div>
+          <div className="article_mid2 paper_wide paper_wide_left">
+            <Paper elevation={0} className="paper">
+              <div>대규모 가상화 환경의 이점</div>
               <div>
-                최대 3TB의 메모리와 가상 데스크톱 인프라스트럭처에 최적화된
-                입출력 옵션을 갖춘 R730은 최고 수준의 VDI 확장성을 보장합니다.
-                확장된 GPU 옵션은 더 나은 성능을 위해 CAD/CAM 같은 그래픽
-                집약적인 VDI 구축 환경을 지원합니다. PowerEdge M630 또는 M830
-                블레이드 노드를 장착할 경우 PowerEdge VRTX는 다 양한 기능과
-                강력한 성능을 갖춘 서버 또는 데스크톱 가상화용 플랫폼이 됩니다.
-                FC630은 가상 데스크톱 환경에서도 그 성능이 입증되었습니다.
+                가상화 기술은 물리적 컴퓨터 1대에서 실행되는 몇 대의 가상
+                머신부터 여러 대의 루트 서버에 걸쳐 구 축된 전체 서버 팜에
+                이르기까지 다양한 규모의 환경에서 무분별한 서버 증가를
+                최소화하여 하드웨어 및 네트워크 인프라스트럭처에 대한 투자
+                효율성을 최적화합니다. 또한 가상화 기술은 활용도를 극대 화하고,
+                지원 리소스를 최적화하고, 설치 공간과 전력 비용을 절감하는 등
+                대규모 구축 환경의 이점을 실현하는 한편, 더 높은 가용성과 복구
+                성능을 보장할 수 있는 강력한 인프라스트럭처를 제공하는 데 도움이
+                됩니다.
               </div>
             </Paper>
-            <Paper elevation={3} className="paper" id="paper_wide3">
-              <div id="noImg">
-                <div>가상화 환경용 PowerEdge 서버</div>
-                <div className="size_s">
-                  PowerEdge 서버는 소켓당 최대 24개의 프로세싱 코어, 높은 메모리
-                  집적도 및 유연한 입출력 옵션으 로 가상화 환경에서 탁월한
-                  성능을 실현하며 다음과 같은 이점도 제공합니다.
-                  <br />
-                  . 운영 중단 없는 확장
-                  <br />
-                  . VDI 환경에서 그래픽 집약적인 애플리케이션을 효과적으로 지원
-                  <br />
-                  . 서버당 더 많은 수의 VM 지원
-                  <br />
-                  . 스위치에 구애받지 않는 파티셔닝 기술로 VM 간에 유연하게
-                  리소스 할당
-                  <br />
-                  . VMware® Virtual SAN™, Microsoft Storage Spaces 등의 가상
-                  스토리지 솔루션에 대한 완벽한 지 원 및 호환성
-                  <br />
-                  . 이중화된 하이퍼바이저 및 무장애 메모리 장애 격리 기능을 통한
-                  자동 페일오버로 애플리케이션 가 동 시간 최대화
-                  <br />
-                  . OpenManage Integration Suite for Microsoft System Center 및
-                  OpenManage Integration for VMware vCenter™ 가상화 콘솔을 통한
-                  효율적인 관리 및 제어
-                  <br />
-                </div>
-              </div>
-            </Paper>
-            <Paper elevation={3} className="paper">
-              <img src={dell4} />
-              <div>가상 및 프라이빗 클라우드 데이터에 권장되는 솔루션</div>
+            <Paper elevation={0} className="paper">
+              <div>애플리케이션 요구 사항</div>
               <div>
-                컴퓨팅 노드당 최고 수준의 VM 성능과 집적도가 요구되는 대규모
-                가상화 환경에 는 4소켓 R930와 FC830이 가장 적합합니다. 랜덤
-                입출력 워크로드에 최적화된 R930은 탁월한 입출력 성능과
-                처리량으로 미션 크리티컬 애플리케이션을 지원하 며, 1U FC830은
-                집적도를 두 배로 높입니다. 올 플래시 구성의 초고집적 1U 2소켓
-                R630은 공간이 협소한 환경에서 비슷한 성능 의 서버와 비교하여
-                절반의 공간만으로도 대용량 메모리와 최고 수준의 입출력 성 능을
-                제공합니다. FC630은 높은 집적도와 향상된 인프라스트럭처 유연성을
-                제공 합니다. 컨버지드 인프라스트럭처를 구축하여 효율성과 성능을
-                높이고 냉각 비용을 절감 하려는 기업에는 M1000e 블레이드 서버
-                솔루션이 제격입니다.
+                데스크톱 가상화 또는 프라이빗 클라우드와 같은 워크로드를
+                처리하려면 효율적인 고성능 IT 인프라스 트럭처가 필요합니다. VDI
+                구축 환경에서는 통합, 집적도 및 성능이 무엇보다 중요합니다.
+                가상화 플랫 폼은 VM에 리소스를 충분히 할당할 수 있을 만큼 많은
+                코어 수, 막대한 메모리 집적도, 유연한 입출력 옵션을 제공해야
+                합니다.
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
-              <div id="noImg">
-                <div>소프트웨어 정의 가상 스토리지에 권장되는 솔루션</div>
-                <div>
-                  Microsoft Storage Spaces, VMware Virtual SAN OpenStack™ Ceph
-                  등의 소프 트웨어 정의 스토리지 솔루션과 호환되며, 가상화된
-                  스토리지 플랫폼으로 이상적 인 서버 솔루션입니다. DAS 스토리지
-                  어레이를 함께 사용하면 비용 효율적인 가상화 스토리지 풀을 더
-                  큰 규모로 구축할 수 있습니다.
-                </div>
+            <Paper elevation={0} className="paper">
+              <div>
+                가상화 환경용 PowerEdge 서버(여기 밑에 7개랑 묶어서 회색배경)
+              </div>
+              <div>
+                PowerEdge 서버는 소켓당 최대 24개의 프로세싱 코어, 높은 메모리
+                집적도 및 유연한 입출력 옵션으로 가상화 환경에서 탁월한 성능을
+                실현하며 다음과 같은 이점도 제공합니다.
               </div>
             </Paper>
           </div>
+          <div className="article_mid2 paper_slim">
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} alt="icon" />
+              <div>운영 중단 없는 확장</div>
+            </Paper>
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} alt="icon" />
+              <div>
+                VDI 환경에서 그래픽 집약적인 애플리케이션을 효과적으로 지원
+              </div>
+            </Paper>
+
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} alt="icon" />
+              <div>서버당 더 많은 수의 VM 지원</div>
+            </Paper>
+
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} alt="icon" />
+              <div>
+                스위치에 구애받지 않는 파티셔닝 기술로 VM 간에 유연하게 리소스
+                할당{" "}
+              </div>
+            </Paper>
+
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} alt="icon" />
+              <div>
+                VMware® Virtual SAN™, Microsoft Storage Spaces 등의 가상
+                스토리지 솔루션에 대한 완벽한 지 원 및 호환성{" "}
+              </div>
+            </Paper>
+
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} alt="icon" />
+              <div>
+                이중화된 하이퍼바이저 및 무장애 메모리 장애 격리 기능을 통한
+                자동 페일오버로 애플리케이션 가동 시간 최대화
+              </div>
+            </Paper>
+
+            <Paper elevation={0} className="paper">
+              <img src={dummyicon} alt="icon" />
+              <div>
+                OpenManage Integration Suite for Microsoft System Center 및
+                OpenManage Integration for VMware vCenter™ 가상화 콘솔을 통한
+                효율적인 관리 및 제어
+              </div>
+            </Paper>
+          </div>
+          <DellSplit />
           <div class="pdf_wrap">
             <p>
               <a

@@ -8,7 +8,7 @@ import TopImage from "../../components/sections/TopImage";
 import vsan from "./../../img/vsan.png";
 
 import img4 from "./../../img/img_ccai.png";
-import dummyicon from "./../../img/dummyicon.png";
+import dummyicon from "./../../img/logo.png";
 import "../../css/virtual.css";
 
 const img_data = [

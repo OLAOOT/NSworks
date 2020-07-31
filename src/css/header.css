@@ -1,67 +1,65 @@
-.subclasses{
-    position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-    padding-left: 0;
-    display:none;
-    top:40px;
-    
+.subclasses {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  padding-left: 0;
+  display: none;
+  top: 40px;
 }
-.subclasses >*{
-    width:100%;
-    font-size:17px;
-    list-style:none;
-    padding: 20px !important;
-    margin-bottom: 0;
-    color:#2E2E2E !important;
-    display: block;
-}
-
-.header{
-    height:64px;
-    background:#fafafa;
-    position: absolute;
-    width:100%
+.subclasses > * {
+  width: 100%;
+  font-size: 17px;
+  list-style: none;
+  padding: 20px !important;
+  margin-bottom: 0;
+  color: #2e2e2e !important;
+  display: block;
 }
 
-.tool{
-    padding-left:180px;
-    padding-right:180px;
-    height:100%;
-}
-@media (max-width:600px){
-    .tool{
-        padding-left:10px;
-        padding-right:10px;
-    }
-    .menus{
-        display:none
-    }
-}
-.tool img{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    width:150px
+.header {
+  height: 64px;
+  position: absolute;
+  width: 100%;
 }
 
-.menus{
-    padding-top:20px;
-    float: right;
-    height: 100%;
+.tool {
+  width: 100%;
+  height: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
-.menus > div{
-    float: left;
-    height:100%;
-    padding-left:10px;
-    padding-right:10px;
+@media (max-width: 960px) {
+  .tool {
+    padding-left: 2%;
+    padding-right: 10px;
+  }
+  .menus {
+    display: none;
+  }
 }
-.menus > div > a{
-    color:#9CA9B3 !important;
-    font-size:16px;
+.tool img {
+  width: 150px;
+  margin-right: 10%;
+}
+
+.menus > div {
+  float: left;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+.menus > div > a {
+  color: #9ca9b3 !important;
+  font-size: 16px;
 }
 
 .MuiAccordionDetails-root {
-    display:block !important;
-    color:#000000 !important
+  display: block !important;
+  color: #000000 !important;
 }

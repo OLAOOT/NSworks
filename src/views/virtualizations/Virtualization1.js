@@ -8,7 +8,7 @@ import TopImage from "../../components/sections/TopImage";
 import vmware from "./../../img/vmware.jpg";
 import vmcloud from "./../../img/vmw-cloud.png";
 import img4 from "./../../img/img_ccai.png";
-import dummyicon from "./../../img/dummyicon.png";
+import dummyicon from "./../../img/logo.png";
 
 import "../../css/virtual.css";
 

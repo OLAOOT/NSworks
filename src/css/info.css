@@ -80,6 +80,7 @@
 
 .info_container .article_top > div {
   margin-top: 20px;
+  margin-bottom: 60px;
   font-size: 15px;
   color: #999999;
   text-align: center;
@@ -95,6 +96,7 @@
   padding-bottom: 5px;
   border-bottom: 2px solid #bdbdbd;
   color: #000000;
+  line-height: 50px;
 }
 .info_container .article_mid {
   display: flex;
@@ -140,6 +142,18 @@
 .info_container .article_mid2 > div:first-child {
   padding: 2%;
   width: 46%;
+}
+
+.info_container .ceo_sign {
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.info_container .ceo_sign > img {
+  width: 100px;
+  margin: 0px 10px;
 }
 
 table.type03 {

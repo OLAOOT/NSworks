@@ -85,15 +85,17 @@ export default function Info1() {
           <div className="article_mid">
             <Paper elevation={3}>
               <img src={img1} alt="empty" />
-              <div>제품 개발</div>
+              <div>IT 컨설팅</div>
               <div>
-                HP, IBM, Dell서버, 스토리지, 백업장비, /Cisco, HP, Dell, Alcatel
-                Network 장비판매 MS, Linux 관련 OS및 SW판매
+                고객사 환경에 최적화된 HW, SW, Network
+                <br />
+                인프라 구축을 위한 솔루션 컨설팅
+                <br /> 재해 방지를 위한 백업및 보안 컨설팅
               </div>
             </Paper>
             <Paper elevation={3}>
               <img src={img2} alt="empty" />
-              <div>솔루션</div>
+              <div>솔루션 공급</div>
               <div>
                 Citrix, Microsoft, Cisco, VMware, HP, Dell의 인프라 구축 및
                 기술지원
@@ -101,18 +103,23 @@ export default function Info1() {
             </Paper>
             <Paper elevation={3}>
               <img src={img2} alt="empty" />
-              <div>컨설팅</div>
+              <div>HW/SW 판매</div>
               <div>
-                고객사 환경에 최적화된 HW, SW, Network 인프라 구축을 위한 솔루션
-                컨설팅 재해 방지를 위한 백업및 보안 컨설팅
+                HP, IBM, Dell서버, 스토리지, 백업 장비 판매
+                <br />
+                Cisco, HP, Dell, Alcatel Network 장비판매
+                <br />
+                MS, Linux 관련 OS및 SW판매
               </div>
             </Paper>
             <Paper elevation={3}>
               <img src={img1} alt="empty" />
-              <div>유지보수</div>
+              <div>통합유지보수</div>
               <div>
-                HP Industrial Server Storage 충북, 세종 공인 지원센터 Dell 충북,
-                충남, 세종 공인 지원센터 기업, 대학, 병원 등 유지보수
+                HP Industrial Server Storage 충북, 세종 공인 지원센터
+                <br />
+                Dell 충북, 충남, 세종 공인 지원센터
+                <br /> 기업, 대학, 병원 등 유지보수
               </div>
             </Paper>
           </div>

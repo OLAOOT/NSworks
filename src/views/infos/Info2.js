@@ -75,9 +75,7 @@ const GreetingSplit = ({
                 className="split-item-content center-content-mobile"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  {/* 이것도 걍 없앨까 */}
-                </div>
+                <div className="text-xxs text-color-primary fw-600 tt-u mb-8" />
 
                 <h3
                   className="mt-0 mb-12"
@@ -103,15 +101,6 @@ const GreetingSplit = ({
                   궁극적인 파트너십에서 출발합니다. 귀사의 발전에 NSworks가 함께
                   하겠습니다. 감사합니다.
                 </p>
-                {/* <Button
-                  tag="a"
-                  color="primary"
-                  wideMobile
-                  href="https://cruip.com/"
-                  style={{ marginTop: 50 + "px" }}
-                >
-                  자세히 보기
-                </Button> */}
               </div>
             </div>
 
@@ -120,9 +109,7 @@ const GreetingSplit = ({
                 className="split-item-content center-content-mobile"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  {/* 이것도 걍 없앨까 */}
-                </div>
+                <div className="text-xxs text-color-primary fw-600 tt-u mb-8" />
                 <h3
                   className="mt-0 mb-12"
                   style={{
@@ -139,15 +126,6 @@ const GreetingSplit = ({
                   만들겠습니다. 작고 사소한 것이라도 지속적으로 혁신하여, 고객
                   여러분께 꼭 필요한 서비스를 의미 있는 가치로 제공하겠습니다.
                 </p>
-                {/* <Button
-                  tag="a"
-                  color="primary"
-                  wideMobile
-                  href="https://cruip.com/"
-                  style={{ marginTop: 50 + "px" }}
-                >
-                  자세히 보기
-                </Button> */}
               </div>
               <div
                 className={classNames(
@@ -165,9 +143,6 @@ const GreetingSplit = ({
                 className="split-item-content center-content-mobile"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  {/* 초록초록초록초록 */}
-                </div>
                 <h3
                   className="mt-0 mb-12"
                   style={{
@@ -184,15 +159,6 @@ const GreetingSplit = ({
                   함께 나눔의 문화를 만들어 가겠습니다. NSworks의 도전과 실천을
                   통해 더 편리하고 더 행복한 내일을 향해 경주하겠습니다.
                 </p>
-                {/* <Button
-                  tag="a"
-                  color="primary"
-                  wideMobile
-                  href="https://cruip.com/"
-                  style={{ marginTop: 50 + "px" }}
-                >
-                  자세히 보기
-                </Button> */}
               </div>
               <div
                 className={classNames(

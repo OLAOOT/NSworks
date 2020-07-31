@@ -73,7 +73,7 @@
 .virtual_container .paper > div {
   text-align: center;
   padding: 25px 40px 0px;
-  font-size: 19px;
+  font-size: 21px;
   font-weight: bold;
 }
 .virtual_container .paper > div:last-child {
@@ -107,6 +107,7 @@
   color: #000000;
   border-bottom: 2px solid #bdbdbd;
   padding-bottom: 5px;
+  line-height: 50px;
 }
 
 .virtual_container .article_bot .paper {
