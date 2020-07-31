@@ -184,7 +184,7 @@ function Header(props) {
           >
             <Typography className={classes.heading}>가상화인프라</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails id="details">
             <div>
               <Link to="/vm/desktop" className={classes.txt_deco_none}>
                 <ListItem button key="서버가상화">
@@ -223,12 +223,11 @@ function Header(props) {
           >
             <Typography className={classes.heading}>하드웨어인프라</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails id="details">
             <div>
               <Link
                 to="/hw/server"
-                className={classes.txt_deco_none}
-                onClick="alert('hi')"
+                className={classes.txt_deco_none}                
               >
                 <ListItem button key="서버">
                   <ListItemText primary="서버" />
@@ -266,7 +265,7 @@ function Header(props) {
           >
             <Typography className={classes.heading}>유지보수</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails id="details">
             <div>
               <Link to="/info/introduce" className={classes.txt_deco_none}>
                 <ListItem button key="엔지니어 현황">
@@ -278,6 +277,31 @@ function Header(props) {
               <Link to="/info/greeting" className={classes.txt_deco_none}>
                 <ListItem button key="유지보수">
                   <ListItemText primary="유지보수" />
+                </ListItem>
+              </Link>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={classes.heading}>문의 & 원격지원</Typography>
+          </AccordionSummary>
+          <AccordionDetails id="details">
+            <div>
+              <Link to="/question" className={classes.txt_deco_none}>
+                <ListItem button key="문의">
+                  <ListItemText primary="문의" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/remote" className={classes.txt_deco_none}>
+                <ListItem button key="원격지원">
+                  <ListItemText primary="원격지원" />
                 </ListItem>
               </Link>
             </div>
@@ -425,15 +449,28 @@ function Header(props) {
               </div>
             </div>
             <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu5">
-              <Link to="#0" className="menu5">
+              <Link to="/mt/maintenance" className="menu5">
                 유지보수
               </Link>
               <div id="subclass5" className="subclasses">
-                <Link to="/mt/engineer" className="menu5">
+                <Link to="/mt/engineer" onMouseOver={mouseOver2} className="menu5">
                   엔지니어 현황
                 </Link>
-                <Link to="/mt/maintenance" className="menu5">
+                <Link to="/mt/maintenance" onMouseOver={mouseOver2} className="menu5">
                   유지보수
+                </Link>
+              </div>
+            </div>
+            <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu6">
+              <Link to="/question" className="menu6">
+                문의 & 원격지원
+              </Link>
+              <div id="subclass6" className="subclasses">
+                <Link to="/question" onMouseOver={mouseOver2} className="menu6">
+                  문의
+                </Link>
+                <Link to="/remote" onMouseOver={mouseOver2} className="menu6">
+                  원격지원
                 </Link>
               </div>
             </div>

@@ -51,6 +51,9 @@
     transform: translateX(-50%);
     margin-top: 50px;
     margin-bottom: 50px;
+    width:80%;
+    min-width:200px;
+    max-width:1000px
 }
   
 .maintenance_container .article_mid ul {

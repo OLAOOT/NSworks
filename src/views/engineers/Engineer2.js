@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
 
-import tmp6 from "./../../img/tmp6.png";
+import maintenance1 from "./../../img/maintenance1.png";
 
 
 
@@ -28,7 +28,7 @@ export default function Engineer2() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={tmp6} />
+            <img src={maintenance1} />
           </div>
           <div className="article_top">
             <div>
@@ -36,7 +36,7 @@ export default function Engineer2() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={tmp6} />
+            <img src={maintenance1} />
             <div>
                 <ul>
                     <li>서버를 관리하는 전문 인력이 없는 고객</li>

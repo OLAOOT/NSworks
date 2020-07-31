@@ -29,6 +29,10 @@ import Hardware4 from "./views/hardwares/Hardware4";
 import Engineer1 from "./views/engineers/Engineer1";
 import Engineer2 from "./views/engineers/Engineer2";
 
+import Question from "./views/q&r/Question";
+import Remote from "./views/q&r/Remote";
+
+
 const App = () => {
   const childRef = useRef();
   let location = useLocation();
@@ -185,6 +189,24 @@ const App = () => {
               render={props => (
                 <LayoutDefault>
                   <Engineer2 {...props} />
+                </LayoutDefault>
+              )}
+            />
+            <Route
+              exact
+              path="/question"
+              render={props => (
+                <LayoutDefault>
+                  <Question {...props} />
+                </LayoutDefault>
+              )}
+            />
+            <Route
+              exact
+              path="/remote"
+              render={props => (
+                <LayoutDefault>
+                  <Remote {...props} />
                 </LayoutDefault>
               )}
             />
