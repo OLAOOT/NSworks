@@ -1,6 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 import styled from "styled-components";
+import Paper from "@material-ui/core/Paper";
+import img4 from "./../../img/img_ccai.png";
 
 import "../../css/info.css";
 

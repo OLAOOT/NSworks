@@ -123,43 +123,6 @@ export default function Info1() {
               </div>
             </Paper>
           </div>
-          <div className="article_top">
-            <div>
-              <span>Major Service Partners</span>
-            </div>
-            <div>
-              고객사의 환경에 최적화된 인프라 구축을 위한 컨설팅을 통해 제품
-              판매 및 솔루션을 제공함은 물론 현재 사용중인 Server Storage의
-              유지보수 서비스를 제공하고 있습니다. 고객사의 비즈니스 성공을 위해
-              최선을 다하는 NSworks가 되겠습니다.
-            </div>
-          </div>
-          <div className="article_mid">
-            <Paper elevation={3}>
-              <img src={img4} />
-              <div>기업</div>
-              <div>
-                사업분야 텍스트를 입력하세요. 이 텍스트는 Dummy Text 입니다.
-                사업분야 텍스트를 입력하세요.
-              </div>
-            </Paper>
-            <Paper elevation={3}>
-              <img src={img4} />
-              <div>공공</div>
-              <div>
-                Citrix, Microsoft, Cisco, VMware, HP, Dell의 인프라 구축 및
-                기술지원
-              </div>
-            </Paper>
-            <Paper elevation={3}>
-              <img src={img4} />
-              <div>병원</div>
-              <div>
-                고객사 환경에 최적화된 HW, SW, Network 인프라 구축을 위한 솔루션
-                컨설팅 재해 방지를 위한 백업및 보안 컨설팅
-              </div>
-            </Paper>
-          </div>
         </div>
       </div>
     </div>

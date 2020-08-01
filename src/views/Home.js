@@ -5,6 +5,7 @@ import Info1 from "./infos/Info1";
 import Info2 from "./infos/Info2";
 import Info3 from "./infos/Info3";
 import Info4 from "./infos/Info4";
+import Info5 from "./infos/Info5";
 
 import $ from "jquery";
 window.$ = $;
@@ -57,6 +58,7 @@ const Home = () => {
       <Info2 />
       <Info3 />
       <Info4 />
+      <Info5 />
     </>
   );
 };
