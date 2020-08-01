@@ -125,6 +125,8 @@ function Header(props) {
     $("#menuBtn").click();
   });
 
+  
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -140,36 +142,28 @@ function Header(props) {
           </AccordionSummary>
           <AccordionDetails id="details">
             <div>
-              <Link to="#info_container1" className={classes.txt_deco_none}>
+              <Link to="/info/introduce" className={classes.txt_deco_none}>
                 <ListItem button key="회사개요">
                   <ListItemText primary="회사개요" />
                 </ListItem>
               </Link>
             </div>
             <div>
-              <Link to="#info_container2" className={classes.txt_deco_none}>
+              <Link to="/info/greeting" className={classes.txt_deco_none}>
                 <ListItem button key="인사말">
                   <ListItemText primary="인사말" />
                 </ListItem>
               </Link>
             </div>
             <div>
-              <Link to="#info_container3" className={classes.txt_deco_none}>
-                <ListItem button key="파트너">
-                  <ListItemText primary="파트너" />
-                </ListItem>
-              </Link>
-            </div>
-
-            <div>
-              <Link to="#info_container4" className={classes.txt_deco_none}>
+              <Link to="/info/history" className={classes.txt_deco_none}>
                 <ListItem button key="연혁">
                   <ListItemText primary="연혁" />
                 </ListItem>
               </Link>
             </div>
             <div>
-              <Link to="#info_container5" className={classes.txt_deco_none}>
+              <Link to="/info/location" className={classes.txt_deco_none}>
                 <ListItem button key="찾아오시는길">
                   <ListItemText primary="찾아오시는길" />
                 </ListItem>
@@ -177,7 +171,7 @@ function Header(props) {
             </div>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion id="details">
           <Link to="/VI" className={classes.txt_deco_none}>
             <ListItem button key="Virtual Integration">
               <ListItemText primary="Virtual Integration" />
@@ -194,14 +188,14 @@ function Header(props) {
           </AccordionSummary>
           <AccordionDetails id="details">
             <div>
-              <Link to="/vm/server" className={classes.txt_deco_none}>
+              <Link to="/vm/desktop" className={classes.txt_deco_none}>
                 <ListItem button key="서버가상화">
                   <ListItemText primary="서버가상화" />
                 </ListItem>
               </Link>
             </div>
             <div>
-              <Link to="/vm/desktop" className={classes.txt_deco_none}>
+              <Link to="/vm/storage" className={classes.txt_deco_none}>
                 <ListItem button key="데스크탑가상화">
                   <ListItemText primary="데스크탑가상화" />
                 </ListItem>
@@ -233,7 +227,10 @@ function Header(props) {
           </AccordionSummary>
           <AccordionDetails id="details">
             <div>
-              <Link to="/hw/server" className={classes.txt_deco_none}>
+              <Link
+                to="/hw/server"
+                className={classes.txt_deco_none}                
+              >
                 <ListItem button key="서버">
                   <ListItemText primary="서버" />
                 </ListItem>
@@ -272,14 +269,14 @@ function Header(props) {
           </AccordionSummary>
           <AccordionDetails id="details">
             <div>
-              <Link to="/mt/engineer" className={classes.txt_deco_none}>
+              <Link to="/info/introduce" className={classes.txt_deco_none}>
                 <ListItem button key="엔지니어 현황">
                   <ListItemText primary="엔지니어 현황" />
                 </ListItem>
               </Link>
             </div>
             <div>
-              <Link to="/mt/maintenance" className={classes.txt_deco_none}>
+              <Link to="/info/greeting" className={classes.txt_deco_none}>
                 <ListItem button key="유지보수">
                   <ListItemText primary="유지보수" />
                 </ListItem>
@@ -365,15 +362,6 @@ function Header(props) {
                 <Link
                   to="#info_container3"
                   name="info_container3"
-                  onClick={scroll_mv}
-                  onMouseOver={mouseOver2}
-                  className="menu1"
-                >
-                  파트너
-                </Link>
-                <Link
-                  to="#info_container4"
-                  name="info_container4"
                   onClick={scroll_mv}
                   onMouseOver={mouseOver2}
                   className="menu1"
@@ -467,18 +455,10 @@ function Header(props) {
                 유지보수
               </Link>
               <div id="subclass5" className="subclasses">
-                <Link
-                  to="/mt/engineer"
-                  onMouseOver={mouseOver2}
-                  className="menu5"
-                >
+                <Link to="/mt/engineer" onMouseOver={mouseOver2} className="menu5">
                   엔지니어 현황
                 </Link>
-                <Link
-                  to="/mt/maintenance"
-                  onMouseOver={mouseOver2}
-                  className="menu5"
-                >
+                <Link to="/mt/maintenance" onMouseOver={mouseOver2} className="menu5">
                   유지보수
                 </Link>
               </div>

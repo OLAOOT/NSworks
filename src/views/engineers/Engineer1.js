@@ -11,7 +11,9 @@ import tmp3 from "./../../img/tmp4.png";
 import tmp4 from "./../../img/tmp3.png";
 import tmp5 from "./../../img/tmp5.png";
 
-
+import engineer1 from "./../../img/engineer1.png";
+import engineer2 from "./../../img/engineer2.png";
+import engineer3 from "./../../img/engineer3.png";
 
 import "../../css/maintenance.css";
 
@@ -33,7 +35,7 @@ export default function Engineer1() {
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={tmp1} />
+              <img src={engineer1} />
               <div>VIRTUALIZATION</div>
               <div>
                 <ul>
@@ -46,7 +48,7 @@ export default function Engineer1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={tmp2} />
+              <img src={engineer2} />
               <div>O / S</div>
               <div>
                 <ul>
@@ -58,7 +60,7 @@ export default function Engineer1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={tmp3} />
+              <img src={engineer3} />
               <div>HARDWARE</div>
               <div>
                 <ul>

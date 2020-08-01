@@ -63,9 +63,7 @@ const Slider = ({ data }) => {
         className={classes.slider}
       >
         {data.map(v => (
-          <div data-src={require(v.image)} key={v.title}>
-            {" "}
-            {/*난 오류나서 임시로 바꿈 <div data-src={require(v.image)} key={v.title}> */}
+          <div data-src={banner} key={v.title}> {/*난 오류나서 임시로 바꿈 <div data-src={require(v.image)} key={v.title}> */}
             <Hero data={v} />
           </div>
         ))}
