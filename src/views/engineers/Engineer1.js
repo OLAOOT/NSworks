@@ -4,18 +4,16 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
-
-import tmp1 from "./../../img/tmp1.png";
-import tmp2 from "./../../img/tmp2.png";
-import tmp3 from "./../../img/tmp4.png";
-import tmp4 from "./../../img/tmp3.png";
 import tmp5 from "./../../img/tmp5.png";
 
 import engineer1 from "./../../img/engineer1.png";
 import engineer2 from "./../../img/engineer2.png";
 import engineer3 from "./../../img/engineer3.png";
+import engineer4 from "./../../img/engineer4.png";
 
 import "../../css/maintenance.css";
+import $ from "jquery";
+window.$ = $;
 
 const img_data = {
   image: "./../../img/slider1.jpg",
@@ -23,6 +21,34 @@ const img_data = {
 };
 
 export default function Engineer1() {
+  $(document).ready(function() {
+    var count = 0;
+    do_ani('.article > div > *',count)
+    do_ani('.split-item',count)
+    $(window).scroll( function(){
+      do_ani('.article > div > *',count)
+      do_ani('.split-item',count)
+    });
+  });
+
+  const do_ani = (target) =>{
+    var count = 0;
+    $(target).each( function(i){
+      
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      
+      if( bottom_of_window > bottom_of_object/1.3){
+        if($(this).css('animation-name') === 'tmp')
+          count+=1
+        
+       
+        $(this).css('animation-name','slide1').delay( 200*count );
+        $(this).animate({'opacity':'1'},1000);        
+        
+      }
+    }); 
+  }
   return (
     <div>
       <TopImage data={img_data} />
@@ -73,7 +99,7 @@ export default function Engineer1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={tmp4} />
+              <img src={engineer4} />
               <div>DATABASE</div>
               <div>
                 <ul>

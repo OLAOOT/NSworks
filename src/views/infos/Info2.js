@@ -190,22 +190,27 @@ export default function Info2() {
   });
 
   const do_ani = (target,count) =>{
+    var count2 = 0
     $(target).each( function(i){
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       
       if( bottom_of_window > bottom_of_object/1.1){
+
+        if($(this).css('animation-name') === 'tmp')
+          count2++
+
         if($(this).attr('class') === 'split-item' && count%2 === 0){
-          $(this).css('animation-name','slide3');
+          $(this).css('animation-name','slide3').delay( 200*count2 );
           count++
         }
         else if($(this).attr('class') === 'split-item' && count%2 === 1){
-          $(this).css('animation-name','slide4');
+          $(this).css('animation-name','slide4').delay( 200*count2 );
           count++
         }
-        else
-          $(this).css('animation-name','slide1');
-        $(this).animate({'opacity':'1'},1500);
+        else          
+          $(this).css('animation-name','slide1').delay( 200*count2 );
+        $(this).animate({'opacity':'1'},1000);
       }
     }); 
   }

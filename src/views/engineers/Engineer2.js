@@ -1,16 +1,14 @@
 import React from "react";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/captioned.css";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
 
 import maintenance1 from "./../../img/maintenance1.png";
 import maintenance2 from "./../../img/maintenance2.png";
 
-
-
 import "../../css/maintenance.css";
+import $ from "jquery";
+window.$ = $;
 
 const img_data = {
   image: "./../../img/slider1.jpg",
@@ -18,6 +16,34 @@ const img_data = {
 };
 
 export default function Engineer2() {
+  $(document).ready(function() {
+    var count = 0;
+    do_ani('.article > div > *',count)
+    do_ani('.split-item',count)
+    $(window).scroll( function(){
+      do_ani('.article > div > *',count)
+      do_ani('.split-item',count)
+    });
+  });
+
+  const do_ani = (target) =>{
+    var count = 0;
+    $(target).each( function(i){
+      
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      
+      if( bottom_of_window > bottom_of_object/1.3){
+        if($(this).css('animation-name') === 'tmp')
+          count+=1
+        
+       
+        $(this).css('animation-name','slide1').delay( 200*count );
+        $(this).animate({'opacity':'1'},1000);        
+        
+      }
+    }); 
+  }
   return (
     <div>
       <TopImage data={img_data} />

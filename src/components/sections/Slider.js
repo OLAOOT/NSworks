@@ -71,7 +71,7 @@ const Slider = ({ data }) => {
       >
         {data.map(v => (
           <div
-            data-src={require(v.image)}
+            data-src={banner}
             key={v.title}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
