@@ -39,9 +39,9 @@ export default function Info1() {
 
   $(document).ready(function() {
     
-    do_ani('.article > div > div')
+    do_ani('.article > div > *')
     $(window).scroll( function(){
-        do_ani('.article > div > div')
+        do_ani('.article > div > *')
     });
   });
 
@@ -55,7 +55,7 @@ export default function Info1() {
       if( bottom_of_window > bottom_of_object/1.3){
         if($(this).css('animation-name') === 'tmp')
           count+=1
-        
+        console.log('asd')
        
         $(this).css('animation-name','slide1').delay( 200*count );
         $(this).animate({'opacity':'1'},1000);        
@@ -115,7 +115,7 @@ export default function Info1() {
             </div>
           </div>
           <div className="article_mid">
-            <Paper elevation={3} className="paper">
+            <Paper elevation={3}>
               <img src={img1} alt="empty" />
               <div>IT 컨설팅</div>
               <div>
@@ -125,7 +125,7 @@ export default function Info1() {
                 <br /> 재해 방지를 위한 백업및 보안 컨설팅
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
+            <Paper elevation={3}>
               <img src={img2} alt="empty" />
               <div>솔루션 공급</div>
               <div>
@@ -133,7 +133,7 @@ export default function Info1() {
                 기술지원
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
+            <Paper elevation={3}>
               <img src={img2} alt="empty" />
               <div>HW/SW 판매</div>
               <div>
@@ -144,7 +144,7 @@ export default function Info1() {
                 MS, Linux 관련 OS및 SW판매
               </div>
             </Paper>
-            <Paper elevation={3} className="paper">
+            <Paper elevation={3}>
               <img src={img1} alt="empty" />
               <div>통합유지보수</div>
               <div>
@@ -152,43 +152,6 @@ export default function Info1() {
                 <br />
                 Dell 충북, 충남, 세종 공인 지원센터
                 <br /> 기업, 대학, 병원 등 유지보수
-              </div>
-            </Paper>
-          </div>
-          <div className="article_top">
-            <div>
-              <span>Major Service Partners</span>
-            </div>
-            <div>
-              고객사의 환경에 최적화된 인프라 구축을 위한 컨설팅을 통해 제품
-              판매 및 솔루션을 제공함은 물론 현재 사용중인 Server Storage의
-              유지보수 서비스를 제공하고 있습니다. 고객사의 비즈니스 성공을 위해
-              최선을 다하는 NSworks가 되겠습니다.
-            </div>
-          </div>
-          <div className="article_mid" id="mid1_2">
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
-              <div>기업</div>
-              <div>
-                사업분야 텍스트를 입력하세요. 이 텍스트는 Dummy Text 입니다.
-                사업분야 텍스트를 입력하세요.
-              </div>
-            </Paper>
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
-              <div>공공</div>
-              <div>
-                Citrix, Microsoft, Cisco, VMware, HP, Dell의 인프라 구축 및
-                기술지원
-              </div>
-            </Paper>
-            <Paper elevation={3} className="paper">
-              <img src={img4} />
-              <div>병원</div>
-              <div>
-                고객사 환경에 최적화된 HW, SW, Network 인프라 구축을 위한 솔루션
-                컨설팅 재해 방지를 위한 백업및 보안 컨설팅
               </div>
             </Paper>
           </div>
