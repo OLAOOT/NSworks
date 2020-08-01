@@ -7,7 +7,7 @@ import Hero from "./Hero";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 
-import banner from "./../../img/banner_w.png";
+import banner from "./../../img/slider1.jpg";
 
 const useStyles = makeStyles(theme => ({
   article_mid: {
@@ -71,7 +71,7 @@ const Slider = ({ data }) => {
       >
         {data.map(v => (
           <div
-            data-src={banner}
+            data-src={banner} //data-src={require(v.image)}
             key={v.title}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
