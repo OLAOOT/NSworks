@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
@@ -53,20 +53,30 @@ const useStyles = makeStyles(theme => ({
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Slider = ({ data }) => {
+  const [play, setPlay] = useState(true);
   const classes = useStyles();
+  const handleMouseOver = () => {
+    setPlay(false);
+  };
+  const handleMouseOut = () => {
+    setPlay(true);
+  };
   return (
     <div>
       <AutoplaySlider
-        play={true}
+        play={play}
         cancelOnInteraction={false}
-        interval={2000}
+        interval={500}
         className={classes.slider}
       >
         {data.map(v => (
-          <div data-src={require(v.image)} key={v.title}>
-            {" "}
-            {/*난 오류나서 임시로 바꿈 <div data-src={require(v.image)} key={v.title}> */}
-            <Hero data={v} />
+          <div
+            data-src={require(v.image)}
+            key={v.title}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            <Hero data={v} play={play} />
           </div>
         ))}
       </AutoplaySlider>

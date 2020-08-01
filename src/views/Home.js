@@ -15,8 +15,8 @@ const heroData = [
     image: "./../../img/slider1.jpg",
     title: "NSWorks",
     subtitle: "Always Do the Best",
-    description: "dummy text",
-    button: "" //링크 넣기. 빈칸으로 남기면 버튼 사라짐
+    description: "",
+    button: null
   },
   {
     image: "./../../img/slider2.jpg",
@@ -24,7 +24,12 @@ const heroData = [
     subtitle: "",
     description:
       "가상화 서비스를 통해 고객의 비즈니스 효율성을 높이며 자본 비용과 운용 비율의 절감을 극대화 할 수 있게 하겠습니다",
-    button: "/href"
+    button: [
+      {
+        text: "",
+        href: "/VI"
+      }
+    ]
   },
   {
     image: "./../../img/slider3.jpg",
@@ -32,21 +37,64 @@ const heroData = [
     subtitle: "",
     description:
       "압도적인 시장 점유율과 높은 신뢰성 및 안전성을 가진 VMware 기반 가상화를 구현합니다",
-    button: "/href"
+    button: [
+      {
+        text: "서버가상화",
+        href: "/vm/server"
+      },
+      {
+        text: "데스크탑가상화",
+        href: "/vm/desktop"
+      },
+      {
+        text: "스토리지가상화",
+        href: "/vm/storage"
+      },
+      {
+        text: "재해복구시스템",
+        href: "/vm/DR"
+      }
+    ]
   },
   {
     image: "./../../img/slider2.jpg",
-    title: "Technical Support",
+    title: "Hardware Infrastructure",
     subtitle: "",
-    description: "전문 엔지니어의 풍부한 경험으로 차별화된 서비스를 지원합니다",
-    button: "/href"
+    description: "하드웨어인프라 설명 text 필요",
+    button: [
+      {
+        text: "서버",
+        href: "/hw/server"
+      },
+      {
+        text: "스토리지",
+        href: "/hw/storage"
+      },
+      {
+        text: "네트워크",
+        href: "/hw/network"
+      },
+      {
+        text: "보안",
+        href: "/hw/security"
+      }
+    ]
   },
   {
     image: "./../../img/slider3.jpg",
-    title: "IT Consulting",
+    title: "유지보수",
     subtitle: "",
-    description: "고객의 요구 사항에 맞는 맞춤형 최적 솔루션을 제공하겠습니다",
-    button: "/href"
+    description: "유지보수 설명 text 필요",
+    button: [
+      {
+        text: "엔지니어 현황",
+        href: "/mt/engineer"
+      },
+      {
+        text: "유지보수",
+        href: "/mt/maintenance"
+      }
+    ]
   }
 ];
 

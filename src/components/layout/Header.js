@@ -7,13 +7,13 @@ import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
+import MuiAccordion from "@material-ui/core/Accordion";
+import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
+import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MenuIcon from "@material-ui/icons/Menu";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import MuiTypography from "@material-ui/core/Typography";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import "../../css/header.css";
 import logo from "./../../img/logo.png";
 import $ from "jquery";
@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     zIndex: 9999,
-    height: "64px"
+    height: "64px",
+    fontFamily: "NanumSquare"
   },
   drawer: {
     [theme.breakpoints.up("md")]: {
@@ -33,16 +34,16 @@ const useStyles = makeStyles(theme => ({
       flexShrink: 0
     }
   },
-  appBar: {
-    [theme.breakpoints.up("md")]: {
-      width: `100%`,
-      marginLeft: drawerWidth,
-      zIndex: 9999
-    },
-    height: "64px",
-    background: "#fafafa",
-    boxShadow: "0px 0px 0px 0px !important"
-  },
+  // appBar: {
+  //   [theme.breakpoints.up("md")]: {
+  //     width: `100%`,
+  //     marginLeft: drawerWidth,
+  //     zIndex: 9999
+  //   },
+  //   height: "64px",
+  //   background: "#fafafa",
+  //   boxShadow: "0px 0px 0px 0px !important"
+  // },
   menuButton: {
     marginLeft: theme.spacing(2),
     [theme.breakpoints.up("md")]: {
@@ -59,25 +60,62 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3)
   },
-  icon_wrap1: {
-    position: "absolute",
-    right: 30,
-    width: 50
-  },
-  icon_wrap2: {
-    flaot: "right",
-    color: "#ffffff",
-    textDecoration: "none"
-  },
   txt_deco_none: {
-    color: "#000000 !important",
-    textDecoration: "none"
+    color: "#000000 !important"
   },
   txt_deco_none2: {
-    color: "#000000 !important",
-    textDecoration: "none"
+    color: "#000000 !important"
+  },
+  heading: {
+    fontWeight: 700
   }
 }));
+
+const Accordion = withStyles({
+  root: {
+    // border: '1px solid rgba(0, 0, 0, .125)',
+    boxShadow: "none",
+    "&:before": {
+      display: "none"
+    },
+    "&$expanded": {
+      margin: "auto"
+    }
+  },
+  expanded: {}
+})(MuiAccordion);
+
+const AccordionSummary = withStyles({
+  root: {
+    marginBottom: -10,
+    minHeight: 56,
+    "&$expanded": {
+      minHeight: 56
+    }
+  },
+  content: {
+    fontWeight: 700,
+    "&$expanded": {
+      margin: "12px 0"
+    }
+  },
+  expanded: {}
+})(MuiAccordionSummary);
+
+const AccordionDetails = withStyles(theme => ({
+  root: {
+    padding: theme.spacing(2)
+  }
+}))(MuiAccordionDetails);
+
+const Typography = withStyles(theme => ({
+  root: {
+    width: "95%",
+    paddingBottom: 15,
+    borderBottom: "1px solid rgba(0, 0, 0, .075)",
+    fontFamily: "NanumSquare"
+  }
+}))(MuiTypography);
 
 function Header(props) {
   const { window } = props;
@@ -110,7 +148,7 @@ function Header(props) {
 
   const scroll_mv = e => {
     //if(window.location.href)
-    if (document.location.pathname != "/") {
+    if (document.location.pathname !== "/") {
       document.location.href = "/#" + e.target.name;
     }
     $([document.documentElement, document.body]).animate(
@@ -128,14 +166,9 @@ function Header(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <Divider />
       <List>
         <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
             <Typography className={classes.heading}>회사소개</Typography>
           </AccordionSummary>
           <AccordionDetails id="details">
@@ -177,19 +210,26 @@ function Header(props) {
             </div>
           </AccordionDetails>
         </Accordion>
+
         <Accordion>
-          <Link to="/VI" className={classes.txt_deco_none}>
-            <ListItem button key="Virtual Integration">
-              <ListItemText primary="Virtual Integration" />
-            </ListItem>
-          </Link>
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+            <Typography className={classes.heading}>
+              Virtual Integration
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails id="details">
+            <div>
+              <Link to="/vm/server" className={classes.txt_deco_none}>
+                <ListItem button key="Virtual Integration">
+                  <ListItemText primary="Virtual Integration" />
+                </ListItem>
+              </Link>
+            </div>
+          </AccordionDetails>
         </Accordion>
+
         <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
             <Typography className={classes.heading}>가상화인프라</Typography>
           </AccordionSummary>
           <AccordionDetails id="details">
@@ -224,11 +264,7 @@ function Header(props) {
           </AccordionDetails>
         </Accordion>
         <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
             <Typography className={classes.heading}>하드웨어인프라</Typography>
           </AccordionSummary>
           <AccordionDetails id="details">
@@ -247,14 +283,14 @@ function Header(props) {
               </Link>
             </div>
             <div>
-              <Link to="/info/network" className={classes.txt_deco_none}>
+              <Link to="/hw/network" className={classes.txt_deco_none}>
                 <ListItem button key="네트워크">
                   <ListItemText primary="네트워크" />
                 </ListItem>
               </Link>
             </div>
             <div>
-              <Link to="/info/security" className={classes.txt_deco_none}>
+              <Link to="/hw/security" className={classes.txt_deco_none}>
                 <ListItem button key="보안">
                   <ListItemText primary="보안" />
                 </ListItem>
@@ -263,11 +299,7 @@ function Header(props) {
           </AccordionDetails>
         </Accordion>
         <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
             <Typography className={classes.heading}>유지보수</Typography>
           </AccordionSummary>
           <AccordionDetails id="details">
@@ -288,11 +320,7 @@ function Header(props) {
           </AccordionDetails>
         </Accordion>
         <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
             <Typography className={classes.heading}>문의 & 원격지원</Typography>
           </AccordionSummary>
           <AccordionDetails id="details">
@@ -333,11 +361,11 @@ function Header(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <div variant="h6" noWrap>
             <Link to="/" className={classes.txt_deco_none2}>
               <img src={logo} />
             </Link>
-          </Typography>
+          </div>
           <div className="menus">
             <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu1">
               <Link to="#info_container1" className="menu1">
