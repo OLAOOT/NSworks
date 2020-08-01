@@ -1,8 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import styled from "styled-components";
-import Paper from "@material-ui/core/Paper";
-import img4 from "./../../img/img_ccai.png";
 
 import "../../css/info.css";
 
@@ -180,6 +178,38 @@ const GreetingSplit = ({
 };
 
 export default function Info2() {
+
+  $(document).ready(function() {
+    var count = 0;
+    do_ani('.info_container > div > div',count)
+    do_ani('.split-item',count)
+    $(window).scroll( function(){
+      do_ani('.info_container > div > div',count)
+      do_ani('.split-item',count)
+    });
+  });
+
+  const do_ani = (target,count) =>{
+    $(target).each( function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      
+      if( bottom_of_window > bottom_of_object/1.1){
+        if($(this).attr('class') === 'split-item' && count%2 === 0){
+          $(this).css('animation-name','slide3');
+          count++
+        }
+        else if($(this).attr('class') === 'split-item' && count%2 === 1){
+          $(this).css('animation-name','slide4');
+          count++
+        }
+        else
+          $(this).css('animation-name','slide1');
+        $(this).animate({'opacity':'1'},1500);
+      }
+    }); 
+  }
+  
   return (
     <div>
       {/* {window.location.href.indexOf("info") === 22 ? (

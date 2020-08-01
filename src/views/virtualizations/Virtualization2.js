@@ -10,13 +10,40 @@ import horizon from "./../../img/horizon.png";
 import img4 from "./../../img/img_ccai.png";
 import dummyicon from "./../../img/logo.png";
 import "../../css/virtual.css";
-
+import $ from "jquery";
+window.$ = $;
 const img_data = {
   image: "./../../img/slider1.jpg",
   title: "데스크톱 가상화"
 };
 
 export default function Virtualization2() {
+  $(document).ready(function() {
+    
+    do_ani('.article > div > *')
+    $(window).scroll( function(){
+        do_ani('.article > div > *')
+    });
+  });
+
+  const do_ani = (target) =>{
+    var count = 0;
+    $(target).each( function(i){
+      
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      
+      if( bottom_of_window > bottom_of_object/1.3){
+        if($(this).css('animation-name') === 'tmp')
+          count+=1
+        
+       
+        $(this).css('animation-name','slide1').delay( 200*count );
+        $(this).animate({'opacity':'1'},1000)
+        
+      }
+    }); 
+  }
   return (
     <div>
       <TopImage data={img_data} />

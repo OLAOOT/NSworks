@@ -12,12 +12,43 @@ import dummyicon from "./../../img/logo.png";
 
 import "../../css/virtual.css";
 
+import $ from "jquery";
+window.$ = $;
+
 const img_data = {
   image: "./../../img/slider1.jpg",
   title: "서버 가상화"
 };
 
 export default function Virtualization1() {
+  
+  $(document).ready(function() {
+    
+    do_ani('.article > div > *')
+    $(window).scroll( function(){
+        do_ani('.article > div > *')
+    });
+  });
+
+  const do_ani = (target) =>{
+    var count = 0;
+    $(target).each( function(i){
+      
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      
+      if( bottom_of_window > bottom_of_object/1.3){
+        if($(this).css('animation-name') === 'tmp')
+          count+=1
+        
+       
+        $(this).css('animation-name','slide1').delay( 200*count );
+        $(this).animate({'opacity':'1'},1000)
+        
+      }
+    }); 
+  }
+
   return (
     <div>
       <TopImage data={img_data} />
@@ -102,7 +133,7 @@ export default function Virtualization1() {
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                비디오 자리
+                <iframe width="1182" height="665" src="https://www.youtube.com/embed/frzVtaNrHU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </Paper>
               <Paper elevation={3} className="paper">
                 <img src={vmcloud} />
