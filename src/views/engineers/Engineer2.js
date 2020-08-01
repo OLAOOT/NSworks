@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
 
 import maintenance1 from "./../../img/maintenance1.png";
+import maintenance2 from "./../../img/maintenance2.png";
 
 
 
@@ -36,7 +37,7 @@ export default function Engineer2() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={maintenance1} />
+            <img src={maintenance2} />
             <div>
                 <ul>
                     <li>서버를 관리하는 전문 인력이 없는 고객</li>

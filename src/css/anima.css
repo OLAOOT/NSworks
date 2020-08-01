@@ -1,0 +1,18 @@
+.info_container .article_mid > * {
+    animation-duration: 1s;
+    animation-name: slideUp;
+  }
+
+  @keyframes slideUp {
+    from {
+        position: relative;
+        top:-30px;
+        opacity: 0;
+    }
+    
+    to {
+        position: relative;
+        top:0px;
+        opacity: 1;
+    } 
+  }

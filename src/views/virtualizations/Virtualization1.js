@@ -102,7 +102,7 @@ export default function Virtualization1() {
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                비디오 자리
+                <iframe width="1182" height="665" src="https://www.youtube.com/embed/frzVtaNrHU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </Paper>
               <Paper elevation={3} className="paper">
                 <img src={vmcloud} />

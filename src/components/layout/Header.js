@@ -169,7 +169,7 @@ function Header(props) {
             </div>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion id="details">
           <Link to="/VI" className={classes.txt_deco_none}>
             <ListItem button key="Virtual Integration">
               <ListItemText primary="Virtual Integration" />

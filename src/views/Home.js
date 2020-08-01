@@ -5,9 +5,11 @@ import Info1 from "./infos/Info1";
 import Info2 from "./infos/Info2";
 import Info3 from "./infos/Info3";
 import Info4 from "./infos/Info4";
-
+import "./../css/anima.css";
 import $ from "jquery";
 window.$ = $;
+
+
 
 const heroData = [
   {

@@ -9,6 +9,7 @@
     "classnames": "^2.2.6",
     "history": "^5.0.0",
     "jquery": "^3.5.1",
+    "jquery-appear-original": "^0.6.2",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
@@ -45,5 +46,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
 }

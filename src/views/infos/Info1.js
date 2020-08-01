@@ -11,6 +11,8 @@ import img2 from "./../../img/slider2.jpg";
 import img3 from "./../../img/slider3.jpg";
 import img4 from "./../../img/img_ccai.png";
 import "../../css/info.css";
+import $ from "jquery";
+window.$ = $;
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -32,6 +34,20 @@ const useStyles = makeStyles(theme => ({
 
 export default function Info1() {
   const classes = useStyles();
+  $(document).ready(function() {
+    $(window).scroll( function(){
+        $('#mid1_2').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* 3 */
+            if( bottom_of_window > bottom_of_object/2 ){
+                $(this).animate({'opacity':'1'},500);
+            }
+        }); 
+    });
+});
+
+
   return (
     <div>
       {/* {window.location.href.indexOf('info') ?  (
@@ -134,7 +150,7 @@ export default function Info1() {
               최선을 다하는 NSworks가 되겠습니다.
             </div>
           </div>
-          <div className="article_mid">
+          <div className="article_mid" id="mid1_2">
             <Paper elevation={3}>
               <img src={img4} />
               <div>기업</div>
