@@ -5,7 +5,7 @@ import ButtonGroup from "../elements/ButtonGroup";
 import MuiButton from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MuiMenuItem from "@material-ui/core/MenuItem";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -17,6 +17,27 @@ const propTypes = {
 const defaultProps = {
   ...SectionProps.defaults
 };
+
+const useStyles = makeStyles(theme => ({
+  button: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  },
+  subtitle: {
+    marginBottom: "8px",
+    color: "#ffffff",
+    fontSize: "20px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px"
+    }
+  },
+  description: {
+    color: "#ffffff",
+    marginBottom: 20 + "px",
+    fontSize: 1 + "rem"
+  }
+}));
 
 const Button = withStyles({
   root: {
@@ -72,6 +93,8 @@ const Hero = ({
     setAnchorEl(null);
   };
 
+  const classes = useStyles();
+
   return (
     <section {...props} className={outerClasses}>
       <div className="container-sm">
@@ -83,7 +106,7 @@ const Hero = ({
         >
           <div className="hero-content">
             <h2 className="mt-0 mb-8">{data.title}</h2>
-            <h3 className="mt-0 mb-8">{data.subtitle}</h3>
+            <div className={classes.subtitle}>{data.subtitle}</div>
             <div className="container-xs">
               <p
                 className="m-0 mb-32"
@@ -104,6 +127,7 @@ const Hero = ({
                           id={data.title}
                           aria-controls="more_menu"
                           aria-haspopup="true"
+                          className={classes.button}
                         >
                           자세히 보기
                         </Button>
@@ -114,6 +138,7 @@ const Hero = ({
                         aria-controls="more_menu"
                         aria-haspopup="true"
                         onMouseOver={handleMouseOver}
+                        className={classes.button}
                       >
                         자세히 보기
                       </Button>
