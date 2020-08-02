@@ -55,7 +55,6 @@ export default function Info1() {
       if( bottom_of_window > bottom_of_object/1.3){
         if($(this).css('animation-name') === 'tmp')
           count+=1
-        console.log('asd')
        
         $(this).css('animation-name','slide1').delay( 200*count );
         $(this).animate({'opacity':'1'},1000);        

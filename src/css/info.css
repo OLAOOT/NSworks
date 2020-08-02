@@ -1,7 +1,7 @@
 .info_container {
   margin: 0 auto;
   margin-top: 80px;
-  max-width: 1280px;
+  width: 1280px;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -15,6 +15,7 @@
 .info_container .header {
   position: absolute;
   width: 100%;
+  min-width:1280px;
   height: 400px;
   left: 0;
   background: #f8fafc;
@@ -143,6 +144,32 @@
   width: 46%;
 }
 
+.info_container .article_mid3{
+  padding-top: 50px;  
+}
+
+.info_container .article_mid3 div{
+  text-align: center;
+  padding-bottom:20px;
+  font-size:35px;
+  color:#000000;
+  font-weight:500;
+  
+}
+
+.info_container .article_mid3 > table{
+  margin-bottom:100px;
+}
+.info_container .article_mid3 > table td {
+  padding:10px
+}
+
+.info_container .article_mid3 > table img {
+  width:100%
+}
+.info_container .article_mid3 > table a {
+  color:#000000
+}
 .info_container .ceo_sign {
   padding-top: 10px;
   display: flex;
@@ -194,4 +221,45 @@ table.type03 td {
   font-weight: 700;
   line-height: 56px;
   letter-spacing: -0.5px;
+}
+
+@media (max-width:600px){
+  .info_container {
+    width:100%; 
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #article1 {
+    padding-top: 1px;
+  }
+  #info1{
+    font-size: 18px;
+  }
+  .info_container .header {
+    min-width: 0px;
+  }
+  .info_container .article_mid > * {
+    margin: 1%;
+    width: 98%;
+    margin-top:30px
+  }
+  .info_container .article_mid > * > div:last-child {
+    font-size:16px;
+  }
+  .info_container .header > div > p {
+    font-size:20px; 
+  }
+  .info_container .header > div > div > p:first-child {
+    font-size: 30px;
+  }
+  .info_container .header > div > div > p:last-child {
+    font-size: 19px;
+    padding-right:20px; 
+  }
+  .mb-12{
+    font-size:1.0rem !important 
+  }
+  .m-0{
+    font-size:0.6rem !important
+  }
 }
