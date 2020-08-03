@@ -14,8 +14,6 @@ import Info2 from "./views/infos/Info2";
 import Info3 from "./views/infos/Info3";
 import Info4 from "./views/infos/Info4";
 
-import VI from "./views/VI";
-
 import Virtualization1 from "./views/virtualizations/Virtualization1";
 import Virtualization2 from "./views/virtualizations/Virtualization2";
 import Virtualization3 from "./views/virtualizations/Virtualization3";
@@ -31,7 +29,6 @@ import Engineer2 from "./views/engineers/Engineer2";
 
 import Question from "./views/q&r/Question";
 import Remote from "./views/q&r/Remote";
-
 
 const App = () => {
   const childRef = useRef();
@@ -90,15 +87,6 @@ const App = () => {
               render={props => (
                 <LayoutDefault>
                   <Info4 {...props} />
-                </LayoutDefault>
-              )}
-            />
-            <Route
-              exact
-              path="/VI"
-              render={props => (
-                <LayoutDefault>
-                  <VI {...props} />
                 </LayoutDefault>
               )}
             />
