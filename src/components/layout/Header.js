@@ -179,7 +179,6 @@ function Header(props) {
   })
   $("#details > *").click(function(e) {
     $("#menuBtn").click();
-    alert(e.target.parentNode.parentNode.parentNode.href)
     if(e.target.parentNode.parentNode.parentNode.href !== undefined)
       document.location.href = e.target.parentNode.parentNode.parentNode.href
   });

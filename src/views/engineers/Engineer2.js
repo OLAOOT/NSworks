@@ -4,6 +4,7 @@ import "react-awesome-slider/dist/captioned.css";
 import TopImage from "../../components/sections/TopImage";
 
 import maintenance1 from "./../../img/maintenance1.png";
+import maintenance1_m from "./../../img/maintenance1_m.png";
 import maintenance2 from "./../../img/maintenance2.png";
 
 import "../../css/maintenance.css";
@@ -44,6 +45,9 @@ export default function Engineer2() {
       }
     }); 
   }
+  if($( window ).width() < 600){
+    $('#maintenance1').attr('src',maintenance1_m)
+  }
   return (
     <div>
       <TopImage data={img_data} />
@@ -55,7 +59,7 @@ export default function Engineer2() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={maintenance1} />
+            <img src={maintenance1} id="maintenance1"/>
           </div>
           <div className="article_top">
             <div>

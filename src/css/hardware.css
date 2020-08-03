@@ -1,7 +1,7 @@
 .hardware_container {
   margin: 0 auto;
   margin-top: 30px;
-  max-width: 1280px;
+  width: 1280px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 150px;
@@ -175,4 +175,10 @@
 
 .black {
   color: #000000;
+}
+
+@media (max-width:600px){
+  .hardware_container {
+    width:100%;  
+  }
 }

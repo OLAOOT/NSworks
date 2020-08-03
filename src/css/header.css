@@ -58,15 +58,8 @@
   color: #000000 !important;
 }
 
-@media (max-width: 960px) {
-  .tool {
-    padding-left: 2%;
-    padding-right: 10px;
-  }
-  .menus {
-    display: none;
-  }
-}
+
+  
 
 @media (max-width: 600px) {
   .header {
@@ -76,4 +69,12 @@
   .makeStyles-slider-26{
     min-width:0px,
   }
+  .tool {
+    padding-left: 2%;
+    padding-right: 10px;
+  }
+  .menus {
+    display: none;
+  }
+
 }
