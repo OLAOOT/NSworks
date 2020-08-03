@@ -4,8 +4,9 @@ import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/captioned.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styled from "styled-components";
-
 import banner from "./../../img/banner_w.png";
+import $ from "jquery";
+window.$ = $;
 
 const SlideContainer = styled.div`
   position: relative;
@@ -32,12 +33,22 @@ const TextContainer = styled.div`
   width: 100%;
 `;
 
-const Title = styled.div`
+var Title = styled.div`
   font-size: 50px;
   font-weight: bold;
   color: #000000;
   text-align: center;
 `;
+
+if($(window).width() < 600)
+{
+  Title = styled.div`
+  font-size: 35px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+`;
+}
 
 const Subtitle = styled.div`
   font-size: 30px;

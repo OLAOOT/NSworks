@@ -41,7 +41,7 @@ export default function Info4() {
       ) : (
         <div />
       )}
-      <div className="info_container" id="info_container3">
+      <div className="info_container" id="info_container4">
         <div className="article">
           <img src={history} className={classes.img} />
         </div>

@@ -122,7 +122,7 @@ function Header(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  var url=''
   //console.log(props.current_link)
 
   const handleDrawerToggle = () => {
@@ -147,7 +147,7 @@ function Header(props) {
   };
 
   const scroll_mv = e => {
-    //if(window.location.href)
+    console.log($(this).parent().attr('name'))
     if (document.location.pathname !== "/") {
       document.location.href = "/#" + e.target.name;
     }
@@ -159,10 +159,27 @@ function Header(props) {
     );
   };
 
-  $("#details > *").click(function() {
+  $('.m_info_container').click(function(){    
+    var id=$(this).attr('id').replace('m_','')
+    if (document.location.pathname !== "/") {
+      document.location.href = "/#" + id;
+    }
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $('#'+id).offset().top - 30
+      },
+      500
+    );
+  })
+  $(document).ready(function() {
+    if(document.location.href.indexOf('undefined') === 22)
+      document.history.back()
+  })
+  $("#details > *").click(function(e) {
     $("#menuBtn").click();
+    document.location.href = e.target.parentNode.parentNode.parentNode.href
   });
-
+    
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -173,23 +190,23 @@ function Header(props) {
           </AccordionSummary>
           <AccordionDetails id="details">
             <div>
-              <Link to="#info_container1" className={classes.txt_deco_none}>
+              <Link to="#info_container1" className={classes.txt_deco_none} >
                 <ListItem button key="회사개요">
-                  <ListItemText primary="회사개요" />
+                  <ListItemText primary="회사개요" id="m_info_container1" class="m_info_container"/>
                 </ListItem>
               </Link>
             </div>
             <div>
               <Link to="#info_container2" className={classes.txt_deco_none}>
                 <ListItem button key="인사말">
-                  <ListItemText primary="인사말" />
+                  <ListItemText primary="인사말" id="m_info_container2" class="m_info_container"/>
                 </ListItem>
               </Link>
             </div>
             <div>
               <Link to="#info_container3" className={classes.txt_deco_none}>
                 <ListItem button key="파트너">
-                  <ListItemText primary="파트너" />
+                  <ListItemText primary="파트너" id="m_info_container3" class="m_info_container"/>
                 </ListItem>
               </Link>
             </div>
@@ -197,14 +214,14 @@ function Header(props) {
             <div>
               <Link to="#info_container4" className={classes.txt_deco_none}>
                 <ListItem button key="연혁">
-                  <ListItemText primary="연혁" />
+                  <ListItemText primary="연혁" id="m_info_container4" class="m_info_container"/>
                 </ListItem>
               </Link>
             </div>
             <div>
               <Link to="#info_container5" className={classes.txt_deco_none}>
                 <ListItem button key="찾아오시는길">
-                  <ListItemText primary="찾아오시는길" />
+                  <ListItemText primary="찾아오시는길" id="m_info_container5" class="m_info_container"/>
                 </ListItem>
               </Link>
             </div>

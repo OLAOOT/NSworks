@@ -59,7 +59,7 @@ export default function Info5() {
       {/* {window.location.href.indexOf('info') === 22  ? (img_data.map(v => (
            <TopImage data={v} />
         ))) : (<div></div>)} */}
-      <div className="info_container" id="info_container4">
+      <div className="info_container" id="info_container5">
         <div className="article" id="article4">
           <table className="type03">
             <tbody>
