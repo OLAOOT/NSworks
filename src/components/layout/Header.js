@@ -172,12 +172,16 @@ function Header(props) {
     );
   })
   $(document).ready(function() {
-    if(document.location.href.indexOf('undefined') === 22)
-      document.history.back()
+    //alert(document.location.href.indexOf('undefined'))
+    //if(document.location.href.indexOf('undefined') === 22)
+      
+      //document.history.back()
   })
   $("#details > *").click(function(e) {
     $("#menuBtn").click();
-    document.location.href = e.target.parentNode.parentNode.parentNode.href
+    alert(e.target.parentNode.parentNode.parentNode.href)
+    if(e.target.parentNode.parentNode.parentNode.href !== undefined)
+      document.location.href = e.target.parentNode.parentNode.parentNode.href
   });
     
   const drawer = (

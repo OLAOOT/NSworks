@@ -21,6 +21,8 @@
   height: 64px;
   position: absolute;
   width: 1280px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tool {

@@ -77,7 +77,7 @@ const Slider = ({ data }) => {
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
-            <Hero data={v} play={play} />
+            <Hero data={v} play={play} key={v}/>
           </div>
         ))}
       </AutoplaySlider>
