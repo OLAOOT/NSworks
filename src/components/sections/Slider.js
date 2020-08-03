@@ -6,7 +6,7 @@ import "react-awesome-slider/dist/captioned.css";
 import Hero from "./Hero";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
-
+import "./../../css/header.css";
 import banner from "./../../img/slider1.jpg";
 
 const useStyles = makeStyles(theme => ({
@@ -66,8 +66,9 @@ const Slider = ({ data }) => {
       <AutoplaySlider
         play={play}
         cancelOnInteraction={false}
-        interval={500}
+        interval={5000}
         className={classes.slider}
+        id="slider"
       >
         {data.map(v => (
           <div

@@ -20,7 +20,7 @@
 .header {
   height: 64px;
   position: absolute;
-  width: 100%;
+  width: 1280px;
 }
 
 .tool {
@@ -33,15 +33,7 @@
   align-items: center;
   overflow: hidden;
 }
-@media (max-width: 960px) {
-  .tool {
-    padding-left: 2%;
-    padding-right: 10px;
-  }
-  .menus {
-    display: none;
-  }
-}
+
 .tool img {
   width: 150px;
   margin-right: 10%;
@@ -62,4 +54,24 @@
 .MuiAccordionDetails-root {
   display: block !important;
   color: #000000 !important;
+}
+
+@media (max-width: 960px) {
+  .tool {
+    padding-left: 2%;
+    padding-right: 10px;
+  }
+  .menus {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    width:100%
+  }
+
+  .makeStyles-slider-26{
+    min-width:0px,
+  }
 }

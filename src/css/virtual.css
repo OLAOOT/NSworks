@@ -1,7 +1,7 @@
 .virtual_container {
   margin: 0 auto;
   margin-top: 30px;
-  max-width: 1280px;
+  width: 1280px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 150px;
@@ -22,7 +22,7 @@
   font-weight: 500;
   margin-top: 100px;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
 }
 .virtual_container .article_top > div:first-child > span {
   padding-bottom: 5px;
@@ -120,4 +120,12 @@
 .virtual_container .article_bot .paper iframe {
   width:100%;
   height:100%
+}
+
+@media (max-width:600px){
+  .virtual_container {width:100%;} 
+  .virtual_container .article_top .highlight {font-size:.9rem}
+  .virtual_container .article_top > div {font-size:15px}
+  .virtual_container .article_mid {font-size:15px}
+  .virtual_container .paper > div {padding: 26px 5px 0px;font-size:18px}
 }
