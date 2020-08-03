@@ -263,3 +263,18 @@ table.type03 td {
     font-size:0.6rem !important
   }
 }
+
+.info_container .article_mid3 > table td:hover {
+  animation-duration: 1s;
+  animation-name: scaleUp;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform:scale(1);   
+  }
+  
+  100% {
+    transform:scale(1.1);   
+  } 
+}

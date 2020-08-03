@@ -33,13 +33,6 @@ const img_data = [
 ];
 
 export default function Info3() {
-  $('#partner_tb tr td').mouseenter((e)=>{
-    $(e.target).animate({'padding':'1px'},500)  
-  })
-
-  $('#partner_tb tr td').mouseleave((e)=>{
-    $(e.target).animate({'padding':'10px'},500)  
-  })
   const classes = useStyles();
   return (
     <div>
