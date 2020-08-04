@@ -22,31 +22,28 @@ const img_data = [
 
 export default function Virtualization4() {
   $(document).ready(function() {
-    
-    do_ani('.article > div > *')
-    $(window).scroll( function(){
-        do_ani('.article > div > *')
+    do_ani(".article > div > *");
+    $(window).scroll(function() {
+      do_ani(".article > div > *");
     });
   });
 
-  const do_ani = (target) =>{
+  const do_ani = target => {
     var count = 0;
-    $(target).each( function(i){
-      
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.3){
-        if($(this).css('animation-name') === 'tmp')
-          count+=1
-        
-       
-        $(this).css('animation-name','slide1').delay( 200*count );
-        $(this).animate({'opacity':'1'},1000)
-        
+
+      if (bottom_of_window > bottom_of_object / 1.3) {
+        if ($(this).css("animation-name") === "tmp") count += 1;
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
   return (
     <div>
       {img_data.map((v, i) => (
@@ -65,7 +62,8 @@ export default function Virtualization4() {
               </div>
               정책 기반 관리, 무중단 테스트 및 자동화된 조정으로 프라이빗
               클라우드 환경 내 각 사이트 간에 애플리케이션 가용성과 모빌리티를
-              구현하는 업계 최고의 재해 복구 소프트웨어입니다.
+              구현하는 <br className="pc" />
+              업계 최고의 재해 복구 소프트웨어입니다.
             </div>
           </div>
           <div className="article_mid">
@@ -81,7 +79,10 @@ export default function Virtualization4() {
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>빠르고 안정적인 IT 재해 복구 제공</div>
+              <div>
+                빠르고 안정적인
+                <br className="mobile" /> IT 재해 복구 제공
+              </div>
               <div>
                 수시로 무중단 테스트를 수행하여 IT 재해 복구 소프트웨어의
                 예측가능성 및 규정 준수를 보장할 수 있습니다.
@@ -89,7 +90,10 @@ export default function Virtualization4() {
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>다운타임 없는 애플리케이션 모빌리티 제공</div>
+              <div>
+                다운타임 없는
+                <br className="pc" /> 애플리케이션 모빌리티 제공
+              </div>
               <div>
                 재해 복구 계획을 사용해서 메트로 범위로 분산되어 있는 사이트
                 간에 대규모의 가상 머신을 실시간으로 이동함으로써 다운타임 없이
@@ -98,29 +102,13 @@ export default function Virtualization4() {
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>간편한 정책기반 관리 사용</div>
+              <div>
+                간편한 정책기반
+                <br className="mobile" /> 관리 사용
+              </div>
               <div>
                 vSphere Web Client에서 관리되는 중앙 집중식 복구 계획을 사용하여
                 수천 대의 가상머신을 손쉽게 보호할 수 있습니다.
-              </div>
-            </Paper>
-            <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
-              <div>사전 예방적 지원</div>
-              <div>
-                vSAN은 수천 건의 vSAN 구축을 검토하고 지능적 통찰력을 향상하며
-                문제가 발생하기 전에 알림을 제공하는 알고리즘을 갖춘 지원
-                통찰력을 통해 사전 예방적 지원을 제공합니다.
-              </div>
-            </Paper>
-            <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
-              <div>TCO를 절감하는 데이터 보호</div>
-              <div>
-                vSAN은 분산 RAID 및 캐시 미러링을 활용하며 이레이저 코딩을
-                사용하여 효율적으로 높은 수준의 보호를 구현하고 활용되는
-                스토리지 용량을 최대 50%까지 줄일 수 있습니다. vSAN을 사용하면
-                몇 번의 클릭만으로 쉽고 원활하게 보호할 수 있습니다.
               </div>
             </Paper>
           </div>
@@ -169,6 +157,16 @@ export default function Virtualization4() {
           <br />
           <br />
           <br />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
         </div>
       </div>
     </div>

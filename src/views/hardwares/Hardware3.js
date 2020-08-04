@@ -22,32 +22,30 @@ const img_data = [
 export default function Hardware2() {
   $(document).ready(function() {
     var count = 0;
-    do_ani('.article > div > *',count)
-    do_ani('.split-item',count)
-    $(window).scroll( function(){
-      do_ani('.article > div > *',count)
-      do_ani('.split-item',count)
+    do_ani(".article > div > *", count);
+    do_ani(".split-item", count);
+    $(window).scroll(function() {
+      do_ani(".article > div > *", count);
+      do_ani(".split-item", count);
     });
   });
 
-  const do_ani = (target) =>{
+  const do_ani = target => {
     var count = 0;
-    $(target).each( function(i){
-      
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.3){
-        if($(this).css('animation-name') === 'tmp')
-          count+=1
-        
-       
-        $(this).css('animation-name','slide1').delay( 200*count );
-        $(this).animate({'opacity':'1'},1000);        
-        
+
+      if (bottom_of_window > bottom_of_object / 1.3) {
+        if ($(this).css("animation-name") === "tmp") count += 1;
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
   return (
     <div>
       {img_data.map((v, i) => (
@@ -67,7 +65,8 @@ export default function Hardware2() {
             <div>
               오늘날 엔터프라이즈 네트워크는 언제, 어디서나, 어떤 장치를
               사용하든 모든 사용자에게 보안과 안정성 그리고 원활한 연결을 보장해
-              줄 수 있어야 합니다. 성공적인 비즈니스를 위한 시스코 엔터프라이즈
+              줄 수 있어야 합니다.
+              <br className="pc" /> 성공적인 비즈니스를 위한 시스코 엔터프라이즈
               네트워크 신제품을 소개해 드립니다.
             </div>
           </div>
@@ -83,16 +82,21 @@ export default function Hardware2() {
             <div>
               시스코는 Category 5e 케이블에서도 멀티기가비트 속도(2.5Gbps 및
               5Gbps)를 사용할 수 있는 혁신적 기술인 Cisco Catalyst 멀티기가비트
-              기술 (mGig)을 탑재한 최신형 스위치를 출시했습니다. 이 기술은
-              기존의 구형 케이블 인프라를 교체하지 않고서도 IEEE 802.11ac 초고속
-              무선랜을 위해 충분한 성능을 발휘하는 유선랜 네트워크 구축에
-              효과적입니다. 현재 mGig 기술은 Cisco Catalyst 3560-CX 시리즈,
-              Cisco Catalyst 3850 시리즈, Cisco Catalyst 4500E 시리즈의 라인
-              카드를 통해 지원됩니다. mGig를 지원하는 모델 외에도 Cisco Catalyst
-              2960-C/3560-C 시리즈의 업그레이드 버전인 Cisco Catalyst
-              2960-CX/3560-CX 시리즈 모델 및 SFP+ 모듈 슬롯이 탑재되어 10GE
-              다운링크를 지원하는 Cisco Catalyst 3850 시리즈 모델 등 새로운
-              시리즈 모델도 함께 출시되었습니다.
+              기술 (mGig)을 탑재한 최신형 스위치를 출시했습니다.
+              <br className="mobile" /> 이 기술은 기존의 구형 케이블 인프라를
+              교체하지 않고서도 IEEE 802.11ac 초고속 무선랜을 위해 충분한 성능을
+              발휘하는
+               유선랜 네트워크 구축에 효과적입니다.
+              <br className="mobile" /> 현재 mGig 기술은 Cisco Catalyst 3560-CX
+              시리즈, Cisco Catalyst 3850 시리즈, Cisco Catalyst 4500E 시리즈의{" "}
+              
+              라인 카드를 통해 지원됩니다. <br className="mobile" />
+              mGig를 지원하는 모델 외에도 Cisco Catalyst 2960-C/3560-C 시리즈의
+              업그레이드 버전인
+               Cisco Catalyst 2960-CX/3560-CX 시리즈 모델
+              및 SFP+ 모듈 슬롯이 탑재되어 10GE 다운링크를 지원하는 Cisco
+              Catalyst 3850 시리즈 모델 등 새로운 시리즈
+              모델도 함께 출시되었습니다.
             </div>
             <img src={cisco1} />
             <img src={cisco2} />

@@ -4,7 +4,7 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
-import tmp5 from "./../../img/tmp5.png";
+import tmp5 from "./../../img/img_ccai.png";
 
 import engineer1 from "./../../img/engineer1.png";
 import engineer2 from "./../../img/engineer2.png";
@@ -23,32 +23,30 @@ const img_data = {
 export default function Engineer1() {
   $(document).ready(function() {
     var count = 0;
-    do_ani('.article > div > *',count)
-    do_ani('.split-item',count)
-    $(window).scroll( function(){
-      do_ani('.article > div > *',count)
-      do_ani('.split-item',count)
+    do_ani(".article > div > *", count);
+    do_ani(".split-item", count);
+    $(window).scroll(function() {
+      do_ani(".article > div > *", count);
+      do_ani(".split-item", count);
     });
   });
 
-  const do_ani = (target) =>{
+  const do_ani = target => {
     var count = 0;
-    $(target).each( function(i){
-      
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.3){
-        if($(this).css('animation-name') === 'tmp')
-          count+=1
-        
-       
-        $(this).css('animation-name','slide1').delay( 200*count );
-        $(this).animate({'opacity':'1'},1000);        
-        
+
+      if (bottom_of_window > bottom_of_object / 1.3) {
+        if ($(this).css("animation-name") === "tmp") count += 1;
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
   return (
     <div>
       <TopImage data={img_data} />
@@ -65,11 +63,11 @@ export default function Engineer1() {
               <div>VIRTUALIZATION</div>
               <div>
                 <ul>
-                    <li>VMware VCP-DCV 3명</li>
-                    <li>VMware VCP-DT 1명</li>
-                    <li>Citrix XenDesktop CCA 1명</li>
-                    <li>Citrix XenApp 1명</li>
-                    <li>Citrix CCSP 2명</li>
+                  <li>VMware VCP-DCV 3명</li>
+                  <li>VMware VCP-DT 1명</li>
+                  <li>Citrix XenDesktop CCA 1명</li>
+                  <li>Citrix XenApp 1명</li>
+                  <li>Citrix CCSP 2명</li>
                 </ul>
               </div>
             </Paper>
@@ -78,10 +76,13 @@ export default function Engineer1() {
               <div>O / S</div>
               <div>
                 <ul>
-                    <li>MCSE 1명</li>
-                    <li>AD(Active Directory) 및 <br/>MS server 전담 엔지니어 2명</li>
-                    <li>Linux LPICm Suse CLA 1명</li>
-                    <li>Linux master 2명</li>
+                  <li>MCSE 1명</li>
+                  <li>
+                    AD(Active Directory) 및 <br />
+                    &nbsp;&nbsp;MS server 전담 엔지니어 2명
+                  </li>
+                  <li>Linux LPICm Suse CLA 1명</li>
+                  <li>Linux master 2명</li>
                 </ul>
               </div>
             </Paper>
@@ -90,11 +91,11 @@ export default function Engineer1() {
               <div>HARDWARE</div>
               <div>
                 <ul>
-                    <li>HP ATP 1명</li>
-                    <li>Dell DCSE 1명</li>
-                    <li>Cisco CCNA 1명</li>
-                    <li>Cisco CCNP 1명</li>
-                    <li>Alcatel Lucent 1명</li>
+                  <li>HP ATP 1명</li>
+                  <li>Dell DCSE 1명</li>
+                  <li>Cisco CCNA 1명</li>
+                  <li>Cisco CCNP 1명</li>
+                  <li>Alcatel Lucent 1명</li>
                 </ul>
               </div>
             </Paper>
@@ -103,12 +104,12 @@ export default function Engineer1() {
               <div>DATABASE</div>
               <div>
                 <ul>
-                    <li>OCP 1명</li>
-                    <li>OCNA 1명</li>
-                    <li>MS SQL 엔지니어 1명</li>
-                    <li>공학박사 (네트워크 보안)</li>
-                    <li>이학박사</li>
-                    <li>정보처리기사 외 다수</li>
+                  <li>OCP 1명</li>
+                  <li>OCNA 1명</li>
+                  <li>MS SQL 엔지니어 1명</li>
+                  <li>공학박사 (네트워크 보안)</li>
+                  <li>이학박사</li>
+                  <li>정보처리기사 외 다수</li>
                 </ul>
               </div>
             </Paper>
@@ -121,14 +122,17 @@ export default function Engineer1() {
           <div className="article_mid">
             <img src={tmp5} />
             <div>
-                <ul>
-                    <li>VMware Enterprise 파트너</li>
-                    <li>HP Industrial Server Storage 공인서비스 센터</li>
-                    <li>HP Server, Storage, Network 파트너</li>
-                    <li>Dell Server, Storage, Network 서비스 파트너</li>
-                    <li>Cisco 파트너</li>
-                    <li>Alcatel Lucent 파트너</li>
-                </ul>
+              <ul>
+                <li>
+                  VMware Enterprise <br className="mobile" />
+                  파트너
+                </li>
+                <li>HP Industrial Server Storage 공인서비스 센터</li>
+                <li>HP Server, Storage, Network 파트너</li>
+                <li>Dell Server, Storage, Network 서비스 파트너</li>
+                <li>Cisco 파트너</li>
+                <li>Alcatel Lucent 파트너</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -74,7 +74,9 @@ const SecuritySplit = ({
                 data-reveal-container=".split-item"
               >
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8" />
-                <h3 className="mt-0 mb-12 black">WEBFRONT-K로 더 빠르게</h3>
+                <h3 className="mt-0 mb-12 black">
+                  WEBFRONT-K로 <br className="mobile" />더 빠르게
+                </h3>
                 <p className="m-0 black" style={{ fontSize: 0.8 + "rem" }}>
                   웹 방화벽 최초 12Gbps throughput으로 포털, 금융, 게임, 쇼핑
                   사이트 등 고성능 웹 서비스 환경에서 안정적입니다.
@@ -134,7 +136,8 @@ const SecuritySplit = ({
                 data-reveal-container=".split-item"
               >
                 <h3 className="mt-0 mb-12 black">
-                  클라우드 데이터센터를 위한 'AppTenant'
+                  클라우드 데이터센터를 <br className="mobile" />
+                  위한 'AppTenant'
                 </h3>
                 <p className="m-0 black" style={{ fontSize: 0.8 + "rem" }}>
                   AppTenant 는 클라우드 서비스(XaaS)를 위한 파이오링크의 웹
@@ -196,37 +199,40 @@ const SecuritySplit = ({
 export default function Hardware4() {
   $(document).ready(function() {
     var count = 0;
-    do_ani('.article > div > *',count)
-    do_ani('.split-item',count)
-    $(window).scroll( function(){
-      do_ani('.article > div > *',count)
-      do_ani('.split-item',count)
+    do_ani(".article > div > *", count);
+    do_ani(".split-item", count);
+    $(window).scroll(function() {
+      do_ani(".article > div > *", count);
+      do_ani(".split-item", count);
     });
   });
 
-  const do_ani = (target,count) =>{
+  const do_ani = (target, count) => {
     var count2 = 0;
-    $(target).each( function(i){
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.1){
-        if($(this).css('animation-name') === 'tmp')
-          count2++
-        if($(this).attr('class') === 'split-item' && count%2 === 0){
-          $(this).css('animation-name','slide3').delay( 200*count2 );
-          count++
-        }
-        else if($(this).attr('class') === 'split-item' && count%2 === 1){          
-          $(this).css('animation-name','slide4').delay( 200*count2 );
-          count++
-        }
-        else          
-          $(this).css('animation-name','slide1').delay( 200*count2 );
-        $(this).animate({'opacity':'1'},1000);       
+
+      if (bottom_of_window > bottom_of_object / 1.1) {
+        if ($(this).css("animation-name") === "tmp") count2++;
+        if ($(this).attr("class") === "split-item" && count % 2 === 0) {
+          $(this)
+            .css("animation-name", "slide3")
+            .delay(200 * count2);
+          count++;
+        } else if ($(this).attr("class") === "split-item" && count % 2 === 1) {
+          $(this)
+            .css("animation-name", "slide4")
+            .delay(200 * count2);
+          count++;
+        } else
+          $(this)
+            .css("animation-name", "slide1")
+            .delay(200 * count2);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
   return (
     <div>
       {img_data.map((v, i) => (
@@ -236,17 +242,22 @@ export default function Hardware4() {
         <div className="article">
           <div className="article_top">
             <div>
-              <span>WEBFRONT-K : 웹 애플리케이션 방화벽</span>
+              <span>
+                WEBFRONT-K : <br className="mobile" />웹 애플리케이션 방화벽
+              </span>
             </div>
             <div>
               <div className="highlight">왜 파이오링크 웹 방화벽인가?</div>
               국내 ADC(Application Delivery Controller) 시장 1위를 차지하고 있는
               파이오링크는 애플리케이션과 네트워크 기술에 대한 독보적인 우수성을
-              인정받고 있습니다. 파이오링크는 고성능과 보안을 동시에 제공할 수
-              있는 웹 방화벽을 위해 최적화된 전문 플랫폼과 보안기술을 접목하고
-              통신서비스, 온라인 쇼핑, 금융, 전자정부, 게임, 교육 등 고성능과
-              고신뢰성이 필요한 웹 방화벽 시장에서 수 많은 고객에게 안전한 웹
-              서비스를 제공하고 있습니다.
+              인정받고 있습니다.
+              <br className="pc" />
+              <br className="mobile" /> 파이오링크는 고성능과 보안을 동시에
+              제공할 수 있는 웹 방화벽을 위해 최적화된 전문 플랫폼과 보안기술을
+              접목하고 통신서비스, 온라인 쇼핑, 금융, 전자정부, 게임, 교육 등{" "}
+              <br className="pc" />
+              고성능과 고신뢰성이 필요한 웹 방화벽 시장에서 수 많은 고객에게
+              안전한 웹 서비스를 제공하고 있습니다.
               <br />
               <br />
               <strong>

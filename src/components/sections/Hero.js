@@ -24,6 +24,12 @@ const useStyles = makeStyles(theme => ({
       display: "none"
     }
   },
+  title: {
+    marginBottom: "8px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "44px"
+    }
+  },
   subtitle: {
     marginBottom: "8px",
     color: "#ffffff",
@@ -32,10 +38,21 @@ const useStyles = makeStyles(theme => ({
       fontSize: "16px"
     }
   },
-  description: {
+  description_pc: {
     color: "#ffffff",
-    marginBottom: 20 + "px",
-    fontSize: 1 + "rem"
+    marginBottom: "20px",
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
+  },
+  description_mobile: {
+    color: "#ffffff",
+    marginBottom: "16px",
+    fontSize: "16px",
+    padding: "0px 10px",
+    [theme.breakpoints.up("md")]: {
+      display: "none"
+    }
   }
 }));
 
@@ -95,6 +112,40 @@ const Hero = ({
 
   const classes = useStyles();
 
+  const breakLinePc = description => {
+    const strs = description
+      .split(`<br className="mobile" />`)
+      .join("")
+      .split(`<br className="pc" />`);
+    return (
+      <p className={classes.description_pc}>
+        {strs.map(str => (
+          <React.Fragment key={str}>
+            {str}
+            <br className="pc" />
+          </React.Fragment>
+        ))}
+      </p>
+    );
+  };
+
+  const breakLineMobile = description => {
+    const strs = description
+      .split(`<br className="pc" />`)
+      .join("")
+      .split(`<br className="mobile" />`);
+    return (
+      <p className={classes.description_mobile}>
+        {strs.map(str => (
+          <React.Fragment key={str}>
+            {str}
+            <br className="mobile" />
+          </React.Fragment>
+        ))}
+      </p>
+    );
+  };
+
   return (
     <section {...props} className={outerClasses}>
       <div className="container-sm">
@@ -105,24 +156,17 @@ const Hero = ({
           }}
         >
           <div className="hero-content">
-            <h2 className="mt-0 mb-8">{data.title}</h2>
+            <h2 className={classes.title}>{data.title}</h2>
             <div className={classes.subtitle}>{data.subtitle}</div>
             <div className="container-xs">
-              <p
-                className="m-0 mb-32"
-                style={{
-                  color: "#ffffff",
-                  marginBottom: 20 + "px",
-                  fontSize: 1 + "rem"
-                }}
-              >
-                {data.description}
-              </p>
+              {breakLinePc(data.description)}
+              {breakLineMobile(data.description)}
+
               <div>
                 {data.button && (
                   <div>
                     {!data.button[0].text ? (
-                      <Link to="/VI">
+                      <Link to="/#info_container3">
                         <Button
                           id={data.title}
                           aria-controls="more_menu"
@@ -161,7 +205,7 @@ const Hero = ({
                       }}
                     >
                       {data.button.map((v, i) => (
-                        <Link to={v.href}>
+                        <Link to={v.href} key={v.href}>
                           <MenuItem key={i} onClick={handleClose}>
                             {v.text}
                           </MenuItem>

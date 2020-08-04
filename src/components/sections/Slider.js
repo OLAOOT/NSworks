@@ -66,7 +66,7 @@ const Slider = ({ data }) => {
       <AutoplaySlider
         play={play}
         cancelOnInteraction={false}
-        interval={500}
+        interval={3000}
         className={classes.slider}
       >
         {data.map(v => (

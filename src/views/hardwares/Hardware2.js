@@ -36,32 +36,30 @@ const img_data = [
 export default function Hardware2() {
   $(document).ready(function() {
     var count = 0;
-    do_ani('.article > div > *',count)
-    do_ani('.split-item',count)
-    $(window).scroll( function(){
-      do_ani('.article > div > *',count)
-      do_ani('.split-item',count)
+    do_ani(".article > div > *", count);
+    do_ani(".split-item", count);
+    $(window).scroll(function() {
+      do_ani(".article > div > *", count);
+      do_ani(".split-item", count);
     });
   });
 
-  const do_ani = (target) =>{
+  const do_ani = target => {
     var count = 0;
-    $(target).each( function(i){
-      
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.3){
-        if($(this).css('animation-name') === 'tmp')
-          count+=1
-        
-       
-        $(this).css('animation-name','slide1').delay( 200*count );
-        $(this).animate({'opacity':'1'},1000);        
-        
+
+      if (bottom_of_window > bottom_of_object / 1.3) {
+        if ($(this).css("animation-name") === "tmp") count += 1;
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
   return (
     <div>
       {img_data.map((v, i) => (
@@ -75,7 +73,8 @@ export default function Hardware2() {
             </div>
             <div>
               <div className="highlight">HPE 스토리지의 비전</div>
-              HPE의 New Style of IT의 새로운 스토리지 아키텍처
+              HPE의 New Style of IT의 <br className="mobile" />
+              새로운 스토리지 아키텍처
             </div>
           </div>
           <div className="article_mid">
@@ -93,11 +92,12 @@ export default function Hardware2() {
             </div>
             <div>
               HPE는 고객의 다양한 스토리지 환경에 최적화된 Total Solution을
-              제공합니다. 소규모 환경에 적합한 Entry storage부터 미션 크리티컬한
-              업무를 위한 고효율, 고성능 스토리지 라인업, 효과적인 백업과 복구를
-              위한 Disk backup, Tape backup 제품군, 파일 공유 환경을 위한 NAS
-              Storage 제품군 그리고 Software-defined Storage 제품군 등 고객의
-              어떠한 IT환경도 충족 가능한 다양한 포트폴리오를 보유하고 있습니다.
+              제공합니다. <br className="pc" />
+              소규모 환경에 적합한 Entry storage부터 미션 크리티컬한 업무를 위한
+              고효율, 고성능 스토리지 라인업, 효과적인 백업과 복구를 위한 Disk
+              backup, Tape backup 제품군, 파일 공유 환경을 위한 NAS Storage
+              제품군 그리고 Software-defined Storage 제품군 등 고객의 어떠한
+              IT환경도 충족 가능한 다양한 포트폴리오를 보유하고 있습니다.
             </div>
           </div>
           <div className="article_mid">
@@ -123,7 +123,8 @@ export default function Hardware2() {
             </div>
             <div>
               <div className="highlight">
-                탁월한 가치를 제공하는 플래시 스토리지
+                탁월한 가치를 제공하는 <br className="mobile" />
+                플래시 스토리지
               </div>
               인프라스트럭처를 현대화하는 과정에서 플래시는 디지털 비즈니스
               성과를 실현할 수 있도록 효율성을 높이고 비용을 절감하는 기반
@@ -142,20 +143,21 @@ export default function Hardware2() {
               <img src={dell1} />
               <div>성능</div>
               <div>
-                3x 빠른 속도1, 최소의 지연 시간, 1밀리초 미만의 응답 시간2을
+                3x 빠른 속도, 최소의 지연 시간, 1밀리초 미만의 응답 시간2을
                 바탕으로 미션 크리티컬 애플리케이션의 무중단 가용성, 신속한 변화
-                대응 능력, 일관되고 예측 가능한 성능을 보장할 수 있습니다.
+                대응 능력, 일관되고 예측 가능한 성능을 보장할 수 있습니다.{" "}
+                <br className="mobile" />
                 워크로드 통합을 실현하고 단일 워크로드 분산 문제를 해소할 수
-                있습니다
+                있습니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dell2} />
               <div>가용성</div>
               <div>
-                최대 99.9999%의 무중단 가용성을 제공합니다.3 재해 복구, 무중단
+                최대 99.9999%의 무중단 가용성을 제공합니다. 재해 복구, 무중단
                 업무 운영 및 데이터 보호 기능이 결합된 세계 최고 수준의 솔루션을
-                사용할 수 있습니다
+                사용할 수 있습니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
@@ -164,12 +166,16 @@ export default function Hardware2() {
               <div>
                 엔트리 레벨에서 엔터프라이즈 솔루션에 이르는 다양한 구성이
                 가능하므로, 소규모로 구축한 후 성능 저하 없이 대규모로 확장할 수
-                있습니다. 단일 클러스터에서 92.4PB까지용량을 확장할 수 있습니다.
+                있습니다. 단일 클러스터에서 92.4PB까지 용량을 확장할 수
+                있습니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dell4} />
-              <div>TCO 절감 및 신속한 ROI 실현</div>
+              <div>
+                TCO 절감 및 <br className="mobile" />
+                신속한 ROI 실현
+              </div>
               <div>
                 간편한 구축, 인라인 데이터 압축, 관리 복잡성 감소,
                 전력/상면/냉각 요구 사항 감소로 스토리지 관리 비용이 1/5.8
@@ -180,7 +186,10 @@ export default function Hardware2() {
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>컨버지드 인프라스트럭처</div>
+              <div>
+                컨버지드 <br className="mobile" />
+                인프라스트럭처
+              </div>
               <div>
                 완벽하게 최적화된 올 플래시 플랫폼을 즉각적으로 구축하여 핵심
                 비즈니스 애플리케이션과 서비스를 실행할 수 있습니다.
@@ -209,6 +218,7 @@ export default function Hardware2() {
               이중 SSD 캐시 드라이브용 M.2 SSD 어댑터 카드(옵션)로 저장소 성능이
               강화된 RS1219+는 데이터 관리를 간소화하고 중요 자산을 보호하며
               다양한 플랫폼에서 파일을 공유하는 중앙 집중 파일 서버입니다.
+              <br className="pc" />
               Synology RS1219+에는 Synology 3년 제한 보증이 제공됩니다.
             </div>
           </div>
@@ -232,7 +242,10 @@ export default function Hardware2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <div>엔터프라이즈급 응용 프로그램</div>
+              <div>
+                엔터프라이즈급 <br className="mobile" />
+                응용 프로그램
+              </div>
               <div>
                 혁신적인 Synology DiskStation Manager(DSM)가 지원하는 RS1219+는
                 소기업 또는 성장하는 기업용으로 특별히 설계된 응용 프로그램과
@@ -359,8 +372,10 @@ export default function Hardware2() {
               <div>SaaS 백업</div>
               <div>
                 Active Backup for Oce 365/G Suite는 중앙 집중 대시보드가 있는
-                공용 클라우드용 온프레미스 백업 솔루션입니다. 단일 인스턴싱과
-                블록 수준 중복 제거 기술을 통해 저장소 효율성이 최적화됩니다.
+                공용 클라우드용 온프레미스 백업 솔루션입니다.{" "}
+                <br className="pc" />
+                단일 인스턴싱과 블록 수준 중복 제거 기술을 통해 저장소 효율성이
+                최적화됩니다.
               </div>
             </Paper>
           </div>
@@ -377,6 +392,7 @@ export default function Hardware2() {
                 솔루션을 완벽하게 지원하므로, 간단한 관리 인터페이스를 통해 업무
                 효율성이 증가합니다. VMware vSphere™ 6.5와 VAAI가 통합되어 있어,
                 저장소 작동 부담이 감소하고 컴퓨팅 효율성이 최적화됩니다.
+                <br className="mobile" />
                 Windows ODX(Offloaded Data Transfer)는 데이터 전송과
                 마이그레이션 속도를 향상시키고, OpenStack Cinder는 Synology
                 NAS를 블록 기반 저장소 구성 요소로 변환시킵니다.
