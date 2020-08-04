@@ -29,39 +29,42 @@ const useStyles = makeStyles(theme => ({
     "& .awssld__controls button": {
       opacity: "0"
     }
+  },
+  paper: {
+    [theme.breakpoints.down("sm")]: {
+      width: "100%"
+    }
   }
 }));
 
 export default function Info1() {
   const classes = useStyles();
-  
-  $('html').scrollTop(0);
+
+  $("html").scrollTop(0);
 
   $(document).ready(function() {
-    
-    do_ani('.article > div > *')
-    $(window).scroll( function(){
-        do_ani('.article > div > *')
+    do_ani(".article > div > *");
+    $(window).scroll(function() {
+      do_ani(".article > div > *");
     });
   });
 
-  const do_ani = (target) =>{
+  const do_ani = target => {
     var count = 0;
-    $(target).each( function(i){
-      
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.3){
-        if($(this).css('animation-name') === 'tmp')
-          count+=1
-       
-        $(this).css('animation-name','slide1').delay( 200*count );
-        $(this).animate({'opacity':'1'},1000);        
-        
+
+      if (bottom_of_window > bottom_of_object / 1.3) {
+        if ($(this).css("animation-name") === "tmp") count += 1;
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
 
   return (
     <div>
@@ -107,50 +110,59 @@ export default function Info1() {
             <div>
               NSworks는 서버, 스토리지, 네트워크의 전문성으로 고객의 IT 인프라를
               통합적으로 제공하며, 이를 바탕으로 안정적인 IT환경과 완성도 높은
-              가상화를 고객에게 제공하는 기술력 있는 기업입니다. IT인프라의
-              기초가 되는 서버, 서버운영체제, 스토리지, 네트워크, 보안, 가상화에
-              대한 전문 엔지니어를 통해 고객의 복잡하고 다양한 요구를
-              수행합니다.
+              가상화를 고객에게 제공하는 기술력 있는 기업입니다.
+              <br />
+              IT인프라의 기초가 되는 서버, 서버운영체제, 스토리지, 네트워크,
+              보안, 가상화에 대한 전문 엔지니어를 통해 고객의 복잡하고 다양한
+              요구를 수행합니다.
             </div>
           </div>
           <div className="article_mid">
-            <Paper elevation={3}>
+            <Paper elevation={3} className={classes.paper}>
               <img src={img1} alt="empty" />
               <div>IT 컨설팅</div>
               <div>
                 고객사 환경에 최적화된 HW, SW, Network
                 <br />
-                인프라 구축을 위한 솔루션 컨설팅
-                <br /> 재해 방지를 위한 백업및 보안 컨설팅
+                인프라 구축을 위한
+                <br className="pc" />
+                <br className="mobile" /> 솔루션 컨설팅
+                <br /> 재해 방지를 위한 백업 및 보안 컨설팅
               </div>
             </Paper>
             <Paper elevation={3}>
               <img src={img2} alt="empty" />
               <div>솔루션 공급</div>
               <div>
-                Citrix, Microsoft, Cisco, VMware, HP, Dell의 인프라 구축 및
-                기술지원
+                Citrix, Microsoft, Cisco, VMware, HP, Dell의
+                <br className="pc" /> 인프라 구축 및 기술지원
               </div>
             </Paper>
             <Paper elevation={3}>
               <img src={img2} alt="empty" />
               <div>HW/SW 판매</div>
               <div>
-                HP, IBM, Dell서버, 스토리지, 백업 장비 판매
+                HP, IBM, Dell 서버, <br className="pc" />
+                <br className="mobile" />
+                스토리지, 백업 장비
+                <br className="mobile" /> 판매
                 <br />
-                Cisco, HP, Dell, Alcatel Network 장비판매
+                Cisco, HP, Dell, Alcatel Network 장비 판매
                 <br />
-                MS, Linux 관련 OS및 SW판매
+                MS, Linux 관련 OS 및 SW판매
               </div>
             </Paper>
             <Paper elevation={3}>
               <img src={img1} alt="empty" />
               <div>통합유지보수</div>
               <div>
-                HP Industrial Server Storage 충북, 세종 공인 지원센터
+                HP Industrial Server Storage 충북, 세종 <br className="pc" />
+                공인 지원센터
                 <br />
-                Dell 충북, 충남, 세종 공인 지원센터
-                <br /> 기업, 대학, 병원 등 유지보수
+                Dell 충북, 충남, 세종 <br className="pc" />
+                공인 지원센터
+                <br /> 기업, 대학, 병원 등<br className="pc" />
+                유지보수
               </div>
             </Paper>
           </div>

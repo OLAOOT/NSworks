@@ -66,7 +66,7 @@ const Slider = ({ data }) => {
       <AutoplaySlider
         play={play}
         cancelOnInteraction={false}
-        interval={5000}
+        interval={3000}
         className={classes.slider}
         id="slider"
       >

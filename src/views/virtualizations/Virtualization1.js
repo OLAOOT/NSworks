@@ -21,33 +21,29 @@ const img_data = {
 };
 
 export default function Virtualization1() {
-  
   $(document).ready(function() {
-    
-    do_ani('.article > div > *')
-    $(window).scroll( function(){
-        do_ani('.article > div > *')
+    do_ani(".article > div > *");
+    $(window).scroll(function() {
+      do_ani(".article > div > *");
     });
   });
 
-  const do_ani = (target) =>{
+  const do_ani = target => {
     var count = 0;
-    $(target).each( function(i){
-      
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.3){
-        if($(this).css('animation-name') === 'tmp')
-          count+=1
-        
-       
-        $(this).css('animation-name','slide1').delay( 200*count );
-        $(this).animate({'opacity':'1'},1000)
-        
+
+      if (bottom_of_window > bottom_of_object / 1.3) {
+        if ($(this).css("animation-name") === "tmp") count += 1;
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
 
   return (
     <div>
@@ -70,8 +66,10 @@ export default function Virtualization1() {
             <img src={vmware} />
             <div>
               VMware는 사용자가 안심하고 수직 확장 및 수평 확장 애플리케이션을
-              가상화할 수 있게 해주며 가용성을 더욱 향상시키고 가상 데이터
-              센터를 간소화합니다. 그 결과 데이터 센터 비용을 대폭 절감하고
+              가상화할 수 있게 해주며 <br className="pc" />
+              가용성을 더욱 향상시키고 가상 데이터 센터를 간소화합니다.
+              <br className="mobile" />
+              <br className="pc" /> 그 결과 데이터 센터 비용을 대폭 절감하고
               시스템 및 애플리케이션 가동 시간을 늘리며 데이터 센터 운영 방식을
               획기적으로 간소화할 수 있습니다.
             </div>
@@ -79,16 +77,21 @@ export default function Virtualization1() {
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>데이터센터 통합 및 비즈니스 연속성</div>
               <div>
-                가상화를 통해 대규모 데이터 센터 운영 및 관리를 간소화 하고
+                데이터센터 통합 및<br /> 비즈니스 연속성
+              </div>
+              <div>
+                가상화를 통해 대규모 데이터 센터 운영 및 관리를 간소화 하고{" "}
                 비즈니스 효율성을 높이며 자본 비용과 운영 비용을 절감할 수
                 있습니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>애플리케이션 및 인프라 보안</div>
+              <div>
+                애플리케이션 및 <br className="mobile" />
+                인프라 보안
+              </div>
               <div>
                 간편하고 확장 가능한 보안 솔루션을 통해 보안 위협 감지 및 분석의
                 정확성을 향상시키고 대응시간을 단축합니다.
@@ -106,13 +109,15 @@ export default function Virtualization1() {
               <img src={dummyicon} />
               <div>빅데이터 가상화</div>
               <div>
-                VMware는 기존 애플리케이션에는 물론 빅데이터에도 가장 적합한
-                플랫폼입니다.{" "}
+                VMware는 기존 애플리케이션에는 물론 <br className="pc" />
+                빅데이터에도 가장 적합한 플랫폼입니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>원격 근무지 및 지사 지원</div>
+              <div>
+                원격 근무지 및<br className="mobile" /> 지사 지원
+              </div>
               <div>
                 로컬 IT 직원이 거의 또는 전혀 없는 상태에서도 원격 근무지 및
                 지사를 관리합니다.
@@ -120,7 +125,12 @@ export default function Virtualization1() {
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>기존 Unix를 가상 Linux로 마이그레이션</div>
+              <div>
+                기존 Unix를
+                <br className="mobile" /> 가상 Linux로
+                <br className="pc" />
+                <br className="mobile" /> 마이그레이션
+              </div>
               <div>
                 성능과 가용성을 개선하고 가상 머신 용량을 늘리며 재해 복구
                 기능을 활용할 수 있습니다.
@@ -133,7 +143,14 @@ export default function Virtualization1() {
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                <iframe width="1182" height="665" src="https://www.youtube.com/embed/frzVtaNrHU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe
+                  width="1182"
+                  height="665"
+                  src="https://www.youtube.com/embed/frzVtaNrHU0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                />
               </Paper>
               <Paper elevation={3} className="paper">
                 <img src={vmcloud} />
@@ -165,6 +182,24 @@ export default function Virtualization1() {
           <br />
           <br />
           <br />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
+          <br className="mobile" />
         </div>
       </div>
     </div>

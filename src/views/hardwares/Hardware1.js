@@ -80,9 +80,10 @@ const HpeSplit = ({
                   className="m-0"
                   style={{ fontSize: 0.8 + "rem", textAlign: "left" }}
                 >
-                  데이터센터의 60% 파워와 40%의 쿨링 비용이 Compute를 위해
+                  데이터센터의 60% 파워와 40%의 쿨링 비용이 Compute를 위해{" "}
                   사용됩니다. Compute를 위한 서버는 데이터센터 상면의 60%를
-                  차지하며, 나머지 40%가 스토리지와 네트워크를 차지합니다.
+                  차지하며, 나머지 40%가 스토리지와 네트워크를 차지합니다.{" "}
+                  <br className="pc" />
                   Compute는 데이터센터의 핵심이며, 서버는 Compute를 위한 핵심
                   요소입니다.
                 </p>
@@ -107,7 +108,7 @@ const HpeSplit = ({
                   className="m-0"
                   style={{ fontSize: 0.8 + "rem", textAlign: "left" }}
                 >
-                  IT는 비즈니스의 가치를 보다 빠르고 효과적으로 전달할 수 있도록
+                  IT는 비즈니스의 가치를 보다 빠르고 효과적으로 전달할 수 있도록{" "}
                   변화해야 합니다. 일반적으로 서버는 기술중심적이고, 엔지니어의
                   수작업에 의해 개별적으로 운영되어 왔습니다.
                   <br />
@@ -193,7 +194,8 @@ const DellSplit = ({
                     fontSize: 1.2 + "rem"
                   }}
                 >
-                  가상 및 프라이빗 클라우드 데이터에 권장되는 솔루션
+                  가상 및 프라이빗 클라우드 데이터에
+                  <br className="pc" /> 권장되는 솔루션
                 </h3>
                 <p
                   className="m-0"
@@ -281,9 +283,9 @@ const DellSplit = ({
                   style={{ fontSize: 0.8 + "rem", textAlign: "left" }}
                 >
                   Microsoft Storage Spaces, VMware Virtual SAN OpenStack™ Ceph
-                  등의 소프 트웨어 정의 스토리지 솔루션과 호환되며, 가상화된
-                  스토리지 플랫폼으로 이상적 인 서버 솔루션입니다. DAS 스토리지
-                  어레이를 함께 사용하면 비용 효율적인 가 상화 스토리지 풀을 더
+                  등의 소프트웨어 정의 스토리지 솔루션과 호환되며, 가상화된
+                  스토리지 플랫폼으로 이상적인 서버 솔루션입니다. DAS 스토리지
+                  어레이를 함께 사용하면 비용 효율적인 가상화 스토리지 풀을 더
                   큰 규모로 구축할 수 있습니다.{" "}
                 </p>
               </div>
@@ -307,37 +309,40 @@ const DellSplit = ({
 export default function Hardware1() {
   $(document).ready(function() {
     var count = 0;
-    do_ani('.article > div > *',count)
-    do_ani('.split-item',count)
-    $(window).scroll( function(){
-      do_ani('.article > div > *',count)
-      do_ani('.split-item',count)
+    do_ani(".article > div > *", count);
+    do_ani(".split-item", count);
+    $(window).scroll(function() {
+      do_ani(".article > div > *", count);
+      do_ani(".split-item", count);
     });
   });
 
-  const do_ani = (target,count) =>{
+  const do_ani = (target, count) => {
     var count2 = 0;
-    $(target).each( function(i){
+    $(target).each(function(i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.1){
-        if($(this).css('animation-name') === 'tmp')
-          count2++
-        if($(this).attr('class') === 'split-item' && count%2 === 0){
-          $(this).css('animation-name','slide3').delay( 200*count2 );
-          count++
-        }
-        else if($(this).attr('class') === 'split-item' && count%2 === 1){          
-          $(this).css('animation-name','slide4').delay( 200*count2 );
-          count++
-        }
-        else          
-          $(this).css('animation-name','slide1').delay( 200*count2 );
-        $(this).animate({'opacity':'1'},1000);       
+
+      if (bottom_of_window > bottom_of_object / 1.1) {
+        if ($(this).css("animation-name") === "tmp") count2++;
+        if ($(this).attr("class") === "split-item" && count % 2 === 0) {
+          $(this)
+            .css("animation-name", "slide3")
+            .delay(200 * count2);
+          count++;
+        } else if ($(this).attr("class") === "split-item" && count % 2 === 1) {
+          $(this)
+            .css("animation-name", "slide4")
+            .delay(200 * count2);
+          count++;
+        } else
+          $(this)
+            .css("animation-name", "slide1")
+            .delay(200 * count2);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
+    });
+  };
   return (
     <div>
       <TopImage data={img_data} />
@@ -348,28 +353,35 @@ export default function Hardware1() {
               <span>HPE Server</span>
             </div>
             <div>
-              <div className="highlight">Compute는 IT 인프라의 핵심입니다.</div>
+              <div className="highlight">
+                Compute는
+                <br className="mobile" /> IT 인프라의 핵심입니다.
+              </div>
               새로운 기회가 여기 있습니다.
             </div>
           </div>
           <div className="article_mid">
             <div className="paragraph">
               클라우드, 모빌리티, 빅 데이터, 보안이라는 4가지의 메가 트렌드는
-              새로운 비즈니스 기회를 만들어 줍니다. 오늘날 이 새로운 기회에
-              도전하기 위해서는 보다 빠르게 서비스를 제공하고, 운영의 효율성을
-              보여주어야 시장을 점유하고 수익을 창출할 수 있습니다.
+              새로운 비즈니스 기회를 만들어 줍니다. <br className="pc" />
+              <br className="mobile" />
+              오늘날 이 새로운 기회에 도전하기 위해서는 보다 빠르게 서비스를
+              제공하고, 운영의 효율성을 보여주어야 시장을 점유하고 수익을 창출할
+              수 있습니다.
               <br />
               IT는 새로운 기술을 활용하여, 비즈니스 성장을 이끌어 주어야 합니다.
+              <br className="mobile" />
               불행하게도 오늘날 IT인프라는 비효율적인 면이 존재하며 최적화되지
               않고 개별적으로 운영됩니다. 그 결과, 비즈니스 혁신을 위한
               요구사항을 만족시키지 못할 뿐만 아니라, 기본적인 비즈니스
               요구사항도 충족시키지 못해 어려움을 겪고 있습니다.
               <br />더 빠른 비즈니스 성과를 효과적으로 도출하고, 달성하기
               위해서는 IT인프라와 비즈니스 요구사항간의 간극을 줄이는 것이
-              필수적입니다. 이제 새로운 접근 방법을 통해 비즈니스 요구사항과
-              IT인프라의 간격을 줄일 때 입니다. 인프라스트럭쳐의 핵심인
-              Compute에 대해 새롭게 접근할 필요가 있습니다. 비즈니스의 혁신은
-              Compute에 대한 새로운 접근을 통해 이루어 질 수 있습니다.
+              필수적입니다. <br className="pc" />
+              이제 새로운 접근 방법을 통해 비즈니스 요구사항과 IT인프라의 간격을
+              줄일 때 입니다. 인프라스트럭쳐의 핵심인 Compute에 대해 새롭게
+              접근할 필요가 있습니다. 비즈니스의 혁신은 Compute에 대한 새로운
+              접근을 통해 이루어 질 수 있습니다.
             </div>
 
             <HpeSplit />
@@ -403,7 +415,10 @@ export default function Hardware1() {
               <span>Dell EMC Server</span>
             </div>
             <div>
-              <div className="highlight">차세대 POWEREDGE 서버 기술</div>
+              <div className="highlight">
+                차세대 POWEREDGE
+                <br className="mobile" /> 서버 기술
+              </div>
               <br />
               13세대 PowerEdge 서버는 Dell EMC가 제공하는 가장 발전된 형태의 랙,
               타워형 및 모듈식 인프라스트럭처 플랫폼 제품군으로서 웹,
@@ -415,18 +430,28 @@ export default function Hardware1() {
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>확장성과 적응성이 뛰어난 인프라스트럭처 구축</div>
+              <div>
+                확장성과 적응성이 <br className="mobile" />
+                뛰어난
+                <br className="mobile" />
+                <br className="pc" /> 인프라스트럭처 구축
+              </div>
               <div>
                 확장성과 적응성이 뛰어난 PowerEdge 서버의 포트폴리오를 모듈식
-                빌딩 블록으로 사용하여 원 격 사무소에서 대규모 데이터 센터에
-                이르기까지 다양한 환경에 대응 능력이 뛰어나고 미래 지향 적인
+                빌딩 블록으로 사용하여 원격 사무소에서 대규모 데이터 센터에
+                이르기까지 다양한 환경에 대응 능력이 뛰어나고 미래 지향적인
                 인프라스트럭처를 구축할 수 있습니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
               <div>
-                확장된 자동화 기능과 새로운 액세스 옵션으로 장소에 구애받지 않는
+                확장된 자동화 기능과
+                <br className="mobile" />
+                <br className="pc" /> 새로운 액세스 옵션으로
+                <br className="mobile" />
+                <br className="pc" /> 장소에 구애받지 않는{" "}
+                <br className="mobile" />
                 관리 작업
               </div>
               <div>
@@ -439,7 +464,10 @@ export default function Hardware1() {
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
               <div>
-                확장성과 효율성이 뛰어난 서버 스토리지로 애플리케이션 성능 향상
+                확장성과 효율성이 <br className="mobile" />
+                뛰어난
+                <br className="pc" /> 서버 스토리지로 <br className="pc" />
+                애플리케이션 성능 향상
               </div>
               <div>
                 다양한 기능과 강력한 성능을 제공하는 서버 스토리지는 데이터 센터
@@ -453,7 +481,9 @@ export default function Hardware1() {
           <div className="article_top">
             <div>
               <div className="highlight">
-                PowerEdge 서버: 업계 최신 기술과 Dell EMC 혁신 기술의 만남
+                PowerEdge 서버: <br className="mobile" />
+                업계 최신 기술과 <br className="mobile" />
+                Dell EMC 혁신 기술의 만남
               </div>
             </div>
           </div>
@@ -471,30 +501,35 @@ export default function Hardware1() {
               <img src={dummyicon} />
               <div>대용량 저전력 메모리</div>
               <div>
-                시스템 관리 툴인 OpenManage 포트폴리오로 자동화 기능을 확대하고
-                툴을 간소화하며 모바 일 디바이스 액세스를 지원하면서
-                엔터프라이즈 관리 작업을 더욱 간소화하고 더 높은 효율성을
-                제공하게 되었습니다.
+                DDR4 메모리로 ERP 및 데이터베이스 애플리케이션과 같은 워크로드의
+                처리 속도를 개선합니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>확장성 및 효율성이 뛰어난 로컬 스토리지</div>
+              <div>
+                확장성 및 효율성이 <br className="mobile" />
+                뛰어난 <br className="pc" />
+                로컬 스토리지
+              </div>
               <div>
                 다양한 서버 내 스토리지 옵션은 올 플래시 구성, 인박스(In-box)
                 하이브리드 계층형 솔루션, 저가의 고집적 대용량 플랫폼을 모두
                 지원하며, 서버 기반 스토리지는 최상의 성능과 가치에 대한
-                애플리케이션 요구 사항을 충족합 니다.
+                애플리케이션 요구사항을 충족합니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={dummyicon} />
-              <div>간소화된 지능형 관리 환경</div>
+              <div>
+                간소화된
+                <br className="mobile" /> 지능형 관리 환경
+              </div>
               <div>
                 OpenManage 툴은 향상된 로컬 액세스와 핸드헬드 디바이스에서
                 데이터 센터를 안전하게 모니터링할 수 있는 새로운 모바일 디바이스
                 및 자동화된 새로운 프로세스로 일상적인 작업에 소요되는 시간과
-                비용을 줄여 운영 개시까지의 소요 기 간을 단축해 줍니다.
+                비용을 줄여 운영 개시까지의 소요 기간을 단축해 줍니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
@@ -502,7 +537,7 @@ export default function Hardware1() {
               <div>에너지 효율</div>
               <div>
                 최대 40°C의 일정한 온도로 데이터 센터를 운영할 수 있는 Fresh Air
-                2.0 등의 혁신적인 전원 및 냉각 기술로 냉각 요구 사 항을 줄이고
+                2.0 등의 혁신적인 전원 및 냉각 기술로 냉각 요구 사항을 줄이고
                 운영 비용을 대폭 절감해 줍니다.
               </div>
             </Paper>
@@ -511,20 +546,26 @@ export default function Hardware1() {
             <div>
               <div className="highlight">가상화 및 클라우드 컴퓨팅</div>
             </div>
-            <div>인프라스트럭처 최적화용 DELL EMC 솔루션</div>
+            <div>
+              인프라스트럭처 최적화용
+              <br className="mobile" /> DELL EMC 솔루션
+            </div>
           </div>
           <div className="article_mid2 paper_wide paper_wide_left">
             <Paper elevation={0} className="paper">
-              <div>대규모 가상화 환경의 이점</div>
+              <div>
+                대규모 가상화 환경의
+                <br className="mobile" /> 이점
+              </div>
               <div>
                 가상화 기술은 물리적 컴퓨터 1대에서 실행되는 몇 대의 가상
-                머신부터 여러 대의 루트 서버에 걸쳐 구 축된 전체 서버 팜에
+                머신부터 여러 대의 루트 서버에 걸쳐 구축된 전체 서버 팜에
                 이르기까지 다양한 규모의 환경에서 무분별한 서버 증가를
                 최소화하여 하드웨어 및 네트워크 인프라스트럭처에 대한 투자
-                효율성을 최적화합니다. 또한 가상화 기술은 활용도를 극대 화하고,
+                효율성을 최적화합니다. 또한 가상화 기술은 활용도를 극대화하고,
                 지원 리소스를 최적화하고, 설치 공간과 전력 비용을 절감하는 등
                 대규모 구축 환경의 이점을 실현하는 한편, 더 높은 가용성과 복구
-                성능을 보장할 수 있는 강력한 인프라스트럭처를 제공하는 데 도움이
+                성능을 보장할 수 있는 강력한 인프라스트럭처를 제공하는데 도움이
                 됩니다.
               </div>
             </Paper>
@@ -532,21 +573,20 @@ export default function Hardware1() {
               <div>애플리케이션 요구 사항</div>
               <div>
                 데스크톱 가상화 또는 프라이빗 클라우드와 같은 워크로드를
-                처리하려면 효율적인 고성능 IT 인프라스 트럭처가 필요합니다. VDI
+                처리하려면 효율적인 고성능 IT 인프라스트럭처가 필요합니다. VDI
                 구축 환경에서는 통합, 집적도 및 성능이 무엇보다 중요합니다.
-                가상화 플랫 폼은 VM에 리소스를 충분히 할당할 수 있을 만큼 많은
+                가상화 플랫폼은 VM에 리소스를 충분히 할당할 수 있을 만큼 많은
                 코어 수, 막대한 메모리 집적도, 유연한 입출력 옵션을 제공해야
                 합니다.
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <div>
-                가상화 환경용 PowerEdge 서버(여기 밑에 7개랑 묶어서 회색배경)
-              </div>
+              <div>가상화 환경용 PowerEdge 서버</div>
               <div>
                 PowerEdge 서버는 소켓당 최대 24개의 프로세싱 코어, 높은 메모리
                 집적도 및 유연한 입출력 옵션으로 가상화 환경에서 탁월한 성능을
-                실현하며 다음과 같은 이점도 제공합니다.
+                실현하며
+                <br className="pc" /> 다음과 같은 이점도 제공합니다.
               </div>
             </Paper>
           </div>
@@ -558,7 +598,8 @@ export default function Hardware1() {
             <Paper elevation={0} className="paper">
               <img src={dummyicon} alt="icon" />
               <div>
-                VDI 환경에서 그래픽 집약적인 애플리케이션을 효과적으로 지원
+                VDI 환경에서 그래픽 집약적인 애플리케이션을
+                <br className="pc" /> 효과적으로 지원
               </div>
             </Paper>
 
@@ -570,8 +611,9 @@ export default function Hardware1() {
             <Paper elevation={0} className="paper">
               <img src={dummyicon} alt="icon" />
               <div>
-                스위치에 구애받지 않는 파티셔닝 기술로 VM 간에 유연하게 리소스
-                할당{" "}
+                스위치에 구애받지 않는
+                <br className="pc" /> 파티셔닝 기술로 VM 간에
+                <br className="pc" /> 유연하게 리소스 할당
               </div>
             </Paper>
 
@@ -579,7 +621,7 @@ export default function Hardware1() {
               <img src={dummyicon} alt="icon" />
               <div>
                 VMware® Virtual SAN™, Microsoft Storage Spaces 등의 가상
-                스토리지 솔루션에 대한 완벽한 지 원 및 호환성{" "}
+                스토리지 솔루션에 대한 완벽한 지원 및 호환성{" "}
               </div>
             </Paper>
 

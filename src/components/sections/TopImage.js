@@ -38,6 +38,9 @@ var Title = styled.div`
   font-weight: bold;
   color: #000000;
   text-align: center;
+  @media (max-width: 960px) {
+    font-size: 30px;
+  }
 `;
 
 if($(window).width() < 600)

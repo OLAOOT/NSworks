@@ -83,7 +83,11 @@ export default function Info5() {
               </tr>
               <tr>
                 <th scope="row">소재지</th>
-                <td>세종특별시 한누리대로 249, 609호(나성동, 에스제이타워)</td>
+                <td>
+                  세종특별시 한누리대로 249, 609호
+                  <br className="mobile" />
+                  (나성동, 에스제이타워)
+                </td>
               </tr>
               <tr>
                 <th scope="row">연락처</th>

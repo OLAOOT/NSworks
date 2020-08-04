@@ -22,12 +22,14 @@ const heroData = [
     image: "./../../img/slider2.jpg",
     title: "Virtual Integration",
     subtitle: "",
-    description:
-      "가상화 서비스를 통해 고객의 비즈니스 효율성을 높이며 자본 비용과 운용 비율의 절감을 극대화 할 수 있게 하겠습니다",
+    description: `가상화 서비스를 통해 <br className="mobile" />
+    고객의 비즈니스 효율성을 높이며 <br className="pc" /><br className="mobile" />
+    자본 비용과 운용 비율의 절감을 <br className="mobile" />
+    극대화 할 수 있게 하겠습니다`,
     button: [
       {
         text: "",
-        href: "/VI"
+        href: "/#info_container3"
       }
     ]
   },
@@ -35,8 +37,9 @@ const heroData = [
     image: "./../../img/slider3.jpg",
     title: "Virtual Infrastructure",
     subtitle: "",
-    description:
-      "압도적인 시장 점유율과 높은 신뢰성 및 안전성을 가진 VMware 기반 가상화를 구현합니다",
+    description: `압도적인 시장 점유율과 <br className="mobile" />
+      높은 신뢰성 및 안전성을 가진 <br className="pc" /><br className="mobile" />
+      VMware 기반 가상화를 구현합니다`,
     button: [
       {
         text: "서버가상화",
@@ -60,7 +63,7 @@ const heroData = [
     image: "./../../img/slider2.jpg",
     title: "Hardware Infrastructure",
     subtitle: "",
-    description: "하드웨어인프라 설명 text 필요",
+    description: `하드웨어인프라 설명 text 필요`,
     button: [
       {
         text: "서버",
@@ -84,7 +87,7 @@ const heroData = [
     image: "./../../img/slider3.jpg",
     title: "유지보수",
     subtitle: "",
-    description: "유지보수 설명 text 필요",
+    description: `유지보수 설명 text 필요`,
     button: [
       {
         text: "엔지니어 현황",
