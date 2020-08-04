@@ -9,7 +9,8 @@ import { withStyles, makeStyles } from "@material-ui/core/styles";
 
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-
+import $ from "jquery";
+window.$ = $;
 const propTypes = {
   ...SectionProps.types
 };
@@ -146,6 +147,16 @@ const Hero = ({
     );
   };
 
+  const scroll_mv = e => {
+    //if(window.location.href)
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#info_container3").offset().top - 30
+      },
+      500
+    );
+  };
+
   return (
     <section {...props} className={outerClasses}>
       <div className="container-sm">
@@ -172,6 +183,7 @@ const Hero = ({
                           aria-controls="more_menu"
                           aria-haspopup="true"
                           className={classes.button}
+                          onClick={scroll_mv}
                         >
                           자세히 보기
                         </Button>
