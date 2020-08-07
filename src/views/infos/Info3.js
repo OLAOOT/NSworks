@@ -70,58 +70,58 @@ export default function Info3() {
             <div><span>&nbsp;&nbsp;기업&nbsp;&nbsp;</span> </div>
             <table border="1" id="partner_tb">
               <tr>
-                <td><a href="https://www.skhynix.com/kor/main.do"><img src={img4}/>sk</a></td>
-                <td><a href="https://www.continental.com/en"><img src={img4}/>continental</a></td>
-                <td><a href="https://www.lge.co.kr/lgekor/main.do"><img src={img4}/>lg</a></td>
-                <td><a href="https://itshanbul.com/"><img src={img4}/>한불</a></td>
+                <td><img src={img4}/>sk</td>
+                <td><img src={img4}/>continental</td>
+                <td><img src={img4}/>lg</td>
+                <td><img src={img4}/>한불</td>
               </tr>
               <tr>
-                <td><a href="https://www.lselectric.co.kr/ko/#"><img src={img4}/>ls</a></td>
-                <td><a href="https://www.dunkindonuts.co.kr/"><img src={img4}/>던킨</a></td>
-                <td><a href="https://www.nestle.co.kr/"><img src={img4}/>nestle</a></td>
-                <td><a href="https://dbhitek.com/kr/default.asp"><img src={img4}/>동부하이텍</a></td>
+                <td><img src={img4}/>ls</td>
+                <td><img src={img4}/>던킨</td>
+                <td><img src={img4}/>nestle</td>
+                <td><img src={img4}/>동부하이텍</td>
               </tr>
               <tr>
-                <td><a href="https://www.cctimes.kr/"><img src={img4}/>충청타임즈</a></td>
-                <td><a href="https://jsrmicro.co.kr/html/main/main.html"><img src={img4}/>jsr micro</a></td>
-                <td><a href="https://www.autonics.com/main"><img src={img4}/>autonics</a></td>
+                <td><img src={img4}/>충청타임즈</td>
+                <td><img src={img4}/>jsr micro</td>
+                <td><img src={img4}/>autonics</td>
                 <td></td>
               </tr>
             </table>
             <div><span>&nbsp;&nbsp;공공&nbsp;&nbsp;</span> </div>
             <table border="1">
               <tr>
-                <td><a href="http://www.jecheon.go.kr/site/corona_new/intro_new.html"><img src={img4}/>제천시</a></td>
-                <td><a href="https://www.kuh.ac.kr/main.do"><img src={img4}/>건대병원</a></td>
-                <td><a href="https://www.cjmct.or.kr/"><img src={img4}/>충주의료원</a></td>
-                <td><a href="https://www.hshospital.co.kr/ko/index.php"><img src={img4}/>효성</a></td>
+                <td><img src={img4}/>제천시</td>
+                <td><img src={img4}/>건대병원</td>
+                <td><img src={img4}/>충주의료원</td>
+                <td><img src={img4}/>효성</td>
               </tr>
               <tr>
-                <td><a href="http://www.hanhsp.co.kr/index.asp?"><img src={img4}/>한국병원</a></td>
-                <td><a href="https://www.kwater.or.kr/main.do?s_mid=1"><img src={img4}/>한국 수자원</a></td>
-                <td><a href="https://www.weather.go.kr/w/index.do"><img src={img4}/>기상청</a></td>
+                <td><img src={img4}/>한국병원</td>
+                <td><img src={img4}/>한국 수자원</td>
+                <td><img src={img4}/>기상청</td>
                 <td></td>
               </tr>
             </table>
             <div><span>&nbsp;&nbsp;교육&nbsp;&nbsp;</span> </div>
             <table border="1">
               <tr>
-                <td><a href="https://www.ut.ac.kr/"><img src={img4}/>교통대</a></td>
-                <td><a href="http://www.semyung.ac.kr/kor.do"><img src={img4}/>세명대</a></td>
-                <td><a href="http://www.konkuk.ac.kr/do/Index.do"><img src={img4}/>건대</a></td>
-                <td><a href="https://www.tw.ac.kr/"><img src={img4}/>동원대</a></td>
+                <td><img src={img4}/>교통대</td>
+                <td><img src={img4}/>세명대</td>
+                <td><img src={img4}/>건대</td>
+                <td><img src={img4}/>동원대</td>
               </tr>
               <tr>
-                <td><a href="https://www.kaywon.ac.kr/CmsHome/MainDefault.aspx"><img src={img4}/>계원예대</a></td>
-                <td><a href="https://www.gangdong.ac.kr/intro.jsp"><img src={img4}/>강동대</a></td>
-                <td><a href="https://www.chsu.ac.kr/CmsHome/intro_00019991.aspx"><img src={img4}/>충북보건대</a></td>
-                <td><a href="http://www.jwu.ac.kr/site/siteView.jwu"><img src={img4}/>중원대</a></td>
+                <td><img src={img4}/>계원예대</td>
+                <td><img src={img4}/>강동대</td>
+                <td><img src={img4}/>충북보건대</td>
+                <td><img src={img4}/>중원대</td>
               </tr>
               <tr>
-                <td><a href="http://www.kdu.ac.kr/"><img src={img4}/>극동대</a></td>
-                <td><a href=""></a></td>
-                <td><a href=""></a></td>
-                <td><a href=""></a></td>
+                <td><img src={img4}/>극동대</td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
             </table>
           </div>

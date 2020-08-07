@@ -319,18 +319,4 @@ table.type03 td {
   }
 }
 
-.info_container .article_mid3 > table td:hover {
-  animation-duration: 1s;
-  animation-name: scaleUp;
-}
-
-@keyframes scaleUp {
-  0% {
-    transform:scale(1);   
-  }
-  
-  100% {
-    transform:scale(1.1);   
-  } 
-}
 
