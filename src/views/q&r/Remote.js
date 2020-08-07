@@ -9,7 +9,7 @@ import "../../css/maintenance.css";
 
 const img_data = {
   image: "./../../img/slider1.jpg",
-  title: "엔지니어 현황"
+  title: "원격지원"
 };
 
 export default function Engineer1() {
@@ -18,7 +18,9 @@ export default function Engineer1() {
       <TopImage data={img_data} />
       <div className="maintenance_container">
         <div className="article">
-          ㅁㅁㅁㅁ
+          <iframe src="http://rs.nsworks.co.kr/" width="100%" min-width="600px" height="1000px">
+            <p>현재 사용 중인 브라우저는 iframe 요소를 지원하지 않습니다!</p>
+          </iframe>
         </div>
       </div>
     </div>

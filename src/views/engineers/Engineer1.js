@@ -120,7 +120,6 @@ export default function Engineer1() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={hs} id="img_hs" />
             <div>
               <ul>
                 <li>

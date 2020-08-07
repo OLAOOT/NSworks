@@ -174,9 +174,7 @@ export default function Info2() {
           $(this)
             .css("animation-name", "slide1")
             .delay(200 * count2);
-        $(this).animate({ opacity: "1" }, 1000, function() {
-          $(this).css("animation-duration", "0s");
-        });
+        $(this).animate({ opacity: "1","animation-duration" :"0s"}, 1000);
       }
     });
   };
