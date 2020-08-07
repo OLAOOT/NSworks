@@ -7,7 +7,8 @@ import Hero from "./Hero";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 import "./../../css/header.css";
-
+import $ from "jquery";
+window.$ = $;
 
 const useStyles = makeStyles(theme => ({
   article_mid: {
@@ -60,13 +61,14 @@ const Slider = ({ data }) => {
   };
   const handleMouseOut = () => {
     setPlay(true);
-  };  
+  };
+  
   return (
     <div>
       <AutoplaySlider
         play={play}
         cancelOnInteraction={false}
-        interval={3000}
+        interval={5000}
         className={classes.slider}
         id="slider"
       >
