@@ -9,6 +9,13 @@ import vmware from "./../../img/vmware.jpg";
 import vmcloud from "./../../img/vmw-cloud.png";
 import img4 from "./../../img/img_ccai.png";
 import dummyicon from "./../../img/logo.png";
+import icon1 from './../../img/icon/6.png'
+import icon2 from "./../../img/icon/1.png";
+import icon3 from "./../../img/icon/3.png";
+import icon4 from "./../../img/icon/13.png";
+import icon5 from "./../../img/icon/34.png";
+import icon6 from "./../../img/icon/4.png";
+
 
 import "../../css/virtual.css";
 
@@ -76,7 +83,7 @@ export default function Virtualization1() {
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon1} />
               <div>
                 데이터센터 통합 및<br /> 비즈니스 연속성
               </div>
@@ -87,7 +94,7 @@ export default function Virtualization1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon2} />
               <div>
                 애플리케이션 및 <br className="mobile" />
                 인프라 보안
@@ -98,7 +105,7 @@ export default function Virtualization1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon3} />
               <div>지능적인 운영 관리 및 자동화</div>
               <div>
                 vSphere with Operations Management를 통해 지능적 운영 관리 및
@@ -106,7 +113,7 @@ export default function Virtualization1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon4} />
               <div>빅데이터 가상화</div>
               <div>
                 VMware는 기존 애플리케이션에는 물론 <br className="pc" />
@@ -114,7 +121,7 @@ export default function Virtualization1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon5} />
               <div>
                 원격 근무지 및<br className="mobile" /> 지사 지원
               </div>
@@ -124,7 +131,7 @@ export default function Virtualization1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon6} />
               <div>
                 기존 Unix를
                 <br className="mobile" /> 가상 Linux로

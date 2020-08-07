@@ -7,8 +7,11 @@ import TopImage from "../../components/sections/TopImage";
 
 import srm from "./../../img/srm.png";
 import vmcloud from "./../../img/vmw-cloud.png";
-import img4 from "./../../img/img_ccai.png";
-import dummyicon from "./../../img/logo.png";
+
+import icon1 from "./../../img/icon/21.png";
+import icon2 from "./../../img/icon/26.png";
+import icon3 from "./../../img/icon/30.png";
+
 import "../../css/virtual.css";
 import $ from "jquery";
 window.$ = $;
@@ -78,7 +81,7 @@ export default function Virtualization4() {
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon1} />
               <div>
                 빠르고 안정적인
                 <br className="mobile" /> IT 재해 복구 제공
@@ -89,7 +92,7 @@ export default function Virtualization4() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon2} />
               <div>
                 다운타임 없는
                 <br className="pc" /> 애플리케이션 모빌리티 제공
@@ -101,7 +104,7 @@ export default function Virtualization4() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon3} />
               <div>
                 간편한 정책기반
                 <br className="mobile" /> 관리 사용

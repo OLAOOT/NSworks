@@ -16,11 +16,22 @@ import dell1 from "./../../img/dell20_01.jpg";
 import dell2 from "./../../img/dell20_11.jpg";
 import dell3 from "./../../img/dell20_12.jpg";
 import dell4 from "./../../img/dell20_13.jpg";
+import dell5 from './../../img/dell20_14.jpg';
 import syn1 from "./../../img/synology01_01.jpg";
 import syn2 from "./../../img/synology02_01.jpg";
 import syn3 from "./../../img/synology02_02.jpg";
 import img4 from "./../../img/img_ccai.png";
-import dummyicon from "./../../img/logo.png";
+
+import icon1 from './../../img/icon/24.png'
+import icon2 from './../../img/icon/25.png'
+import icon3 from './../../img/icon/5.png'
+import icon4 from './../../img/icon/20.png'
+import icon5 from './../../img/icon/28.png'
+import icon6 from './../../img/icon/37.png'
+import icon7 from './../../img/icon/14.png'
+import icon8 from './../../img/icon/23.png'
+import icon9 from './../../img/icon/31.png'
+import icon10 from './../../img/icon/6.png'
 
 import "../../css/hardware.css";
 import $ from "jquery";
@@ -185,7 +196,7 @@ export default function Hardware2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={dell5} />
               <div>
                 컨버지드 <br className="mobile" />
                 인프라스트럭처
@@ -276,7 +287,7 @@ export default function Hardware2() {
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon1} alt="icon" />
               <div>
                 사용자 지정 가능한 백업 스케줄 기능이 있는 고급 스냅샷 기술을
                 사용하면 많은 저장소 용량과 시스템 리소스를 차지하지 않고도 공유
@@ -285,7 +296,7 @@ export default function Hardware2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon2} alt="icon" />
               <div>
                 파일 또는 폴더 수준 데이터 복원은 특정 파일 또는 폴더만
                 복원하려는 사용자에게 편의성과 시간 절약이라는 이점을
@@ -294,7 +305,7 @@ export default function Hardware2() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon3} alt="icon" />
               <div>
                 유연한 공유 폴더와 사용자 할당량 시스템은 모든 사용자 계정과
                 공유 폴더의 할당량을 포괄적으로 제어합니다.
@@ -302,7 +313,7 @@ export default function Hardware2() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon4} alt="icon" />
               <div>
                 기본 제공되는 데이터 무결성 검사 기능은 데이터와 메타데이터
                 체크섬을 사용하여 데이터 및 파일 시스템 손상을 감지하고 안정성을
@@ -311,7 +322,7 @@ export default function Hardware2() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon5} alt="icon" />
               <div>
                 Btrfs 파일 시스템은 미러링된 메타데이터를 사용하여 손상된 파일을
                 자동으로 감지하고, RAID1, 5, 6 및 10을 포함한 지원되는 RAID
@@ -320,7 +331,7 @@ export default function Hardware2() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon6} alt="icon" />
               <div>
                 IT 관리자를 위해 고급 LUN과 더불어 매우 빠른 스냅샷 생성, 복원
                 및 복제를 제공하는 최첨단 iSCSI 서비스를 제공합니다.
@@ -339,7 +350,7 @@ export default function Hardware2() {
           </div>
           <div className="article_mid2 paper_slim">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon7} alt="icon" />
               <div>데스크톱 백업</div>
               <div>
                 Cloud Station Backup은 PC, Mac 또는 기타 데스크톱 장치를
@@ -348,7 +359,7 @@ export default function Hardware2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon8} alt="icon" />
               <div>NAS 백업</div>
               <div>
                 Hyper Backup은 데이터를 로컬 공유 폴더, 외부 장치, 다른 Synology
@@ -358,7 +369,7 @@ export default function Hardware2() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon9} alt="icon" />
               <div>서버 백업</div>
               <div>
                 Active Backup for Server는 에이전트 없는 백업 솔루션을 제공하고
@@ -368,7 +379,7 @@ export default function Hardware2() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon10} alt="icon" />
               <div>SaaS 백업</div>
               <div>
                 Active Backup for Oce 365/G Suite는 중앙 집중 대시보드가 있는

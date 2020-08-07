@@ -141,6 +141,7 @@
 .info_container .sign {
   display: flex;
   margin-top: 20px;
+  margin-bottom: 100px;
   align-items: center;
   justify-content: flex-end;
 }

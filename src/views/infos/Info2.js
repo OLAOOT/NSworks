@@ -61,60 +61,7 @@ const GreetingSplit = ({
       <div className="container">
         <div className={innerClasses}>
           <div className={splitClasses}>
-            <div className="split-item">
-              <div
-                className={classNames(
-                  "split-item-image center-content-mobile",
-                  imageFill && "split-item-image-fill"
-                )}
-                data-reveal-container=".split-item"
-              >
-                <CeoImage src={require("./../../img/ceo-1.jpg")} alt="1" />
-              </div>
-              <div
-                className="split-item-content center-content-mobile"
-                data-reveal-container=".split-item"
-              >
-                <h3
-                  className="mt-0 mb-12"
-                  style={{
-                    color: "#000000",
-                    fontSize: 1.2 + "rem"
-                  }}
-                >
-                  새로운 기술, 새로운 인재와 함께 하는
-                  <br className="pc" /> 젊은 기업입니다.
-                </h3>
-                <div>
-                  <p
-                    className="m-0"
-                    style={{ fontSize: 0.8 + "rem", color: "#000000" }}
-                  >
-                    네트워크를 통한 정보의 연결과 이동은 보다 나은 삶의 발전과
-                    인간의 소중한 가치를 실현하는데 의의가 있습니다.{" "}
-                    <br className="mobile" />
-                    NSworks는 이러한 프레임워크와 함께 고객과 만납니다. <br />
-                    <br />
-                    신뢰와 정성으로 네트워크 기반 통합 비즈니스 환경을 구현하기
-                    위하여 우수한 기술 인력을 바탕으로 최고의 서비스 품질을
-                    제공합니다. 인간 존중과 미래지향의 가치를 위하여 가장
-                    안전하고 효율적인 방식과 기법으로 고객만족에 부응하고자
-                    합니다. <br />
-                    <br />
-                    더불어 NSworks가 추구하고자 하는 네트워크와 정보통신에 대한
-                    모든 기여와 봉사는 궁극적인 파트너십에서 출발합니다. <br />
-                    <br />
-                    귀사의 발전에 <br className="mobile" />
-                    NSworks가 함께 하겠습니다. <br />
-                    감사합니다.
-                  </p>
-                  <div className="sign">
-                    <img src={require("./../../img/ceo2.jpg")} alt="logo" />
-                    {/* <img src={require("./../../img/logo.png")} alt="sign" /> */}
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             <div className="split-item">
               <div
@@ -269,6 +216,46 @@ export default function Info2() {
           <div className="article_top">
             <div>
               <span>CEO 인사말</span>
+            </div>
+          </div>
+          <div className="atricle_mid">
+            <h3
+              className="mt-0 mb-12"
+              style={{
+                color: "#000000",
+                fontSize: 1.2 + "rem",
+                textAlign: 'right'
+              }}
+            >
+              새로운 기술, 새로운 인재와 함께 하는
+              젊은 기업입니다.
+            </h3>
+            <div>
+              <p
+                style={{ fontSize: 0.8 + "rem", color: "#000000", textAlign: 'right'}}
+              >
+                네트워크를 통한 정보의 연결과 이동은 보다 나은 삶의 발전과
+                인간의 소중한 가치를 실현하는데 의의가 있습니다.<br />
+                <br className="mobile" />
+                NSworks는 이러한 프레임워크와 함께 고객과 만납니다. <br />
+                <br />
+                신뢰와 정성으로 네트워크 기반 통합 비즈니스 환경을 구현하기
+                위하여 우수한 기술 인력을 바탕으로 최고의 서비스 품질을
+                제공합니다.<br /> 인간 존중과 미래지향의 가치를 위하여 가장
+                안전하고 효율적인 방식과 기법으로 고객만족에 부응하고자
+                합니다. <br />
+                <br />
+                더불어 NSworks가 추구하고자 하는 네트워크와 정보통신에 대한
+                모든 기여와 봉사는 궁극적인 파트너십에서 출발합니다. <br />
+                <br />
+                귀사의 발전에 <br className="mobile" />
+                NSworks가 함께 하겠습니다. <br />
+                감사합니다.
+              </p>
+              <div className="sign">
+                <img src={require("./../../img/ceo2.png")} alt="logo" />
+                {/* <img src={require("./../../img/logo.png")} alt="sign" /> */}
+              </div>
             </div>
           </div>
         </div>

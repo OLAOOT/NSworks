@@ -7,8 +7,12 @@ import TopImage from "../../components/sections/TopImage";
 
 import vsan from "./../../img/vsan.png";
 
-import img4 from "./../../img/img_ccai.png";
-import dummyicon from "./../../img/logo.png";
+import icon1 from "./../../img/icon/33.png";
+import icon2 from "./../../img/icon/32.png";
+import icon3 from "./../../img/icon/1.png";
+import icon4 from "./../../img/icon/20.png";
+import icon5 from "./../../img/icon/25.png";
+
 import "../../css/virtual.css";
 import $ from "jquery";
 window.$ = $;
@@ -78,7 +82,7 @@ export default function Virtualization3() {
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon1} />
               <div>
                 소프트웨어 정의
                 <br className="mobile" /> 데이터센터를 통한
@@ -91,7 +95,7 @@ export default function Virtualization3() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon2} />
               <div>업계 최고의 구축 옵션</div>
               <div>
                 vSAN을 사용하는 고객은 수요가 증가함에 따라 2개에서 64개
@@ -100,7 +104,7 @@ export default function Virtualization3() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon3} />
               <div>업계 최초의 기본 보안</div>
               <div>
                 기존에는 기업이 자체 암호화 드라이브(SED) 또는 타사 보안
@@ -110,7 +114,7 @@ export default function Virtualization3() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon4} />
               <div>사전 예방적 지원</div>
               <div>
                 vSAN은 수천 건의 vSAN 구축을 검토하고 지능적 통찰력을 향상하며
@@ -119,7 +123,7 @@ export default function Virtualization3() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon5} />
               <div>
                 TCO를 절감하는
                 <br className="mobile" /> 데이터 보호

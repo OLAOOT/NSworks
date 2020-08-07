@@ -14,7 +14,22 @@ import dell2 from "./../../img/dell02_01.jpg";
 import dell3 from "./../../img/dell02_02.jpg";
 import dell4 from "./../../img/dell02_03.jpg";
 import img4 from "./../../img/img_ccai.png";
-import dummyicon from "./../../img/logo.png";
+
+import icon1 from './../../img/icon/31.png'
+import icon2 from './../../img/icon/34.png'
+import icon3 from './../../img/icon/19.png'
+import icon4 from './../../img/icon/40.png'
+import icon5 from './../../img/icon/17.png'
+import icon6 from './../../img/icon/22.png'
+import icon7 from './../../img/icon/3.png'
+import icon8 from './../../img/icon/16.png'
+import icon9 from './../../img/icon/38.png'
+import icon10 from './../../img/icon/18.png'
+import icon11 from './../../img/icon/19.png'
+import icon12 from './../../img/icon/21.png'
+import icon13 from './../../img/icon/9.png'
+import icon14 from './../../img/icon/35.png'
+import icon15 from './../../img/icon/39.png'
 
 import "../../css/hardware.css";
 import $ from "jquery";
@@ -222,7 +237,7 @@ const DellSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <img src={require("./../../img/hp01_01.jpg")} alt="1" />
+                <img src={require("./../../img/dell02_01.jpg")} alt="1" />
               </div>
             </div>
 
@@ -261,7 +276,7 @@ const DellSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <img src={require("./../../img/hp01_02.jpg")} alt="2" />
+                <img src={require("./../../img/dell02_02.jpg")} alt="2" />
               </div>
             </div>
             <div className="split-item">
@@ -296,7 +311,7 @@ const DellSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <img src={require("./../../img/hp01_02.jpg")} alt="2" />
+                <img src={require("./../../img/dell02_03.jpg")} alt="2" />
               </div>
             </div>
           </div>
@@ -431,7 +446,7 @@ export default function Hardware1() {
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon1} />
               <div>
                 확장성과 적응성이 <br className="mobile" />
                 뛰어난
@@ -446,7 +461,7 @@ export default function Hardware1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon2} />
               <div>
                 확장된 자동화 기능과
                 <br className="mobile" />
@@ -464,7 +479,7 @@ export default function Hardware1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon3} />
               <div>
                 확장성과 효율성이 <br className="mobile" />
                 뛰어난
@@ -492,7 +507,7 @@ export default function Hardware1() {
           <div className="article_mid2">
             <img src={dell1} />
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon4} />
               <div>더 큰 처리 능력</div>
               <div>
                 최신 세대 Intel® Xeon® 프로세서는 가상화 환경과 높은 성능을
@@ -500,7 +515,7 @@ export default function Hardware1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon5} />
               <div>대용량 저전력 메모리</div>
               <div>
                 DDR4 메모리로 ERP 및 데이터베이스 애플리케이션과 같은 워크로드의
@@ -508,7 +523,7 @@ export default function Hardware1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon6} />
               <div>
                 확장성 및 효율성이 <br className="mobile" />
                 뛰어난 <br className="pc" />
@@ -522,7 +537,7 @@ export default function Hardware1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon7} />
               <div>
                 간소화된
                 <br className="mobile" /> 지능형 관리 환경
@@ -535,7 +550,7 @@ export default function Hardware1() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon8} />
               <div>에너지 효율</div>
               <div>
                 최대 40°C의 일정한 온도로 데이터 센터를 운영할 수 있는 Fresh Air
@@ -594,11 +609,11 @@ export default function Hardware1() {
           </div>
           <div className="article_mid2 paper_slim">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon9} alt="icon" />
               <div>운영 중단 없는 확장</div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon10} alt="icon" />
               <div>
                 VDI 환경에서 그래픽 집약적인 애플리케이션을
                 <br className="pc" /> 효과적으로 지원
@@ -606,12 +621,12 @@ export default function Hardware1() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon11} alt="icon" />
               <div>서버당 더 많은 수의 VM 지원</div>
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon12} alt="icon" />
               <div>
                 스위치에 구애받지 않는
                 <br className="pc" /> 파티셔닝 기술로 VM 간에
@@ -620,7 +635,7 @@ export default function Hardware1() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon13} alt="icon" />
               <div>
                 VMware® Virtual SAN™, Microsoft Storage Spaces 등의 가상
                 스토리지 솔루션에 대한 완벽한 지원 및 호환성{" "}
@@ -628,7 +643,7 @@ export default function Hardware1() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon14} alt="icon" />
               <div>
                 이중화된 하이퍼바이저 및 무장애 메모리 장애 격리 기능을 통한
                 자동 페일오버로 애플리케이션 가동 시간 최대화
@@ -636,7 +651,7 @@ export default function Hardware1() {
             </Paper>
 
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} alt="icon" />
+              <img src={icon15} alt="icon" />
               <div>
                 OpenManage Integration Suite for Microsoft System Center 및
                 OpenManage Integration for VMware vCenter™ 가상화 콘솔을 통한

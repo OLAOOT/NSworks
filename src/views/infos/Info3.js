@@ -9,6 +9,7 @@ import TopImage from "../../components/sections/TopImage";
 import history from "./../../img/history.png";
 import "../../css/info.css";
 import img4 from "./../../img/img_ccai.png";
+import vi from './../../img/vi.png'
 import $ from "jquery";
 window.$ = $;
 
@@ -48,7 +49,11 @@ export default function Info3() {
               완성도 높은 가상화 시스템을 제공합니다.
             </div>
           </div>
-          <div className="article_mid">사업 영역 이미지 삽입 예정</div>
+          <div className="article_mid">
+            <img src={vi} alt="vi" style={{
+              width: '800px'
+            }}/>
+          </div>
           <div className="article_top">
             <div>
               <span>Major Service Partners</span>

@@ -253,8 +253,8 @@ function Header(props) {
             </div>
             <div>
               <Link to="/vm/desktop" className={classes.txt_deco_none}>
-                <ListItem button key="데스크탑가상화" onClick={handleItemClick}>
-                  <ListItemText primary="데스크탑가상화" />
+                <ListItem button key="데스크톱가상화" onClick={handleItemClick}>
+                  <ListItemText primary="데스크톱가상화" />
                 </ListItem>
               </Link>
             </div>
@@ -456,7 +456,7 @@ function Header(props) {
                   onMouseOver={mouseOver2}
                   className="menu2"
                 >
-                  데스크탑 가상화
+                  데스크톱 가상화
                 </Link>
                 <Link
                   to="/vm/storage"

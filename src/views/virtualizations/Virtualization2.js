@@ -7,8 +7,12 @@ import TopImage from "../../components/sections/TopImage";
 
 import horizon from "./../../img/horizon.png";
 
-import img4 from "./../../img/img_ccai.png";
-import dummyicon from "./../../img/logo.png";
+import icon1 from "./../../img/icon/15.png";
+import icon2 from "./../../img/icon/1.png";
+import icon3 from "./../../img/icon/8.png";
+import icon4 from "./../../img/icon/5.png";
+import icon5 from "./../../img/icon/27.png";
+
 import "../../css/virtual.css";
 import $ from "jquery";
 window.$ = $;
@@ -75,7 +79,7 @@ export default function Virtualization2() {
           </div>
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon1} />
               <div>
                 단일 플랫폼을 통해
                 <br className="mobile" /> 데스크톱과
@@ -89,7 +93,7 @@ export default function Virtualization2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon2} />
               <div>
                 데이터 보안 유지 및<br className="pc" /> 규정 준수 간소화
               </div>
@@ -101,7 +105,7 @@ export default function Virtualization2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon3} />
               <div>
                 ROI (투자 수익)
                 <br className="mobile" /> 대폭 향상
@@ -112,7 +116,7 @@ export default function Virtualization2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon4} />
               <div>
                 다양하고 유연한
                 <br className="mobile" /> 사용자 환경 지원
@@ -124,7 +128,7 @@ export default function Virtualization2() {
               </div>
             </Paper>
             <Paper elevation={0} className="paper">
-              <img src={dummyicon} />
+              <img src={icon5} />
               <div>완벽한 업무 공간 환경 관리</div>
               <div>
                 긴밀하게 통합된 단일 플랫폼을 통해 사용자 컴퓨팅 리소스에 대한
