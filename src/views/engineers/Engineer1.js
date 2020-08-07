@@ -4,7 +4,7 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
-import tmp5 from "./../../img/img_ccai.png";
+import hs from "./../../img/partnership-handshake.png";
 
 import engineer1 from "./../../img/engineer1.png";
 import engineer2 from "./../../img/engineer2.png";
@@ -120,7 +120,7 @@ export default function Engineer1() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={tmp5} />
+            <img src={hs} id="img_hs" />
             <div>
               <ul>
                 <li>
