@@ -12,14 +12,14 @@ window.$ = $;
 
 const heroData = [
   {
-    image: "./../../img/slider1.jpg",
+    image: "banner1.jpg",
     title: "NSWorks",
     subtitle: "Always Do the Best",
     description: "",
     button: null
   },
   {
-    image: "./../../img/slider2.jpg",
+    image: "banner2.jpg",
     title: "Virtual Integration",
     subtitle: "",
     description: `가상화 서비스를 통해 <br className="mobile" />
@@ -34,7 +34,7 @@ const heroData = [
     ]
   },
   {
-    image: "./../../img/slider3.jpg",
+    image: "banner3.jpg",
     title: "Virtual Infrastructure",
     subtitle: "",
     description: `압도적인 시장 점유율과 <br className="mobile" />
@@ -60,7 +60,7 @@ const heroData = [
     ]
   },
   {
-    image: "./../../img/slider2.jpg",
+    image: "banner4.jpg",
     title: "Hardware Infrastructure",
     subtitle: "",
     description: `하드웨어인프라 설명 text 필요`,
@@ -84,7 +84,7 @@ const heroData = [
     ]
   },
   {
-    image: "./../../img/slider3.jpg",
+    image: "banner5.jpg",
     title: "유지보수",
     subtitle: "",
     description: `유지보수 설명 text 필요`,

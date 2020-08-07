@@ -7,7 +7,7 @@ import Hero from "./Hero";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from "styled-components";
 import "./../../css/header.css";
-import banner from "./../../img/slider1.jpg";
+
 
 const useStyles = makeStyles(theme => ({
   article_mid: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
       margin: "1%",
       width: "23%",
       minWidth: "250px",
-      height: 480
+      height: 580
     },
     "& > * > img": {
       position: "relative",
@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     left: 0,
     top: "64px",
-    height: 400,
+    height: 600,
     "&  .awssld__bullets": {
       display: "none"
     },
@@ -60,7 +60,7 @@ const Slider = ({ data }) => {
   };
   const handleMouseOut = () => {
     setPlay(true);
-  };
+  };  
   return (
     <div>
       <AutoplaySlider
@@ -70,9 +70,9 @@ const Slider = ({ data }) => {
         className={classes.slider}
         id="slider"
       >
-        {data.map(v => (
+        {data.map((v,i) => (
           <div
-            data-src={banner} //data-src={require(v.image)}
+            data-src={require("./../../img/"+data[i].image)} //data-src={require(v.image)}
             key={v.title}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
@@ -82,6 +82,7 @@ const Slider = ({ data }) => {
         ))}
       </AutoplaySlider>
     </div>
+    
   );
 };
 

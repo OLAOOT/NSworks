@@ -29,7 +29,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "8px",
     [theme.breakpoints.down("sm")]: {
       fontSize: "44px"
-    }
+    },
+    color:"#ffffff"
   },
   subtitle: {
     marginBottom: "8px",

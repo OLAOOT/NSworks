@@ -10,6 +10,13 @@ import img1 from "./../../img/slider1.jpg";
 import img2 from "./../../img/slider2.jpg";
 import img3 from "./../../img/slider3.jpg";
 import img4 from "./../../img/img_ccai.png";
+
+import icon1 from "./../../img/icon/technical-support.png";
+import icon2 from "./../../img/icon/solution.png";
+import icon3 from "./../../img/icon/it.png";
+import icon4 from "./../../img/icon/repair.png";
+
+
 import "../../css/info.css";
 import $ from "jquery";
 window.$ = $;
@@ -119,7 +126,7 @@ export default function Info1() {
           </div>
           <div className="article_mid">
             <Paper elevation={3} className={classes.paper}>
-              <img src={img1} alt="empty" />
+              <img src={icon1} alt="empty" />
               <div>IT 컨설팅</div>
               <div>
                 고객사 환경에 최적화된 HW, SW, Network
@@ -131,7 +138,7 @@ export default function Info1() {
               </div>
             </Paper>
             <Paper elevation={3}>
-              <img src={img2} alt="empty" />
+              <img src={icon2} alt="empty" />
               <div>솔루션 공급</div>
               <div>
                 Citrix, Microsoft, Cisco, VMware, HP, Dell의
@@ -139,7 +146,7 @@ export default function Info1() {
               </div>
             </Paper>
             <Paper elevation={3}>
-              <img src={img2} alt="empty" />
+              <img src={icon3} alt="empty" />
               <div>HW/SW 판매</div>
               <div>
                 HP, IBM, Dell 서버, <br className="pc" />
@@ -153,7 +160,7 @@ export default function Info1() {
               </div>
             </Paper>
             <Paper elevation={3}>
-              <img src={img1} alt="empty" />
+              <img src={icon4} alt="empty" />
               <div>통합유지보수</div>
               <div>
                 HP Industrial Server Storage 충북, 세종 <br className="pc" />

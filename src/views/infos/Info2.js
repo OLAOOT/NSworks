@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 import "../../css/info.css";
 
+import item1 from "./../../img/item1.jpg";
+import item2 from "./../../img/item2.jpg";
+
 import $ from "jquery";
 window.$ = $;
 
@@ -96,7 +99,7 @@ const GreetingSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <img src={require("./../../img/slider1.jpg")} alt="1" />
+                <img src={item1} alt="1" />
               </div>
             </div>
 
@@ -130,7 +133,7 @@ const GreetingSplit = ({
                 )}
                 data-reveal-container=".split-item"
               >
-                <img src={require("./../../img/slider2.jpg")} alt="2" />
+                <img src={item2} alt="2" />
               </div>
             </div>
           </div>

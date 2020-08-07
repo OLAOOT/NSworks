@@ -79,7 +79,7 @@
 }
 
 #article1 {
-  padding-top: 100px;
+  padding-top: 300px;
 }
 #article2 {
   padding-top: 400px;
@@ -166,7 +166,10 @@
 
 .info_container .article_mid > * > img {
   position: relative;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width:50%;
+  padding-top:20px
 }
 .info_container .article_mid > * > div {
   text-align: left;
