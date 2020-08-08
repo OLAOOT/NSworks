@@ -63,13 +63,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const img_data = [
-  {
-    image: "./../../img/slider1.jpg",
-    title: "연혁"
-  }
-];
-
 export default function Info3() {
   const classes = useStyles();
   return (

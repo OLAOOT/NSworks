@@ -6,7 +6,6 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
-import img1 from "./../../img/slider1.jpg";
 import img2 from "./../../img/slider2.jpg";
 import img3 from "./../../img/slider3.jpg";
 import img4 from "./../../img/img_ccai.png";

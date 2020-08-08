@@ -39,7 +39,7 @@ window.$ = $;
 
 const img_data = [
   {
-    image: "./../../img/slider1.jpg",
+    image: "banner4.jpg",
     title: "스토리지"
   }
 ];

@@ -17,12 +17,6 @@ import "../../css/info.css";
 import $ from "jquery";
 window.$ = $;
 
-const img_data = [
-  {
-    image: "./../../img/slider1.jpg",
-    title: "찾아오시는 길"
-  }
-];
 
 export default function Info5() {
   if (window.location.href.indexOf("location")) {

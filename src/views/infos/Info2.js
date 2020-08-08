@@ -239,8 +239,12 @@ export default function Info2() {
                 감사합니다.
               </p>
               <div className="sign">
+
+                <img src={require("./../../img/logo.png")} alt="sign" />
+                <span style={{
+                  fontSize: "25px"
+                }}>CEO</span>
                 <img src={require("./../../img/ceo2.png")} alt="logo" />
-                {/* <img src={require("./../../img/logo.png")} alt="sign" /> */}
               </div>
             </div>
           </div>

@@ -35,7 +35,7 @@ import "../../css/hardware.css";
 import $ from "jquery";
 window.$ = $;
 const img_data = {
-  image: "./../../img/slider1.jpg",
+  image: "banner4.jpg",
   title: "서버"
 };
 

@@ -17,7 +17,7 @@ import "../../css/virtual.css";
 import $ from "jquery";
 window.$ = $;
 const img_data = {
-  image: "./../../img/slider1.jpg",
+  image: "banner3.jpg",
   title: "데스크톱 가상화"
 };
 
@@ -142,10 +142,10 @@ export default function Virtualization2() {
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                <iframe src='http://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=4759488053001' allowfullscreen frameborder='0'/>
+                <iframe src='https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=4759488053001' allowfullscreen frameborder='0'/>
               </Paper>
               <Paper elevation={3} className="paper">
-                <iframe src='http://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5164277989001' allowfullscreen frameborder='0'/>
+                <iframe src='https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5164277989001' allowfullscreen frameborder='0'/>
               </Paper>
             </div>
           </div>

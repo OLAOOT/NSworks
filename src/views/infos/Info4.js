@@ -25,22 +25,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const img_data = [
-  {
-    image: "./../../img/slider1.jpg",
-    title: "연혁"
-  }
-];
-
 export default function Info4() {
   const classes = useStyles();
   return (
     <div>
-      {window.location.href.indexOf("info") === 22 ? (
+      {/* {window.location.href.indexOf("info") === 22 ? (
         img_data.map(v => <TopImage data={v} />)
       ) : (
         <div />
-      )}
+      )} */}
       <div className="info_container" id="info_container4">
         <div className="article">
           <img src={history} className={classes.img} />

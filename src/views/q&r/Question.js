@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const img_data = {
-  image: "./../../img/slider1.jpg",
+  image: "banner2.jpg",
   title: "문의"
 };
 

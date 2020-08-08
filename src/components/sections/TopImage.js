@@ -4,7 +4,6 @@ import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/captioned.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styled from "styled-components";
-import banner from "./../../img/banner_w.png";
 import $ from "jquery";
 window.$ = $;
 
@@ -65,7 +64,7 @@ const TopImage = ({ data }) => {
   return (
     <SlideContainer>
       <ImageContainer>
-        <Image src={banner} alt="image" />
+        <Image src={require('./../../img/' + data.image)} alt="image" />
       </ImageContainer>
       <TextContainer>
         <Title>{data.title}</Title>
