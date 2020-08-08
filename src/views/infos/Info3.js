@@ -8,10 +8,47 @@ import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
 import history from "./../../img/history.png";
 import "../../css/info.css";
-import img4 from "./../../img/img_ccai.png";
 import vi from './../../img/vi.png'
+
+import logo1 from "./../../img/partner/1.png";
+import logo2 from "./../../img/partner/2.png";
+import logo3 from "./../../img/partner/3.png";
+import logo4 from "./../../img/partner/4.png";
+import logo5 from "./../../img/partner/5.png";
+import logo6 from "./../../img/partner/6.png";
+import logo7 from "./../../img/partner/7.png";
+import logo8 from "./../../img/partner/8.png";
+import logo9 from "./../../img/partner/9.png";
+import logo10 from "./../../img/partner/10.png";
+import logo11 from "./../../img/partner/11.png";
+import logo12 from "./../../img/partner/12.png";
+import logo13 from "./../../img/partner/13.png";
+import logo14 from "./../../img/partner/14.png";
+import logo15 from "./../../img/partner/15.png";
+import logo16 from "./../../img/partner/16.png";
+import logo17 from "./../../img/partner/17.png";
+import logo18 from "./../../img/partner/18.png";
+import logo19 from "./../../img/partner/19.png";
+import logo20 from "./../../img/partner/20.png";
+import logo21 from "./../../img/partner/21.png";
+import logo22 from "./../../img/partner/22.png";
+import logo23 from "./../../img/partner/23.png";
+import logo24 from "./../../img/partner/24.png";
+import logo25 from "./../../img/partner/25.png";
+import logo26 from "./../../img/partner/26.png";
+import logo27 from "./../../img/partner/27.png";
+import logo28 from "./../../img/partner/28.png";
+import logo29 from "./../../img/partner/29.png";
+import logo30 from "./../../img/partner/30.png";
+import logo31 from "./../../img/partner/31.png";
+import logo32 from "./../../img/partner/32.png";
+import logo33 from "./../../img/partner/33.png";
+import logo34 from "./../../img/partner/34.png";
+import logo35 from "./../../img/partner/35.png";
+import logo36 from "./../../img/partner/36.png";
 import $ from "jquery";
 window.$ = $;
+
 
 const useStyles = makeStyles(theme => ({
   img: {
@@ -67,61 +104,67 @@ export default function Info3() {
             </div>
           </div>
           <div className="article_mid3">
-            <div><span>&nbsp;&nbsp;기업&nbsp;&nbsp;</span> </div>
+            <div><span>&nbsp;&nbsp;기업&nbsp;&nbsp;</span> <br /><br /></div>
             <table border="1" id="partner_tb">
               <tr>
-                <td><img src={img4}/>sk</td>
-                <td><img src={img4}/>continental</td>
-                <td><img src={img4}/>lg</td>
-                <td><img src={img4}/>한불</td>
+                <td><img src={logo1}/></td>
+                <td><img src={logo2}/></td>
+                <td><img src={logo3}/></td>
+                <td><img src={logo4}/></td>
               </tr>
               <tr>
-                <td><img src={img4}/>ls</td>
-                <td><img src={img4}/>던킨</td>
-                <td><img src={img4}/>nestle</td>
-                <td><img src={img4}/>동부하이텍</td>
+                <td><img src={logo5}/></td>
+                <td><img src={logo6}/></td>
+                <td><img src={logo7}/></td>
+                <td><img src={logo8}/></td>
               </tr>
               <tr>
-                <td><img src={img4}/>충청타임즈</td>
-                <td><img src={img4}/>jsr micro</td>
-                <td><img src={img4}/>autonics</td>
-                <td></td>
-              </tr>
-            </table>
-            <div><span>&nbsp;&nbsp;공공&nbsp;&nbsp;</span> </div>
-            <table border="1">
-              <tr>
-                <td><img src={img4}/>제천시</td>
-                <td><img src={img4}/>건대병원</td>
-                <td><img src={img4}/>충주의료원</td>
-                <td><img src={img4}/>효성</td>
-              </tr>
-              <tr>
-                <td><img src={img4}/>한국병원</td>
-                <td><img src={img4}/>한국 수자원</td>
-                <td><img src={img4}/>기상청</td>
-                <td></td>
+                <td><img src={logo9}/></td>
+                <td><img src={logo10}/></td>
+                <td><img src={logo11}/></td>
+                <td><img src={logo12}/></td>
               </tr>
             </table>
-            <div><span>&nbsp;&nbsp;교육&nbsp;&nbsp;</span> </div>
+            <div><span>&nbsp;&nbsp;공공&nbsp;&nbsp;</span> <br /><br /></div>
             <table border="1">
               <tr>
-                <td><img src={img4}/>교통대</td>
-                <td><img src={img4}/>세명대</td>
-                <td><img src={img4}/>건대</td>
-                <td><img src={img4}/>동원대</td>
+                <td><img src={logo13}/></td>
+                <td><img src={logo14}/></td>
+                <td><img src={logo15}/></td>
+                <td><img src={logo16}/></td>
               </tr>
               <tr>
-                <td><img src={img4}/>계원예대</td>
-                <td><img src={img4}/>강동대</td>
-                <td><img src={img4}/>충북보건대</td>
-                <td><img src={img4}/>중원대</td>
+                <td><img src={logo17}/></td>
+                <td><img src={logo18}/></td>
+                <td><img src={logo19}/></td>
+                <td><img src={logo20}/></td>
               </tr>
               <tr>
-                <td><img src={img4}/>극동대</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><img src={logo21}/></td>
+                <td><img src={logo22}/></td>
+                <td><img src={logo23}/></td>
+                <td><img src={logo24}/></td>
+              </tr>
+            </table>
+            <div><span>&nbsp;&nbsp;교육&nbsp;&nbsp;</span> <br /><br /></div>
+            <table border="1">
+              <tr>
+                <td><img src={logo25}/></td>
+                <td><img src={logo26}/></td>
+                <td><img src={logo27}/></td>
+                <td><img src={logo28}/></td>
+              </tr>
+              <tr>
+                <td><img src={logo29}/></td>
+                <td><img src={logo30}/></td>
+                <td><img src={logo31}/></td>
+                <td><img src={logo32}/></td>
+              </tr>
+              <tr>
+                <td><img src={logo33}/></td>
+                <td><img src={logo34}/></td>
+                <td><img src={logo35}/></td>
+                <td><img src={logo36}/></td>
               </tr>
             </table>
           </div>

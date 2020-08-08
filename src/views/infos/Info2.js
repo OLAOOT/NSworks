@@ -213,7 +213,7 @@ export default function Info2() {
                 textAlign: 'right'
               }}
             >
-              새로운 기술, 새로운 인재와 함께 하는
+              새로운 기술, 새로운 인재와<br className="mobile" /> 함께 하는
               젊은 기업입니다.
             </h3>
             <div>
