@@ -150,14 +150,7 @@ export default function Virtualization1() {
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                <iframe
-                  width="1182"
-                  height="665"
-                  src="https://www.youtube.com/embed/frzVtaNrHU0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                />
+                <iframe src='http://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5969011395001' allowfullscreen frameborder='0' />
               </Paper>
               <Paper elevation={3} className="paper">
                 <img src={vmcloud} />

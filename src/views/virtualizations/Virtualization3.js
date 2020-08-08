@@ -142,10 +142,10 @@ export default function Virtualization3() {
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                비디오 자리
+                <iframe src='http://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5441173224001' allowfullscreen frameborder='0'/>
               </Paper>
               <Paper elevation={3} className="paper">
-                비디오 자리
+                <iframe src='http://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5984055780001' allowfullscreen frameborder='0'/>
               </Paper>
             </div>
           </div>
