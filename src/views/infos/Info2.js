@@ -161,10 +161,7 @@ export default function Info2() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
       if (bottom_of_window > bottom_of_object / 1.1) {
-        if ($(this).css("animation-name") === "tmp") count2++;
-        $(this)
-          .css("animation-name", "slide1")
-          .delay(200 * count2);
+        
         $(this).animate({ opacity: "1","animation-duration" :"0s"}, 1000);
       }
     });
