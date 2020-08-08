@@ -12,7 +12,7 @@ import $ from "jquery";
 window.$ = $;
 
 const img_data = {
-  image: "banner5.jpg",
+  image: "banner5_2.jpg",
   title: "유지보수"
 };
 

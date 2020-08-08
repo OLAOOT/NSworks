@@ -8,7 +8,7 @@ import TopImage from "../../components/sections/TopImage";
 import "../../css/maintenance.css";
 
 const img_data = {
-  image: "banner2.jpg",
+  image: "banner1.jpg",
   title: "원격지원"
 };
 

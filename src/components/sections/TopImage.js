@@ -22,6 +22,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   max-width: 3840px;
+  width:100%
 `;
 
 const TextContainer = styled.div`
@@ -35,7 +36,7 @@ const TextContainer = styled.div`
 var Title = styled.div`
   font-size: 50px;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   @media (max-width: 960px) {
     font-size: 30px;
@@ -47,7 +48,7 @@ if($(window).width() < 600)
   Title = styled.div`
   font-size: 35px;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 `;
 }
@@ -55,7 +56,7 @@ if($(window).width() < 600)
 const Subtitle = styled.div`
   font-size: 30px;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   margin-top: 16px;
 `;
