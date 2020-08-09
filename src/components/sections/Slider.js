@@ -10,7 +10,7 @@ import "./../../css/header.css";
 import $ from "jquery";
 window.$ = $;
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   article_mid: {
     display: "flex",
     marginTop: 50,
@@ -41,13 +41,13 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     left: 0,
     top: "64px",
-    height: 600,
-    "&  .awssld__bullets": {
-      display: "none"
-    },
-    "& .awssld__controls button": {
-      opacity: "0"
-    }
+    height: 600
+    // "&  .awssld__bullets": {
+    //   display: "none"
+    // },
+    // "& .awssld__controls button": {
+    //   opacity: "0"
+    // }
   }
 }));
 
@@ -62,7 +62,7 @@ const Slider = ({ data }) => {
   const handleMouseOut = () => {
     setPlay(true);
   };
-  
+
   return (
     <div>
       <AutoplaySlider
@@ -72,19 +72,18 @@ const Slider = ({ data }) => {
         className={classes.slider}
         id="slider"
       >
-        {data.map((v,i) => (
+        {data.map((v, i) => (
           <div
-            data-src={require("./../../img/"+data[i].image)} //data-src={require(v.image)}
+            data-src={require("./../../img/" + data[i].image)} //data-src={require(v.image)}
             key={v.title}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
-            <Hero data={v} play={play} key={v}/>
+            <Hero data={v} play={play} key={v} />
           </div>
         ))}
       </AutoplaySlider>
     </div>
-    
   );
 };
 

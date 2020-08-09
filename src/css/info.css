@@ -24,60 +24,31 @@
   text-align: center;
 }
 
-.info_container .header {
-  position: absolute;
-  width: 100%;
-  min-width:1280px;
-  height: 400px;
-  background: #f8fafc;
-  background-repeat: no-repeat;
-  background-size: cover;
+.info_container .greeting_container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 100px;
+  height: 500px;
 }
+
+.info_container .greeting1 {
+  background: #f8fafc;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+
+info_container .greeting2 {
+  height: 100%;
+}
+
 @media (max-width: 960px) {
-  .info_container .header {
+  .info_container .greeting1 {
     padding: 0 5%;
     height: 450px;
     margin-bottom: 40px;
   }
-}
-.info_container .header > div {
-  position: relative;
-  height: 75%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 500px;
-  width: 100%;
-}
-
-.info_container .header > div > p {
-  text-align: center;
-  font-weight: 500;
-  font-size: 30px;
-  color: #2e2e2e;
-}
-@media (max-width: 960px) {
-  .info_container .header > div > p {
-    font-size: 24px;
-  }
-}
-.info_container .header > div > div > p {
-  float: left;
-  color: #2e2e2e;
-}
-.info_container .header > div > div > p:first-child {
-  width: 30%;
-  text-align: center;
-  font-size: 50px;
-  padding-top: 15px;
-}
-.info_container .header > div > div > p:last-child {
-  width: 70%;
-  font-size: 22px;
-}
-
-.info_container .header > div > div > p > p {
-  margin-bottom: 8px;
 }
 
 #article1 {
@@ -89,6 +60,27 @@
 
 #article4 {
   padding-top: 1px;
+}
+
+#map_container {
+  display: flex;
+  padding-top: 50px;
+}
+
+#contact_container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+#contact {
+  padding-top: 20px;
+  color: #000000;
+}
+
+#contact span {
+  color: #6bbf24;
+  font-weight: 700;
 }
 
 #Mymap {
@@ -113,7 +105,7 @@
   font-weight: 500;
   margin-top: 100px;
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
 }
 .info_container .article_top > div:first-child > span {
   padding-bottom: 5px;
@@ -143,7 +135,6 @@
 .info_container .sign {
   display: flex;
   margin-top: 20px;
-  margin-bottom: 100px;
   align-items: center;
   justify-content: flex-end;
 }
@@ -170,8 +161,8 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width:50%;
-  padding-top:20px
+  width: 50%;
+  padding-top: 20px;
 }
 .info_container .article_mid > * > div {
   text-align: left;
@@ -198,32 +189,31 @@
   width: 46%;
 }
 
-.info_container .article_mid3{
-  padding-top: 50px;  
+.info_container .article_mid3 {
+  padding-top: 50px;
 }
 
-.info_container .article_mid3 div{
+.info_container .article_mid3 div {
   text-align: center;
-  padding-bottom:20px;
-  font-size:35px;
-  color:#000000;
-  font-weight:500;
-  
+  padding-bottom: 20px;
+  font-size: 35px;
+  color: #000000;
+  font-weight: 500;
 }
 
 .info_container .article_mid3 > table {
-  margin-bottom:100px;
+  margin-bottom: 100px;
   border: 1px solid #eeeeee;
   table-layout: fixed;
 }
 .info_container .article_mid3 > table td {
   border: 1px solid #eeeeee;
-  padding:10px;
+  padding: 10px;
   width: 25%;
-  height: 308px;
+  height: 170px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 600px) {
   .info_container .article_mid3 > table td {
     height: 75px;
   }
@@ -232,11 +222,8 @@
 .info_container .article_mid3 > table img {
   margin: auto;
   padding: 10px;
-  width: 200px;
+  width: 150px;
   max-height: 100%;
-}
-.info_container .article_mid3 > table a {
-  color:#000000
 }
 .info_container .ceo_sign {
   padding-top: 10px;
@@ -296,46 +283,43 @@ table.type03 td {
   letter-spacing: -0.5px;
 }
 
-
-@media (max-width:600px){
+@media (max-width: 600px) {
   .info_container {
-    width:100%; 
+    width: 100%;
     padding-left: 10px;
     padding-right: 10px;
   }
   #article1 {
     padding-top: 1px;
   }
-  #info1{
+  #info1 {
     font-size: 18px;
   }
-  .info_container .header {
+  .info_container .greeting1 {
     min-width: 0px;
   }
   .info_container .article_mid > * {
     margin: 1%;
     width: 98%;
-    margin-top:30px
+    margin-top: 30px;
   }
   .info_container .article_mid > * > div:last-child {
-    font-size:16px;
+    font-size: 16px;
   }
-  .info_container .header > div > p {
-    font-size:20px; 
+  .info_container .greeting1 > div > p {
+    font-size: 20px;
   }
-  .info_container .header > div > div > p:first-child {
+  .info_container .greeting1 > div > div > p:first-child {
     font-size: 30px;
   }
-  .info_container .header > div > div > p:last-child {
+  .info_container .greeting1 > div > div > p:last-child {
     font-size: 19px;
-    padding-right:20px; 
+    padding-right: 20px;
   }
-  .mb-12{
-    font-size:1.0rem !important 
+  .mb-12 {
+    font-size: 1rem !important;
   }
-  .m-0{
-    font-size:0.6rem !important
+  .m-0 {
+    font-size: 0.6rem !important;
   }
 }
-
-

@@ -19,7 +19,7 @@ const defaultProps = {
   ...SectionProps.defaults
 };
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   button: {
     [theme.breakpoints.down("sm")]: {
       display: "none"
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "44px"
     },
-    color:"#ffffff"
+    color: "#ffffff"
   },
   subtitle: {
     marginBottom: "8px",
@@ -64,7 +64,8 @@ const Button = withStyles({
     padding: "5px 30px",
     border: "2px solid #ffffff",
     borderRadius: "30px",
-    color: "#ffffff"
+    color: "#ffffff",
+    width: "170px"
   }
 })(MuiButton);
 
@@ -72,7 +73,8 @@ const MenuItem = withStyles({
   root: {
     fontFamily: "NanumSquare",
     textAlign: "center",
-    color: "#000000"
+    color: "#000000",
+    width: "170px"
   }
 })(MuiMenuItem);
 
@@ -104,7 +106,7 @@ const Hero = ({
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleMouseOver = event => {
+  const handleMouseOver = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -114,14 +116,14 @@ const Hero = ({
 
   const classes = useStyles();
 
-  const breakLinePc = description => {
+  const breakLinePc = (description) => {
     const strs = description
       .split(`<br className="mobile" />`)
       .join("")
       .split(`<br className="pc" />`);
     return (
       <p className={classes.description_pc}>
-        {strs.map(str => (
+        {strs.map((str) => (
           <React.Fragment key={str}>
             {str}
             <br className="pc" />
@@ -131,14 +133,14 @@ const Hero = ({
     );
   };
 
-  const breakLineMobile = description => {
+  const breakLineMobile = (description) => {
     const strs = description
       .split(`<br className="pc" />`)
       .join("")
       .split(`<br className="mobile" />`);
     return (
       <p className={classes.description_mobile}>
-        {strs.map(str => (
+        {strs.map((str) => (
           <React.Fragment key={str}>
             {str}
             <br className="mobile" />
@@ -148,7 +150,7 @@ const Hero = ({
     );
   };
 
-  const scroll_mv = e => {
+  const scroll_mv = (e) => {
     //if(window.location.href)
     $([document.documentElement, document.body]).animate(
       {

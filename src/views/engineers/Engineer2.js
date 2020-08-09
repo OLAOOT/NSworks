@@ -17,36 +17,34 @@ const img_data = {
 };
 
 export default function Engineer2() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     var count = 0;
-    do_ani('.article > div > *',count)
-    do_ani('.split-item',count)
-    $(window).scroll( function(){
-      do_ani('.article > div > *',count)
-      do_ani('.split-item',count)
+    do_ani(".article > div > *", count);
+    do_ani(".split-item", count);
+    $(window).scroll(function () {
+      do_ani(".article > div > *", count);
+      do_ani(".split-item", count);
     });
   });
 
-  const do_ani = (target) =>{
+  const do_ani = (target) => {
     var count = 0;
-    $(target).each( function(i){
-      
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
-      
-      if( bottom_of_window > bottom_of_object/1.3){
-        if($(this).css('animation-name') === 'tmp')
-          count+=1
-        
-       
-        $(this).css('animation-name','slide1').delay( 200*count );
-        $(this).animate({'opacity':'1'},1000);        
-        
+
+      if (bottom_of_window > bottom_of_object / 1.3) {
+        if ($(this).css("animation-name") === "tmp") count += 1;
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count);
+        $(this).animate({ opacity: "1" }, 1000);
       }
-    }); 
-  }
-  if($( window ).width() < 600){
-    $('#maintenance1').attr('src',maintenance1_m)
+    });
+  };
+  if ($(window).width() < 600) {
+    $("#maintenance1").attr("src", maintenance1_m);
   }
   return (
     <div>
@@ -59,7 +57,7 @@ export default function Engineer2() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={maintenance1} id="maintenance1"/>
+            <img src={maintenance1} id="maintenance1" alt="maintenance" />
           </div>
           <div className="article_top">
             <div>
@@ -67,14 +65,14 @@ export default function Engineer2() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={maintenance2} />
+            <img src={maintenance2} id="maintenance2" alt="maintenance" />
             <div>
-                <ul>
-                    <li>서버를 관리하는 전문 인력이 없는 고객</li>
-                    <li>체계적인 장비관리가 필요한 고객</li>
-                    <li>전산실의 비용절감과 효율적 운영을 원하는 고객</li>
-                    <li>전산실의 아웃소싱을 원하는 고객</li>
-                </ul>
+              <ul>
+                <li>서버를 관리하는 전문 인력이 없는 고객</li>
+                <li>체계적인 장비관리가 필요한 고객</li>
+                <li>전산실의 비용절감과 효율적 운영을 원하는 고객</li>
+                <li>전산실의 아웃소싱을 원하는 고객</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -18,7 +18,12 @@ export default function Engineer1() {
       <TopImage data={img_data} />
       <div className="maintenance_container">
         <div className="article">
-          <iframe src="https://rs.nsworks.co.kr/" width="100%" min-width="600px" height="1000px">
+          <iframe
+            src="http://rs.nsworks.co.kr/"
+            width="100%"
+            min-width="600px"
+            height="1000px"
+          >
             <p>현재 사용 중인 브라우저는 iframe 요소를 지원하지 않습니다!</p>
           </iframe>
         </div>
