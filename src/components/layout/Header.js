@@ -10,18 +10,41 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
+import MuiMenu from "@material-ui/core/Menu";
+import MuiMenuItem from "@material-ui/core/MenuItem";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MenuIcon from "@material-ui/icons/Menu";
 import MuiTypography from "@material-ui/core/Typography";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
+import MuiButton from "@material-ui/core/Button";
+import Popover from "@material-ui/core/Popover";
 import "../../css/header.css";
 import logo from "./../../img/logo.png";
 import $ from "jquery";
 window.$ = $;
 
 const drawerWidth = 240;
-
-const useStyles = makeStyles(theme => ({
+const Button = withStyles({
+  root: {
+    fontFamily: "NanumSquare",
+    color: "#666666"
+  }
+})(MuiButton);
+const Menu = withStyles({
+  root: {
+    marginTop: "1000px",
+    paddingTop: "1000px"
+  }
+})(MuiMenu);
+const MenuItem = withStyles({
+  root: {
+    fontFamily: "NanumSquare",
+    textAlign: "center",
+    color: "#000000",
+    width: "170px"
+  }
+})(MuiMenuItem);
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     zIndex: 9999,
@@ -68,6 +91,12 @@ const useStyles = makeStyles(theme => ({
   },
   heading: {
     fontWeight: 700
+  },
+  popover: {
+    pointerEvents: "none"
+  },
+  paper: {
+    padding: theme.spacing(1)
   }
 }));
 
@@ -102,13 +131,13 @@ const AccordionSummary = withStyles({
   expanded: {}
 })(MuiAccordionSummary);
 
-const AccordionDetails = withStyles(theme => ({
+const AccordionDetails = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2)
   }
 }))(MuiAccordionDetails);
 
-const Typography = withStyles(theme => ({
+const Typography = withStyles((theme) => ({
   root: {
     width: "95%",
     paddingBottom: 15,
@@ -126,11 +155,11 @@ function Header(props) {
 
   //console.log(props.current_link)
 
-  const handleAccordionChange = panel => (event, isExpanded) => {
+  const handleAccordionChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const handleDrawerToggle = open => () => {
+  const handleDrawerToggle = (open) => () => {
     setExpanded(false);
     setMobileOpen(open);
   };
@@ -140,24 +169,24 @@ function Header(props) {
     setMobileOpen(false);
   };
 
-  const mouseOver = e => {
+  const mouseOver = (e) => {
     var event_id = e.target.className.replace("menu", "");
     $("#subclass" + event_id).show();
   };
 
-  const mouseOver2 = e => {
+  const mouseOver2 = (e) => {
     var event_target_style = e.target.style;
     $(".subclasses > *").css("background", "#ffffff");
-    event_target_style.background = "#D8D8D8";
+    event_target_style.background = "#f8fafc";
   };
 
-  const mouseOut = e => {
+  const mouseOut = (e) => {
     var event_id = e.target.className.replace("menu", "");
     $(".subclasses > *").css("background", "#ffffff");
     $("#subclass" + event_id).hide();
   };
 
-  const scroll_mv = e => {
+  const scroll_mv = (e) => {
     //console.log($(this).parent().attr('name'))
     if (document.location.pathname !== "/") {
       document.location.href = "/#" + e.target.name;
@@ -170,21 +199,19 @@ function Header(props) {
     );
   };
 
-  $('.m_info_container').click(function(){    
-    var id=$(this).attr('id').replace('m_','')
+  $(".m_info_container").click(function () {
+    var id = $(this).attr("id").replace("m_", "");
     if (document.location.pathname !== "/") {
-     
-        document.location.href = "/#"+id;
-      
+      document.location.href = "/#" + id;
     }
     $([document.documentElement, document.body]).animate(
       {
-        scrollTop: $('#'+id).offset().top - 30
+        scrollTop: $("#" + id).offset().top - 30
       },
       500
     );
-  })
-    
+  });
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -200,21 +227,33 @@ function Header(props) {
             <div>
               <Link to="/" className={classes.txt_deco_none}>
                 <ListItem button key="회사개요" onClick={handleItemClick}>
-                  <ListItemText primary="회사개요" id="m_info_container1" class="m_info_container"/>
+                  <ListItemText
+                    primary="회사개요"
+                    id="m_info_container1"
+                    class="m_info_container"
+                  />
                 </ListItem>
               </Link>
             </div>
             <div>
               <Link to="/" className={classes.txt_deco_none}>
                 <ListItem button key="인사말" onClick={handleItemClick}>
-                  <ListItemText primary="인사말" id="m_info_container2" class="m_info_container" />
+                  <ListItemText
+                    primary="인사말"
+                    id="m_info_container2"
+                    class="m_info_container"
+                  />
                 </ListItem>
               </Link>
             </div>
             <div>
               <Link to="/" className={classes.txt_deco_none}>
                 <ListItem button key="사업영역" onClick={handleItemClick}>
-                  <ListItemText primary="사업영역" id="m_info_container3" class="m_info_container" />
+                  <ListItemText
+                    primary="사업영역"
+                    id="m_info_container3"
+                    class="m_info_container"
+                  />
                 </ListItem>
               </Link>
             </div>
@@ -222,14 +261,22 @@ function Header(props) {
             <div>
               <Link to="/" className={classes.txt_deco_none}>
                 <ListItem button key="연혁" onClick={handleItemClick}>
-                  <ListItemText primary="연혁" id="m_info_container4" class="m_info_container" />
+                  <ListItemText
+                    primary="연혁"
+                    id="m_info_container4"
+                    class="m_info_container"
+                  />
                 </ListItem>
               </Link>
             </div>
             <div>
               <Link to="/" className={classes.txt_deco_none}>
                 <ListItem button key="찾아오시는길" onClick={handleItemClick}>
-                  <ListItemText primary="찾아오시는길" id="m_info_container5" class="m_info_container" />
+                  <ListItemText
+                    primary="찾아오시는길"
+                    id="m_info_container5"
+                    class="m_info_container"
+                  />
                 </ListItem>
               </Link>
             </div>
@@ -367,6 +414,42 @@ function Header(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleMouseOver = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+  const data = {
+    image: "banner3.jpg",
+    title: "Virtual Infrastructure",
+    subtitle: "",
+    description: `압도적인 시장 점유율과 <br className="mobile" />
+      높은 신뢰성 및 안전성을 가진 <br className="pc" /><br className="mobile" />
+      VMware 기반 가상화를 구현합니다`,
+    button: [
+      {
+        text: "서버가상화",
+        href: "/vm/server"
+      },
+      {
+        text: "데스크탑가상화",
+        href: "/vm/desktop"
+      },
+      {
+        text: "스토리지가상화",
+        href: "/vm/storage"
+      },
+      {
+        text: "재해복구시스템",
+        href: "/vm/DR"
+      }
+    ]
+  };
   return (
     <div className={classes.root}>
       <div className="header">
@@ -387,6 +470,41 @@ function Header(props) {
             </Link>
           </div>
           <div className="menus">
+            {/* dummy */}
+            {/* <div onMouseLeave={handleClose}>
+              <Typography
+                aria-owns={open ? "mouse-over-popover" : undefined}
+                aria-haspopup="true"
+                onMouseEnter={handleMouseOver}
+                style={{
+                  fontSize: "15px"
+                }}
+              >
+                가상화
+              </Typography>
+              <Popover
+                id="mouse-over-popover"
+                className={classes.popover}
+                classes={{
+                  paper: classes.paper
+                }}
+                open={open}
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left"
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left"
+                }}
+                onClose={handleClose}
+                disableRestoreFocus
+              >
+                <Typography>I use Popover.</Typography>
+              </Popover>
+            </div> */}
+            {/* dummy */}
             <div onMouseOver={mouseOver} onMouseOut={mouseOut} id="menu1">
               <Link to="/" className="menu1">
                 회사소개
@@ -466,7 +584,7 @@ function Header(props) {
                   스토리지 가상화
                 </Link>
                 <Link to="/vm/DR" onMouseOver={mouseOver2} className="menu2">
-                  재해복구시스템(DR)
+                  재해복구시스템
                 </Link>
               </div>
             </div>

@@ -6,15 +6,18 @@
   padding-left: 0;
   display: none;
   top: 40px;
+  width: 150px;
+  border-radius: 50px;
 }
 .subclasses > * {
   width: 100%;
-  font-size: 17px;
+  font-size: 15px;
   list-style: none;
-  padding: 20px !important;
+  padding: 15px !important;
   margin-bottom: 0;
   color: #2e2e2e !important;
   display: block;
+  text-align: left;
 }
 
 .header {
@@ -37,10 +40,9 @@
 }
 
 .tool img {
-  width: 150px;
+  width: 200px;
   margin-right: 10%;
 }
-
 .menus > div {
   float: left;
   height: 100%;
@@ -58,16 +60,13 @@
   color: #000000 !important;
 }
 
-
-  
-
 @media (max-width: 600px) {
   .header {
-    width:100%
+    width: 100%;
   }
 
-  .makeStyles-slider-26{
-    min-width:0px,
+  .makeStyles-slider-26 {
+    min-width: 0px;
   }
   .tool {
     padding-left: 2%;
@@ -76,5 +75,8 @@
   .menus {
     display: none;
   }
+}
 
+#menu1 {
+  height: 100%;
 }

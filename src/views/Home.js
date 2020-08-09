@@ -13,9 +13,9 @@ window.$ = $;
 const heroData = [
   {
     image: "banner1.jpg",
-    title: "NSWorks",
-    subtitle: "Always Do the Best",
-    description: "",
+    title: "NSworks",
+    subtitle: "",
+    description: "Always Do the Best",
     button: null
   },
   {

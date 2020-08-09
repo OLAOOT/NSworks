@@ -11,12 +11,12 @@ import TopImage from "../../components/sections/TopImage";
 import ceo from "./../../img/ceo-1.jpg";
 import img1 from "./../../img/img_ccai1.png";
 import img2 from "./../../img/img_ccai2.png";
+import logo from "./../../img/logo.png";
 
 import "../../css/info.css";
 
 import $ from "jquery";
 window.$ = $;
-
 
 export default function Info5() {
   if (window.location.href.indexOf("location")) {
@@ -63,7 +63,7 @@ export default function Info5() {
               </tr>
               <tr>
                 <th scope="row">대표</th>
-                <td>김창영</td>
+                <td>최일준</td>
               </tr>
               <tr>
                 <th scope="row">설립일</th>
@@ -89,19 +89,27 @@ export default function Info5() {
               </tr>
               <tr>
                 <th scope="row">이메일</th>
-                <td>email@youremail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">지하철 이용</th>
-                <td>지하철 이용 방법 안내</td>
-              </tr>
-              <tr>
-                <th scope="row">버스 이용</th>
-                <td>버스노선 및 코스 안내</td>
+                <td>contact@nsworks.co.kr</td>
               </tr>
             </tbody>
           </table>
-          <div id="Mymap" />
+          <div id="map_container">
+            <div id="contact_container">
+              <div>
+                <img src={logo} />
+              </div>
+              <div id="contact">
+                세종특별시 한누리대로 249, 609호
+                <br />
+                (나성동, 에스제이타워)
+                <br />
+                <span>TEL</span> 070-4232-2240
+                <br />
+                <span>FAX</span> 044-868-2240
+              </div>
+            </div>
+            <div id="Mymap" />
+          </div>
         </div>
       </div>
     </div>
