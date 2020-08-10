@@ -5,48 +5,68 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   padding-left: 0;
   display: none;
-  top: 40px;
-}
-.subclasses > * {
+  top: 64px;
   width: 100%;
-  font-size: 17px;
+  min-width: 1280px;
+  left:0;
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 0;
+}
+
+.subclasses > * {
+  width: 14%;
+  font-size: 15px;
   list-style: none;
-  padding: 20px !important;
+  padding: 15px !important;
   margin-bottom: 0;
   color: #2e2e2e !important;
   display: block;
+  text-align: left;
+  float: right;
 }
-
+.subclasses > * > a{
+  width:100%;
+  float: left;
+  padding:10px;
+  color:#000000 !important;
+  text-align: center;
+}
 .header {
   height: 64px;
   position: absolute;
-  width: 1280px;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .tool {
   width: 100%;
+  min-width: 1280px;
   height: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 80px;
+  padding-right: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  margin : 0 auto;
 }
 
 .tool img {
-  width: 150px;
+  width: 200px;
   margin-right: 10%;
 }
-
+.menus{
+  width:70%;
+  
+}
 .menus > div {
   float: left;
   height: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  width:20%;
   text-align: center;
+  padding: 15px;
 }
 .menus > div > a {
   color: #9ca9b3 !important;
@@ -58,16 +78,13 @@
   color: #000000 !important;
 }
 
-
-  
-
 @media (max-width: 600px) {
   .header {
-    width:100%
+    width: 100%;
   }
 
-  .makeStyles-slider-26{
-    min-width:0px,
+  .makeStyles-slider-26 {
+    min-width: 0px;
   }
   .tool {
     padding-left: 2%;
@@ -76,5 +93,8 @@
   .menus {
     display: none;
   }
+}
 
+#menu1 {
+  height: 100%;
 }

@@ -64,8 +64,6 @@ const GreetingSplit = ({
       <div className="container">
         <div className={innerClasses}>
           <div className={splitClasses}>
-            
-
             <div className="split-item">
               <div
                 className="split-item-content center-content-mobile"
@@ -144,11 +142,11 @@ const GreetingSplit = ({
 };
 
 export default function Info2() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     var count = 0;
     do_ani(".info_container > div > div", count);
     do_ani(".split-item", count);
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".info_container > div > div", count);
       do_ani(".split-item", count);
     });
@@ -156,13 +154,12 @@ export default function Info2() {
 
   const do_ani = (target, count) => {
     var count2 = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
       if (bottom_of_window > bottom_of_object / 1.1) {
-        
-        $(this).animate({ opacity: "1","animation-duration" :"0s"}, 1000);
+        $(this).animate({ opacity: "1", "animation-duration": "0s" }, 1000);
       }
     });
   };
@@ -175,29 +172,6 @@ export default function Info2() {
         <div />
       )} */}
       <div className="info_container" id="info_container2">
-        <div className="header">
-          <div>
-            <p>
-              The world's most powerful
-              <br /> NSworks Service Team
-            </p>
-            <div>
-              <p>01</p>
-              <p>
-                <p>Paradigm</p> 최적의 가상화, 디지털 기술,
-                <br className="pc" /> 빅데이터 역량을 활용
-              </p>
-            </div>
-            <div>
-              <p>02</p>
-              <p>
-                <p>Service</p> 고객 여러분께서 쉽게 체감하실 수 있는 실용적인
-                상품과 서비스
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div className="article" id="article2">
           <div className="article_top">
             <div>
@@ -205,51 +179,47 @@ export default function Info2() {
             </div>
           </div>
           <div className="atricle_mid">
-            <h3
-              className="mt-0 mb-12"
-              style={{
-                color: "#000000",
-                fontSize: 1.2 + "rem",
-                textAlign: 'right'
-              }}
-            >
-              새로운 기술, 새로운 인재와<br className="mobile" /> 함께 하는
-              젊은 기업입니다.
-            </h3>
-            <div>
-              <p
-                style={{ fontSize: 0.8 + "rem", color: "#000000", textAlign: 'right'}}
-              >
-                네트워크를 통한 정보의 연결과 이동은 보다 나은 삶의 발전과
-                인간의 소중한 가치를 실현하는데 의의가 있습니다.<br />
-                <br className="mobile" />
-                NSworks는 이러한 프레임워크와 함께 고객과 만납니다. <br />
-                <br />
-                신뢰와 정성으로 네트워크 기반 통합 비즈니스 환경을 구현하기
-                위하여 우수한 기술 인력을 바탕으로 최고의 서비스 품질을
-                제공합니다.<br /> 인간 존중과 미래지향의 가치를 위하여 가장
-                안전하고 효율적인 방식과 기법으로 고객만족에 부응하고자
-                합니다. <br />
-                <br />
-                더불어 NSworks가 추구하고자 하는 네트워크와 정보통신에 대한
-                모든 기여와 봉사는 궁극적인 파트너십에서 출발합니다. <br />
-                <br />
-                귀사의 발전에 <br className="mobile" />
-                NSworks가 함께 하겠습니다. <br />
-                감사합니다.
-              </p>
-              <div className="sign">
-
-                <img src={require("./../../img/logo.png")} alt="sign" />
-                <span style={{
-                  fontSize: "25px"
-                }}>CEO</span>
-                <img src={require("./../../img/ceo2.png")} alt="logo" />
+            <div className="greeting_container">
+              <h3>
+                새로운 기술, 새로운 인재와
+                <br className="mobile" /> 함께 하는 젊은 기업입니다.
+              </h3>
+              <div>
+                <p>
+                  네트워크를 통한 정보의 연결과 이동은 보다 나은 삶의 발전과
+                  인간의 소중한 가치를 실현하는데 의의가 있습니다. NSworks는
+                  이러한 프레임워크와 함께 고객과 만납니다.
+                  <br />
+                  <br />
+                  신뢰와 정성으로 네트워크 기반 통합 비즈니스 환경을 구현하기
+                  위하여 우수한 기술 인력을 바탕으로 최고의 서비스 품질을
+                  제공합니다. 인간 존중과 미래지향의 가치를 위하여 가장 안전하고
+                  효율적인 방식과 기법으로 고객만족에 부응하고자 합니다.
+                  <br />
+                  <br />
+                  더불어 NSworks가 추구하고자 하는 네트워크와 정보통신에 대한
+                  모든 기여와 봉사는 궁극적인 파트너십에서 출발합니다.
+                </p>
+                <p>
+                  귀사의 발전에 <br className="mobile" />
+                  NSworks가 함께 하겠습니다. <br />
+                  감사합니다.
+                </p>
+                <div className="sign">
+                  <img src={require("./../../img/logo.png")} alt="sign" />
+                  <span
+                    style={{
+                      fontSize: "20px"
+                    }}
+                  >
+                    대표이사
+                  </span>
+                  <img src={require("./../../img/ceo2.png")} alt="logo" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-
         <GreetingSplit />
       </div>
     </div>

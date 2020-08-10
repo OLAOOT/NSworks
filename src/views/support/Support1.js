@@ -21,19 +21,19 @@ const img_data = {
 };
 
 export default function Engineer1() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     var count = 0;
     do_ani(".article > div > *", count);
     do_ani(".split-item", count);
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".article > div > *", count);
       do_ani(".split-item", count);
     });
   });
 
-  const do_ani = target => {
+  const do_ani = (target) => {
     var count = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -121,11 +121,8 @@ export default function Engineer1() {
           </div>
           <div className="article_mid">
             <div>
-              <ul>
-                <li>
-                  VMware Enterprise <br className="mobile" />
-                  파트너
-                </li>
+              <ul id="partnership">
+                <li>VMware Enterprise 파트너</li>
                 <li>HP Industrial Server Storage 공인서비스 센터</li>
                 <li>HP Server, Storage, Network 파트너</li>
                 <li>Dell Server, Storage, Network 서비스 파트너</li>

@@ -15,21 +15,21 @@ import dell3 from "./../../img/dell02_02.jpg";
 import dell4 from "./../../img/dell02_03.jpg";
 import img4 from "./../../img/img_ccai.png";
 
-import icon1 from './../../img/icon/31.png'
-import icon2 from './../../img/icon/34.png'
-import icon3 from './../../img/icon/19.png'
-import icon4 from './../../img/icon/40.png'
-import icon5 from './../../img/icon/17.png'
-import icon6 from './../../img/icon/22.png'
-import icon7 from './../../img/icon/3.png'
-import icon8 from './../../img/icon/16.png'
-import icon9 from './../../img/icon/38.png'
-import icon10 from './../../img/icon/18.png'
-import icon11 from './../../img/icon/19.png'
-import icon12 from './../../img/icon/21.png'
-import icon13 from './../../img/icon/9.png'
-import icon14 from './../../img/icon/35.png'
-import icon15 from './../../img/icon/39.png'
+import icon1 from "./../../img/icon/31.png";
+import icon2 from "./../../img/icon/34.png";
+import icon3 from "./../../img/icon/19.png";
+import icon4 from "./../../img/icon/40.png";
+import icon5 from "./../../img/icon/17.png";
+import icon6 from "./../../img/icon/22.png";
+import icon7 from "./../../img/icon/3.png";
+import icon8 from "./../../img/icon/16.png";
+import icon9 from "./../../img/icon/38.png";
+import icon10 from "./../../img/icon/18.png";
+import icon11 from "./../../img/icon/19.png";
+import icon12 from "./../../img/icon/21.png";
+import icon13 from "./../../img/icon/9.png";
+import icon14 from "./../../img/icon/35.png";
+import icon15 from "./../../img/icon/39.png";
 
 import "../../css/hardware.css";
 import $ from "jquery";
@@ -322,11 +322,11 @@ const DellSplit = ({
 };
 
 export default function Hardware1() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     var count = 0;
     do_ani(".article > div > *", count);
     do_ani(".split-item", count);
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".article > div > *", count);
       do_ani(".split-item", count);
     });
@@ -334,13 +334,12 @@ export default function Hardware1() {
 
   const do_ani = (target, count) => {
     var count2 = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
       if (bottom_of_window > bottom_of_object / 1.1) {
-        
-        $(this).animate({ opacity: "1" }, 1000, function() {
+        $(this).animate({ opacity: "1" }, 1000, function () {
           $(this).css("animation-duration", "0s");
         });
       }
@@ -433,7 +432,7 @@ export default function Hardware1() {
           <div className="article_mid2">
             <Paper elevation={0} className="paper">
               <img src={icon1} />
-              <div>
+              <div className="card_title_wide">
                 확장성과 적응성이 <br className="mobile" />
                 뛰어난
                 <br className="mobile" />
@@ -448,7 +447,7 @@ export default function Hardware1() {
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={icon2} />
-              <div>
+              <div className="card_title_wide">
                 확장된 자동화 기능과
                 <br className="mobile" />
                 <br className="pc" /> 새로운 액세스 옵션으로
@@ -466,7 +465,7 @@ export default function Hardware1() {
             </Paper>
             <Paper elevation={0} className="paper">
               <img src={icon3} />
-              <div>
+              <div className="card_title_wide">
                 확장성과 효율성이 <br className="mobile" />
                 뛰어난
                 <br className="pc" /> 서버 스토리지로 <br className="pc" />

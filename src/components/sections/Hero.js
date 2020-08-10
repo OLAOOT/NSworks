@@ -19,31 +19,31 @@ const defaultProps = {
   ...SectionProps.defaults
 };
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   button: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: "none"
     }
   },
   title: {
     marginBottom: "8px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       fontSize: "44px"
     },
-    color:"#ffffff"
+    color: "#ffffff"
   },
   subtitle: {
-    marginBottom: "8px",
+    marginBottom: "12px",
     color: "#ffffff",
-    fontSize: "20px",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "16px"
+    fontSize: "26px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "20px"
     }
   },
   description_pc: {
     color: "#ffffff",
     marginBottom: "20px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: "none"
     }
   },
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "16px",
     fontSize: "16px",
     padding: "0px 10px",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("sm")]: {
       display: "none"
     }
   }
@@ -64,7 +64,8 @@ const Button = withStyles({
     padding: "5px 30px",
     border: "2px solid #ffffff",
     borderRadius: "30px",
-    color: "#ffffff"
+    color: "#ffffff",
+    width: "170px"
   }
 })(MuiButton);
 
@@ -72,7 +73,8 @@ const MenuItem = withStyles({
   root: {
     fontFamily: "NanumSquare",
     textAlign: "center",
-    color: "#000000"
+    color: "#000000",
+    width: "170px"
   }
 })(MuiMenuItem);
 
@@ -102,26 +104,16 @@ const Hero = ({
     bottomDivider && "has-bottom-divider"
   );
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleMouseOver = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   const classes = useStyles();
 
-  const breakLinePc = description => {
+  const breakLinePc = (description) => {
     const strs = description
       .split(`<br className="mobile" />`)
       .join("")
       .split(`<br className="pc" />`);
     return (
       <p className={classes.description_pc}>
-        {strs.map(str => (
+        {strs.map((str) => (
           <React.Fragment key={str}>
             {str}
             <br className="pc" />
@@ -131,14 +123,14 @@ const Hero = ({
     );
   };
 
-  const breakLineMobile = description => {
+  const breakLineMobile = (description) => {
     const strs = description
       .split(`<br className="pc" />`)
       .join("")
       .split(`<br className="mobile" />`);
     return (
       <p className={classes.description_mobile}>
-        {strs.map(str => (
+        {strs.map((str) => (
           <React.Fragment key={str}>
             {str}
             <br className="mobile" />
@@ -148,11 +140,11 @@ const Hero = ({
     );
   };
 
-  const scroll_mv = e => {
+  const scroll_mv = (e) => {
     //if(window.location.href)
     $([document.documentElement, document.body]).animate(
       {
-        scrollTop: $("#info_container3").offset().top - 30
+        scrollTop: $("#info_container1").offset().top + 350
       },
       500
     );
@@ -175,58 +167,30 @@ const Hero = ({
               {breakLineMobile(data.description)}
 
               <div>
-                {data.button && (
-                  <div>
-                    {!data.button[0].text ? (
-                      <Link to="/#info_container3">
-                        <Button
-                          id={data.title}
-                          aria-controls="more_menu"
-                          aria-haspopup="true"
-                          className={classes.button}
-                          onClick={scroll_mv}
-                        >
-                          자세히 보기
-                        </Button>
-                      </Link>
-                    ) : (
+                <div>
+                  {data.href ? (
+                    <Link to={data.href}>
                       <Button
                         id={data.title}
                         aria-controls="more_menu"
                         aria-haspopup="true"
-                        onMouseOver={handleMouseOver}
                         className={classes.button}
                       >
                         자세히 보기
                       </Button>
-                    )}
-
-                    <Menu
-                      id="more_menu"
-                      anchorEl={anchorEl}
-                      keepMounted
-                      open={Boolean(anchorEl)}
-                      onClose={handleClose}
-                      onMouseLeave={handleClose}
-                      anchorOrigin={{
-                        vertical: "bottom",
-                        horizontal: "center"
-                      }}
-                      transformOrigin={{
-                        vertical: "top",
-                        horizontal: "center"
-                      }}
+                    </Link>
+                  ) : (
+                    <Button
+                      id={data.title}
+                      aria-controls="more_menu"
+                      aria-haspopup="true"
+                      className={classes.button}
+                      onClick={scroll_mv}
                     >
-                      {data.button.map((v, i) => (
-                        <Link to={v.href} key={v.href}>
-                          <MenuItem key={i} onClick={handleClose}>
-                            {v.text}
-                          </MenuItem>
-                        </Link>
-                      ))}
-                    </Menu>
-                  </div>
-                )}
+                      자세히 보기
+                    </Button>
+                  )}
+                </div>
               </div>
             </div>
           </div>

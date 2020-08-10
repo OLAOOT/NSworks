@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 
 const img_data = {
   image: "banner1.jpg",
-  title: "문의"
+  title: "기술지원문의"
 };
 
 export default function Question() {

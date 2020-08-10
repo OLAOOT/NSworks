@@ -22,16 +22,16 @@ const img_data = {
 };
 
 export default function Virtualization2() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     do_ani(".article > div > *");
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".article > div > *");
     });
   });
 
-  const do_ani = target => {
+  const do_ani = (target) => {
     var count = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -138,14 +138,22 @@ export default function Virtualization2() {
           </div>
           <div className="article_bot">
             <div>
-              <span>Horizon Refernece</span>
+              <span>Horizon Reference</span>
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                <iframe src='https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=4759488053001' allowfullscreen frameborder='0'/>
+                <iframe
+                  src="https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=4759488053001"
+                  allowfullscreen
+                  frameborder="0"
+                />
               </Paper>
               <Paper elevation={3} className="paper">
-                <iframe src='https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5164277989001' allowfullscreen frameborder='0'/>
+                <iframe
+                  src="https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5164277989001"
+                  allowfullscreen
+                  frameborder="0"
+                />
               </Paper>
             </div>
           </div>

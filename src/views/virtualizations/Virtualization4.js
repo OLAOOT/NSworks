@@ -24,16 +24,16 @@ const img_data = [
 ];
 
 export default function Virtualization4() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     do_ani(".article > div > *");
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".article > div > *");
     });
   });
 
-  const do_ani = target => {
+  const do_ani = (target) => {
     var count = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -117,16 +117,15 @@ export default function Virtualization4() {
           </div>
           <div className="article_bot">
             <div>
-              <span>SRM Refernece</span>
+              <span>SRM Reference</span>
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                <iframe src='https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=4699019323001' allowfullscreen frameborder='0'/>
-              </Paper>
-              <Paper elevation={3} className="paper">
-                <img src={vmcloud} />
-                <div>업계 최고의 가상화 플랫폼</div>
-                <div>NSworks 전문 엔지니어와 상담하십시요. </div>
+                <iframe
+                  src="https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=4699019323001"
+                  allowfullscreen
+                  frameborder="0"
+                />
               </Paper>
             </div>
           </div>

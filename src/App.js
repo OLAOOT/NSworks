@@ -24,10 +24,11 @@ import Hardware2 from "./views/hardwares/Hardware2";
 import Hardware3 from "./views/hardwares/Hardware3";
 import Hardware4 from "./views/hardwares/Hardware4";
 
-import Engineer1 from "./views/engineers/Engineer1";
-import Engineer2 from "./views/engineers/Engineer2";
+import Support1 from "./views/support/Support1";
+import Support2 from "./views/support/Support2";
+import Support3 from "./views/support/Support3";
+import Support4 from "./views/support/Support4";
 
-import Question from "./views/q&r/Question";
 import Remote from "./views/q&r/Remote";
 
 const App = () => {
@@ -167,7 +168,7 @@ const App = () => {
               path="/mt/engineer"
               render={props => (
                 <LayoutDefault>
-                  <Engineer1 {...props} />
+                  <Support1 {...props} />
                 </LayoutDefault>
               )}
             />
@@ -176,16 +177,25 @@ const App = () => {
               path="/mt/maintenance"
               render={props => (
                 <LayoutDefault>
-                  <Engineer2 {...props} />
+                  <Support2 {...props} />
                 </LayoutDefault>
               )}
             />
             <Route
               exact
-              path="/question"
+              path="/mt/question"
               render={props => (
                 <LayoutDefault>
-                  <Question {...props} />
+                  <Support3 {...props} />
+                </LayoutDefault>
+              )}
+            />
+            <Route
+              exact
+              path="/mt/reference"
+              render={props => (
+                <LayoutDefault>
+                  <Support4 {...props} />
                 </LayoutDefault>
               )}
             />

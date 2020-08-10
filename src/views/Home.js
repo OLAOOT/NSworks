@@ -13,25 +13,13 @@ window.$ = $;
 const heroData = [
   {
     image: "banner1.jpg",
-    title: "NSWorks",
-    subtitle: "Always Do the Best",
-    description: "",
-    button: null
-  },
-  {
-    image: "banner2.jpg",
-    title: "Virtual Integration",
-    subtitle: "",
+    title: "NSworks",
+    subtitle: "Virtualizing Your Information Infrastructure",
     description: `가상화 서비스를 통해 <br className="mobile" />
     고객의 비즈니스 효율성을 높이며 <br className="pc" /><br className="mobile" />
     자본 비용과 운용 비율의 절감을 <br className="mobile" />
     극대화 할 수 있게 하겠습니다`,
-    button: [
-      {
-        text: "",
-        href: "/#info_container3"
-      }
-    ]
+    href: ""
   },
   {
     image: "banner3.jpg",
@@ -40,64 +28,33 @@ const heroData = [
     description: `압도적인 시장 점유율과 <br className="mobile" />
       높은 신뢰성 및 안전성을 가진 <br className="pc" /><br className="mobile" />
       VMware 기반 가상화를 구현합니다`,
-    button: [
-      {
-        text: "서버가상화",
-        href: "/vm/server"
-      },
-      {
-        text: "데스크탑가상화",
-        href: "/vm/desktop"
-      },
-      {
-        text: "스토리지가상화",
-        href: "/vm/storage"
-      },
-      {
-        text: "재해복구시스템",
-        href: "/vm/DR"
-      }
-    ]
+    href: "/vm/server"
   },
   {
     image: "banner4.jpg",
     title: "Hardware Infrastructure",
     subtitle: "",
-    description: `하드웨어인프라 설명 text 필요`,
-    button: [
-      {
-        text: "서버",
-        href: "/hw/server"
-      },
-      {
-        text: "스토리지",
-        href: "/hw/storage"
-      },
-      {
-        text: "네트워크",
-        href: "/hw/network"
-      },
-      {
-        text: "보안",
-        href: "/hw/security"
-      }
-    ]
+    description: `가장 유연하고, 안정적이며, 최적화된 성능을<br className="mobile" /> 
+    낼 수 있는 제품군으로<br className="pc" />
+     가상화 및 클라우드<br className="mobile" /> 컴퓨팅의 솔루션을 제공합니다`,
+    href: "/hw/server"
   },
   {
     image: "banner5.jpg",
-    title: "유지보수",
+    title: "Technical Support",
     subtitle: "",
-    description: `유지보수 설명 text 필요`,
-    button: [
-      {
-        text: "엔지니어 현황",
-        href: "/mt/engineer"
-      },
-      {
-        text: "유지보수",
-        href: "/mt/maintenance"
-      }
-    ]
+    description: `전문 엔지니어의 풍부한 경험으로<br className="mobile" />
+     차별화된 서비스를 지원합니다`,
+    href: "/mt/engineer"
+  },
+  {
+    image: "banner2.jpg",
+    title: "IT Consulting",
+    subtitle: "",
+    description: `고객의 요구 사항에 맞는<br className="mobile" />
+     맞춤형 최적 솔루션을 제공하겠습니다`,
+    href: ""
+    // 여기에 ppt 10페이지 링크
   }
 ];
 

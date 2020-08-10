@@ -16,22 +16,22 @@ import dell1 from "./../../img/dell20_01.jpg";
 import dell2 from "./../../img/dell20_11.jpg";
 import dell3 from "./../../img/dell20_12.jpg";
 import dell4 from "./../../img/dell20_13.jpg";
-import dell5 from './../../img/dell20_14.jpg';
+import dell5 from "./../../img/dell20_14.jpg";
 import syn1 from "./../../img/synology01_01.jpg";
 import syn2 from "./../../img/synology02_01.jpg";
 import syn3 from "./../../img/synology02_02.jpg";
 import img4 from "./../../img/img_ccai.png";
 
-import icon1 from './../../img/icon/24.png'
-import icon2 from './../../img/icon/25.png'
-import icon3 from './../../img/icon/5.png'
-import icon4 from './../../img/icon/20.png'
-import icon5 from './../../img/icon/28.png'
-import icon6 from './../../img/icon/37.png'
-import icon7 from './../../img/icon/14.png'
-import icon8 from './../../img/icon/23.png'
-import icon9 from './../../img/icon/31.png'
-import icon10 from './../../img/icon/6.png'
+import icon1 from "./../../img/icon/24.png";
+import icon2 from "./../../img/icon/25.png";
+import icon3 from "./../../img/icon/5.png";
+import icon4 from "./../../img/icon/20.png";
+import icon5 from "./../../img/icon/28.png";
+import icon6 from "./../../img/icon/37.png";
+import icon7 from "./../../img/icon/14.png";
+import icon8 from "./../../img/icon/23.png";
+import icon9 from "./../../img/icon/31.png";
+import icon10 from "./../../img/icon/6.png";
 
 import "../../css/hardware.css";
 import $ from "jquery";
@@ -45,19 +45,19 @@ const img_data = [
 ];
 
 export default function Hardware2() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     var count = 0;
     do_ani(".article > div > *", count);
     do_ani(".split-item", count);
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".article > div > *", count);
       do_ani(".split-item", count);
     });
   });
 
-  const do_ani = target => {
+  const do_ani = (target) => {
     var count = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -274,7 +274,12 @@ export default function Hardware2() {
               </div>
             </Paper>
           </div>
-          <div className="article_mid2">
+          <div
+            className="article_mid2"
+            style={{
+              marginTop: "100px"
+            }}
+          >
             <div className="paper_wide">
               <Paper elevation={0} className="paper">
                 <div>Btrfs: 차세대 저장소 효율성</div>

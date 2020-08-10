@@ -11,12 +11,12 @@ import TopImage from "../../components/sections/TopImage";
 import ceo from "./../../img/ceo-1.jpg";
 import img1 from "./../../img/img_ccai1.png";
 import img2 from "./../../img/img_ccai2.png";
+import logo from "./../../img/logo.png";
 
 import "../../css/info.css";
 
 import $ from "jquery";
 window.$ = $;
-
 
 export default function Info5() {
   if (window.location.href.indexOf("location")) {
@@ -55,53 +55,35 @@ export default function Info5() {
         ))) : (<div></div>)} */}
       <div className="info_container" id="info_container5">
         <div className="article" id="article4">
-          <table className="type03">
-            <tbody>
-              <tr>
-                <th scope="row">회사명</th>
-                <td>엔에스웍스(주)</td>
-              </tr>
-              <tr>
-                <th scope="row">대표</th>
-                <td>김창영</td>
-              </tr>
-              <tr>
-                <th scope="row">설립일</th>
-                <td>2012년 2월 22일</td>
-              </tr>
-              <tr>
-                <th scope="row">주요사업</th>
-                <td>
-                  가상화 / 서버, 스토리지, 네트워크 구축 및 유지보수 / 컨설팅
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">소재지</th>
-                <td>
-                  세종특별시 한누리대로 249, 609호
-                  <br className="mobile" />
-                  (나성동, 에스제이타워)
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">연락처</th>
-                <td>TEL 070-4232-2240 / FAX 044-868-2240</td>
-              </tr>
-              <tr>
-                <th scope="row">이메일</th>
-                <td>email@youremail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">지하철 이용</th>
-                <td>지하철 이용 방법 안내</td>
-              </tr>
-              <tr>
-                <th scope="row">버스 이용</th>
-                <td>버스노선 및 코스 안내</td>
-              </tr>
-            </tbody>
-          </table>
-          <div id="Mymap" />
+          <div id="map_container">
+            <div id="contact_container">
+              <div>
+                <img src={logo} />
+              </div>
+              <div id="contact">
+                엔에스웍스(주)
+                <br />
+                세종특별시 한누리대로 249, 609호
+                <br />
+                (나성동, 에스제이타워)
+                <br />
+                <span>TEL</span> 070-4232-2240
+                <br />
+                <span>FAX</span> 044-868-2240
+                <br />
+                <span>EMail</span> contact@nsworks.co.kr
+                <br />
+                <br />
+                <span>대표</span> 최일준
+                <br />
+                <span>설립일</span> 2012년 2월 22일
+                <br />
+                <span>주요사업</span> 가상화 / 서버, 스토리지,
+                <br /> 네트워크 구축 및 유지보수 / 컨설팅
+              </div>
+            </div>
+            <div id="Mymap" />
+          </div>
         </div>
       </div>
     </div>

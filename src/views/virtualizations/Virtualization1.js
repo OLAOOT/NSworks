@@ -9,13 +9,12 @@ import vmware from "./../../img/vmware.jpg";
 import vmcloud from "./../../img/vmw-cloud.png";
 import img4 from "./../../img/img_ccai.png";
 import dummyicon from "./../../img/logo.png";
-import icon1 from './../../img/icon/6.png'
+import icon1 from "./../../img/icon/6.png";
 import icon2 from "./../../img/icon/1.png";
 import icon3 from "./../../img/icon/3.png";
 import icon4 from "./../../img/icon/13.png";
 import icon5 from "./../../img/icon/34.png";
 import icon6 from "./../../img/icon/4.png";
-
 
 import "../../css/virtual.css";
 
@@ -28,16 +27,16 @@ const img_data = {
 };
 
 export default function Virtualization1() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     do_ani(".article > div > *");
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".article > div > *");
     });
   });
 
-  const do_ani = target => {
+  const do_ani = (target) => {
     var count = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -88,7 +87,7 @@ export default function Virtualization1() {
                 데이터센터 통합 및<br /> 비즈니스 연속성
               </div>
               <div>
-                가상화를 통해 대규모 데이터 센터 운영 및 관리를 간소화 하고{" "}
+                가상화를 통해 대규모 데이터 센터 운영 및 관리를 간소화 하고
                 비즈니스 효율성을 높이며 자본 비용과 운영 비용을 절감할 수
                 있습니다.
               </div>
@@ -143,19 +142,66 @@ export default function Virtualization1() {
                 기능을 활용할 수 있습니다.
               </div>
             </Paper>
+            <Paper elevation={0} className="paper">
+              <img src={icon6} />
+              <div>압도적인 시장점유율</div>
+              <div>
+                전 세계 35만여 고객사 (한국: 3,000여사)를 보유한 가상화 시장의
+                리더로 포츈 1,000대 기업의 99%가 사용 중입니다.
+              </div>
+            </Paper>
+            <Paper elevation={0} className="paper">
+              <img src={icon6} />
+              <div>우수한 통합률과 퍼포먼스</div>
+              <div>
+                메모리 오버커밋 기술을 통한 높은 통합률을 가지며, 리소스
+                유효활용에 따른 높은 퍼포먼스를 보여줍니다.
+              </div>
+            </Paper>
+            <Paper elevation={0} className="paper">
+              <img src={icon6} />
+              <div>높은 신뢰성 및 안정성</div>
+              <div>
+                실제 고객 환경에서 6년 이상 구동되며 검증된 안정성을 보여주어
+                기존의 고객 및 신규 도입 예정인 기업들의 지지를 받습니다.
+              </div>
+            </Paper>
+            <Paper elevation={0} className="paper">
+              <img src={icon6} />
+              <div>간단하고 편리한 관리 기능</div>
+              <div>
+                편리하고 단일화된 관리 프로세스, 쉽고 빠른 이중화 구성 및
+                마이그레이션을 제공합니다.
+              </div>
+            </Paper>
+            <Paper elevation={0} className="paper">
+              <img src={icon6} />
+              <div>기존 자산의 유용한 활용</div>
+              <div>
+                90여 개 이상의 Guest OS를 지원하며, 폭넓은 하드웨어와
+                소프트웨어를 서포트합니다.
+              </div>
+            </Paper>
+            <Paper elevation={0} className="paper">
+              <img src={icon6} />
+              <div>다양한 에디션과 클라우드로의 확장</div>
+              <div>
+                사용자 예산에 맞는 vSphere 에디션을 선택 가능하며, 클라우드로
+                확장 가능한 VMware만의 다양한 솔루션을 제공합니다.
+              </div>
+            </Paper>
           </div>
           <div className="article_bot">
             <div>
-              <span>vSphere Refernece</span>
+              <span>vSphere Reference</span>
             </div>
             <div>
               <Paper elevation={3} className="paper">
-                <iframe src='https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5969011395001' allowfullscreen frameborder='0' />
-              </Paper>
-              <Paper elevation={3} className="paper">
-                <img src={vmcloud} />
-                <div>dummy text</div>
-                <div>dummy text</div>
+                <iframe
+                  src="https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5969011395001"
+                  allowFullScreen
+                  frameBorder="0"
+                />
               </Paper>
             </div>
           </div>

@@ -197,11 +197,11 @@ const SecuritySplit = ({
 };
 
 export default function Hardware4() {
-  $(document).ready(function() {
+  $(document).ready(function () {
     var count = 0;
     do_ani(".article > div > *", count);
     do_ani(".split-item", count);
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       do_ani(".article > div > *", count);
       do_ani(".split-item", count);
     });
@@ -209,17 +209,17 @@ export default function Hardware4() {
 
   const do_ani = (target, count) => {
     var count2 = 0;
-    $(target).each(function(i) {
+    $(target).each(function (i) {
       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
       var bottom_of_window = $(window).scrollTop() + $(window).height();
 
       if (bottom_of_window > bottom_of_object / 1.1) {
         if ($(this).css("animation-name") === "tmp") count2++;
-        
-          $(this)
-            .css("animation-name", "slide1")
-            .delay(200 * count2);
-          $(this).animate({opacity: "1",}, 1000);
+
+        $(this)
+          .css("animation-name", "slide1")
+          .delay(200 * count2);
+        $(this).animate({ opacity: "1" }, 1000);
       }
     });
   };
@@ -241,11 +241,9 @@ export default function Hardware4() {
               국내 ADC(Application Delivery Controller) 시장 1위를 차지하고 있는
               파이오링크는 애플리케이션과 네트워크 기술에 대한 독보적인 우수성을
               인정받고 있습니다.
-              <br className="pc" />
               <br className="mobile" /> 파이오링크는 고성능과 보안을 동시에
               제공할 수 있는 웹 방화벽을 위해 최적화된 전문 플랫폼과 보안기술을
-              접목하고 통신서비스, 온라인 쇼핑, 금융, 전자정부, 게임, 교육 등{" "}
-              <br className="pc" />
+              접목하고 통신서비스, 온라인 쇼핑, 금융, 전자정부, 게임, 교육 등
               고성능과 고신뢰성이 필요한 웹 방화벽 시장에서 수 많은 고객에게
               안전한 웹 서비스를 제공하고 있습니다.
               <br />
