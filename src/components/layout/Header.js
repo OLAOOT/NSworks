@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "NanumSquare"
   },
   drawer: {
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       width: drawerWidth,
       flexShrink: 0
     }
@@ -68,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   // },
   menuButton: {
     marginLeft: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none"
     },
     position: "absolute",
@@ -167,11 +168,12 @@ function Header(props) {
     setExpanded(false);
     setMobileOpen(false);
   };
-
-  const mouseOver = (e) => {
-    // console.log("over");
-    $(".subclasses").show();
-    $(".subclasses").animate({ height: "280px" }, 500);
+  var isOpen = true
+  const mouseOver = (e) => { 
+    isOpen = false   
+    //console.log('over')
+    $(".subclasses").show()
+    $(".subclasses").animate({ height : "280px" },500)
   };
 
   const mouseOver2 = (e) => {
@@ -181,10 +183,12 @@ function Header(props) {
   };
 
   const mouseOut = (e) => {
-    // console.log("out");
-    $(".subclasses").animate({ height: "0px" }, 500);
-    setTimeout(function () {
-      $(".subclasses").hide();
+    isOpen = true
+    //console.log('out')
+    $(".subclasses").animate({ height : "0px" },500)    
+    setTimeout(function() { 
+      if(isOpen)
+        $(".subclasses").hide() 
     }, 500);
   };
 
@@ -232,7 +236,7 @@ function Header(props) {
                   <ListItemText
                     primary="회사개요"
                     id="m_info_container1"
-                    className="m_info_container"
+                    class="m_info_container"
                   />
                 </ListItem>
               </Link>
@@ -243,7 +247,7 @@ function Header(props) {
                   <ListItemText
                     primary="인사말"
                     id="m_info_container2"
-                    className="m_info_container"
+                    class="m_info_container"
                   />
                 </ListItem>
               </Link>
@@ -254,7 +258,7 @@ function Header(props) {
                   <ListItemText
                     primary="사업영역"
                     id="m_info_container3"
-                    className="m_info_container"
+                    class="m_info_container"
                   />
                 </ListItem>
               </Link>
@@ -266,7 +270,7 @@ function Header(props) {
                   <ListItemText
                     primary="연혁"
                     id="m_info_container4"
-                    className="m_info_container"
+                    class="m_info_container"
                   />
                 </ListItem>
               </Link>
@@ -277,7 +281,7 @@ function Header(props) {
                   <ListItemText
                     primary="찾아오시는길"
                     id="m_info_container5"
-                    className="m_info_container"
+                    class="m_info_container"
                   />
                 </ListItem>
               </Link>
@@ -411,13 +415,13 @@ function Header(props) {
           onChange={handleAccordionChange("panel5")}
         >
           <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
-            <Typography className={classes.heading}>직원전용</Typography>
+            <Typography className={classes.heading}>원격지원</Typography>
           </AccordionSummary>
           <AccordionDetails id="details">
             <div>
               <Link to="/remote" className={classes.txt_deco_none}>
-                <ListItem button key="직원전용" onClick={handleItemClick}>
-                  <ListItemText primary="직원전용" />
+                <ListItem button key="원격지원" onClick={handleItemClick}>
+                  <ListItemText primary="원격지원" />
                 </ListItem>
               </Link>
             </div>
@@ -430,17 +434,63 @@ function Header(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleMouseOver = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+  const data = {
+    image: "banner3.jpg",
+    title: "Virtual Infrastructure",
+    subtitle: "",
+    description: `압도적인 시장 점유율과 <br className="mobile" />
+      높은 신뢰성 및 안전성을 가진 <br className="pc" /><br className="mobile" />
+      VMware 기반 가상화를 구현합니다`,
+    button: [
+      {
+        text: "서버가상화",
+        href: "/vm/server"
+      },
+      {
+        text: "데스크탑가상화",
+        href: "/vm/desktop"
+      },
+      {
+        text: "스토리지가상화",
+        href: "/vm/storage"
+      },
+      {
+        text: "재해복구시스템",
+        href: "/vm/DR"
+      }
+    ]
+  };
+  
+  
   return (
     <div className={classes.root}>
-      <div className="header" onMouseLeave={mouseOut}>
-        <div className="subclasses">
+      <div className="header"  onMouseLeave={mouseOut}>
+        <div className="subclasses" > 
+          <div id="subclass6"></div>
           <div id="subclass5">
-            <Link to="/remote" onMouseOver={mouseOver2} className="menu4">
-              직원전용
+            <Link 
+              to="/remote" 
+              onMouseOver={mouseOver2} 
+              className="menu4">
+              원격지원
             </Link>
           </div>
           <div id="subclass4">
-            <Link to="/mt/engineer" onMouseOver={mouseOver2} className="menu4">
+            <Link
+              to="/mt/engineer"
+              onMouseOver={mouseOver2}
+              className="menu4"
+            >
               엔지니어 현황
             </Link>
             <Link
@@ -450,38 +500,75 @@ function Header(props) {
             >
               유지보수
             </Link>
-            <Link to="/mt/question" onMouseOver={mouseOver2} className="menu4">
+            <Link 
+              to="/mt/question" 
+              onMouseOver={mouseOver2} 
+              className="menu4">
               기술지원문의
             </Link>
-            <Link to="/mt/reference" onMouseOver={mouseOver2} className="menu4">
+            <Link 
+              to="/mt/reference" 
+              onMouseOver={mouseOver2} 
+              className="menu4">
               자료실
             </Link>
-            <Link to="/remote" onMouseOver={mouseOver2} className="menu4">
+            <Link 
+              to="/remote" 
+              onMouseOver={mouseOver2} 
+              className="menu4">
               원격지원
             </Link>
           </div>
           <div id="subclass3">
-            <Link to="/hw/server" onMouseOver={mouseOver2} className="menu3">
+            <Link
+              to="/hw/server"
+              onMouseOver={mouseOver2}
+              className="menu3"
+            >
               서버
             </Link>
-            <Link to="/hw/storage" onMouseOver={mouseOver2} className="menu3">
+            <Link
+              to="/hw/storage"
+              onMouseOver={mouseOver2}
+              className="menu3"
+            >
               스토리지
             </Link>
-            <Link to="/hw/network" onMouseOver={mouseOver2} className="menu3">
+            <Link
+              to="/hw/network"
+              onMouseOver={mouseOver2}
+              className="menu3"
+            >
               네트워크
             </Link>
-            <Link to="/hw/security" onMouseOver={mouseOver2} className="menu3">
+            <Link
+              to="/hw/security"
+              onMouseOver={mouseOver2}
+              className="menu3"
+            >
               보안
             </Link>
           </div>
           <div id="subclass2">
-            <Link to="/vm/server" onMouseOver={mouseOver2} className="menu2">
+            <Link
+              to="/vm/server"
+              onMouseOver={mouseOver2}
+              className="menu2"
+            >
               서버 가상화
             </Link>
-            <Link to="/vm/desktop" onMouseOver={mouseOver2} className="menu2">
+            <Link
+              to="/vm/desktop"
+              onMouseOver={mouseOver2}
+              className="menu2"
+            >
               데스크톱 가상화
             </Link>
-            <Link to="/vm/storage" onMouseOver={mouseOver2} className="menu2">
+            <Link
+              to="/vm/storage"
+              onMouseOver={mouseOver2}
+              className="menu2"
+            >
               스토리지 가상화
             </Link>
             <Link to="/vm/DR" onMouseEnter={mouseOver2} className="menu2">
@@ -556,7 +643,7 @@ function Header(props) {
             <div id="menu1" onMouseEnter={mouseOver}>
               <Link to="/" className="menu1">
                 회사소개
-              </Link>
+              </Link>              
             </div>
             <div id="menu2" onMouseEnter={mouseOver}>
               <Link to="/vm/server" className="menu2">
@@ -575,6 +662,11 @@ function Header(props) {
             </div>
             <div id="menu5" onMouseEnter={mouseOver}>
               <Link to="/remote" className="menu5">
+                원격지원
+              </Link>
+            </div>
+            <div id="menu6" onMouseEnter={mouseOver}>
+              <Link to="/" className="menu6">
                 직원전용
               </Link>
             </div>

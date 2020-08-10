@@ -62,7 +62,8 @@ const Slider = ({ data }) => {
   const handleMouseOut = () => {
     setPlay(true);
   };
-
+  //if($(".awssld__content > img").css('transform'))
+  //$(".awssld__content > img").addClass('animate');  
   return (
     <div>
       <AutoplaySlider

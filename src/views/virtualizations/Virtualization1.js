@@ -191,6 +191,17 @@ export default function Virtualization1() {
               </div>
             </Paper>
           </div>
+          <div class="pdf_wrap">
+            <p>
+              <a
+                href="https://www.vmware.com/content/dam/digitalmarketing/vmware/ko/pdf/products/horizon/vmware-horizon-7-datasheet.pdf"
+                target="_blank"
+                className="PDF_link"
+              >
+                DataSheet Download
+              </a>
+            </p>
+          </div>
           <div className="article_bot">
             <div>
               <span>vSphere Reference</span>

@@ -115,6 +115,17 @@ export default function Virtualization4() {
               </div>
             </Paper>
           </div>
+          <div class="pdf_wrap">
+            <p>
+              <a
+                href="https://www.vmware.com/content/dam/digitalmarketing/vmware/ko/pdf/products/site-recovery-manager/vmware-site-recovery-manager-datasheet.pdf"
+                target="_blank"
+                className="PDF_link"
+              >
+                DataSheet Download
+              </a>
+            </p>
+          </div>
           <div className="article_bot">
             <div>
               <span>SRM Reference</span>
