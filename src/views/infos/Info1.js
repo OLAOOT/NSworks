@@ -7,8 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 import img1 from "./../../img/item1.jpg";
-import img3 from "./../../img/slider3.jpg";
-import img4 from "./../../img/img_ccai.png";
+import img2 from "./../../img/icon/nsworks.jpg";
 
 import icon1 from "./../../img/icon/technical-support.png";
 import icon2 from "./../../img/icon/solution.png";
@@ -84,7 +83,7 @@ export default function Info1() {
             </div>
 
             <div className="title_description_container">
-              <img src={img1} alt="img" />
+              <img src={img2} alt="img" />
               <div>
                 NSworks는 서버, 스토리지, 네트워크의 전문성으로 고객의 IT
                 인프라를 통합적으로 제공하며, 이를 바탕으로 안정적인 IT환경과
