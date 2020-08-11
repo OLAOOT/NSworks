@@ -12,11 +12,5 @@ iframe{
     height: 1000px;
     border: 0    
 }
-.service_article_container form{width:100%; height:450px;border: 1px;}
-.service_article_container form fieldset{width:95%;max-width:600px;margin: 0 auto;margin-top:15px}
-.service_article_container form > div{width:105px;margin: 0 auto;margin-top:40px;}
-.service_article_container form fieldset > div{width:100%;}
-.service_article_container form fieldset > div > label{padding:10px}
-.service_article_container form fieldset input{padding-left:25px;padding-top:30px}
-.service_article_container form fieldset textarea{padding-left:25px;padding-top:30px}
+
 

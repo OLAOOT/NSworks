@@ -7,7 +7,7 @@ import maintenance1 from "./../../img/maintenance1.png";
 import maintenance1_m from "./../../img/maintenance1_m.png";
 import maintenance2 from "./../../img/maintenance2.png";
 
-import "../../css/maintenance.css";
+import "../../css/support.css";
 import $ from "jquery";
 window.$ = $;
 

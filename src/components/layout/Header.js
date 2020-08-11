@@ -172,23 +172,17 @@ function Header(props) {
   const mouseOver = (e) => { 
     isOpen = false   
     //console.log('over')
-    $(".subclasses").show()
-    $(".subclasses").animate({ height : "280px" },500)
-  };
-
-  const mouseOver2 = (e) => {
-    var event_target_style = e.target.style;
-    $(".subclasses > div > a").css("background", "#ffffff");
-    event_target_style.background = "#f8fafc";
+    $(".subclasses_wrap").show()
+    $(".subclasses_wrap").animate({ height : "280px" },500)
   };
 
   const mouseOut = (e) => {
     isOpen = true
     //console.log('out')
-    $(".subclasses").animate({ height : "0px" },500)    
+    $(".subclasses_wrap").animate({ height : "0px" },500)    
     setTimeout(function() { 
       if(isOpen)
-        $(".subclasses").hide() 
+        $(".subclasses_wrap").hide() 
     }, 500);
   };
 
@@ -474,153 +468,139 @@ function Header(props) {
   
   return (
     <div className={classes.root}>
-      <div className="header"  onMouseLeave={mouseOut}>
-        <div className="subclasses" > 
-          <div id="subclass6"></div>
-          <div id="subclass5">
-            <Link 
-              to="/remote" 
-              onMouseOver={mouseOver2} 
-              className="menu4">
-              원격지원
-            </Link>
-          </div>
-          <div id="subclass4">
-            <Link
-              to="/mt/engineer"
-              onMouseOver={mouseOver2}
-              className="menu4"
-            >
-              엔지니어 현황
-            </Link>
-            <Link
-              to="/mt/maintenance"
-              onMouseOver={mouseOver2}
-              className="menu4"
-            >
-              유지보수
-            </Link>
-            <Link 
-              to="/mt/question" 
-              onMouseOver={mouseOver2} 
-              className="menu4">
-              기술지원문의
-            </Link>
-            <Link 
-              to="/mt/reference" 
-              onMouseOver={mouseOver2} 
-              className="menu4">
-              자료실
-            </Link>
-            <Link 
-              to="/remote" 
-              onMouseOver={mouseOver2} 
-              className="menu4">
-              원격지원
-            </Link>
-          </div>
-          <div id="subclass3">
-            <Link
-              to="/hw/server"
-              onMouseOver={mouseOver2}
-              className="menu3"
-            >
-              서버
-            </Link>
-            <Link
-              to="/hw/storage"
-              onMouseOver={mouseOver2}
-              className="menu3"
-            >
-              스토리지
-            </Link>
-            <Link
-              to="/hw/network"
-              onMouseOver={mouseOver2}
-              className="menu3"
-            >
-              네트워크
-            </Link>
-            <Link
-              to="/hw/security"
-              onMouseOver={mouseOver2}
-              className="menu3"
-            >
-              보안
-            </Link>
-          </div>
-          <div id="subclass2">
-            <Link
-              to="/vm/server"
-              onMouseOver={mouseOver2}
-              className="menu2"
-            >
-              서버 가상화
-            </Link>
-            <Link
-              to="/vm/desktop"
-              onMouseOver={mouseOver2}
-              className="menu2"
-            >
-              데스크톱 가상화
-            </Link>
-            <Link
-              to="/vm/storage"
-              onMouseOver={mouseOver2}
-              className="menu2"
-            >
-              스토리지 가상화
-            </Link>
-            <Link to="/vm/DR" onMouseEnter={mouseOver2} className="menu2">
-              재해복구시스템
-            </Link>
-          </div>
-          <div id="subclass1">
-            <Link
-              to="/#info_container1"
-              name="info_container1"
-              onClick={scroll_mv}
-              onMouseOver={mouseOver2}
-              className="menu1"
-            >
-              회사개요
-            </Link>
-            <Link
-              to="/#info_container2"
-              name="info_container2"
-              onClick={scroll_mv}
-              onMouseOver={mouseOver2}
-              className="menu1"
-            >
-              인사말
-            </Link>
-            <Link
-              to="/#info_container3"
-              name="info_container3"
-              onClick={scroll_mv}
-              onMouseOver={mouseOver2}
-              className="menu1"
-            >
-              사업영역
-            </Link>
-            <Link
-              to="/#info_container4"
-              name="info_container4"
-              onClick={scroll_mv}
-              onMouseOver={mouseOver2}
-              className="menu1"
-            >
-              연혁
-            </Link>
-            <Link
-              to="/#info_container5"
-              name="info_container5"
-              onClick={scroll_mv}
-              onMouseOver={mouseOver2}
-              className="menu1"
-            >
-              찾아오시는 길
-            </Link>
+      <div className="header" onMouseLeave={mouseOut}>
+        <div className="subclasses_wrap" > 
+          <div className="subclasses">
+            <div id="subclass1">
+              <Link
+                to="/#info_container1"
+                name="info_container1"
+                onClick={scroll_mv}
+                className="menu1"
+              >
+                회사개요
+              </Link>
+              <Link
+                to="/#info_container2"
+                name="info_container2"
+                onClick={scroll_mv}
+                className="menu1"
+              >
+                인사말
+              </Link>
+              <Link
+                to="/#info_container3"
+                name="info_container3"
+                onClick={scroll_mv}
+                className="menu1"
+              >
+                사업영역
+              </Link>
+              <Link
+                to="/#info_container4"
+                name="info_container4"
+                onClick={scroll_mv}
+                className="menu1"
+              >
+                연혁
+              </Link>
+              <Link
+                to="/#info_container5"
+                name="info_container5"
+                onClick={scroll_mv}
+                className="menu1"
+              >
+                찾아오시는 길
+              </Link>
+            </div>
+            <div id="subclass2">
+              <Link
+                to="/vm/server"
+                className="menu2"
+              >
+                서버 가상화
+              </Link>
+              <Link
+                to="/vm/desktop"
+                className="menu2"
+              >
+                데스크톱 가상화
+              </Link>
+              <Link
+                to="/vm/storage"
+                className="menu2"
+              >
+                스토리지 가상화
+              </Link>
+              <Link 
+                to="/vm/DR"
+                className="menu2">
+                재해복구시스템
+              </Link>
+            </div>
+            <div id="subclass3">
+              <Link
+                to="/hw/server"
+                className="menu3"
+              >
+                서버
+              </Link>
+              <Link
+                to="/hw/storage"
+                className="menu3"
+              >
+                스토리지
+              </Link>
+              <Link
+                to="/hw/network"
+                className="menu3"
+              >
+                네트워크
+              </Link>
+              <Link
+                to="/hw/security"
+                className="menu3"
+              >
+                보안
+              </Link>
+            </div>
+            <div id="subclass4">
+              <Link
+                to="/mt/engineer"
+                className="menu4"
+              >
+                엔지니어 현황
+              </Link>
+              <Link
+                to="/mt/maintenance"
+                className="menu4"
+              >
+                유지보수
+              </Link>
+              <Link 
+                to="/mt/question" 
+                className="menu4">
+                기술지원문의
+              </Link>
+              <Link 
+                to="/mt/reference" 
+                className="menu4">
+                자료실
+              </Link>
+              <Link 
+                to="/remote" 
+                className="menu4">
+                원격지원
+              </Link>
+            </div>
+            <div id="subclass5">
+              <Link 
+                to="/remote" 
+                className="menu4">
+                원격지원
+              </Link>
+            </div>
+            <div id="subclass6"></div>
           </div>
         </div>
         <div className="tool">

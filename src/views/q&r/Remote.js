@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
 
-import "../../css/maintenance.css";
+import "../../css/q&r.css";
 
 const img_data = {
   image: "banner1.jpg",

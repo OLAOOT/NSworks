@@ -11,7 +11,7 @@ import engineer2 from "./../../img/engineer2.png";
 import engineer3 from "./../../img/engineer3.png";
 import engineer4 from "./../../img/engineer4.png";
 
-import "../../css/maintenance.css";
+import "../../css/support.css";
 import $ from "jquery";
 window.$ = $;
 
