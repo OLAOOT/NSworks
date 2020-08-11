@@ -18,7 +18,9 @@ import $ from "jquery";
 window.$ = $;
 const img_data = {
   image: "banner3.jpg",
-  title: "데스크톱 가상화"
+  title: "데스크톱 가상화",
+  menu1: "가상화인프라",
+  menu2: "데스크톱가상화"
 };
 
 export default function Virtualization2() {

@@ -14,7 +14,9 @@ import "../../css/support.css";
 
 const img_data = {
   image: "banner1.jpg",
-  title: "자료실"
+  title: "자료실",
+  menu1: "기술문의",
+  menu2: "자료실"
 };
 
 function sleep(ms) { //sleep 함수

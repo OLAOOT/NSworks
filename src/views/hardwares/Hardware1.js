@@ -36,7 +36,9 @@ import $ from "jquery";
 window.$ = $;
 const img_data = {
   image: "banner4.jpg",
-  title: "서버"
+  title: "서버",
+  menu1: "하드웨어인프라",
+  menu2: "서버"
 };
 
 const HpeSplit = ({

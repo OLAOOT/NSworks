@@ -23,7 +23,9 @@ window.$ = $;
 
 const img_data = {
   image: "banner3.jpg",
-  title: "서버 가상화"
+  title: "서버 가상화",
+  menu1: "가상화인프라",
+  menu2: "서버가상화"
 };
 
 export default function Virtualization1() {

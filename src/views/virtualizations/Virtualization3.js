@@ -20,7 +20,9 @@ window.$ = $;
 const img_data = [
   {
     image: "banner3.jpg",
-    title: "스토리지 가상화"
+    title: "스토리지 가상화",
+    menu1: "가상화인프라",
+    menu2: "스토리지가상화"
   }
 ];
 

@@ -17,8 +17,11 @@ window.$ = $;
 
 const img_data = {
   image: "banner1.jpg",
-  title: "기술지원문의"
+  title: "기술지원문의",
+  menu1: "기술문의",
+  menu2: "기술지원문의"
 };
+
 const useStyles = makeStyles((theme) => ({
   slider: {
     width: "100%",
@@ -37,6 +40,17 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "100%"
     }
+  },
+  none: {
+    display: "none"
+  },
+  style1: {
+    height: 40,
+    borderBottom: "1px solid #676767"
+  },
+  btn: {
+    backgroundColor: "#6bbf24",
+    color: "#ffffff"
   }
 }));
 export default function Engineer1() {

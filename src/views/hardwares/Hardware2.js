@@ -40,7 +40,9 @@ window.$ = $;
 const img_data = [
   {
     image: "banner4.jpg",
-    title: "스토리지"
+    title: "스토리지",
+    menu1: "하드웨어인프라",
+    menu2: "스토리지"
   }
 ];
 

@@ -4,6 +4,7 @@ import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/captioned.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import styled from "styled-components";
+import NavBar from "./NavBar";
 import $ from "jquery";
 window.$ = $;
 
@@ -22,7 +23,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   max-width: 3840px;
-  width:100%
+  width: 100%;
 `;
 
 const TextContainer = styled.div`
@@ -43,14 +44,13 @@ var Title = styled.div`
   }
 `;
 
-if($(window).width() < 600)
-{
+if ($(window).width() < 600) {
   Title = styled.div`
-  font-size: 35px;
-  font-weight: bold;
-  color: #ffffff;
-  text-align: center;
-`;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+  `;
 }
 
 const Subtitle = styled.div`
@@ -63,15 +63,18 @@ const Subtitle = styled.div`
 
 const TopImage = ({ data }) => {
   return (
-    <SlideContainer>
-      <ImageContainer>
-        <Image src={require('./../../img/' + data.image)} alt="image" />
-      </ImageContainer>
-      <TextContainer>
-        <Title>{data.title}</Title>
-        <Subtitle>{data.subtitle}</Subtitle>
-      </TextContainer>
-    </SlideContainer>
+    <>
+      <SlideContainer>
+        <ImageContainer>
+          <Image src={require("./../../img/" + data.image)} alt="image" />
+        </ImageContainer>
+        <TextContainer>
+          <Title>{data.title}</Title>
+          <Subtitle>{data.subtitle}</Subtitle>
+        </TextContainer>
+      </SlideContainer>
+      <NavBar menu1={data.menu1} menu2={data.menu2} />
+    </>
   );
 };
 

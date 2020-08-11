@@ -13,7 +13,9 @@ window.$ = $;
 
 const img_data = {
   image: "banner5_2.jpg",
-  title: "유지보수"
+  title: "유지보수",
+  menu1: "기술문의",
+  menu2: "유지보수"
 };
 
 export default function Engineer2() {
