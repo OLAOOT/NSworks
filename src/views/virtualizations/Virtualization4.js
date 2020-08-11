@@ -19,7 +19,9 @@ window.$ = $;
 const img_data = [
   {
     image: "banner3.jpg",
-    title: "재해복구시스템(DR)"
+    title: "재해복구시스템(DR)",
+    menu1: "가상화인프라",
+    menu2: "재해복구시스템"
   }
 ];
 

@@ -10,7 +10,7 @@ import "../../css/q&r.css";
 import $ from "jquery";
 window.$ = $;
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   none: {
     display: "none"
   },
@@ -26,13 +26,15 @@ const useStyles = makeStyles(theme => ({
 
 const img_data = {
   image: "banner1.jpg",
-  title: "기술지원문의"
+  title: "기술지원문의",
+  menu1: "기술문의",
+  menu2: "기술지원문의"
 };
 
 export default function Question() {
   const classes = useStyles();
 
-  const submit = e => {
+  const submit = (e) => {
     if ($("#name").val().length < 1) {
       alert("제목을 입력해주세요");
       $("#name").focus();
@@ -50,13 +52,13 @@ export default function Question() {
           email: $("#email").val()
         }, // 서버로 데이터 전송시 옵션
         dataType: "json",
-        success: function(response) {
+        success: function (response) {
           alert("전송되었습니다.");
           $("#name").val("");
           $("#message").val("");
           $("#gform_btn").css("display", "block");
         },
-        error: function(request, status, error) {
+        error: function (request, status, error) {
           // 통신 실패시 - 로그인 페이지 리다이렉트
           //alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
           alert("잘못 기입된 곳이 없는지 확인해주세요");

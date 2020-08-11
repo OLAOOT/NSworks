@@ -17,7 +17,9 @@ window.$ = $;
 
 const img_data = {
   image: "banner5_2.jpg",
-  title: "엔지니어 현황"
+  title: "엔지니어 현황",
+  menu1: "기술문의",
+  menu2: "엔지니어현황"
 };
 
 export default function Engineer1() {

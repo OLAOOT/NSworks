@@ -17,7 +17,9 @@ window.$ = $;
 const img_data = [
   {
     image: "banner4.jpg",
-    title: "보안"
+    title: "보안",
+    menu1: "하드웨어인프라",
+    menu2: "보안"
   }
 ];
 
