@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, createContext } from "react";
+import React, { useState, useRef, useEffect, createContext } from "react";
 import { useLocation, Switch, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
@@ -33,14 +33,11 @@ import Remote from "./views/q&r/Remote";
 import $ from "jquery";
 window.$ = $;
 
-let position = "info_container2";
-const setPosition = (n) => {
-  position = n;
-};
-
 const App = () => {
   const childRef = useRef();
   let location = useLocation();
+
+  const [position, setPosition] = useState("header0");
 
   useEffect(() => {
     document.body.classList.add("is-loaded");
