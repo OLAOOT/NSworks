@@ -19,6 +19,7 @@ import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import MuiButton from "@material-ui/core/Button";
 import Popover from "@material-ui/core/Popover";
 import "../../css/header.css";
+import icon1 from "./../../img/icon/technical-support.png";
 import logo from "./../../img/logo.png";
 import $ from "jquery";
 window.$ = $;
@@ -171,19 +172,16 @@ function Header(props) {
   var isOpen = true
   const mouseOver = (e) => { 
     isOpen = false   
-    //console.log('over')
-    $(".subclasses_wrap").show()
+    //console.log('over')    
+    $(".subclasses_wrap").animate({ opacity:'1' },1)
     $(".subclasses_wrap").animate({ height : "280px" },500)
+    
   };
 
   const mouseOut = (e) => {
     isOpen = true
     //console.log('out')
-    $(".subclasses_wrap").animate({ height : "0px" },500)    
-    setTimeout(function() { 
-      if(isOpen)
-        $(".subclasses_wrap").hide() 
-    }, 500);
+    $(".subclasses_wrap").animate({ height : "0px",opacity:'0'},200)    
   };
 
   const scroll_mv = (e) => {
@@ -212,6 +210,31 @@ function Header(props) {
     );
   });
 
+  $('#div_laypopup > span').click(()=>{    
+    var checked = $("input:checkbox[id='close']").is(":checked")    
+    if(checked)
+      setCookieMobile( "todayCookies", "done" , 1);
+    $('#div_laypopup').hide()
+  })
+    
+  const setCookieMobile = ( name, value, expiredays ) => {
+
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+  }
+
+  $(document).ready(function () {
+    var cookiedata = document.cookie;    
+    alert(cookiedata)
+    if ( !cookiedata  && document.location.pathname === '/'){
+        $("#div_laypopup").show();
+    }
+    else {
+        $("#div_laypopup").hide();
+    }
+   
+  });
   const drawer = (
     <div>
       <div className={classes.toolbar} />
@@ -468,6 +491,11 @@ function Header(props) {
   
   return (
     <div className={classes.root}>
+      <div id="div_laypopup" align="center" className='popup'>
+        <span>x</span>
+        <img src={icon1} />
+          <input type="checkbox" id="close" value="OK" onclick="javascript:closeWin('div_laypopup', 1);"/>하루동안 이 창을 열지 않음
+      </div>
       <div className="header" onMouseLeave={mouseOut}>
         <div className="subclasses_wrap" > 
           <div className="subclasses">

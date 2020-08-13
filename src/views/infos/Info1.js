@@ -13,6 +13,7 @@ import icon1 from "./../../img/icon/technical-support.png";
 import icon2 from "./../../img/icon/solution.png";
 import icon3 from "./../../img/icon/it.png";
 import icon4 from "./../../img/icon/repair.png";
+import organization from "./../../img/organization.png";
 
 import "../../css/info.css";
 import $ from "jquery";
@@ -69,37 +70,10 @@ export default function Info1() {
       }
     });
   };
-  $('#div_laypopup > span').click(()=>{    
-    var checked = $("input:checkbox[id='close']").is(":checked")    
-    if(checked)
-      setCookieMobile( "todayCookies", "done" , 1);
-    $('#div_laypopup').hide()
-  })
-    
-  const setCookieMobile = ( name, value, expiredays ) => {
-
-    var todayDate = new Date();
-    todayDate.setDate( todayDate.getDate() + expiredays );
-    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-  }
-
-  $(document).ready(function () {
-    var cookiedata = document.cookie;    
-    if ( cookiedata.indexOf("todayCookies=done") === -1 ){
-        $("#div_laypopup").show();
-    }
-    else {
-        $("#div_laypopup").hide();
-    }
-   
-  });
+  
   return (
     <div>
-      <div id="div_laypopup" align="center" className='popup'>
-        <span>x</span>
-        <img src={icon1} />
-          <input type="checkbox" id="close" value="OK" onclick="javascript:closeWin('div_laypopup', 1);"/>하루동안 이 창을 열지 않음
-      </div>
+      
       <div className="info_container" id="info_container1">
         <div className="article" id="article1">
           <div className="article_top">
@@ -189,7 +163,9 @@ export default function Info1() {
               <span>조직도</span>
             </div>
           </div>
-          <div className="article_mid">조직도</div>
+          <div className="article_mid">
+            <img src={organization}/>
+          </div>
         </div>
       </div>
     </div>
