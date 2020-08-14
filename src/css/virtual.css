@@ -118,7 +118,7 @@
 
 .virtual_container .article_bot .paper {
   margin: 1%;
-  width: 48%;
+  width: 98%;
   max-width: 500px;
   height: 480px;
   background: none;
@@ -128,7 +128,6 @@
 .virtual_container .article_bot .paper iframe {
   width: 100%;
   height: 100%;
-  padding: 0 50px;
 }
 
 @media (max-width: 600px) {

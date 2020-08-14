@@ -164,7 +164,7 @@ export default function Info1() {
             </div>
           </div>
           <div className="article_mid">
-            <img src={organization}/>
+            <img src={organization} id="orga"/>
           </div>
         </div>
       </div>

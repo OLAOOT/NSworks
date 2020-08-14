@@ -200,4 +200,7 @@
   .card_title_wide {
     height: 145px !important;
   }
+  .hardware_container .paper > div {
+    padding: 25px 0px 0px;
+  }
 }

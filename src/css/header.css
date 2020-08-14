@@ -8,13 +8,13 @@
   top: 64px;
   width: 100%;
   min-width: 1280px;
-  left:0;
+  left: 0;
   padding-left: 80px;
   padding-right: 80px;
   height: 0;
 }
-.subclasses{
-  width:70%;
+.subclasses {
+  width: 70%;
   float: right;
 }
 .subclasses > * {
@@ -28,14 +28,15 @@
   text-align: left;
   float: left;
 }
-.subclasses > * > a{
-  width:100%;
+.subclasses > * > a {
+  width: 100%;
   float: left;
-  padding-top:10px;
-  padding-bottom:10px;
-  color:#000000 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #000000 !important;
   text-align: center;
-}.subclasses > * > a:hover{
+}
+.subclasses > * > a:hover {
   background-color: #f8fafc;
 }
 .header {
@@ -56,7 +57,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 1400px) {
@@ -72,14 +73,13 @@
   width: 200px;
   margin-right: 10%;
 }
-.menus{
-  width:70%;
-  
+.menus {
+  width: 70%;
 }
 .menus > div {
   float: left;
   height: 100%;
-  width:16%;
+  width: 16%;
   text-align: center;
   padding: 15px;
 }
@@ -115,14 +115,14 @@
 }
 
 /*여기는 슬라이더 css*/
-.awssld__content > img{
+.awssld__content > img {
   transform: scale(1.5);
   animation-duration: 21s;
   animation-name: scaleUp;
   animation-iteration-count: infinite;
 }
 
-.awssld__content > img.animate{  
+.awssld__content > img.animate {
   transform: scale(1);
 }
 
@@ -132,8 +132,41 @@
   }
   50% {
     transform: scale(1.5);
-  } 
+  }
   100% {
     transform: scale(1);
-  } 
+  }
+}
+
+.popup {
+  width: 200px;
+  height: 280px;
+  border: 1px solid #e2e2e2;
+  z-index: 201;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-size: 12px;
+  color: #000000;
+}
+.popup span {
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  top: 5px;
+  font-size: 20px;
+  color: #000000;
+  cursor: pointer;
+}
+.popup img {
+  width: 100%;
+  height: 90%;
+}
+.popup input {
+  margin-right: 10px;
+  position: relative;
+  top: 2.5px;
 }

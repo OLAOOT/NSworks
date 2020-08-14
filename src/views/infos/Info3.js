@@ -106,7 +106,7 @@ export default function Info3() {
               <span>&nbsp;&nbsp;기업&nbsp;&nbsp;</span> <br />
               <br />
             </div>
-            <table border="1" id="partner_tb">
+            <table border="1" id="partner_tb_pc">
               <tr>
                 <td>
                   <img src={logo1} />
@@ -148,11 +148,57 @@ export default function Info3() {
                 </td>
               </tr>
             </table>
+            <table border="1" id="partner_tb_mb">
+              <tr>
+                <td>
+                  <img src={logo1} />
+                </td>
+                <td>
+                  <img src={logo2} />
+                </td>
+                <td>
+                  <img src={logo3} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo4} />
+                </td>
+                <td>
+                  <img src={logo5} />
+                </td>
+                <td>
+                  <img src={logo6} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo7} />
+                </td>
+                <td>
+                  <img src={logo8} />
+                </td>
+                <td>
+                  <img src={logo9} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo10} />
+                </td>
+                <td>
+                  <img src={logo11} />
+                </td>
+                <td>
+                  <img src={logo12} />
+                </td>
+              </tr>
+            </table>
             <div>
               <span>&nbsp;&nbsp;공공/교육&nbsp;&nbsp;</span> <br />
               <br />
             </div>
-            <table border="1">
+            <table border="1" id="partner_tb_pc">
               <tr>
                 <td>
                   <img src={logo13} />
@@ -194,11 +240,57 @@ export default function Info3() {
                 </td>
               </tr>
             </table>
+            <table border="1" id="partner_tb_mb">
+              <tr>
+                <td>
+                  <img src={logo13} />
+                </td>
+                <td>
+                  <img src={logo14} />
+                </td>
+                <td>
+                  <img src={logo15} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo16} />
+                </td>
+                <td>
+                  <img src={logo17} />
+                </td>
+                <td>
+                  <img src={logo18} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo19} />
+                </td>
+                <td>
+                  <img src={logo20} />
+                </td>
+                <td>
+                  <img src={logo21} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo22} />
+                </td>
+                <td>
+                  <img src={logo23} />
+                </td>
+                <td>
+                  <img src={logo24} />
+                </td>
+              </tr>
+            </table>
             <div>
               <span>&nbsp;&nbsp;병원&nbsp;&nbsp;</span> <br />
               <br />
             </div>
-            <table border="1">
+            <table border="1" id="partner_tb_pc">
               <tr>
                 <td>
                   <img src={logo25} />
@@ -229,6 +321,52 @@ export default function Info3() {
                 <td>
                   <img src={logo33} />
                 </td>
+                <td>
+                  <img src={logo34} />
+                </td>
+                <td>
+                  <img src={logo35} />
+                </td>
+                <td>
+                  <img src={logo36} />
+                </td>
+              </tr>
+            </table>
+            <table border="1" id="partner_tb_mb">
+              <tr>
+                <td>
+                  <img src={logo25} />
+                </td>
+                <td>
+                  <img src={logo26} />
+                </td>
+                <td>
+                  <img src={logo27} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo28} />
+                </td>
+                <td>
+                  <img src={logo29} />
+                </td>
+                <td>
+                  <img src={logo30} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={logo31} />
+                </td>
+                <td>
+                  <img src={logo32} />
+                </td>
+                <td>
+                  <img src={logo33} />
+                </td>
+              </tr>
+              <tr>
                 <td>
                   <img src={logo34} />
                 </td>

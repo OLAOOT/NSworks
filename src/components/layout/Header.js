@@ -169,19 +169,18 @@ function Header(props) {
     setExpanded(false);
     setMobileOpen(false);
   };
-  var isOpen = true
-  const mouseOver = (e) => { 
-    isOpen = false   
-    //console.log('over')    
-    $(".subclasses_wrap").animate({ opacity:'1' },1)
-    $(".subclasses_wrap").animate({ height : "280px" },500)
-    
+  var isOpen = true;
+  const mouseOver = (e) => {
+    isOpen = false;
+    //console.log('over')
+    $(".subclasses_wrap").animate({ opacity: "1" }, 1);
+    $(".subclasses_wrap").animate({ height: "280px" }, 500);
   };
 
   const mouseOut = (e) => {
-    isOpen = true
+    isOpen = true;
     //console.log('out')
-    $(".subclasses_wrap").animate({ height : "0px",opacity:'0'},200)    
+    $(".subclasses_wrap").animate({ height: "0px", opacity: "0" }, 200);
   };
 
   const scroll_mv = (e) => {
@@ -210,30 +209,31 @@ function Header(props) {
     );
   });
 
-  $('#div_laypopup > span').click(()=>{    
-    var checked = $("input:checkbox[id='close']").is(":checked")    
-    if(checked)
-      setCookieMobile( "todayCookies", "done" , 1);
-    $('#div_laypopup').hide()
-  })
-    
-  const setCookieMobile = ( name, value, expiredays ) => {
+  $("#div_laypopup > span").click(() => {
+    var checked = $("input:checkbox[id='close']").is(":checked");
+    if (checked) setCookieMobile("todayCookies", "done", 1);
+    $("#div_laypopup").hide();
+  });
 
+  const setCookieMobile = (name, value, expiredays) => {
     var todayDate = new Date();
-    todayDate.setDate( todayDate.getDate() + expiredays );
-    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-  }
+    todayDate.setDate(todayDate.getDate() + expiredays);
+    document.cookie =
+      name +
+      "=" +
+      escape(value) +
+      "; path=/; expires=" +
+      todayDate.toGMTString() +
+      ";";
+  };
 
   $(document).ready(function () {
-    var cookiedata = document.cookie;    
-    alert(cookiedata)
-    if ( !cookiedata  && document.location.pathname === '/'){
-        $("#div_laypopup").show();
+    var cookiedata = document.cookie;
+    if (!cookiedata && document.location.pathname === "/") {
+      $("#div_laypopup").show();
+    } else {
+      $("#div_laypopup").hide();
     }
-    else {
-        $("#div_laypopup").hide();
-    }
-   
   });
   const drawer = (
     <div>
@@ -487,17 +487,22 @@ function Header(props) {
       }
     ]
   };
-  
-  
+
   return (
     <div className={classes.root}>
-      <div id="div_laypopup" align="center" className='popup'>
+      <div id="div_laypopup" align="center" className="popup">
         <span>x</span>
         <img src={icon1} />
-          <input type="checkbox" id="close" value="OK" onclick="javascript:closeWin('div_laypopup', 1);"/>하루동안 이 창을 열지 않음
+        <input
+          type="checkbox"
+          id="close"
+          value="OK"
+          onclick="javascript:closeWin('div_laypopup', 1);"
+        />
+        하루동안 이 창을 열지 않음
       </div>
       <div className="header" onMouseLeave={mouseOut}>
-        <div className="subclasses_wrap" > 
+        <div className="subclasses_wrap">
           <div className="subclasses">
             <div id="subclass1">
               <Link
@@ -542,89 +547,52 @@ function Header(props) {
               </Link>
             </div>
             <div id="subclass2">
-              <Link
-                to="/vm/server"
-                className="menu2"
-              >
+              <Link to="/vm/server" className="menu2">
                 서버 가상화
               </Link>
-              <Link
-                to="/vm/desktop"
-                className="menu2"
-              >
+              <Link to="/vm/desktop" className="menu2">
                 데스크톱 가상화
               </Link>
-              <Link
-                to="/vm/storage"
-                className="menu2"
-              >
+              <Link to="/vm/storage" className="menu2">
                 스토리지 가상화
               </Link>
-              <Link 
-                to="/vm/DR"
-                className="menu2">
+              <Link to="/vm/DR" className="menu2">
                 재해복구시스템
               </Link>
             </div>
             <div id="subclass3">
-              <Link
-                to="/hw/server"
-                className="menu3"
-              >
+              <Link to="/hw/server" className="menu3">
                 서버
               </Link>
-              <Link
-                to="/hw/storage"
-                className="menu3"
-              >
+              <Link to="/hw/storage" className="menu3">
                 스토리지
               </Link>
-              <Link
-                to="/hw/network"
-                className="menu3"
-              >
+              <Link to="/hw/network" className="menu3">
                 네트워크
               </Link>
-              <Link
-                to="/hw/security"
-                className="menu3"
-              >
+              <Link to="/hw/security" className="menu3">
                 보안
               </Link>
             </div>
             <div id="subclass4">
-              <Link
-                to="/mt/engineer"
-                className="menu4"
-              >
+              <Link to="/mt/engineer" className="menu4">
                 엔지니어 현황
               </Link>
-              <Link
-                to="/mt/maintenance"
-                className="menu4"
-              >
+              <Link to="/mt/maintenance" className="menu4">
                 유지보수
               </Link>
-              <Link 
-                to="/mt/question" 
-                className="menu4">
+              <Link to="/mt/question" className="menu4">
                 기술지원문의
               </Link>
-              <Link 
-                to="/mt/reference" 
-                className="menu4">
+              <Link to="/mt/reference" className="menu4">
                 자료실
               </Link>
-              <Link 
-                to="/remote" 
-                className="menu4">
+              <Link to="/remote" className="menu4">
                 원격지원
               </Link>
             </div>
             <div id="subclass5">
-              <Link 
-                to="/remote" 
-                className="menu4">
+              <Link to="/remote" className="menu4">
                 원격지원
               </Link>
             </div>
@@ -651,7 +619,7 @@ function Header(props) {
             <div id="menu1" onMouseEnter={mouseOver}>
               <Link to="/" className="menu1">
                 회사소개
-              </Link>              
+              </Link>
             </div>
             <div id="menu2" onMouseEnter={mouseOver}>
               <Link to="/vm/server" className="menu2">
