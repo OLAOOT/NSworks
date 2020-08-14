@@ -179,18 +179,69 @@ function Header(props) {
   const mouseOver = (e) => {
     isOpen = false;
     //console.log('over')
-    $(".subclasses_wrap").show();
+    $(".subclasses_wrap").animate({ opacity: "1" }, 1);
     $(".subclasses_wrap").animate({ height: "280px" }, 500);
   };
 
   const mouseOut = (e) => {
     isOpen = true;
     //console.log('out')
-    $(".subclasses_wrap").animate({ height: "0px" }, 500);
-    setTimeout(function () {
-      if (isOpen) $(".subclasses_wrap").hide();
-    }, 500);
+    $(".subclasses_wrap").animate({ height: "0px", opacity: "0" }, 200);
   };
+
+  const scroll_mv = (e) => {
+    //console.log($(this).parent().attr('name'))
+    if (document.location.pathname !== "/") {
+      document.location.href = "/#" + e.target.name;
+    }
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#" + e.target.name).offset().top - 30
+      },
+      500
+    );
+  };
+
+  $(".m_info_container").click(function () {
+    var id = $(this).attr("id").replace("m_", "");
+    if (document.location.pathname !== "/") {
+      document.location.href = "/#" + id;
+    }
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#" + id).offset().top - 30
+      },
+      500
+    );
+  });
+
+  $("#div_laypopup > span").click(() => {
+    var checked = $("input:checkbox[id='close']").is(":checked");
+    if (checked) setCookieMobile("todayCookies", "done", 1);
+    $("#div_laypopup").hide();
+  });
+
+  const setCookieMobile = (name, value, expiredays) => {
+    var todayDate = new Date();
+    todayDate.setDate(todayDate.getDate() + expiredays);
+    document.cookie =
+      name +
+      "=" +
+      escape(value) +
+      "; path=/; expires=" +
+      todayDate.toGMTString() +
+      ";";
+  };
+
+  $(document).ready(function () {
+    var cookiedata = document.cookie;
+    if (!cookiedata && document.location.pathname === "/") {
+      $("#div_laypopup").show();
+    } else {
+      $("#div_laypopup").hide();
+    }
+  });
+  
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
