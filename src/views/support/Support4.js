@@ -13,7 +13,7 @@ import { fade } from "@material-ui/core/styles/colorManipulator";
 import "../../css/support.css";
 
 const img_data = {
-  image: "banner1.jpg",
+  image: "banner1_1.jpg",
   title: "자료실",
   menu1: "기술문의",
   menu2: "자료실"
@@ -29,7 +29,7 @@ const styles = (theme) => ({
     width: 100
   },
   menu: {
-    marginTop: 80,
+    marginTop: 0,
     marginBottom: 15,
     marginRight: "2.5%",
     display: "flex",
@@ -43,7 +43,6 @@ const styles = (theme) => ({
     "& > table": {
       minWidth: "100%"
     },
-    marginTop: "80px",
     marginBottom: "50px"
   },
   table: {

@@ -28,7 +28,7 @@ import $ from "jquery";
 window.$ = $;
 
 const img_data = {
-  image: "banner5_2.jpg",
+  image: "banner1_1.jpg",
   title: "유지보수",
   menu1: "기술문의",
   menu2: "유지보수"

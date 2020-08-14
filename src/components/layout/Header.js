@@ -202,19 +202,6 @@ function Header(props) {
     );
   };
 
-  $(".m_info_container").click(function () {
-    var id = $(this).attr("id").replace("m_", "");
-    if (document.location.pathname !== "/") {
-      document.location.href = "/#" + id;
-    }
-    $([document.documentElement, document.body]).animate(
-      {
-        scrollTop: $("#" + id).offset().top - 30
-      },
-      500
-    );
-  });
-
   $("#div_laypopup > span").click(() => {
     var checked = $("input:checkbox[id='close']").is(":checked");
     if (checked) setCookieMobile("todayCookies", "done", 1);
@@ -241,7 +228,7 @@ function Header(props) {
       $("#div_laypopup").hide();
     }
   });
-  
+
   const container =
     window !== undefined ? () => window().document.body : undefined;
 

@@ -16,7 +16,7 @@ import $ from "jquery";
 window.$ = $;
 
 const img_data = {
-  image: "banner5_2.jpg",
+  image: "banner1_1.jpg",
   title: "엔지니어 현황",
   menu1: "기술문의",
   menu2: "엔지니어현황"

@@ -60,6 +60,7 @@ const heroData = [
 
 const Home = () => {
   const scrollPosition = useContext(InfoContext);
+  console.log(scrollPosition)
   useEffect(() => {
     $([document.documentElement, document.body]).animate(
       {

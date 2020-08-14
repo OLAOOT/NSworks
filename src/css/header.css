@@ -117,7 +117,7 @@
 /*여기는 슬라이더 css*/
 .awssld__content > img {
   transform: scale(1.5);
-  animation-duration: 21s;
+  animation-duration: 51s;
   animation-name: scaleUp;
   animation-iteration-count: infinite;
 }

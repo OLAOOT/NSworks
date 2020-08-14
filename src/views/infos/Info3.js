@@ -59,6 +59,9 @@ const useStyles = makeStyles((theme) => ({
 
     width: "95%",
     maxWidth: 800
+  },
+  big:{
+    transform:"scale(1.2)"
   }
 }));
 
@@ -124,12 +127,12 @@ export default function Info3() {
                   <img src={logo5} />
                 </td>
                 <td>
-                  <img src={logo6} />
+                  <img src={logo6} className={classes.big}/>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src={logo7} />
+                  <img src={logo7}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo8} />
@@ -141,7 +144,7 @@ export default function Info3() {
                   <img src={logo10} />
                 </td>
                 <td>
-                  <img src={logo11} />
+                  <img src={logo11}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo12} />
@@ -168,12 +171,12 @@ export default function Info3() {
                   <img src={logo5} />
                 </td>
                 <td>
-                  <img src={logo6} />
+                  <img src={logo6}  className={classes.big}/>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <img src={logo7} />
+                  <img src={logo7}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo8} />
@@ -187,7 +190,7 @@ export default function Info3() {
                   <img src={logo10} />
                 </td>
                 <td>
-                  <img src={logo11} />
+                  <img src={logo11}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo12} />
@@ -210,13 +213,13 @@ export default function Info3() {
                   <img src={logo15} />
                 </td>
                 <td>
-                  <img src={logo16} />
+                  <img src={logo16}  className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo17} />
+                  <img src={logo17}  className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo18} />
+                  <img src={logo18}  className={classes.big}/>
                 </td>
               </tr>
               <tr>
@@ -227,7 +230,7 @@ export default function Info3() {
                   <img src={logo20} />
                 </td>
                 <td>
-                  <img src={logo21} />
+                  <img src={logo21}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo22} />
@@ -254,13 +257,13 @@ export default function Info3() {
               </tr>
               <tr>
                 <td>
-                  <img src={logo16} />
+                  <img src={logo16}  className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo17} />
+                  <img src={logo17} className={classes.big} />
                 </td>
                 <td>
-                  <img src={logo18} />
+                  <img src={logo18} className={classes.big} />
                 </td>
               </tr>
               <tr>
@@ -271,7 +274,7 @@ export default function Info3() {
                   <img src={logo20} />
                 </td>
                 <td>
-                  <img src={logo21} />
+                  <img src={logo21}  className={classes.big}/>
                 </td>
               </tr>
               <tr>
@@ -293,22 +296,22 @@ export default function Info3() {
             <table border="1" id="partner_tb_pc">
               <tr>
                 <td>
-                  <img src={logo25} />
+                  <img src={logo25}  className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo26} />
+                  <img src={logo26}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo27} />
                 </td>
                 <td>
-                  <img src={logo28} />
+                  <img src={logo28}  className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo29} />
+                  <img src={logo29}  className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo30} />
+                  <img src={logo30}  className={classes.big}/>
                 </td>
               </tr>
               <tr>
@@ -316,7 +319,7 @@ export default function Info3() {
                   <img src={logo31} />
                 </td>
                 <td>
-                  <img src={logo32} />
+                  <img src={logo32}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo33} />
@@ -335,10 +338,10 @@ export default function Info3() {
             <table border="1" id="partner_tb_mb">
               <tr>
                 <td>
-                  <img src={logo25} />
+                  <img src={logo25} className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo26} />
+                  <img src={logo26}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo27} />
@@ -346,13 +349,13 @@ export default function Info3() {
               </tr>
               <tr>
                 <td>
-                  <img src={logo28} />
+                  <img src={logo28}  className={classes.big}/>
                 </td>
                 <td>
-                  <img src={logo29} />
+                  <img src={logo29} className={classes.big} />
                 </td>
                 <td>
-                  <img src={logo30} />
+                  <img src={logo30}  className={classes.big}/>
                 </td>
               </tr>
               <tr>
@@ -360,7 +363,7 @@ export default function Info3() {
                   <img src={logo31} />
                 </td>
                 <td>
-                  <img src={logo32} />
+                  <img src={logo32}  className={classes.big}/>
                 </td>
                 <td>
                   <img src={logo33} />

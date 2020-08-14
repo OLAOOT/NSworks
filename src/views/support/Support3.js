@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
 import Support3C from "./Support3_c";
+import icon1 from "./../../img/icon/technical-support.png";
 import "../../css/support.css";
 
 import engineer1 from "./../../img/engineer1.png";
@@ -16,7 +17,7 @@ import $ from "jquery";
 window.$ = $;
 
 const img_data = {
-  image: "banner1.jpg",
+  image: "banner1_1.jpg",
   title: "기술지원문의",
   menu1: "기술문의",
   menu2: "기술지원문의"
@@ -106,11 +107,11 @@ export default function Engineer1() {
                   </tr>
                   <tr>
                     <td />
-                    <td />
                     <td
                       style={{
                         textAlign: "right"
                       }}
+                      colSpan='2'
                     >
                       <Support3C />
                     </td>

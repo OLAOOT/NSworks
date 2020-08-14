@@ -8,7 +8,7 @@ import TopImage from "../../components/sections/TopImage";
 import "../../css/q&r.css";
 
 const img_data = {
-  image: "banner1.jpg",
+  image: "banner6.jpg",
   title: "원격지원",
   menu1: "기술문의",
   menu2: "원격지원"
