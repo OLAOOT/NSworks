@@ -196,7 +196,7 @@ export default function Virtualization1() {
           <div class="pdf_wrap">
             <p>
               <a
-                href="https://www.vmware.com/content/dam/digitalmarketing/vmware/ko/pdf/products/horizon/vmware-horizon-7-datasheet.pdf"
+                href="https://www.vmware.com/content/dam/digitalmarketing/vmware/ko/pdf/vsphere/vmw-vsphere-datasheet.pdf"
                 target="_blank"
                 className="PDF_link"
               >

@@ -63,7 +63,7 @@ export default function Info5() {
               <div id="contact">
                 엔에스웍스(주)
                 <br />
-                세종특별시 한누리대로 249, 609호
+                세종특별자치시 한누리대로 249, 609호
                 <br />
                 (나성동, 에스제이타워)
                 <br />
