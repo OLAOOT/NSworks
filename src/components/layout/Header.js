@@ -20,6 +20,7 @@ import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import MuiButton from "@material-ui/core/Button";
 import Popover from "@material-ui/core/Popover";
 import "../../css/header.css";
+import icon1 from "./../../img/icon/technical-support.png";
 import logo from "./../../img/logo.png";
 import $ from "jquery";
 window.$ = $;
@@ -179,18 +180,281 @@ function Header(props) {
   const mouseOver = (e) => {
     isOpen = false;
     //console.log('over')
-    $(".subclasses_wrap").show();
+    $(".subclasses_wrap").animate({ opacity: "1" }, 1);
     $(".subclasses_wrap").animate({ height: "280px" }, 500);
   };
 
   const mouseOut = (e) => {
     isOpen = true;
     //console.log('out')
-    $(".subclasses_wrap").animate({ height: "0px" }, 500);
-    setTimeout(function () {
-      if (isOpen) $(".subclasses_wrap").hide();
-    }, 500);
+    $(".subclasses_wrap").animate({ height: "0px", opacity: "0" }, 200);
   };
+
+  const scroll_mv = (e) => {
+    //console.log($(this).parent().attr('name'))
+    if (document.location.pathname !== "/") {
+      document.location.href = "/#" + e.target.name;
+    }
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#" + e.target.name).offset().top - 30
+      },
+      500
+    );
+  };
+
+  $(".m_info_container").click(function () {
+    var id = $(this).attr("id").replace("m_", "");
+    if (document.location.pathname !== "/") {
+      document.location.href = "/#" + id;
+    }
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#" + id).offset().top - 30
+      },
+      500
+    );
+  });
+
+  $("#div_laypopup > span").click(() => {
+    var checked = $("input:checkbox[id='close']").is(":checked");
+    if (checked) setCookieMobile("todayCookies", "done", 1);
+    $("#div_laypopup").hide();
+  });
+
+  const setCookieMobile = (name, value, expiredays) => {
+    var todayDate = new Date();
+    todayDate.setDate(todayDate.getDate() + expiredays);
+    document.cookie =
+      name +
+      "=" +
+      escape(value) +
+      "; path=/; expires=" +
+      todayDate.toGMTString() +
+      ";";
+  };
+
+  $(document).ready(function () {
+    var cookiedata = document.cookie;
+    if (!cookiedata && document.location.pathname === "/") {
+      $("#div_laypopup").show();
+    } else {
+      $("#div_laypopup").hide();
+    }
+  });
+  const drawer = (
+    <div>
+      <div className={classes.toolbar} />
+      <List>
+        <Accordion
+          expanded={expanded === "panel1"}
+          onChange={handleAccordionChange("panel1")}
+        >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+            <Typography className={classes.heading}>회사소개</Typography>
+          </AccordionSummary>
+          <AccordionDetails id="details">
+            <div>
+              <Link to="/" className={classes.txt_deco_none}>
+                <ListItem button key="회사개요" onClick={handleItemClick}>
+                  <ListItemText
+                    primary="회사개요"
+                    id="m_info_container1"
+                    class="m_info_container"
+                  />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/" className={classes.txt_deco_none}>
+                <ListItem button key="인사말" onClick={handleItemClick}>
+                  <ListItemText
+                    primary="인사말"
+                    id="m_info_container2"
+                    class="m_info_container"
+                  />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/" className={classes.txt_deco_none}>
+                <ListItem button key="사업영역" onClick={handleItemClick}>
+                  <ListItemText
+                    primary="사업영역"
+                    id="m_info_container3"
+                    class="m_info_container"
+                  />
+                </ListItem>
+              </Link>
+            </div>
+
+            <div>
+              <Link to="/" className={classes.txt_deco_none}>
+                <ListItem button key="연혁" onClick={handleItemClick}>
+                  <ListItemText
+                    primary="연혁"
+                    id="m_info_container4"
+                    class="m_info_container"
+                  />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/" className={classes.txt_deco_none}>
+                <ListItem button key="찾아오시는길" onClick={handleItemClick}>
+                  <ListItemText
+                    primary="찾아오시는길"
+                    id="m_info_container5"
+                    class="m_info_container"
+                  />
+                </ListItem>
+              </Link>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion
+          expanded={expanded === "panel2"}
+          onChange={handleAccordionChange("panel2")}
+        >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+            <Typography className={classes.heading}>가상화인프라</Typography>
+          </AccordionSummary>
+          <AccordionDetails id="details">
+            <div>
+              <Link to="/vm/server" className={classes.txt_deco_none}>
+                <ListItem button key="서버가상화" onClick={handleItemClick}>
+                  <ListItemText primary="서버가상화" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/vm/desktop" className={classes.txt_deco_none}>
+                <ListItem button key="데스크톱가상화" onClick={handleItemClick}>
+                  <ListItemText primary="데스크톱가상화" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/vm/storage" className={classes.txt_deco_none}>
+                <ListItem button key="스토리지가상화" onClick={handleItemClick}>
+                  <ListItemText primary="스토리지가상화" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/vm/DR" className={classes.txt_deco_none}>
+                <ListItem button key="재해복구시스템" onClick={handleItemClick}>
+                  <ListItemText primary="재해복구시스템" />
+                </ListItem>
+              </Link>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel3"}
+          onChange={handleAccordionChange("panel3")}
+        >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+            <Typography className={classes.heading}>하드웨어인프라</Typography>
+          </AccordionSummary>
+          <AccordionDetails id="details">
+            <div>
+              <Link to="/hw/server" className={classes.txt_deco_none}>
+                <ListItem button key="서버" onClick={handleItemClick}>
+                  <ListItemText primary="서버" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/hw/storage" className={classes.txt_deco_none}>
+                <ListItem button key="스토리지" onClick={handleItemClick}>
+                  <ListItemText primary="스토리지" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/hw/network" className={classes.txt_deco_none}>
+                <ListItem button key="네트워크" onClick={handleItemClick}>
+                  <ListItemText primary="네트워크" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/hw/security" className={classes.txt_deco_none}>
+                <ListItem button key="보안" onClick={handleItemClick}>
+                  <ListItemText primary="보안" />
+                </ListItem>
+              </Link>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel4"}
+          onChange={handleAccordionChange("panel4")}
+        >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+            <Typography className={classes.heading}>기술문의</Typography>
+          </AccordionSummary>
+          <AccordionDetails id="details">
+            <div>
+              <Link to="/mt/engineer" className={classes.txt_deco_none}>
+                <ListItem button key="엔지니어 현황" onClick={handleItemClick}>
+                  <ListItemText primary="엔지니어 현황" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/mt/maintenance" className={classes.txt_deco_none}>
+                <ListItem button key="유지보수" onClick={handleItemClick}>
+                  <ListItemText primary="유지보수" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/mt/question" className={classes.txt_deco_none}>
+                <ListItem button key="기술지원문의" onClick={handleItemClick}>
+                  <ListItemText primary="기술지원문의" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/mt/reference" className={classes.txt_deco_none}>
+                <ListItem button key="자료실" onClick={handleItemClick}>
+                  <ListItemText primary="자료실" />
+                </ListItem>
+              </Link>
+            </div>
+            <div>
+              <Link to="/remote" className={classes.txt_deco_none}>
+                <ListItem button key="원격지원" onClick={handleItemClick}>
+                  <ListItemText primary="원격지원" />
+                </ListItem>
+              </Link>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion
+          expanded={expanded === "panel5"}
+          onChange={handleAccordionChange("panel5")}
+        >
+          <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
+            <Typography className={classes.heading}>원격지원</Typography>
+          </AccordionSummary>
+          <AccordionDetails id="details">
+            <div>
+              <Link to="/remote" className={classes.txt_deco_none}>
+                <ListItem button key="원격지원" onClick={handleItemClick}>
+                  <ListItemText primary="원격지원" />
+                </ListItem>
+              </Link>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+      </List>
+    </div>
+  );
+
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
@@ -200,9 +464,51 @@ function Header(props) {
     scrollPosition.setPosition(pos);
   };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+  const data = {
+    image: "banner3.jpg",
+    title: "Virtual Infrastructure",
+    subtitle: "",
+    description: `압도적인 시장 점유율과 <br className="mobile" />
+      높은 신뢰성 및 안전성을 가진 <br className="pc" /><br className="mobile" />
+      VMware 기반 가상화를 구현합니다`,
+    button: [
+      {
+        text: "서버가상화",
+        href: "/vm/server"
+      },
+      {
+        text: "데스크탑가상화",
+        href: "/vm/desktop"
+      },
+      {
+        text: "스토리지가상화",
+        href: "/vm/storage"
+      },
+      {
+        text: "재해복구시스템",
+        href: "/vm/DR"
+      }
+    ]
+  };
+
   return (
     <div className={classes.root}>
-      <div className="header" onMouseLeave={mouseOut} id="header0">
+      <div id="div_laypopup" align="center" className="popup">
+        <span>x</span>
+        <img src={icon1} />
+        <input
+          type="checkbox"
+          id="close"
+          value="OK"
+          onclick="javascript:closeWin('div_laypopup', 1);"
+        />
+        하루동안 이 창을 열지 않음
+      </div>
+      <div className="header" onMouseLeave={mouseOut}>
         <div className="subclasses_wrap">
           <div className="subclasses">
             <div id="subclass1">

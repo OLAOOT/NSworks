@@ -12,7 +12,7 @@ const SlideContainer = styled.div`
   position: relative;
   left: 0;
   width: 100%;
-  top: 20px;
+
   height: 300px;
 `;
 const ImageContainer = styled.div`

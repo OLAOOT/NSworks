@@ -57,7 +57,7 @@ export default function Info5() {
         <div className="article" id="article4">
           <div id="map_container">
             <div id="contact_container">
-              <div>
+              <div id="contact_img">
                 <img src={logo} />
               </div>
               <div id="contact">

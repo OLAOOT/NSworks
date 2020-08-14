@@ -296,4 +296,25 @@
   #maintenance2 {
     width: 100%;
   }
+  .maintenance_container .article_contact {
+    height: 600px;
+  }
+  .maintenance_container .article_contact .left {
+    width: 100%;
+  }
+  .maintenance_container .article_contact .left img {
+    top: 10px;
+  }
+  .maintenance_container .article_contact .right {
+    width: 100%;
+  }
+  .maintenance_container .article_contact .right thead td {
+    font-size: 20px;
+  }
+  table {
+    font-size: 10px !important;
+  }
+  .maintenance_container .paper > div:last-child {
+    font-size: 15px;
+  }
 }
