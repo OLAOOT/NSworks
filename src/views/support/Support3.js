@@ -4,7 +4,7 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
-import Support3C from "./Support3C";
+import Support3C from "./Support3_c";
 import "../../css/support.css";
 
 import engineer1 from "./../../img/engineer1.png";
