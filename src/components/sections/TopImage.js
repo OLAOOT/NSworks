@@ -24,6 +24,8 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   max-width: 3840px;
   width: 100%;
+  min-height: 300px;
+  min-width: 663px;
 `;
 
 const TextContainer = styled.div`

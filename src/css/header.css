@@ -8,13 +8,13 @@
   top: 64px;
   width: 100%;
   min-width: 1280px;
-  left:0;
+  left: 0;
   padding-left: 80px;
   padding-right: 80px;
   height: 0;
 }
-.subclasses{
-  width:70%;
+.subclasses {
+  width: 70%;
   float: right;
 }
 .subclasses > * {
@@ -28,13 +28,14 @@
   text-align: left;
   float: left;
 }
-.subclasses > * > a{
-  width:100%;
+.subclasses > * > a {
+  width: 100%;
   float: left;
-  padding:10px;
-  color:#000000 !important;
+  padding: 10px;
+  color: #000000 !important;
   text-align: center;
-}.subclasses > * > a:hover{
+}
+.subclasses > * > a:hover {
   background-color: #f8fafc;
 }
 .header {
@@ -55,21 +56,20 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 .tool img {
-  width: 200px;
+  width: 150px;
   margin-right: 10%;
 }
-.menus{
-  width:70%;
-  
+.menus {
+  width: 70%;
 }
 .menus > div {
   float: left;
   height: 100%;
-  width:16%;
+  width: 16%;
   text-align: center;
   padding: 15px;
 }
@@ -105,14 +105,14 @@
 }
 
 /*여기는 슬라이더 css*/
-.awssld__content > img{
+.awssld__content > img {
   transform: scale(1.5);
   animation-duration: 21s;
   animation-name: scaleUp;
   animation-iteration-count: infinite;
 }
 
-.awssld__content > img.animate{  
+.awssld__content > img.animate {
   transform: scale(1);
 }
 
@@ -122,8 +122,8 @@
   }
   50% {
     transform: scale(1.5);
-  } 
+  }
   100% {
     transform: scale(1);
-  } 
+  }
 }

@@ -4,7 +4,7 @@ import "react-awesome-slider/dist/captioned.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TopImage from "../../components/sections/TopImage";
-import Support3_c from './Support3_c';
+import Support3C from "./Support3C";
 import "../../css/support.css";
 
 import engineer1 from "./../../img/engineer1.png";
@@ -47,10 +47,6 @@ const useStyles = makeStyles((theme) => ({
   style1: {
     height: 40,
     borderBottom: "1px solid #676767"
-  },
-  btn: {
-    backgroundColor: "#6bbf24",
-    color: "#ffffff"
   }
 }));
 export default function Engineer1() {
@@ -88,24 +84,36 @@ export default function Engineer1() {
         <div className="article">
           <div className="article_contact">
             <div className="left">
-              <img src={contact}/>
+              <img src={contact} />
             </div>
             <div className="right">
               <table>
                 <thead>
                   <tr>
-                    <td colSpan='3'>영업 및 기술문의</td>
+                    <td colSpan="3">영업 및 기술문의</td>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>황재찬 부장</td><td>010-2525-5519</td><td>ahbon@nsworks.co.kr</td>
+                    <td>황재찬 부장</td>
+                    <td>010-2525-5519</td>
+                    <td>ahbon@nsworks.co.kr</td>
                   </tr>
                   <tr>
-                    <td>임재성 차장</td><td>010-9468-9344 </td><td>homerun@nsworks.co.kr</td>
+                    <td>임재성 차장</td>
+                    <td>010-9468-9344 </td>
+                    <td>homerun@nsworks.co.kr</td>
                   </tr>
                   <tr>
-                    <td><Support3_c/></td>
+                    <td />
+                    <td />
+                    <td
+                      style={{
+                        textAlign: "right"
+                      }}
+                    >
+                      <Support3C />
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -122,7 +130,8 @@ export default function Engineer1() {
               <div>가상화</div>
               <div>
                 <ul>
-                  <li>VMware , Citrix , Microsoft <br/>
+                  <li>
+                    VMware , Citrix , Microsoft <br />
                     3개 가상화 구축 지원 가능
                   </li>
                 </ul>
@@ -133,8 +142,11 @@ export default function Engineer1() {
               <div>H/W , S/W</div>
               <div>
                 <ul>
-                  <li>HP, Dell 서버 스토리지 백업장비
-                  <br/>Cisco, HP Network장비 판매 구축</li>
+                  <li>
+                    HP, Dell 서버 스토리지 백업장비
+                    <br />
+                    Cisco, HP Network장비 판매 구축
+                  </li>
                   <li>Windows 서버 / Linux 서버 판매</li>
                 </ul>
               </div>

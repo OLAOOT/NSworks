@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import Slider from "../components/sections/Slider";
 import "../css/info.css";
 import Info1 from "./infos/Info1";
@@ -6,6 +6,7 @@ import Info2 from "./infos/Info2";
 import Info3 from "./infos/Info3";
 import Info4 from "./infos/Info4";
 import Info5 from "./infos/Info5";
+import InfoContext from "./../InfoContext";
 import "./../css/anima.css";
 import $ from "jquery";
 window.$ = $;
@@ -45,7 +46,7 @@ const heroData = [
     subtitle: "",
     description: `전문 엔지니어의 풍부한 경험으로<br className="mobile" />
      차별화된 서비스를 지원합니다`,
-    href: "/mt/engineer"
+    href: "/mt/maintenance"
   },
   {
     image: "banner2.jpg",
@@ -53,12 +54,21 @@ const heroData = [
     subtitle: "",
     description: `고객의 요구 사항에 맞는<br className="mobile" />
      맞춤형 최적 솔루션을 제공하겠습니다`,
-    href: ""
-    // 여기에 ppt 10페이지 링크
+    href: "/mt/question"
   }
 ];
 
 const Home = () => {
+  const scrollPosition = useContext(InfoContext);
+  useEffect(() => {
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#" + scrollPosition.position).offset().top - 30
+      },
+      500
+    );
+  });
+
   return (
     <>
       <Slider data={heroData} />

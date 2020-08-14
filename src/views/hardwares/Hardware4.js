@@ -235,7 +235,8 @@ export default function Hardware4() {
           <div className="article_top">
             <div>
               <span>
-                WEBFRONT-K : <br className="mobile" />웹 애플리케이션 방화벽
+                WEBFRONT-K : <br className="mobile" />웹 애플리케이션
+                <br className="mobile" /> 방화벽
               </span>
             </div>
             <div>

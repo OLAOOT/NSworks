@@ -21,9 +21,7 @@ const defaultProps = {
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    [theme.breakpoints.down("xs")]: {
-      display: "none"
-    }
+    [theme.breakpoints.down("xs")]: {}
   },
   title: {
     marginBottom: "8px",

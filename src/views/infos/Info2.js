@@ -181,8 +181,10 @@ export default function Info2() {
           <div className="atricle_mid">
             <div className="greeting_container">
               <h3>
-                새로운 기술, 새로운 인재와
-                <br className="mobile" /> 함께 하는 젊은 기업입니다.
+                새로운 기술, <br className="mobile" />
+                새로운 인재와 <br className="mobile" />
+                함께 하는 <br className="mobile" />
+                젊은 기업입니다.
               </h3>
               <div>
                 <p>
@@ -219,8 +221,10 @@ export default function Info2() {
               </div>
             </div>
           </div>
+          <div className="atricle_mid">
+            <GreetingSplit />
+          </div>
         </div>
-        <GreetingSplit />
       </div>
     </div>
   );

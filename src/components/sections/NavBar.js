@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import MuiListItem from "@material-ui/core/ListItem";
 import MuiListItemText from "@material-ui/core/ListItemText";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
+import InfoContext from "./../../InfoContext";
 import MuiMenu from "@material-ui/core/Menu";
 import MuiMenuItem from "@material-ui/core/MenuItem";
 import MuiTypography from "@material-ui/core/Typography";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
-import MuiButton from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { green } from "@material-ui/core/colors";
+import SvgIcon from "@material-ui/core/SvgIcon";
 import $ from "jquery";
 window.$ = $;
 
@@ -20,24 +23,8 @@ const data = [
     href: "/",
     sub: [
       {
-        text: "회사개요",
-        href: "/#info_container1"
-      },
-      {
-        text: "인사말",
-        href: "/#info_container2"
-      },
-      {
-        text: "사업영역",
-        href: "/#info_container3"
-      },
-      {
-        text: "연혁",
-        href: "/#info_container4"
-      },
-      {
-        text: "찾아오시는길",
-        href: "/#info_container5"
+        text: "",
+        href: "/"
       }
     ]
   },
@@ -123,6 +110,37 @@ const data = [
   }
 ];
 
+function HomeIcon(props) {
+  return (
+    <SvgIcon {...props}>
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+    </SvgIcon>
+  );
+}
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    position: "absolute",
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+    margin: "30px 0px 50px",
+    padding: "0px 0px 0px 30px",
+    [theme.breakpoints.down("xs")]: {
+      display: "none"
+    }
+  },
+  btn: {
+    background: "#ffffff",
+    border: "none",
+    borderBottom: "1px solid rgba(0, 0, 0, .075)",
+    width: "61px",
+    height: "61px",
+    cursor: "pointer"
+  }
+}));
+
 const Accordion = withStyles({
   root: {
     // border: '1px solid rgba(0, 0, 0, .125)',
@@ -131,7 +149,9 @@ const Accordion = withStyles({
       display: "none"
     }
   },
-  expanded: {}
+  expanded: {
+    marginTop: "0px !important"
+  }
 })(MuiAccordion);
 
 const AccordionSummary = withStyles({
@@ -165,6 +185,15 @@ const Typography = withStyles((theme) => ({
   root: {
     width: "95%",
     paddingBottom: 15,
+    fontFamily: "NanumSquare",
+    fontSize: "17px"
+  }
+}))(MuiTypography);
+
+const BigTypography = withStyles((theme) => ({
+  root: {
+    width: "95%",
+    paddingBottom: 15,
     fontFamily: "NanumSquare"
   }
 }))(MuiTypography);
@@ -181,7 +210,8 @@ const ListItemText = withStyles((theme) => ({
     color: "#000000",
     fontFamily: "NanumSquare",
     borderBottom: "1px solid rgba(0, 0, 0, .075)",
-    margin: "15px 0 0"
+    margin: "15px 0 0",
+    fontSize: "17px !important"
   }
 }))(MuiListItemText);
 
@@ -192,19 +222,22 @@ const NavBar = ({ menu1, menu2 }) => {
     setExpanded(isExpanded ? panel : false);
   };
 
+  const classes = useStyles();
+
+  const scrollPosition = useContext(InfoContext);
+
+  const onClickInfo = (pos) => () => {
+    scrollPosition.setPosition(pos);
+  };
+
   return (
     <>
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          display: "flex",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          margin: "30px 0px 50px",
-          padding: "0px 0px 0px 30px"
-        }}
-      >
+      <div className={classes.container}>
+        <Link to="/" onClick={onClickInfo("header0")}>
+          <Button className={classes.btn}>
+            <HomeIcon style={{ color: green[500] }} />
+          </Button>
+        </Link>
         <Accordion
           expanded={expanded === "panel1"}
           onChange={onChange("panel1")}
@@ -214,7 +247,7 @@ const NavBar = ({ menu1, menu2 }) => {
             id="panel1a-header"
             expandIcon={<ExpandMoreIcon />}
           >
-            <Typography>{menu1}</Typography>
+            <BigTypography>{menu1}</BigTypography>
           </AccordionSummary>
           <AccordionDetails id="details">
             {data.map((first) => (
@@ -222,7 +255,9 @@ const NavBar = ({ menu1, menu2 }) => {
                 <Link to={first.href}>
                   <ListItem button key={first.text} onClick={undefined}>
                     <ListItemText
-                      primary={<Typography>{first.text}</Typography>}
+                      primary={
+                        <Typography>&nbsp;&nbsp;{first.text}</Typography>
+                      }
                     />
                   </ListItem>
                 </Link>
@@ -236,11 +271,11 @@ const NavBar = ({ menu1, menu2 }) => {
           onChange={onChange("panel2")}
         >
           <AccordionSummary
-            aria-controls="panel1a-content"
-            id="panel1a-header"
+            aria-controls="panel2a-content"
+            id="panel2a-header"
             expandIcon={<ExpandMoreIcon />}
           >
-            <Typography>{menu2}</Typography>
+            <BigTypography>{menu2}</BigTypography>
           </AccordionSummary>
           <AccordionDetails id="details">
             {data
@@ -250,7 +285,9 @@ const NavBar = ({ menu1, menu2 }) => {
                   <Link to={second.href}>
                     <ListItem button key={second.text} onClick={undefined}>
                       <ListItemText
-                        primary={<Typography>{second.text}</Typography>}
+                        primary={
+                          <Typography>&nbsp;&nbsp;{second.text}</Typography>
+                        }
                       />
                     </ListItem>
                   </Link>

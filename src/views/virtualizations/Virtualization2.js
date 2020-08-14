@@ -157,15 +157,15 @@ export default function Virtualization2() {
               <Paper elevation={3} className="paper">
                 <iframe
                   src="https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=4759488053001"
-                  allowfullscreen
-                  frameborder="0"
+                  allowFullScreen
+                  frameBorder="0"
                 />
               </Paper>
               <Paper elevation={3} className="paper">
                 <iframe
                   src="https://players.brightcove.net/1534342432001/Byh3doRJx_default/index.html?videoId=5164277989001"
-                  allowfullscreen
-                  frameborder="0"
+                  allowFullScreen
+                  frameBorder="0"
                 />
               </Paper>
             </div>
