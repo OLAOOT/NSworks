@@ -1,0 +1,17 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {font-family: 'noto_sans';src: url('./css/Noto_Sans_KR/NotoSansKR-Medium.otf');}
+*{
+    font-family: 'noto_sans',serif !important;
+    
+}
+#manager *{
+  font-size: 16px !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img{
+  display: inline !important;
+}

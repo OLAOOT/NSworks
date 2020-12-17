@@ -8,8 +8,16 @@
 # testing
 /coverage
 
+#upload
+/upload
+
+/sessions
+
 # production
 /build
+
+# database
+/database.json
 
 # misc
 .DS_Store

@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import Logo from './partials/Logo';
 import FooterNav from './partials/FooterNav';
 import FooterSocial from './partials/FooterSocial';
+import Divider from '@material-ui/core/Divider';
+
 
 const propTypes = {
   topOuterDivider: PropTypes.bool,
@@ -29,10 +31,12 @@ const Footer = ({
   );
 
   return (
+    
     <footer
       {...props}
       className={classes}
     >
+      <Divider/>
       <div className="container">
         <div className={
           classNames(

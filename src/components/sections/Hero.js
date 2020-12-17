@@ -1,19 +1,80 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
-import { SectionProps } from '../../utils/SectionProps';
-import ButtonGroup from '../elements/ButtonGroup';
-import Button from '../elements/Button';
-import Image from '../elements/Image';
-import Modal from '../elements/Modal';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState, useCallback } from "react";
+import classNames from "classnames";
+import { SectionProps } from "../../utils/SectionProps";
+import ButtonGroup from "../elements/ButtonGroup";
+import MuiButton from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MuiMenuItem from "@material-ui/core/MenuItem";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 
+import { Link, NavLink } from "react-router-dom";
+import styled from "styled-components";
+import $ from "jquery";
+window.$ = $;
 const propTypes = {
   ...SectionProps.types
-}
+};
 
 const defaultProps = {
   ...SectionProps.defaults
-}
+};
+
+const useStyles = makeStyles((theme) => ({
+  button: {
+    [theme.breakpoints.down("xs")]: {}
+  },
+  title: {
+    marginBottom: "8px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "44px"
+    },
+    color: "#ffffff"
+  },
+  subtitle: {
+    marginBottom: "12px",
+    color: "#ffffff",
+    fontSize: "26px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "20px"
+    }
+  },
+  description_pc: {
+    color: "#ffffff",
+    marginBottom: "20px",
+    [theme.breakpoints.down("xs")]: {
+      display: "none"
+    }
+  },
+  description_mobile: {
+    color: "#ffffff",
+    marginBottom: "16px",
+    fontSize: "16px",
+    padding: "0px 10px",
+    [theme.breakpoints.up("sm")]: {
+      display: "none"
+    }
+  }
+}));
+
+const Button = withStyles({
+  root: {
+    fontFamily: "NanumSquare",
+    padding: "5px 30px",
+    border: "2px solid #ffffff",
+    borderRadius: "30px",
+    color: "#ffffff",
+    width: "170px"
+  }
+})(MuiButton);
+
+const MenuItem = withStyles({
+  root: {
+    fontFamily: "NanumSquare",
+    textAlign: "center",
+    color: "#000000",
+    width: "170px"
+  }
+})(MuiMenuItem);
 
 const Hero = ({
   className,
@@ -23,72 +84,119 @@ const Hero = ({
   bottomDivider,
   hasBgColor,
   invertColor,
+  data,
+  play,
   ...props
 }) => {
-
-  const [videoModalActive, setVideomodalactive] = useState(false);
-
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
-
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  }   
-
   const outerClasses = classNames(
-    'hero section center-content',
-    topOuterDivider && 'has-top-divider',
-    bottomOuterDivider && 'has-bottom-divider',
-    hasBgColor && 'has-bg-color',
-    invertColor && 'invert-color'
+    "hero section center-content",
+    topOuterDivider && "has-top-divider",
+    bottomOuterDivider && "has-bottom-divider",
+    hasBgColor && "has-bg-color",
+    invertColor && "invert-color"
   );
 
   const innerClasses = classNames(
-    'hero-inner section-inner',
-    topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider'
+    "hero-inner section-inner",
+    topDivider && "has-top-divider",
+    bottomDivider && "has-bottom-divider"
   );
 
+  const classes = useStyles();
+
+  const breakLinePc = (description) => {
+    const strs = description
+      .split(`<br className="mobile" />`)
+      .join("")
+      .split(`<br className="pc" />`);
+    return (
+      <p className={classes.description_pc}>
+        {strs.map((str) => (
+          <React.Fragment key={str}>
+            {str}
+            <br className="pc" />
+          </React.Fragment>
+        ))}
+      </p>
+    );
+  };
+
+  const breakLineMobile = (description) => {
+    const strs = description
+      .split(`<br className="pc" />`)
+      .join("")
+      .split(`<br className="mobile" />`);
+    return (
+      <p className={classes.description_mobile}>
+        {strs.map((str) => (
+          <React.Fragment key={str}>
+            {str}
+            <br className="mobile" />
+          </React.Fragment>
+        ))}
+      </p>
+    );
+  };
+
+  const scroll_mv = (e) => {
+    //if(window.location.href)
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#info_container1").offset().top + 350
+      },
+      500
+    );
+  };
+
   return (
-    <section
-      {...props}
-      className={outerClasses}
-    >
+    <section {...props} className={outerClasses}>
       <div className="container-sm">
-        <div className={innerClasses}>
+        <div
+          className={innerClasses}
+          style={{
+            paddingTop: 0 + "px"
+          }}
+        >
           <div className="hero-content">
-            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              <span className="text-color-primary">NSworks</span>
-            </h1>
-            <h3 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Always Do the Best
-            </h3>
+            <h2 className={classes.title}>{data.title}</h2>
+            <div className={classes.subtitle}>{data.subtitle}</div>
             <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400"
-               style={{fontSize: 0.8 + "rem"}}>
-                존나 어렵노 시발 이거; 템플릿 개발한 ㅁㅊ넘들이 자체개발 프레임워크 써버려서 먼소린지 하나도모르겠음 삘가는대로 하는중
-                </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    여따간 뭐넣지
+              {breakLinePc(data.description)}
+              {breakLineMobile(data.description)}
+
+              <div>
+                <div>
+                  {data.href ? (
+                    <Link to={data.href}>
+                      <Button
+                        id={data.title}
+                        aria-controls="more_menu"
+                        aria-haspopup="true"
+                        className={classes.button}
+                      >
+                        자세히 보기
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button
+                      id={data.title}
+                      aria-controls="more_menu"
+                      aria-haspopup="true"
+                      className={classes.button}
+                      onClick={scroll_mv}
+                    >
+                      자세히 보기
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    걍 지워버릴까
-                    </Button>
-                </ButtonGroup>
+                  )}
+                </div>
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
   );
-}
+};
 
 Hero.propTypes = propTypes;
 Hero.defaultProps = defaultProps;

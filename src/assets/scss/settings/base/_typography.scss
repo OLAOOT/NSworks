@@ -1,14 +1,15 @@
 // Typography
 
-$font--provider:    'Google Fonts';
-$font--import:      'Inter:400,500,600,700,800';
+// $font--provider:    'Google Fonts';
+// $font--import:      'Inter:400,500,600,700,800';
 
 // The font set
 $font--family: (
 	heading: 	null,
-	base:		'"Inter", sans-serif',
-	code: 		'Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace',
-	pre: 		'"Courier 10 Pitch", Courier, monospace'
+	base: 'NanumSquare'
+	// base:		'"Inter", sans-serif',
+	// code: 		'Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace',
+	// pre: 		'"Courier 10 Pitch", Courier, monospace'
 );
 
 // The typographic scale
